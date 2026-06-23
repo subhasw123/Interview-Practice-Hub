@@ -13,7 +13,7 @@ function renderNavbar(opts = {}) {
       <button class="hamburger" onclick="toggleMenu()">
     ☰
 </button>
-      <nav class="nav-links">
+      <nav class="nav-links" id="mobileMenu">
     <a href="/" class="${active === 'home' ? 'active' : ''}">Home</a>
 
     <a href="/history.html"
@@ -47,11 +47,12 @@ function renderNavbar(opts = {}) {
   </header>`;
 }
 
-function mountNavbar(opts) {
-  function toggleMenu() {
+function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     menu.classList.toggle("show");
 }
+
+function mountNavbar(opts) {
     const el = document.getElementById('navbar');
     if (el) el.innerHTML = renderNavbar(opts);
 }
