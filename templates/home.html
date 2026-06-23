@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interview Practice Hub — Practice technical interviews</title>
+    <meta name="description" content="Timed mock interviews across Python, Java, DSA, SQL, ML, DL, MERN and more." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <span class="hero-badge">✨ 50 questions · 60 minutes · 10 domains</span>
+                <h1>Interview Practice Hub</h1>
+                <p>Practice technical interviews across multiple domains with realistic
+                    timed assessments, instant scoring, and detailed answer review.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-label">📚 Domains</div>
+                        <div class="stat-value">10</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">🎯 Questions / set</div>
+                        <div class="stat-value">50</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">⏱ Duration</div>
+                        <div class="stat-value">60 min</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Choose a domain</h2>
+                    <p>Pick a track and start a full-length assessment.</p>
+                </div>
+                <div id="domainGrid" class="domain-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+    <script>
+        mountNavbar({ active: 'home' });
+        const grid = document.getElementById('domainGrid');
+        grid.innerHTML = DOMAINS.map(d => `
+      <a class="domain-card" href="domain.html?slug=${d.slug}">
+        <div class="domain-icon">${d.icon}</div>
+        <div class="domain-name">${d.name}</div>
+        <div class="domain-desc">${d.desc}</div>
+        <div class="domain-meta">
+          <span>${d.questions} questions</span>
+          <span>${d.duration} min</span>
+        </div>
+      </a>
+    `).join('');
+    </script>
+</body>
+
+</html>

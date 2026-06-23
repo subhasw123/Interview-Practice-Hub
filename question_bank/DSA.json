@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "DSA001",
+    "domain": "dsa",
+    "topic": "Arrays",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the time complexity of accessing an element in an array by index?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n\u00b2)"
+    ],
+    "answer": "O(1)",
+    "explanation": "Arrays store elements in contiguous memory locations, so any element can be accessed directly using its index in constant time."
+  },
+  {
+    "id": "DSA002",
+    "domain": "dsa",
+    "topic": "Arrays",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is NOT a characteristic of an array?",
+    "options": [
+      "Fixed size",
+      "Dynamic size by default",
+      "Contiguous memory",
+      "Random access"
+    ],
+    "answer": "Dynamic size by default",
+    "explanation": "Arrays in most languages (C, Java) have a fixed size. Dynamic resizing is a feature of dynamic arrays like ArrayList or Python lists."
+  },
+  {
+    "id": "DSA003",
+    "domain": "dsa",
+    "topic": "Arrays",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of inserting an element at the beginning of an array of size n?",
+    "options": [
+      "O(n)",
+      "O(n\u00b2)",
+      "O(1)",
+      "O(log n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Inserting at the beginning requires shifting all n existing elements one position to the right, making it O(n)."
+  },
+  {
+    "id": "DSA004",
+    "domain": "dsa",
+    "topic": "Arrays",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following best describes the two-pointer technique?",
+    "options": [
+      "Use two nested loops to check all pairs",
+      "Use two separate arrays to store results",
+      "Use two stacks to process elements",
+      "Use two indices traversing the array from different positions to reduce O(n\u00b2) to O(n)"
+    ],
+    "answer": "Use two indices traversing the array from different positions to reduce O(n\u00b2) to O(n)",
+    "explanation": "The two-pointer technique uses two indices (often from both ends or same start) that move toward each other or together, converting many O(n\u00b2) brute-force problems into O(n) solutions \u2014 e.g., pair sum in sorted array."
+  },
+  {
+    "id": "DSA005",
+    "domain": "dsa",
+    "topic": "Arrays",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Given an unsorted array, what is the most efficient algorithm to find the maximum sum subarray?",
+    "options": [
+      "Kadane's Algorithm O(n)",
+      "Divide and Conquer O(n log n)",
+      "Brute force O(n\u00b3)",
+      "Prefix sum O(n\u00b2)"
+    ],
+    "answer": "Kadane's Algorithm O(n)",
+    "explanation": "Kadane's Algorithm iterates once through the array, maintaining a running maximum and overall maximum, achieving O(n) time and O(1) space."
+  },
+  {
+    "id": "DSA006",
+    "domain": "dsa",
+    "topic": "Strings",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the time complexity of checking if two strings are anagrams using sorting?",
+    "options": [
+      "O(n log n)",
+      "O(1)",
+      "O(n)",
+      "O(n\u00b2)"
+    ],
+    "answer": "O(n log n)",
+    "explanation": "Sorting both strings takes O(n log n) each, and comparing them takes O(n), so overall it's O(n log n)."
+  },
+  {
+    "id": "DSA007",
+    "domain": "dsa",
+    "topic": "Strings",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which data structure is best for checking if a string has all unique characters in O(n) time?",
+    "options": [
+      "Array",
+      "Stack",
+      "Queue",
+      "Hash Set"
+    ],
+    "answer": "Hash Set",
+    "explanation": "A Hash Set allows O(1) average-time insertions and lookups, enabling a single O(n) pass to check for duplicate characters."
+  },
+  {
+    "id": "DSA008",
+    "domain": "dsa",
+    "topic": "Strings",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of the KMP (Knuth-Morris-Pratt) string matching algorithm?",
+    "options": [
+      "O(n*m)",
+      "O(n log m)",
+      "O(n + m)",
+      "O(m log n)"
+    ],
+    "answer": "O(n + m)",
+    "explanation": "KMP preprocesses the pattern in O(m) to build the failure function, then searches in O(n), giving total O(n + m) where n is text length and m is pattern length."
+  },
+  {
+    "id": "DSA009",
+    "domain": "dsa",
+    "topic": "Strings",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which approach for palindrome checking is more space-efficient?",
+    "options": [
+      "Hashing using O(n) space",
+      "Stack-based approach using O(n) space",
+      "Recursion using O(n) call stack space",
+      "Two-pointer approach using O(1) space"
+    ],
+    "answer": "Two-pointer approach using O(1) space",
+    "explanation": "Stack approach pushes all characters (O(n) space) then pops to compare. Two-pointer uses left and right indices converging to center \u2014 O(1) space, O(n) time. Two pointers is always preferred for palindrome checks."
+  },
+  {
+    "id": "DSA010",
+    "domain": "dsa",
+    "topic": "Strings",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which algorithm finds the longest palindromic substring in O(n) time?",
+    "options": [
+      "Brute Force",
+      "Manacher's Algorithm",
+      "Dynamic Programming",
+      "KMP"
+    ],
+    "answer": "Manacher's Algorithm",
+    "explanation": "Manacher's Algorithm cleverly uses previously computed palindrome information to find all palindromic substrings in linear O(n) time."
+  },
+  {
+    "id": "DSA011",
+    "domain": "dsa",
+    "topic": "Linked List",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the time complexity of inserting a node at the head of a singly linked list?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n\u00b2)"
+    ],
+    "answer": "O(1)",
+    "explanation": "Inserting at the head only requires updating the new node's next pointer and the head pointer, which is constant time."
+  },
+  {
+    "id": "DSA012",
+    "domain": "dsa",
+    "topic": "Linked List",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is an advantage of a linked list over an array?",
+    "options": [
+      "Dynamic size without reallocation",
+      "O(1) random access",
+      "Cache-friendly memory layout",
+      "Less memory per element"
+    ],
+    "answer": "Dynamic size without reallocation",
+    "explanation": "Linked lists can grow or shrink dynamically without needing to copy data or pre-allocate large contiguous blocks of memory."
+  },
+  {
+    "id": "DSA013",
+    "domain": "dsa",
+    "topic": "Linked List",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you detect a cycle in a linked list efficiently?",
+    "options": [
+      "Use extra array to store visited nodes",
+      "Reverse the list and compare",
+      "Use two pointers (Floyd's algorithm)",
+      "Use a stack"
+    ],
+    "answer": "Use two pointers (Floyd's algorithm)",
+    "explanation": "Floyd's cycle detection uses a slow pointer (1 step) and fast pointer (2 steps). If they meet, a cycle exists. This is O(n) time and O(1) space."
+  },
+  {
+    "id": "DSA014",
+    "domain": "dsa",
+    "topic": "Linked List",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which linked list type allows traversal in both directions?",
+    "options": [
+      "Doubly linked list",
+      "Singly linked list",
+      "Circular linked list",
+      "XOR linked list"
+    ],
+    "answer": "Doubly linked list",
+    "explanation": "Doubly linked list has both next and prev pointers per node, enabling bidirectional traversal. Singly allows only forward traversal. Circular connects last node back to head. Doubly uses more memory but supports O(1) backward traversal."
+  },
+  {
+    "id": "DSA015",
+    "domain": "dsa",
+    "topic": "Linked List",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of reversing a doubly linked list?",
+    "options": [
+      "O(log n)",
+      "O(n\u00b2)",
+      "O(n)",
+      "O(1)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Reversing requires visiting each node to swap its next and prev pointers. With n nodes, this is O(n) time. Since it's done in-place, space is O(1)."
+  },
+  {
+    "id": "DSA016",
+    "domain": "dsa",
+    "topic": "Stack",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which principle does a Stack follow?",
+    "options": [
+      "FIFO",
+      "LIFO",
+      "FILO",
+      "Random Access"
+    ],
+    "answer": "LIFO",
+    "explanation": "Stack follows Last In First Out \u2014 the element inserted last is the first to be removed, like a stack of plates."
+  },
+  {
+    "id": "DSA017",
+    "domain": "dsa",
+    "topic": "Stack",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the time complexity of push and pop operations in a stack?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n\u00b2)"
+    ],
+    "answer": "O(1)",
+    "explanation": "Both push (insert at top) and pop (remove from top) are constant time operations as they only involve the top element."
+  },
+  {
+    "id": "DSA018",
+    "domain": "dsa",
+    "topic": "Stack",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which application is best solved using a stack?",
+    "options": [
+      "Level-order tree traversal",
+      "Finding shortest path in a graph",
+      "Checking balanced parentheses",
+      "Implementing a priority queue"
+    ],
+    "answer": "Checking balanced parentheses",
+    "explanation": "A stack naturally tracks opening brackets. When a closing bracket is encountered, we pop and check if it matches the corresponding opening bracket."
+  },
+  {
+    "id": "DSA019",
+    "domain": "dsa",
+    "topic": "Queue",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which principle does a Queue follow?",
+    "options": [
+      "FIFO",
+      "Random Access",
+      "LIFO",
+      "FILO"
+    ],
+    "answer": "FIFO",
+    "explanation": "Queue follows First In First Out \u2014 the element inserted first is the first to be removed, like a queue at a ticket counter."
+  },
+  {
+    "id": "DSA020",
+    "domain": "dsa",
+    "topic": "Queue",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What problem does a circular queue solve compared to a simple linear queue?",
+    "options": [
+      "It allows storing more elements",
+      "It supports priority ordering",
+      "It automatically sorts elements",
+      "It reuses freed front positions using modulo arithmetic, eliminating wasted memory"
+    ],
+    "answer": "It reuses freed front positions using modulo arithmetic, eliminating wasted memory",
+    "explanation": "In a linear queue, dequeued front positions cannot be reused. Circular queue connects rear back to front using modulo, so freed positions are reused \u2014 making it memory-efficient for fixed-size implementations."
+  },
+  {
+    "id": "DSA021",
+    "domain": "dsa",
+    "topic": "Stack",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the minimum number of stacks needed to implement a queue?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2",
+    "explanation": "Two stacks can simulate a queue: one for enqueue (push) and one for dequeue (pop). When dequeue stack is empty, transfer all from enqueue stack. Amortized O(1) per operation."
+  },
+  {
+    "id": "DSA022",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the maximum number of nodes at level k in a binary tree (root at level 0)?",
+    "options": [
+      "k",
+      "2^k",
+      "2k",
+      "k\u00b2"
+    ],
+    "answer": "2^k",
+    "explanation": "At level 0 (root) there is 1 = 2^0 node. Each level can have at most double the nodes of the previous level, giving 2^k nodes at level k."
+  },
+  {
+    "id": "DSA023",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which traversal of a BST gives nodes in sorted (ascending) order?",
+    "options": [
+      "Inorder",
+      "Preorder",
+      "Postorder",
+      "Level-order"
+    ],
+    "answer": "Inorder",
+    "explanation": "Inorder traversal (Left \u2192 Root \u2192 Right) of a BST always visits nodes in ascending sorted order due to BST's left < root < right property."
+  },
+  {
+    "id": "DSA024",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of searching in a balanced BST?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "In a balanced BST, each comparison eliminates half the remaining nodes, similar to binary search, giving O(log n) = O(height) search time."
+  },
+  {
+    "id": "DSA025",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the key difference between a complete binary tree and a full binary tree?",
+    "options": [
+      "Full tree has all levels filled; complete tree may have gaps",
+      "They are the same thing",
+      "Complete tree has 0 or 2 children; full tree is filled left to right",
+      "Full tree: every node has 0 or 2 children; complete tree: all levels filled except last which is filled left to right"
+    ],
+    "answer": "Full tree: every node has 0 or 2 children; complete tree: all levels filled except last which is filled left to right",
+    "explanation": "Full binary tree: no node has exactly 1 child. Complete binary tree: all levels fully filled except possibly the last, which is filled from left to right. Heaps are complete binary trees but not necessarily full."
+  },
+  {
+    "id": "DSA026",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What rotations are performed in an AVL tree to fix a Left-Right (LR) imbalance?",
+    "options": [
+      "Single left rotation",
+      "Right rotation on child then left rotation on root",
+      "Left rotation on child then right rotation on root",
+      "Single right rotation"
+    ],
+    "answer": "Left rotation on child then right rotation on root",
+    "explanation": "LR case: the left child has a right-heavy subtree. Fix by first performing a left rotation on the left child (making it LL case), then a right rotation on the unbalanced node."
+  },
+  {
+    "id": "DSA027",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity for a point update and range query in a Segment Tree?",
+    "options": [
+      "O(log n) update, O(log n) query",
+      "O(n) build, O(n) query",
+      "O(n) update, O(1) query",
+      "O(1) update, O(n) query"
+    ],
+    "answer": "O(log n) update, O(log n) query",
+    "explanation": "Segment Tree builds in O(n). Both point updates and range queries (sum/min/max) run in O(log n) by traversing from root to relevant leaves. This makes it ideal for problems with repeated queries and updates."
+  },
+  {
+    "id": "DSA028",
+    "domain": "dsa",
+    "topic": "Heap",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "In a max-heap, which element is always at the root?",
+    "options": [
+      "Minimum element",
+      "Median element",
+      "Maximum element",
+      "Random element"
+    ],
+    "answer": "Maximum element",
+    "explanation": "By the max-heap property, every parent node is greater than or equal to its children, so the root is always the maximum element."
+  },
+  {
+    "id": "DSA029",
+    "domain": "dsa",
+    "topic": "Heap",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the time complexity of inserting an element into a heap?",
+    "options": [
+      "O(n log n)",
+      "O(1)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "After inserting at the end, the element may need to bubble up (heapify up) to maintain heap property. In worst case it travels the full height, which is O(log n)."
+  },
+  {
+    "id": "DSA030",
+    "domain": "dsa",
+    "topic": "Heap",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of building a heap from an unsorted array?",
+    "options": [
+      "O(n log n)",
+      "O(n\u00b2)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Using the bottom-up heapification approach (starting from the last internal node), building a heap is O(n). This is tighter than the naive O(n log n) analysis."
+  },
+  {
+    "id": "DSA031",
+    "domain": "dsa",
+    "topic": "Heap",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "For a heap stored as an array, what is the index of the left child of node at index i (0-based)?",
+    "options": [
+      "2i",
+      "2i + 1",
+      "2i - 1",
+      "(i - 1) / 2"
+    ],
+    "answer": "2i + 1",
+    "explanation": "Heap array representation (0-based): left child = 2i+1, right child = 2i+2, parent = (i-1)/2. This formula allows heap operations without pointer overhead and is cache-friendly."
+  },
+  {
+    "id": "DSA032",
+    "domain": "dsa",
+    "topic": "Heap",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "How would you find the median of a stream of numbers efficiently?",
+    "options": [
+      "Use a single max-heap",
+      "Use two heaps: max-heap for lower half and min-heap for upper half",
+      "Use a BST",
+      "Sort the stream each time"
+    ],
+    "answer": "Use two heaps: max-heap for lower half and min-heap for upper half",
+    "explanation": "Maintain a max-heap for the lower half and a min-heap for the upper half, keeping their sizes balanced. Median is the top of the larger heap or average of both tops. O(log n) insert, O(1) median."
+  },
+  {
+    "id": "DSA033",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "In a graph with V vertices, what is the maximum number of edges in an undirected graph?",
+    "options": [
+      "V",
+      "V-1",
+      "V\u00b2",
+      "V(V-1)/2"
+    ],
+    "answer": "V(V-1)/2",
+    "explanation": "In an undirected graph, each pair of vertices can have at most one edge. Total pairs = C(V,2) = V*(V-1)/2."
+  },
+  {
+    "id": "DSA034",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which graph traversal uses a queue?",
+    "options": [
+      "DFS",
+      "Topological Sort",
+      "BFS",
+      "Dijkstra's"
+    ],
+    "answer": "BFS",
+    "explanation": "Breadth First Search uses a queue to explore nodes level by level, ensuring shortest path in unweighted graphs."
+  },
+  {
+    "id": "DSA035",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of BFS on a graph with V vertices and E edges?",
+    "options": [
+      "O(V * E)",
+      "O(V)",
+      "O(E)",
+      "O(V + E)"
+    ],
+    "answer": "O(V + E)",
+    "explanation": "BFS visits each vertex once (O(V)) and processes each edge once (O(E)), giving total time complexity of O(V + E)."
+  },
+  {
+    "id": "DSA036",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which algorithm finds the shortest path in a weighted graph with non-negative weights?",
+    "options": [
+      "Dijkstra's Algorithm",
+      "Floyd-Warshall",
+      "BFS",
+      "DFS"
+    ],
+    "answer": "Dijkstra's Algorithm",
+    "explanation": "Dijkstra's algorithm uses a greedy approach with a priority queue to find shortest paths from a source to all vertices in graphs with non-negative weights."
+  },
+  {
+    "id": "DSA037",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is a prerequisite for topological sorting?",
+    "options": [
+      "Graph must be connected",
+      "Graph must be undirected",
+      "Graph must be weighted",
+      "Graph must be a Directed Acyclic Graph (DAG)"
+    ],
+    "answer": "Graph must be a Directed Acyclic Graph (DAG)",
+    "explanation": "Topological sort is only possible on DAGs. If a cycle exists, no valid topological order exists. It orders vertices so that for every edge u\u2192v, u appears before v. Used in task scheduling and build systems."
+  },
+  {
+    "id": "DSA038",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of Dijkstra's algorithm using a binary heap (priority queue)?",
+    "options": [
+      "O(V\u00b2)",
+      "O(E log V)",
+      "O(V log V + E)",
+      "O((V + E) log V)"
+    ],
+    "answer": "O((V + E) log V)",
+    "explanation": "With a binary heap: each vertex is extracted once O(V log V), and each edge can trigger a decrease-key O(E log V), giving O((V + E) log V) total."
+  },
+  {
+    "id": "DSA039",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "When should Bellman-Ford be used instead of Dijkstra's algorithm?",
+    "options": [
+      "When the graph is dense",
+      "When the graph is unweighted",
+      "When the graph has negative weight edges or needs negative cycle detection",
+      "When the graph has many vertices"
+    ],
+    "answer": "When the graph has negative weight edges or needs negative cycle detection",
+    "explanation": "Bellman-Ford handles negative weight edges and detects negative cycles (impossible in Dijkstra's). Cost: O(V*E) vs Dijkstra's O((V+E) log V). Use Dijkstra's for non-negative weights; Bellman-Ford for negative weights."
+  },
+  {
+    "id": "DSA040",
+    "domain": "dsa",
+    "topic": "Hashing",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the average time complexity for search, insert, and delete in a hash table?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(1)",
+    "explanation": "Hash tables use a hash function to compute direct index access, giving O(1) average time for all basic operations, assuming a good hash function and low load factor."
+  },
+  {
+    "id": "DSA041",
+    "domain": "dsa",
+    "topic": "Hashing",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a collision in hashing?",
+    "options": [
+      "When the hash table is full",
+      "When the hash function is slow",
+      "When two keys produce the same hash value",
+      "When memory is insufficient"
+    ],
+    "answer": "When two keys produce the same hash value",
+    "explanation": "A collision occurs when two different keys map to the same index in the hash table. Collision resolution techniques include chaining and open addressing."
+  },
+  {
+    "id": "DSA042",
+    "domain": "dsa",
+    "topic": "Hashing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which collision resolution technique uses linked lists at each bucket?",
+    "options": [
+      "Linear probing",
+      "Quadratic probing",
+      "Double hashing",
+      "Separate chaining"
+    ],
+    "answer": "Separate chaining",
+    "explanation": "In separate chaining, each hash table slot holds a linked list of all elements that hash to that slot. Collisions are handled by appending to the list."
+  },
+  {
+    "id": "DSA043",
+    "domain": "dsa",
+    "topic": "Hashing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What happens when the load factor of a hash table exceeds its threshold (e.g., 0.75)?",
+    "options": [
+      "The table is rehashed and typically doubles in size",
+      "Old entries are deleted",
+      "The table stops accepting new entries",
+      "Collision chaining is disabled"
+    ],
+    "answer": "The table is rehashed and typically doubles in size",
+    "explanation": "When load factor (entries/buckets) exceeds threshold, the hash table resizes \u2014 typically doubling \u2014 and rehashes all entries. This is O(n) but happens rarely, keeping amortized insert O(1). High load factor degrades performance toward O(n)."
+  },
+  {
+    "id": "DSA044",
+    "domain": "dsa",
+    "topic": "Hashing",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the worst-case time complexity for search in a hash table using separate chaining?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n\u00b2)"
+    ],
+    "answer": "O(n)",
+    "explanation": "In the worst case, all n elements hash to the same bucket, creating a linked list of length n. Searching requires traversing the entire list: O(n)."
+  },
+  {
+    "id": "DSA045",
+    "domain": "dsa",
+    "topic": "Recursion",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the base case in a recursive function?",
+    "options": [
+      "The recursive call",
+      "The return type",
+      "The condition that stops recursion",
+      "The function parameters"
+    ],
+    "answer": "The condition that stops recursion",
+    "explanation": "The base case is the condition under which the recursive function returns without making another recursive call, preventing infinite recursion."
+  },
+  {
+    "id": "DSA046",
+    "domain": "dsa",
+    "topic": "Recursion",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What data structure is implicitly used during recursive function calls?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Array"
+    ],
+    "answer": "Stack",
+    "explanation": "Each recursive call adds a stack frame to the call stack. The function returns by unwinding the call stack, which operates in LIFO order."
+  },
+  {
+    "id": "DSA047",
+    "domain": "dsa",
+    "topic": "Backtracking",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which problem is a classic example of backtracking?",
+    "options": [
+      "N-Queens problem",
+      "Merge sort",
+      "Dijkstra's shortest path",
+      "Binary search"
+    ],
+    "answer": "N-Queens problem",
+    "explanation": "N-Queens requires placing N queens on an N\u00d7N board such that no two queens attack each other. Backtracking places queens column by column and backtracks when a conflict is found."
+  },
+  {
+    "id": "DSA048",
+    "domain": "dsa",
+    "topic": "Backtracking",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following best describes the backtracking template?",
+    "options": [
+      "Choose \u2192 Sort \u2192 Recurse \u2192 Return",
+      "Loop \u2192 Check \u2192 Store \u2192 Exit",
+      "Divide \u2192 Conquer \u2192 Merge \u2192 Return",
+      "Choose \u2192 Constraint Check \u2192 Explore \u2192 Unchoose (backtrack)"
+    ],
+    "answer": "Choose \u2192 Constraint Check \u2192 Explore \u2192 Unchoose (backtrack)",
+    "explanation": "Backtracking: 1) Choose a candidate, 2) Check constraints (prune invalid paths), 3) Explore recursively, 4) Unchoose to restore state. This DFS-with-pruning approach systematically searches all possibilities while abandoning invalid branches early."
+  },
+  {
+    "id": "DSA049",
+    "domain": "dsa",
+    "topic": "Recursion",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of calculating Fibonacci numbers using naive recursion?",
+    "options": [
+      "O(n\u00b2)",
+      "O(n)",
+      "O(2^n)",
+      "O(n log n)"
+    ],
+    "answer": "O(2^n)",
+    "explanation": "Naive recursive Fibonacci has exponential time complexity because it recalculates the same subproblems repeatedly. For fib(n), the call tree has approximately 2^n nodes."
+  },
+  {
+    "id": "DSA050",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What are the two key properties a problem must have to be solved using Dynamic Programming?",
+    "options": [
+      "Overlapping subproblems and optimal substructure",
+      "Memoization and tabulation",
+      "Recursion and iteration",
+      "Greedy choice and optimal substructure"
+    ],
+    "answer": "Overlapping subproblems and optimal substructure",
+    "explanation": "DP requires: overlapping subproblems (same subproblems solved multiple times) and optimal substructure (optimal solution built from optimal subsolutions)."
+  },
+  {
+    "id": "DSA051",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is memoization in dynamic programming?",
+    "options": [
+      "Storing results of subproblems to avoid recomputation",
+      "Breaking problem into non-overlapping subproblems",
+      "Converting recursion to iteration",
+      "Sorting the problem input"
+    ],
+    "answer": "Storing results of subproblems to avoid recomputation",
+    "explanation": "Memoization (top-down DP) caches the result of each subproblem the first time it's solved, returning the cached value on subsequent calls."
+  },
+  {
+    "id": "DSA052",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time and space complexity of the Longest Common Subsequence (LCS) DP solution?",
+    "options": [
+      "O(n*m) time, O(n*m) space",
+      "O(n+m) time, O(1) space",
+      "O(n log m) time, O(n) space",
+      "O(n\u00b2) time, O(n) space"
+    ],
+    "answer": "O(n*m) time, O(n*m) space",
+    "explanation": "LCS builds a 2D DP table of size n\u00d7m where n and m are string lengths. Each cell takes O(1) to compute, giving O(n*m) time and space (space can be optimized to O(min(n,m)))."
+  },
+  {
+    "id": "DSA053",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the main advantage of bottom-up (tabulation) DP over top-down (memoization)?",
+    "options": [
+      "Top-down is always faster",
+      "Bottom-up avoids recursion overhead and stack overflow risk, often faster in practice",
+      "Memoization uses less memory",
+      "Top-down handles more problem types"
+    ],
+    "answer": "Bottom-up avoids recursion overhead and stack overflow risk, often faster in practice",
+    "explanation": "Top-down (memoization): natural recursive translation, risk of stack overflow for large n. Bottom-up (tabulation): iterative, fills DP table from smallest subproblems, no function call overhead, better space control. Same time complexity, bottom-up usually preferred in production."
+  },
+  {
+    "id": "DSA054",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of the 0/1 Knapsack problem using dynamic programming?",
+    "options": [
+      "O(n)",
+      "O(nW)",
+      "O(n log n)",
+      "O(2^n)"
+    ],
+    "answer": "O(nW)",
+    "explanation": "The DP table has n*W cells (n items, W capacity), each computed in O(1), giving O(nW) time and space. Note: this is pseudo-polynomial \u2014 exponential in the input size of W."
+  },
+  {
+    "id": "DSA055",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "In the Coin Change DP solution, what does dp[i] represent?",
+    "options": [
+      "The coin denomination at index i",
+      "The minimum number of coins needed to make amount i",
+      "The number of ways to make amount i",
+      "The maximum value achievable with i coins"
+    ],
+    "answer": "The minimum number of coins needed to make amount i",
+    "explanation": "Coin Change DP: dp[0]=0 (base), dp[i]=min over all coins c where c<=i of dp[i-c]+1. Answer is dp[amount]. This bottom-up approach fills the table for amounts 1 to target in O(amount * num_coins) time."
+  },
+  {
+    "id": "DSA056",
+    "domain": "dsa",
+    "topic": "Greedy",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following problems can be solved optimally using a greedy approach?",
+    "options": [
+      "0/1 Knapsack",
+      "Matrix Chain Multiplication",
+      "Activity Selection Problem",
+      "Longest Common Subsequence"
+    ],
+    "answer": "Activity Selection Problem",
+    "explanation": "Activity selection (choosing max non-overlapping activities) has greedy choice property \u2014 always picking the activity with earliest finish time yields optimal result."
+  },
+  {
+    "id": "DSA057",
+    "domain": "dsa",
+    "topic": "Greedy",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which algorithm uses a greedy approach to find the Minimum Spanning Tree?",
+    "options": [
+      "Dijkstra's",
+      "Floyd-Warshall",
+      "Bellman-Ford",
+      "Kruskal's"
+    ],
+    "answer": "Kruskal's",
+    "explanation": "Kruskal's algorithm greedily selects the smallest weight edge that doesn't form a cycle, building the MST edge by edge. Time: O(E log E) for sorting edges."
+  },
+  {
+    "id": "DSA058",
+    "domain": "dsa",
+    "topic": "Greedy",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the key difference between greedy algorithms and dynamic programming?",
+    "options": [
+      "Greedy makes irrevocable locally optimal choices; DP explores all options and picks the best",
+      "Greedy uses recursion; DP uses iteration",
+      "Greedy is always slower than DP",
+      "DP can only solve sorting problems"
+    ],
+    "answer": "Greedy makes irrevocable locally optimal choices; DP explores all options and picks the best",
+    "explanation": "Greedy: make the locally best choice at each step and never revise \u2014 works when the greedy choice property holds. DP: try all sub-choices and build optimal solution from optimal subproblems. Greedy is faster but only applicable when provably correct."
+  },
+  {
+    "id": "DSA059",
+    "domain": "dsa",
+    "topic": "Greedy",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of Huffman Encoding?",
+    "options": [
+      "O(n log n)",
+      "O(2^n)",
+      "O(n)",
+      "O(n\u00b2)"
+    ],
+    "answer": "O(n log n)",
+    "explanation": "Huffman encoding builds a priority queue of n characters in O(n), then performs n-1 merges each taking O(log n) with the min-heap, giving O(n log n) total."
+  },
+  {
+    "id": "DSA060",
+    "domain": "dsa",
+    "topic": "Sorting",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the worst-case time complexity of Bubble Sort?",
+    "options": [
+      "O(n log n)",
+      "O(n\u00b2)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "answer": "O(n\u00b2)",
+    "explanation": "Bubble Sort makes n-1 passes through the array, each comparing adjacent elements. Worst case (reverse sorted): O(n\u00b2) comparisons and swaps."
+  },
+  {
+    "id": "DSA061",
+    "domain": "dsa",
+    "topic": "Sorting",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which sorting algorithm has O(n log n) average-case complexity and O(n\u00b2) worst case?",
+    "options": [
+      "Quick Sort",
+      "Merge Sort",
+      "Heap Sort",
+      "Bubble Sort"
+    ],
+    "answer": "Quick Sort",
+    "explanation": "Quick Sort averages O(n log n) with good pivot selection but degrades to O(n\u00b2) with consistently bad pivots (e.g., always picking the smallest/largest element in a sorted array)."
+  },
+  {
+    "id": "DSA062",
+    "domain": "dsa",
+    "topic": "Sorting",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which sorting algorithm is stable and has O(n log n) time complexity in all cases?",
+    "options": [
+      "Selection Sort",
+      "Merge Sort",
+      "Quick Sort",
+      "Heap Sort"
+    ],
+    "answer": "Merge Sort",
+    "explanation": "Merge Sort is stable (preserves relative order of equal elements) and guarantees O(n log n) in best, average, and worst cases. Space: O(n)."
+  },
+  {
+    "id": "DSA063",
+    "domain": "dsa",
+    "topic": "Sorting",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Why is Merge Sort preferred over Quick Sort for sorting linked lists?",
+    "options": [
+      "Merge Sort uses O(1) space for linked lists",
+      "Merge Sort is always faster",
+      "Merge Sort doesn't need random access \u2014 splitting and merging work with pointer manipulation",
+      "Quick Sort cannot handle duplicates in linked lists"
+    ],
+    "answer": "Merge Sort doesn't need random access \u2014 splitting and merging work with pointer manipulation",
+    "explanation": "Quick Sort needs efficient random-access for pivot selection (O(n) for linked lists). Merge Sort splits at midpoint using slow-fast pointer (O(n)) and merges via pointer manipulation without extra space. This makes Merge Sort the natural choice for linked lists."
+  },
+  {
+    "id": "DSA064",
+    "domain": "dsa",
+    "topic": "Sorting",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of Heap Sort?",
+    "options": [
+      "O(n log n) average, O(n\u00b2) worst",
+      "O(n)",
+      "O(n log n) always",
+      "O(n\u00b2) worst case"
+    ],
+    "answer": "O(n log n) always",
+    "explanation": "Heap Sort: build heap in O(n), then extract max n times each taking O(log n) = O(n log n). This holds for all cases. Space: O(1) in-place."
+  },
+  {
+    "id": "DSA065",
+    "domain": "dsa",
+    "topic": "Sorting",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "When is Counting Sort more efficient than comparison-based sorting algorithms?",
+    "options": [
+      "When the array is nearly sorted",
+      "When the range of values k is small relative to n, giving O(n+k) time",
+      "When the array has many duplicates",
+      "When n is very large"
+    ],
+    "answer": "When the range of values k is small relative to n, giving O(n+k) time",
+    "explanation": "Counting Sort runs in O(n+k) where k is the range of input values. When k=O(n), this is O(n), beating the O(n log n) comparison-sort lower bound. Not suitable when k is very large (e.g., arbitrary integers)."
+  },
+  {
+    "id": "DSA066",
+    "domain": "dsa",
+    "topic": "Searching",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the time complexity of Binary Search?",
+    "options": [
+      "O(n)",
+      "O(n\u00b2)",
+      "O(1)",
+      "O(log n)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "Binary Search halves the search space at each step. Starting with n elements, after k steps n/2^k = 1, so k = log\u2082(n), giving O(log n) time."
+  },
+  {
+    "id": "DSA067",
+    "domain": "dsa",
+    "topic": "Searching",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the prerequisite for applying Binary Search?",
+    "options": [
+      "Array must have even size",
+      "Array must have no duplicates",
+      "Array must be stored in a heap",
+      "Array must be sorted"
+    ],
+    "answer": "Array must be sorted",
+    "explanation": "Binary Search relies on comparing the target with the middle element and discarding half the array. This only works correctly if the array is sorted."
+  },
+  {
+    "id": "DSA068",
+    "domain": "dsa",
+    "topic": "Searching",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you find the first occurrence of a target in a sorted array with duplicates using binary search?",
+    "options": [
+      "Binary search, but on finding target continue searching left",
+      "Linear scan after binary search",
+      "Standard binary search",
+      "Binary search, but on finding target continue searching right"
+    ],
+    "answer": "Binary search, but on finding target continue searching left",
+    "explanation": "When target is found, record the position but continue searching the left half (high = mid - 1) to find the leftmost occurrence. This keeps O(log n) time."
+  },
+  {
+    "id": "DSA069",
+    "domain": "dsa",
+    "topic": "Searching",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which approach uses binary search to find the integer square root of a number n?",
+    "options": [
+      "Search index in array of squares",
+      "Use Newton's method iteratively",
+      "Binary search the range [0, n] for largest x where x\u00b2 \u2264 n",
+      "Linear scan from 0 to n"
+    ],
+    "answer": "Binary search the range [0, n] for largest x where x\u00b2 \u2264 n",
+    "explanation": "Binary search on answer space [0,n]: mid=(low+high)/2. If mid\u00b2\u2264n record mid and search right; if mid\u00b2>n search left. Returns largest integer whose square \u2264 n. O(log n) time \u2014 demonstrates binary search on monotonic answer space."
+  },
+  {
+    "id": "DSA070",
+    "domain": "dsa",
+    "topic": "Searching",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of searching in a sorted rotated array (e.g., [4,5,6,7,0,1,2])?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(1)",
+      "O(log n)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "Modified binary search: determine which half is sorted, check if target is in that half, search accordingly. Each step halves the space, giving O(log n)."
+  },
+  {
+    "id": "DSA071",
+    "domain": "dsa",
+    "topic": "Sliding Window",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the sliding window technique primarily used for?",
+    "options": [
+      "Finding patterns in arrays/strings without nested loops",
+      "Sorting arrays",
+      "Graph traversal",
+      "Tree balancing"
+    ],
+    "answer": "Finding patterns in arrays/strings without nested loops",
+    "explanation": "The sliding window maintains a window of elements and slides it across the array/string, avoiding redundant computation of overlapping subproblems. Reduces O(n\u00b2) to O(n)."
+  },
+  {
+    "id": "DSA072",
+    "domain": "dsa",
+    "topic": "Sliding Window",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of finding the maximum sum subarray of size k using sliding window?",
+    "options": [
+      "O(n*k)",
+      "O(n\u00b2)",
+      "O(n)",
+      "O(k log n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Sliding window computes the first window sum in O(k), then slides by adding the new element and removing the old, updating the maximum in O(1) per step. Total: O(n)."
+  },
+  {
+    "id": "DSA073",
+    "domain": "dsa",
+    "topic": "Sliding Window",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the key difference between fixed-size and variable-size sliding window techniques?",
+    "options": [
+      "Fixed window only works on sorted arrays",
+      "Fixed window size never changes and uses one pointer movement; variable window expands/shrinks dynamically based on a condition using two pointers",
+      "Fixed window uses one pointer; variable uses two pointers",
+      "Variable window is always faster"
+    ],
+    "answer": "Fixed window size never changes and uses one pointer movement; variable window expands/shrinks dynamically based on a condition using two pointers",
+    "explanation": "Fixed sliding window: window size k is constant, slide by adding right element and removing leftmost \u2014 one pointer advance. Variable window: expand right to meet condition, then shrink left to minimize \u2014 both pointers move. Each element is added/removed at most once: O(n). Example: smallest subarray with sum >= target uses variable window."
+  },
+  {
+    "id": "DSA074",
+    "domain": "dsa",
+    "topic": "Two Pointer",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which technique efficiently finds if a sorted array has a pair with a given sum?",
+    "options": [
+      "Hash Map O(n)",
+      "Both A and B are equally efficient",
+      "Two pointers from both ends O(n)",
+      "Binary search for each element O(n log n)"
+    ],
+    "answer": "Both A and B are equally efficient",
+    "explanation": "Both hash map and two-pointer approaches achieve O(n) time. Two-pointer uses O(1) space (better), hash map uses O(n) space. For sorted arrays, two pointers is preferred."
+  },
+  {
+    "id": "DSA075",
+    "domain": "dsa",
+    "topic": "Two Pointer",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of the optimized 3Sum solution using sorting and two pointers?",
+    "options": [
+      "O(n log n)",
+      "O(n\u00b3)",
+      "O(n\u00b2)",
+      "O(n)"
+    ],
+    "answer": "O(n\u00b2)",
+    "explanation": "3Sum: sort the array O(n log n), then for each element use two pointers to find pairs summing to the negative of that element in O(n). Total: O(n\u00b2). Brute force is O(n\u00b3). Duplicate skipping keeps result clean."
+  },
+  {
+    "id": "DSA076",
+    "domain": "dsa",
+    "topic": "Divide and Conquer",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is an example of Divide and Conquer?",
+    "options": [
+      "Merge Sort",
+      "Dijkstra's Algorithm",
+      "Prim's Algorithm",
+      "Bubble Sort"
+    ],
+    "answer": "Merge Sort",
+    "explanation": "Merge Sort divides the array into two halves (divide), recursively sorts each (conquer), then merges them (combine) \u2014 the classic Divide and Conquer paradigm."
+  },
+  {
+    "id": "DSA077",
+    "domain": "dsa",
+    "topic": "Divide and Conquer",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What recurrence relation represents Merge Sort's time complexity?",
+    "options": [
+      "T(n) = 2T(n/2) + O(n)",
+      "T(n) = T(n/2) + O(1)",
+      "T(n) = 2T(n-1) + O(1)",
+      "T(n) = T(n-1) + O(n)"
+    ],
+    "answer": "T(n) = 2T(n/2) + O(n)",
+    "explanation": "Merge Sort divides into 2 halves of size n/2 (giving 2T(n/2)) and the merge step is O(n). By Master Theorem Case 2, this solves to O(n log n)."
+  },
+  {
+    "id": "DSA078",
+    "domain": "dsa",
+    "topic": "Divide and Conquer",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "For T(n) = 2T(n/2) + O(n), what does the Master Theorem give?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n\u00b2)",
+      "O(log n)"
+    ],
+    "answer": "O(n log n)",
+    "explanation": "T(n) = 2T(n/2) + O(n): a=2, b=2, f(n)=n. log_b(a) = log\u2082(2) = 1. f(n) = \u0398(n^1) = Case 2 of Master Theorem. Result: \u0398(n log n). This is the recurrence for Merge Sort."
+  },
+  {
+    "id": "DSA079",
+    "domain": "dsa",
+    "topic": "Divide and Conquer",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of Strassen's matrix multiplication algorithm?",
+    "options": [
+      "O(n\u00b2 + n log n)",
+      "O(n\u00b3)",
+      "O(n\u00b2 log n)",
+      "O(n^2.81)"
+    ],
+    "answer": "O(n^2.81)",
+    "explanation": "Strassen's reduces the 8 multiplications of naive O(n\u00b3) to 7 recursive multiplications of n/2 size matrices. By Master Theorem: T(n) = 7T(n/2) + O(n\u00b2) \u2192 O(n^log\u20827) \u2248 O(n^2.807)."
+  },
+  {
+    "id": "DSA080",
+    "domain": "dsa",
+    "topic": "Complexity",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does Big O notation represent?",
+    "options": [
+      "Exact running time",
+      "Upper bound on time complexity",
+      "Best case time complexity",
+      "Lower bound on time complexity"
+    ],
+    "answer": "Upper bound on time complexity",
+    "explanation": "Big O notation describes the worst-case or upper bound on an algorithm's running time or space as the input size grows."
+  },
+  {
+    "id": "DSA081",
+    "domain": "dsa",
+    "topic": "Complexity",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following has the highest growth rate?",
+    "options": [
+      "O(n\u00b2)",
+      "O(2^n)",
+      "O(n\u00b3)",
+      "O(n log n)"
+    ],
+    "answer": "O(2^n)",
+    "explanation": "Growth rates from slowest to fastest: O(1) < O(log n) < O(n) < O(n log n) < O(n\u00b2) < O(n\u00b3) < O(2^n) < O(n!). Exponential O(2^n) grows faster than any polynomial."
+  },
+  {
+    "id": "DSA082",
+    "domain": "dsa",
+    "topic": "Complexity",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the space complexity of recursive Fibonacci without memoization?",
+    "options": [
+      "O(2^n)",
+      "O(n\u00b2)",
+      "O(1)",
+      "O(n)"
+    ],
+    "answer": "O(n)",
+    "explanation": "Although 2^n calls are made, at any time the call stack depth is at most n (the deepest branch of the recursion tree). Space complexity = O(n) = O(maximum recursion depth)."
+  },
+  {
+    "id": "DSA083",
+    "domain": "dsa",
+    "topic": "Complexity",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between Big O, Omega (\u03a9), and Theta (\u0398) notation?",
+    "options": [
+      "All three represent the same thing",
+      "O is average case; \u03a9 is worst case; \u0398 is best case",
+      "O is upper bound (worst case); \u03a9 is lower bound (best case); \u0398 is tight bound",
+      "O is for space; \u03a9 is for time; \u0398 is for both"
+    ],
+    "answer": "O is upper bound (worst case); \u03a9 is lower bound (best case); \u0398 is tight bound",
+    "explanation": "Big O: upper bound \u2014 algorithm runs in at most this growth rate. \u03a9 (Omega): lower bound \u2014 algorithm takes at least this long. \u0398 (Theta): tight bound \u2014 exact growth rate (both upper and lower). \u0398 is most precise; O is most commonly used in interviews."
+  },
+  {
+    "id": "DSA084",
+    "domain": "dsa",
+    "topic": "Complexity",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the amortized time complexity of a dynamic array's push operation?",
+    "options": [
+      "O(n)",
+      "O(n) worst case, O(1) amortized",
+      "O(log n)",
+      "O(1)"
+    ],
+    "answer": "O(n) worst case, O(1) amortized",
+    "explanation": "Most pushes are O(1), but when the array is full, it doubles in size (O(n) copy). Using accounting or aggregate analysis: total cost of n pushes is O(n), so amortized cost per push is O(1)."
+  },
+  {
+    "id": "DSA085",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the height of a complete binary tree with n nodes?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n/2)",
+      "O(\u221an)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "A complete binary tree is as balanced as possible. The height h satisfies 2^h \u2264 n < 2^(h+1), so h = \u230alog\u2082n\u230b = O(log n)."
+  },
+  {
+    "id": "DSA086",
+    "domain": "dsa",
+    "topic": "Trees",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of finding the Lowest Common Ancestor (LCA) in a BST?",
+    "options": [
+      "O(n) for skewed BST",
+      "O(1)",
+      "Both B and C",
+      "O(log n) for balanced BST"
+    ],
+    "answer": "Both B and C",
+    "explanation": "In a BST, LCA can be found by traversing from root: if both nodes are smaller go left, if both larger go right, else current node is LCA. Time = O(h) = O(log n) balanced, O(n) skewed."
+  },
+  {
+    "id": "DSA087",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which algorithm finds Strongly Connected Components in a directed graph?",
+    "options": [
+      "Prim's Algorithm",
+      "BFS",
+      "Dijkstra's",
+      "Kosaraju's Algorithm"
+    ],
+    "answer": "Kosaraju's Algorithm",
+    "explanation": "Kosaraju's algorithm performs two DFS passes: first on original graph to get finish order, second on transposed graph in reverse finish order. Time: O(V + E)."
+  },
+  {
+    "id": "DSA088",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How does Union-Find detect a cycle in an undirected graph?",
+    "options": [
+      "If Find(u) == Find(v) for edge (u,v), a cycle exists",
+      "By checking if BFS revisits a node",
+      "By counting edges vs vertices",
+      "By running DFS and checking back edges"
+    ],
+    "answer": "If Find(u) == Find(v) for edge (u,v), a cycle exists",
+    "explanation": "Union-Find: for each edge (u,v), if Find(u)==Find(v) they're already in the same set \u2014 adding this edge creates a cycle. Otherwise, Union(u,v). With path compression and union by rank, operations are nearly O(1) amortized. Used in Kruskal's MST."
+  },
+  {
+    "id": "DSA089",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of the Edit Distance (Levenshtein) dynamic programming algorithm?",
+    "options": [
+      "O(n+m)",
+      "O(n*m)",
+      "O(n log m)",
+      "O(2^n)"
+    ],
+    "answer": "O(n*m)",
+    "explanation": "Edit distance DP creates an (n+1)\u00d7(m+1) table for strings of length n and m. Each cell is computed in O(1) by considering insertion, deletion, or substitution. Total: O(n*m)."
+  },
+  {
+    "id": "DSA090",
+    "domain": "dsa",
+    "topic": "Arrays",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the Dutch National Flag algorithm used for?",
+    "options": [
+      "Detecting cycles in arrays",
+      "3-way partitioning an array (e.g., 0s, 1s, 2s) in O(n) time and O(1) space",
+      "Sorting strings alphabetically",
+      "Finding the maximum subarray"
+    ],
+    "answer": "3-way partitioning an array (e.g., 0s, 1s, 2s) in O(n) time and O(1) space",
+    "explanation": "Dutch National Flag (DNF) uses three pointers (low, mid, high) to partition an array into three sections in a single pass. O(n) time, O(1) space. Applied in Sort Colors problem, 3-way QuickSort partition."
+  },
+  {
+    "id": "DSA091",
+    "domain": "dsa",
+    "topic": "Strings",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the average-case time complexity of Rabin-Karp string matching?",
+    "options": [
+      "O(n log m)",
+      "O(n+m)",
+      "O(m\u00b2)",
+      "O(n*m)"
+    ],
+    "answer": "O(n+m)",
+    "explanation": "Rabin-Karp uses rolling hash to compute text window hashes in O(1) each. Average case O(n+m) \u2014 O(m) to hash pattern, O(n) to slide the window. Worst case O(n*m) if all windows have same hash. Supports multiple pattern search simultaneously."
+  },
+  {
+    "id": "DSA092",
+    "domain": "dsa",
+    "topic": "Heap",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of extracting the minimum element from a min-heap?",
+    "options": [
+      "O(log n)",
+      "O(1)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "Extract-min removes the root, places the last element at root, then heapifies down to restore heap property. Heapify-down takes O(log n) in worst case."
+  },
+  {
+    "id": "DSA093",
+    "domain": "dsa",
+    "topic": "Sorting",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the space complexity of Quick Sort?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "Quick Sort is in-place for comparisons, but requires O(log n) space for the recursion call stack in average case (balanced partitions). Worst case: O(n) stack space (skewed partitions)."
+  },
+  {
+    "id": "DSA094",
+    "domain": "dsa",
+    "topic": "Linked List",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What technique finds the middle of a linked list in a single pass without knowing its length?",
+    "options": [
+      "Count nodes then traverse to n/2",
+      "Floyd's slow-fast pointer \u2014 slow moves 1 step, fast moves 2 steps",
+      "Use a stack to find the middle",
+      "Store all nodes in an array"
+    ],
+    "answer": "Floyd's slow-fast pointer \u2014 slow moves 1 step, fast moves 2 steps",
+    "explanation": "Slow-fast pointer: when fast reaches the end, slow is at the middle. O(n) single pass, O(1) space. Used in linked list Merge Sort, palindrome check, and cycle detection. Avoids two-pass approach."
+  },
+  {
+    "id": "DSA095",
+    "domain": "dsa",
+    "topic": "Complexity",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "When would you prefer a Balanced BST over a Hash Table?",
+    "options": [
+      "When you need O(1) lookups",
+      "When you need sorted iteration, range queries, or order statistics",
+      "When memory is unlimited",
+      "When the dataset is very small"
+    ],
+    "answer": "When you need sorted iteration, range queries, or order statistics",
+    "explanation": "Balanced BST (O(log n) ops): supports in-order traversal, range queries, predecessor/successor, kth smallest. Hash Table (O(1) average): superior for pure key-value lookup. Choose BST for ordered operations; hash table for raw lookup speed."
+  },
+  {
+    "id": "DSA096",
+    "domain": "dsa",
+    "topic": "Greedy",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the key difference between Prim's and Kruskal's MST algorithms?",
+    "options": [
+      "Prim's uses DFS; Kruskal's uses BFS",
+      "Kruskal's is always faster",
+      "Prim's uses Union-Find; Kruskal's uses a heap",
+      "Prim's grows one connected component greedily; Kruskal's sorts all edges and avoids cycles"
+    ],
+    "answer": "Prim's grows one connected component greedily; Kruskal's sorts all edges and avoids cycles",
+    "explanation": "Prim's: starts from one vertex, greedily adds cheapest edge to MST tree. O((V+E) log V). Better for dense graphs. Kruskal's: sorts all edges, adds cheapest edge that doesn't form cycle (Union-Find). O(E log E). Better for sparse graphs."
+  },
+  {
+    "id": "DSA097",
+    "domain": "dsa",
+    "topic": "Backtracking",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of generating all subsets (power set) of a set with n elements?",
+    "options": [
+      "O(n * 2^n)",
+      "O(n\u00b2)",
+      "O(2^n)",
+      "O(n)"
+    ],
+    "answer": "O(n * 2^n)",
+    "explanation": "There are 2^n subsets. Generating each subset takes O(n) to copy elements. Total: O(n * 2^n). The backtracking tree has 2^n leaves and O(n) depth, giving O(n * 2^n) total work."
+  },
+  {
+    "id": "DSA098",
+    "domain": "dsa",
+    "topic": "Two Pointer",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Two pointer technique requires the input array to always be sorted. Is this statement true?",
+    "options": [
+      "It depends on the specific problem",
+      "False, some problems work on unsorted arrays",
+      "True, but only for one pointer",
+      "True, always"
+    ],
+    "answer": "It depends on the specific problem",
+    "explanation": "Many two-pointer problems require sorting (pair sum, 3Sum), but some work on unsorted data (e.g., removing duplicates in-place, partitioning, container with most water doesn't require sorting)."
+  },
+  {
+    "id": "DSA099",
+    "domain": "dsa",
+    "topic": "Dynamic Programming",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which DP problem involves finding the length of the longest increasing subsequence?",
+    "options": [
+      "Matrix Chain Multiplication",
+      "Coin Change",
+      "Longest Increasing Subsequence (LIS)",
+      "Rod Cutting"
+    ],
+    "answer": "Longest Increasing Subsequence (LIS)",
+    "explanation": "LIS finds the length of the longest subsequence where each element is strictly greater than the previous. Standard DP: O(n\u00b2). Optimized with binary search: O(n log n)."
+  },
+  {
+    "id": "DSA100",
+    "domain": "dsa",
+    "topic": "Graphs",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the time complexity of Floyd-Warshall all-pairs shortest path algorithm?",
+    "options": [
+      "O(V\u00b3)",
+      "O(V + E)",
+      "O(V\u00b2 log V)",
+      "O(V * E)"
+    ],
+    "answer": "O(V\u00b3)",
+    "explanation": "Floyd-Warshall uses a 3-nested-loop DP: for each intermediate vertex k, update dp[i][j] = min(dp[i][j], dp[i][k]+dp[k][j]). Time O(V\u00b3), Space O(V\u00b2). Handles negative weights but not negative cycles. Simpler to implement than running Dijkstra V times."
+  }
+]

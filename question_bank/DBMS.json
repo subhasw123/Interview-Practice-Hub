@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "DBMS001",
+    "domain": "dbms",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does DBMS stand for?",
+    "options": [
+      "Data Building and Modeling System",
+      "Database Management System",
+      "Distributed Backup Management System",
+      "Data Backup Management System"
+    ],
+    "answer": "Database Management System",
+    "explanation": "DBMS stands for Database Management System \u2014 software that enables users to define, create, maintain, and control access to a database. Examples: MySQL, Oracle, PostgreSQL, MongoDB, SQL Server."
+  },
+  {
+    "id": "DBMS002",
+    "domain": "dbms",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is NOT an advantage of using a DBMS over a file system?",
+    "options": [
+      "Faster processing than all file operations",
+      "Data redundancy control",
+      "Data integrity enforcement",
+      "Concurrent access management"
+    ],
+    "answer": "Faster processing than all file operations",
+    "explanation": "DBMS is not always faster than file systems for simple sequential reads. Its advantages are: reduced data redundancy, data integrity, concurrent access control, security, backup/recovery, and data independence \u2014 not raw speed over file systems."
+  },
+  {
+    "id": "DBMS003",
+    "domain": "dbms",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a database schema?",
+    "options": [
+      "A type of database query",
+      "The actual data stored in the database",
+      "The logical structure or blueprint that defines how data is organized in the database",
+      "A backup of the database"
+    ],
+    "answer": "The logical structure or blueprint that defines how data is organized in the database",
+    "explanation": "A database schema defines the structure of the database: tables, columns, data types, constraints, and relationships. It is the design/blueprint, not the data itself. Instance refers to the actual data stored at a given point in time."
+  },
+  {
+    "id": "DBMS004",
+    "domain": "dbms",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is data independence in DBMS?",
+    "options": [
+      "Each user having independent access",
+      "Data that cannot be modified",
+      "Data stored independently on different servers",
+      "The ability to change the schema at one level without affecting the schema at another level"
+    ],
+    "answer": "The ability to change the schema at one level without affecting the schema at another level",
+    "explanation": "Data independence has two types: Physical data independence \u2014 changing physical storage doesn't affect logical schema. Logical data independence \u2014 changing logical schema doesn't affect application programs. This is achieved through the three-level ANSI/SPARC architecture."
+  },
+  {
+    "id": "DBMS005",
+    "domain": "dbms",
+    "topic": "Three Level Architecture",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What are the three levels of the ANSI/SPARC database architecture?",
+    "options": [
+      "User, Admin, Developer",
+      "Physical, Logical, Application",
+      "Input, Process, Output",
+      "External, Conceptual, Internal"
+    ],
+    "answer": "External, Conceptual, Internal",
+    "explanation": "Three-level ANSI/SPARC architecture: External (View) level \u2014 individual user views of data. Conceptual level \u2014 community view, logical structure of entire database (ER diagram). Internal (Physical) level \u2014 how data is physically stored on disk (indexes, file organization). Mappings between levels enable data independence."
+  },
+  {
+    "id": "DBMS006",
+    "domain": "dbms",
+    "topic": "Data Models",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which data model organizes data into tables with rows and columns?",
+    "options": [
+      "Hierarchical model",
+      "Network model",
+      "Relational model",
+      "Object-oriented model"
+    ],
+    "answer": "Relational model",
+    "explanation": "The Relational model (proposed by E.F. Codd, 1970) organizes data into relations (tables) with tuples (rows) and attributes (columns). All modern SQL databases (MySQL, PostgreSQL, Oracle) are based on the relational model."
+  },
+  {
+    "id": "DBMS007",
+    "domain": "dbms",
+    "topic": "Data Models",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the key characteristic of a hierarchical data model?",
+    "options": [
+      "Data organized in a tree structure where each child has exactly one parent",
+      "Data organized in tables",
+      "Data organized as a graph with multiple parents",
+      "Data stored as key-value pairs"
+    ],
+    "answer": "Data organized in a tree structure where each child has exactly one parent",
+    "explanation": "Hierarchical model: data organized in a tree (parent-child relationship). Each child record has exactly ONE parent. Efficient for one-to-many relationships but cannot represent many-to-many without duplication. Example: IBM's IMS database. Predecessor to relational model."
+  },
+  {
+    "id": "DBMS008",
+    "domain": "dbms",
+    "topic": "Keys",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a super key in a relational database?",
+    "options": [
+      "Any set of attributes that can uniquely identify a tuple in a relation",
+      "A key that references another table",
+      "A key with only one attribute",
+      "The primary key of a parent table"
+    ],
+    "answer": "Any set of attributes that can uniquely identify a tuple in a relation",
+    "explanation": "Super key: any set of one or more attributes that uniquely identifies a row. A table can have many super keys. Candidate key: minimal super key (no redundant attributes). Primary key: chosen candidate key. Foreign key: references primary key of another table."
+  },
+  {
+    "id": "DBMS009",
+    "domain": "dbms",
+    "topic": "Keys",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a candidate key?",
+    "options": [
+      "Any attribute in a table",
+      "A composite key with exactly two attributes",
+      "A key that is a candidate to be a foreign key",
+      "A minimal super key \u2014 a super key with no unnecessary attributes"
+    ],
+    "answer": "A minimal super key \u2014 a super key with no unnecessary attributes",
+    "explanation": "Candidate key: minimal super key \u2014 uniquely identifies rows, and removing any attribute would lose that property. A table can have multiple candidate keys. One is chosen as the PRIMARY KEY; others become ALTERNATE keys. Example: both 'email' and 'phone' could be candidate keys in a users table."
+  },
+  {
+    "id": "DBMS010",
+    "domain": "dbms",
+    "topic": "Keys",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a primary key and a unique key?",
+    "options": [
+      "Unique key cannot have duplicates but primary key can",
+      "Primary key can have NULLs; unique key cannot",
+      "No difference",
+      "Primary key: NOT NULL + UNIQUE, one per table; Unique key: allows one NULL, multiple per table"
+    ],
+    "answer": "Primary key: NOT NULL + UNIQUE, one per table; Unique key: allows one NULL, multiple per table",
+    "explanation": "Primary key: uniquely identifies each row, cannot be NULL, only ONE per table, usually clustered index. Unique key: enforces uniqueness, typically allows one NULL value, a table can have MULTIPLE unique keys, creates non-clustered index by default."
+  },
+  {
+    "id": "DBMS011",
+    "domain": "dbms",
+    "topic": "ER Model",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does ER stand for in ER diagram?",
+    "options": [
+      "Extended Relational",
+      "Element Reference",
+      "Execution Rules",
+      "Entity Relationship"
+    ],
+    "answer": "Entity Relationship",
+    "explanation": "ER (Entity-Relationship) diagram is a conceptual data modeling tool proposed by Peter Chen (1976). It represents entities (tables), attributes (columns), and relationships between entities graphically, used to design database schemas before implementation."
+  },
+  {
+    "id": "DBMS012",
+    "domain": "dbms",
+    "topic": "ER Model",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is an entity in an ER diagram?",
+    "options": [
+      "A relationship between tables",
+      "A real-world object or concept that has a distinct existence and data stored about it",
+      "A constraint on a table",
+      "A column in a table"
+    ],
+    "answer": "A real-world object or concept that has a distinct existence and data stored about it",
+    "explanation": "Entity: a real-world object with independent existence \u2014 represented as a rectangle in ER diagram. Example: Student, Employee, Product. Entity set: collection of similar entities. Weak entity: depends on strong entity for identification (represented by double rectangle)."
+  },
+  {
+    "id": "DBMS013",
+    "domain": "dbms",
+    "topic": "ER Model",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a weak entity in an ER diagram?",
+    "options": [
+      "An entity that stores temporary data",
+      "An entity with few attributes",
+      "An entity that cannot be uniquely identified by its own attributes alone and depends on a strong entity",
+      "An entity that has no relationships"
+    ],
+    "answer": "An entity that cannot be uniquely identified by its own attributes alone and depends on a strong entity",
+    "explanation": "Weak entity: cannot be uniquely identified without its owner/strong entity. Has a partial key (discriminator) \u2014 unique only within the context of the owner entity. Shown as double rectangle. Relationship to owner is double diamond. Example: Order_Item depends on Order."
+  },
+  {
+    "id": "DBMS014",
+    "domain": "dbms",
+    "topic": "ER Model",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between total and partial participation in an ER diagram?",
+    "options": [
+      "Total means all instances participate; partial means some may not",
+      "Total participation is shown with a single line; partial with double line",
+      "Total means one entity; partial means many entities",
+      "Both mean the same thing"
+    ],
+    "answer": "Total means all instances participate; partial means some may not",
+    "explanation": "Total participation (mandatory): every entity instance must participate in the relationship \u2014 shown with DOUBLE LINE. Example: every employee MUST belong to a department. Partial participation (optional): some entity instances may not participate \u2014 shown with SINGLE LINE. Example: not every employee manages a department."
+  },
+  {
+    "id": "DBMS015",
+    "domain": "dbms",
+    "topic": "ER Model",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a recursive relationship in an ER diagram?",
+    "options": [
+      "A relationship between three entities",
+      "A redundant relationship",
+      "A relationship where an entity has a relationship with itself",
+      "A relationship that loops back to a previous entity"
+    ],
+    "answer": "A relationship where an entity has a relationship with itself",
+    "explanation": "Recursive (unary) relationship: an entity participates in a relationship with itself. Example: Employee 'manages' Employee (manager-subordinate). Employee 'is married to' Employee. Represented with a relationship connecting back to the same entity, with role names to distinguish participation."
+  },
+  {
+    "id": "DBMS016",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the primary goal of normalization in database design?",
+    "options": [
+      "To encrypt sensitive data",
+      "To reduce data redundancy and eliminate data anomalies",
+      "To increase query speed",
+      "To add more tables to the database"
+    ],
+    "answer": "To reduce data redundancy and eliminate data anomalies",
+    "explanation": "Normalization eliminates data redundancy and update/insert/delete anomalies by organizing data into well-structured tables. It involves decomposing tables into smaller ones with proper dependencies. Higher normal forms provide stronger redundancy elimination."
+  },
+  {
+    "id": "DBMS017",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is a violation of First Normal Form (1NF)?",
+    "options": [
+      "A foreign key referencing another table",
+      "A column storing multiple values like 'Math,Science,English'",
+      "A table with a composite primary key",
+      "A table with no primary key"
+    ],
+    "answer": "A column storing multiple values like 'Math,Science,English'",
+    "explanation": "1NF requires: each column contains atomic (indivisible) values, each column contains values of a single type, each column has a unique name, order of rows/columns doesn't matter. Storing 'Math,Science,English' in one column violates atomicity \u2014 violates 1NF."
+  },
+  {
+    "id": "DBMS018",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "A table is in 2NF if it is in 1NF and has no:",
+    "options": [
+      "Redundant foreign keys",
+      "Partial dependencies on the primary key",
+      "Multi-valued dependencies",
+      "Transitive dependencies"
+    ],
+    "answer": "Partial dependencies on the primary key",
+    "explanation": "2NF: must be in 1NF AND every non-key attribute must be FULLY functionally dependent on the entire primary key (no partial dependency). Partial dependency: a non-key attribute depends on only PART of a composite primary key. 2NF is only relevant when the primary key is composite."
+  },
+  {
+    "id": "DBMS019",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which anomaly does 3NF primarily eliminate?",
+    "options": [
+      "Join dependency",
+      "Partial dependency",
+      "Transitive dependency",
+      "Multi-valued dependency"
+    ],
+    "answer": "Transitive dependency",
+    "explanation": "3NF: must be in 2NF AND no non-key attribute should depend on another non-key attribute (no transitive dependency). Example: Employee(emp_id, dept_id, dept_name) \u2014 dept_name depends on dept_id (non-key), not emp_id. Fix: move dept_name to a Departments table."
+  },
+  {
+    "id": "DBMS020",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between 3NF and BCNF (Boyce-Codd Normal Form)?",
+    "options": [
+      "3NF is stricter than BCNF",
+      "They are identical",
+      "BCNF only applies to composite keys",
+      "BCNF is stricter \u2014 every determinant must be a super key, while 3NF allows non-super key determinants if the dependent is part of a candidate key"
+    ],
+    "answer": "BCNF is stricter \u2014 every determinant must be a super key, while 3NF allows non-super key determinants if the dependent is part of a candidate key",
+    "explanation": "3NF allows: A\u2192B where A is not a super key IF B is part of a candidate key. BCNF requires: for every non-trivial functional dependency A\u2192B, A must be a super key. BCNF eliminates all redundancy from FDs but may lose some FDs (lossless decomposition but not always dependency-preserving)."
+  },
+  {
+    "id": "DBMS021",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is denormalization and when is it used?",
+    "options": [
+      "Splitting one table into many tables",
+      "Converting to higher normal forms",
+      "Removing all foreign keys from a schema",
+      "Intentionally introducing redundancy to improve read performance by reducing JOINs"
+    ],
+    "answer": "Intentionally introducing redundancy to improve read performance by reducing JOINs",
+    "explanation": "Denormalization adds controlled redundancy (duplicate columns, precomputed aggregates) to reduce expensive JOIN operations. Used in: data warehouses, OLAP systems, reporting databases, read-heavy applications. Trade-off: faster reads at the cost of slower writes and potential update anomalies."
+  },
+  {
+    "id": "DBMS022",
+    "domain": "dbms",
+    "topic": "Functional Dependencies",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the functional dependency A \u2192 B mean?",
+    "options": [
+      "B must be a primary key",
+      "A is derived from B",
+      "If two tuples have the same value of A, they must have the same value of B",
+      "A and B must be in separate tables"
+    ],
+    "answer": "If two tuples have the same value of A, they must have the same value of B",
+    "explanation": "Functional dependency A\u2192B: attribute A functionally determines attribute B \u2014 for any two tuples with the same A value, they must have the same B value. A is the determinant, B is the dependent. Example: emp_id \u2192 emp_name (knowing emp_id uniquely determines emp_name)."
+  },
+  {
+    "id": "DBMS023",
+    "domain": "dbms",
+    "topic": "Functional Dependencies",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which of the following is an Armstrong's Axiom?",
+    "options": [
+      "If A\u2192B then A must be a primary key",
+      "If A\u2192B then A and B must be in same table",
+      "If A\u2192B and B\u2192C then A\u2192C (Transitivity)",
+      "If A\u2192B then B\u2192A (Symmetry)"
+    ],
+    "answer": "If A\u2192B and B\u2192C then A\u2192C (Transitivity)",
+    "explanation": "Armstrong's Axioms (sound and complete rules for FDs): Reflexivity (if B\u2286A then A\u2192B), Augmentation (if A\u2192B then AC\u2192BC), Transitivity (if A\u2192B and B\u2192C then A\u2192C). Derived rules: Union, Decomposition, Pseudo-transitivity. Used to derive all functional dependencies from a given set."
+  },
+  {
+    "id": "DBMS024",
+    "domain": "dbms",
+    "topic": "Transactions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does ACID stand for in database transactions?",
+    "options": [
+      "Availability, Consistency, Integrity, Dependency",
+      "Atomicity, Consistency, Isolation, Durability",
+      "Atomicity, Consistency, Isolation, Distribution",
+      "Atomicity, Concurrency, Integrity, Distribution"
+    ],
+    "answer": "Atomicity, Consistency, Isolation, Durability",
+    "explanation": "ACID properties: Atomicity (all operations succeed or all fail \u2014 no partial execution), Consistency (database goes from one valid state to another), Isolation (concurrent transactions don't interfere with each other), Durability (committed transactions survive system failures permanently)."
+  },
+  {
+    "id": "DBMS025",
+    "domain": "dbms",
+    "topic": "Transactions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a dirty read in database concurrency?",
+    "options": [
+      "Reading deleted data",
+      "Reading the same row twice with different values",
+      "Reading data from a corrupted table",
+      "Reading data written by a transaction that has not yet committed, which may later be rolled back"
+    ],
+    "answer": "Reading data written by a transaction that has not yet committed, which may later be rolled back",
+    "explanation": "Dirty read: Transaction T2 reads data modified by T1, which then rolls back. T2 has read 'dirty' (invalid) data. Prevented by Read Committed isolation level and above. Other problems: non-repeatable read (same row, different values on re-read), phantom read (new rows appear in re-executed query)."
+  },
+  {
+    "id": "DBMS026",
+    "domain": "dbms",
+    "topic": "Transactions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which transaction isolation level prevents all three concurrency problems: dirty reads, non-repeatable reads, and phantom reads?",
+    "options": [
+      "Serializable",
+      "Read Uncommitted",
+      "Repeatable Read",
+      "Read Committed"
+    ],
+    "answer": "Serializable",
+    "explanation": "Isolation levels and problems prevented: Read Uncommitted: none. Read Committed: prevents dirty reads. Repeatable Read: prevents dirty + non-repeatable reads. Serializable: prevents all three (dirty, non-repeatable, phantom reads) \u2014 highest isolation, lowest concurrency, slowest."
+  },
+  {
+    "id": "DBMS027",
+    "domain": "dbms",
+    "topic": "Transactions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a phantom read?",
+    "options": [
+      "Reading data from a deleted table",
+      "Reading data from a backup",
+      "A transaction re-executing a query gets different rows because another committed transaction inserted or deleted rows",
+      "Reading NULL values"
+    ],
+    "answer": "A transaction re-executing a query gets different rows because another committed transaction inserted or deleted rows",
+    "explanation": "Phantom read: T1 executes a range query (SELECT WHERE salary > 50000), T2 inserts a new row matching that condition and commits, T1 re-executes the same query and sees the new 'phantom' row. Prevented only by Serializable isolation level (or range locks in some implementations)."
+  },
+  {
+    "id": "DBMS028",
+    "domain": "dbms",
+    "topic": "Concurrency Control",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of locking in DBMS concurrency control?",
+    "options": [
+      "To speed up queries",
+      "To serialize access to shared data, preventing conflicting concurrent operations that could cause inconsistency",
+      "To encrypt data",
+      "To prevent users from logging in"
+    ],
+    "answer": "To serialize access to shared data, preventing conflicting concurrent operations that could cause inconsistency",
+    "explanation": "Locks control concurrent access to shared data. Shared (S) lock: for reading \u2014 multiple transactions can hold S lock simultaneously. Exclusive (X) lock: for writing \u2014 only one transaction can hold X lock, blocks all others. Prevents lost updates, dirty reads, and inconsistent analysis."
+  },
+  {
+    "id": "DBMS029",
+    "domain": "dbms",
+    "topic": "Concurrency Control",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is Two-Phase Locking (2PL) protocol?",
+    "options": [
+      "A protocol where locks are acquired in two separate database instances",
+      "A two-step login protocol",
+      "A protocol using exactly two lock types",
+      "A protocol where all locks are acquired in the growing phase and released in the shrinking phase, guaranteeing serializability"
+    ],
+    "answer": "A protocol where all locks are acquired in the growing phase and released in the shrinking phase, guaranteeing serializability",
+    "explanation": "2PL: Growing phase \u2014 transaction can acquire locks but not release any. Shrinking phase \u2014 transaction can release locks but not acquire new ones. Lock point: when last lock is acquired. 2PL guarantees conflict-serializability but may cause deadlocks. Strict 2PL: hold all locks until commit (prevents cascading rollbacks)."
+  },
+  {
+    "id": "DBMS030",
+    "domain": "dbms",
+    "topic": "Concurrency Control",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a deadlock in DBMS and how is it detected?",
+    "options": [
+      "A corrupted transaction log",
+      "A query that runs indefinitely",
+      "A situation where two or more transactions wait for each other to release locks, causing all to wait forever \u2014 detected using a wait-for graph",
+      "A failed database connection"
+    ],
+    "answer": "A situation where two or more transactions wait for each other to release locks, causing all to wait forever \u2014 detected using a wait-for graph",
+    "explanation": "Deadlock: T1 holds Lock A waits for Lock B; T2 holds Lock B waits for Lock A \u2014 circular wait. Detection: wait-for graph \u2014 if a cycle exists, deadlock exists. Resolution: abort one transaction (victim selection). Prevention: lock ordering, timeouts, wound-wait/wait-die schemes."
+  },
+  {
+    "id": "DBMS031",
+    "domain": "dbms",
+    "topic": "Concurrency Control",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between deadlock prevention and deadlock detection?",
+    "options": [
+      "Detection prevents deadlocks; prevention detects them",
+      "Prevention is for updates; detection is for reads",
+      "Prevention avoids deadlock conditions proactively (lock ordering, timestamps); Detection finds deadlocks after they occur (wait-for graph) and resolves them by aborting a victim",
+      "No difference"
+    ],
+    "answer": "Prevention avoids deadlock conditions proactively (lock ordering, timestamps); Detection finds deadlocks after they occur (wait-for graph) and resolves them by aborting a victim",
+    "explanation": "Prevention: eliminate one of Coffman's deadlock conditions proactively. Techniques: resource ordering (always acquire locks in same order), wait-die/wound-wait timestamp schemes. Detection: allow deadlocks to occur, periodically check wait-for graph for cycles, abort a victim transaction to break the cycle. Most DBMSes use detection + resolution."
+  },
+  {
+    "id": "DBMS032",
+    "domain": "dbms",
+    "topic": "Recovery",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of a transaction log (write-ahead log) in DBMS?",
+    "options": [
+      "To log user queries for auditing",
+      "To cache frequently accessed data",
+      "To record all database modifications before they are applied to the database, enabling recovery after a failure",
+      "To store indexes for faster queries"
+    ],
+    "answer": "To record all database modifications before they are applied to the database, enabling recovery after a failure",
+    "explanation": "Write-Ahead Log (WAL): all changes are written to the log BEFORE being applied to the database. Log record: [transaction ID, operation, old value, new value]. WAL enables: UNDO (rollback uncommitted transactions on crash), REDO (replay committed transactions whose changes weren't flushed to disk). Foundation of DBMS recovery."
+  },
+  {
+    "id": "DBMS033",
+    "domain": "dbms",
+    "topic": "Recovery",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a checkpoint in DBMS recovery?",
+    "options": [
+      "A point where all modified buffer pages are flushed to disk and logged, reducing the work needed during recovery",
+      "A transaction commit point",
+      "A point where a database backup is created",
+      "A database audit point"
+    ],
+    "answer": "A point where all modified buffer pages are flushed to disk and logged, reducing the work needed during recovery",
+    "explanation": "Checkpoint: DBMS periodically flushes dirty buffer pages to disk and records a checkpoint log entry. During recovery after crash: only transactions active after the last checkpoint need to be redone/undone. Reduces recovery time dramatically \u2014 without checkpoints, recovery would need to replay the entire log."
+  },
+  {
+    "id": "DBMS034",
+    "domain": "dbms",
+    "topic": "Recovery",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the ARIES recovery algorithm?",
+    "options": [
+      "A query optimization technique",
+      "A backup compression algorithm",
+      "An index building algorithm",
+      "A recovery algorithm using WAL with three phases: Analysis, REDO, UNDO"
+    ],
+    "answer": "A recovery algorithm using WAL with three phases: Analysis, REDO, UNDO",
+    "explanation": "ARIES (Algorithm for Recovery and Isolation Exploiting Semantics): Analysis phase \u2014 scan log forward from last checkpoint to determine which transactions were active and which pages were dirty. REDO phase \u2014 redo all logged operations from earliest dirty page. UNDO phase \u2014 undo operations of transactions that didn't commit. Industry standard recovery algorithm."
+  },
+  {
+    "id": "DBMS035",
+    "domain": "dbms",
+    "topic": "Indexing",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the primary purpose of an index in a DBMS?",
+    "options": [
+      "To enforce data integrity",
+      "To prevent concurrent access",
+      "To speed up data retrieval by providing fast access paths to rows",
+      "To compress data"
+    ],
+    "answer": "To speed up data retrieval by providing fast access paths to rows",
+    "explanation": "An index is an auxiliary data structure that speeds up data retrieval. Without index: full table scan O(n). With index: typically O(log n) access. Trade-off: indexes consume extra storage and slow down INSERT/UPDATE/DELETE due to index maintenance."
+  },
+  {
+    "id": "DBMS036",
+    "domain": "dbms",
+    "topic": "Indexing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a dense index and a sparse index?",
+    "options": [
+      "Dense index has more storage; sparse has less",
+      "Sparse index covers all records; dense covers some",
+      "Dense index has an entry for every search key value; sparse index has entries only for some records (one per block)",
+      "Dense index is for primary keys only"
+    ],
+    "answer": "Dense index has an entry for every search key value; sparse index has entries only for some records (one per block)",
+    "explanation": "Dense index: one index entry per data record \u2014 points to exact location. Larger, faster access. Sparse index: one entry per data block \u2014 points to first record of each block. Smaller, requires sequential scan within block. Primary index on sorted file is often sparse; secondary indexes are typically dense."
+  },
+  {
+    "id": "DBMS037",
+    "domain": "dbms",
+    "topic": "Indexing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What data structure is most commonly used for implementing database indexes?",
+    "options": [
+      "Hash table only",
+      "B+ Tree",
+      "Binary search tree",
+      "Linked list"
+    ],
+    "answer": "B+ Tree",
+    "explanation": "B+ Tree is the dominant index structure in DBMS (MySQL InnoDB, PostgreSQL, Oracle). All data in leaf nodes (unlike B-Tree), leaf nodes linked for range scans, balanced tree guarantees O(log n) for search/insert/delete. Supports point queries AND range queries. Hash indexes are faster for point queries but don't support range queries."
+  },
+  {
+    "id": "DBMS038",
+    "domain": "dbms",
+    "topic": "Indexing",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between a clustered and a non-clustered index?",
+    "options": [
+      "Non-clustered orders data physically",
+      "Clustered index physically orders table data by index key (one per table); non-clustered is a separate structure pointing to data rows (many per table)",
+      "No difference",
+      "Clustered index is always on the primary key and non-clustered on foreign keys only"
+    ],
+    "answer": "Clustered index physically orders table data by index key (one per table); non-clustered is a separate structure pointing to data rows (many per table)",
+    "explanation": "Clustered: data rows physically stored in index order \u2014 only ONE per table (data can only be sorted one way), fast for range queries on the clustered key. Non-clustered: separate B+ tree with pointers to actual data rows \u2014 multiple allowed, extra lookup step (key lookup) if non-covering. PRIMARY KEY usually creates clustered index."
+  },
+  {
+    "id": "DBMS039",
+    "domain": "dbms",
+    "topic": "Query Processing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What are the steps in query processing in a DBMS?",
+    "options": [
+      "Compilation \u2192 Linking \u2192 Running",
+      "Input \u2192 Storage \u2192 Output",
+      "Parsing \u2192 Optimization \u2192 Execution \u2192 Output",
+      "Validation \u2192 Storage \u2192 Retrieval"
+    ],
+    "answer": "Parsing \u2192 Optimization \u2192 Execution \u2192 Output",
+    "explanation": "Query processing steps: 1) Parsing & Translation \u2014 check syntax, translate SQL to relational algebra. 2) Query Optimization \u2014 generate execution plans, estimate costs, choose the cheapest plan. 3) Execution \u2014 execute the chosen plan using access methods (index scan, sequential scan, joins). 4) Return results."
+  },
+  {
+    "id": "DBMS040",
+    "domain": "dbms",
+    "topic": "Query Optimization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does a query optimizer do in a DBMS?",
+    "options": [
+      "Estimates the cost of different execution plans and chooses the most efficient one",
+      "Corrects syntax errors in SQL",
+      "Converts SQL to machine code",
+      "Caches query results"
+    ],
+    "answer": "Estimates the cost of different execution plans and chooses the most efficient one",
+    "explanation": "Query optimizer: generates multiple equivalent execution plans (different join orders, access methods), estimates cost of each using statistics (table sizes, index availability, cardinality estimates), selects the plan with minimum estimated cost. Cost metrics: I/O operations, CPU time, memory. Uses statistics from catalog (column histograms, table sizes)."
+  },
+  {
+    "id": "DBMS041",
+    "domain": "dbms",
+    "topic": "Relational Algebra",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which relational algebra operation is equivalent to SQL's WHERE clause?",
+    "options": [
+      "Selection (\u03c3)",
+      "Join (\u22c8)",
+      "Projection (\u03c0)",
+      "Union (\u222a)"
+    ],
+    "answer": "Selection (\u03c3)",
+    "explanation": "Relational algebra operations: Selection \u03c3(condition)(R) \u2014 filters rows (like SQL WHERE). Projection \u03c0(attributes)(R) \u2014 selects columns (like SQL SELECT). Join \u22c8 \u2014 combines tables (like SQL JOIN). Union \u222a \u2014 combines rows from two relations (like SQL UNION). Difference \u2212 (like SQL EXCEPT). Cartesian product \u00d7 (like SQL CROSS JOIN)."
+  },
+  {
+    "id": "DBMS042",
+    "domain": "dbms",
+    "topic": "Relational Algebra",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the projection operation (\u03c0) do in relational algebra?",
+    "options": [
+      "Filters rows based on a condition",
+      "Selects specific columns from a relation, eliminating duplicates",
+      "Combines two relations",
+      "Finds the difference between two relations"
+    ],
+    "answer": "Selects specific columns from a relation, eliminating duplicates",
+    "explanation": "Projection \u03c0(A1,A2,...An)(R) selects specified attributes (columns) from a relation and eliminates duplicate tuples from the result. Equivalent to SQL: SELECT DISTINCT A1, A2 FROM R. Reduces the 'width' of a relation. Selection reduces 'height' (rows)."
+  },
+  {
+    "id": "DBMS043",
+    "domain": "dbms",
+    "topic": "Joins",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a natural join in relational algebra?",
+    "options": [
+      "A join that returns all rows from both tables",
+      "A join with no conditions",
+      "A join between tables in their natural order",
+      "A join that automatically joins on all attributes with the same name and eliminates duplicate columns"
+    ],
+    "answer": "A join that automatically joins on all attributes with the same name and eliminates duplicate columns",
+    "explanation": "Natural join (\u22c8): automatically joins on all common attribute names, keeps only one copy of the join attributes. More concise than explicit join. Danger: if unrelated attributes happen to share names, natural join produces incorrect results. Always prefer explicit join conditions in SQL for clarity."
+  },
+  {
+    "id": "DBMS044",
+    "domain": "dbms",
+    "topic": "Storage",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a buffer pool in DBMS?",
+    "options": [
+      "A temporary table in memory",
+      "An area of main memory (RAM) managed by DBMS to cache disk pages, reducing I/O operations",
+      "A buffer for storing transaction logs",
+      "A network buffer for database connections"
+    ],
+    "answer": "An area of main memory (RAM) managed by DBMS to cache disk pages, reducing I/O operations",
+    "explanation": "Buffer pool: DBMS-managed memory cache for database pages. Disk I/O is ~1000x slower than RAM \u2014 buffer pool reduces disk access by keeping frequently used pages in memory. Buffer manager handles: page replacement (LRU, clock algorithm), dirty page tracking, pin/unpin mechanism for pages in use."
+  },
+  {
+    "id": "DBMS045",
+    "domain": "dbms",
+    "topic": "Storage",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between a heap file and a sorted file organization?",
+    "options": [
+      "Heap file: records in insertion order, fast insert O(1), slow search O(n); Sorted file: records sorted by key, fast binary search O(log n), slow insert O(n)",
+      "Heap files are sorted by primary key",
+      "Heap files are faster for all operations",
+      "Sorted files are always better"
+    ],
+    "answer": "Heap file: records in insertion order, fast insert O(1), slow search O(n); Sorted file: records sorted by key, fast binary search O(log n), slow insert O(n)",
+    "explanation": "Heap (unordered) file: insert at end O(1), search O(n) full scan, delete leaves gaps. Sorted file: insert requires shifting O(n), binary search O(log n), range queries fast. Hashed file: O(1) point queries, no range query support. DBMS typically uses heap files + indexes rather than sorted files."
+  },
+  {
+    "id": "DBMS046",
+    "domain": "dbms",
+    "topic": "Hashing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between static hashing and dynamic hashing?",
+    "options": [
+      "Dynamic hashing is slower",
+      "No difference",
+      "Static hashing supports range queries; dynamic does not",
+      "Static hashing has fixed number of buckets; dynamic hashing (extendible/linear) allows bucket count to grow as data increases"
+    ],
+    "answer": "Static hashing has fixed number of buckets; dynamic hashing (extendible/linear) allows bucket count to grow as data increases",
+    "explanation": "Static hashing: fixed hash function and buckets \u2014 overflow with large data. Dynamic hashing: Extendible hashing uses a directory that doubles when overflow occurs. Linear hashing splits buckets incrementally. Both support growing datasets without complete rehashing. Neither supports range queries (unlike B+ trees)."
+  },
+  {
+    "id": "DBMS047",
+    "domain": "dbms",
+    "topic": "Distributed Databases",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does the CAP theorem state?",
+    "options": [
+      "A distributed system can have Consistency, Availability, and Partition tolerance simultaneously",
+      "A distributed system can guarantee at most two of three: Consistency, Availability, Partition tolerance",
+      "CAP only applies to relational databases",
+      "All three properties can be achieved with proper hardware"
+    ],
+    "answer": "A distributed system can guarantee at most two of three: Consistency, Availability, Partition tolerance",
+    "explanation": "CAP theorem (Brewer, 2000): in a distributed system, you can only guarantee TWO of: Consistency (all nodes see same data), Availability (every request gets a response), Partition Tolerance (system works despite network partitions). Since network partitions are unavoidable, you choose CP (consistent but may be unavailable) or AP (available but may be inconsistent)."
+  },
+  {
+    "id": "DBMS048",
+    "domain": "dbms",
+    "topic": "Distributed Databases",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is horizontal partitioning (sharding) in a distributed database?",
+    "options": [
+      "Compressing database tables horizontally",
+      "Splitting columns across different servers",
+      "Distributing rows of a table across multiple database nodes based on a shard key",
+      "Replicating the entire database across servers"
+    ],
+    "answer": "Distributing rows of a table across multiple database nodes based on a shard key",
+    "explanation": "Horizontal partitioning (sharding): distribute rows across nodes using a shard key (e.g., user_id % 4 distributes to 4 shards). Each shard contains a subset of rows. Enables horizontal scaling. Challenges: cross-shard queries (expensive), rebalancing shards when adding nodes, transactions spanning shards. Vertical partitioning: splits columns across nodes."
+  },
+  {
+    "id": "DBMS049",
+    "domain": "dbms",
+    "topic": "NoSQL",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the BASE model in NoSQL databases?",
+    "options": [
+      "Basically Available, Soft state, Eventually consistent \u2014 a relaxed alternative to ACID for distributed systems",
+      "Basic Available Structured and Efficient",
+      "Binary Access Storage Engine",
+      "Base table and Secondary Entities"
+    ],
+    "answer": "Basically Available, Soft state, Eventually consistent \u2014 a relaxed alternative to ACID for distributed systems",
+    "explanation": "BASE: Basically Available (system guarantees availability), Soft state (state may change over time without input due to eventual consistency), Eventually consistent (system will become consistent over time). Contrasts with ACID's strong consistency. NoSQL databases (Cassandra, DynamoDB, MongoDB) often follow BASE for scalability."
+  },
+  {
+    "id": "DBMS050",
+    "domain": "dbms",
+    "topic": "NoSQL",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which type of NoSQL database is best suited for storing highly connected data like social networks?",
+    "options": [
+      "Document database",
+      "Column-family database",
+      "Key-value store",
+      "Graph database"
+    ],
+    "answer": "Graph database",
+    "explanation": "Graph databases (Neo4j, Amazon Neptune) store data as nodes and edges \u2014 ideal for highly connected data: social networks (friends-of-friends), recommendation engines, fraud detection, knowledge graphs. Graph traversal is O(number of connections) vs O(n) for SQL JOIN across many levels. MongoDB/Cassandra struggle with deep relationship queries."
+  },
+  {
+    "id": "DBMS051",
+    "domain": "dbms",
+    "topic": "Relational Model",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a relation in the relational model?",
+    "options": [
+      "A link between two databases",
+      "A type of foreign key constraint",
+      "A mathematical set of tuples (rows) defined over a set of attributes (columns) \u2014 equivalent to a table",
+      "A JOIN operation result"
+    ],
+    "answer": "A mathematical set of tuples (rows) defined over a set of attributes (columns) \u2014 equivalent to a table",
+    "explanation": "In the relational model: Relation = Table. Tuple = Row. Attribute = Column. Domain = set of allowed values for an attribute. Degree = number of attributes. Cardinality = number of tuples. A relation is a set \u2014 no duplicate tuples, order of tuples and attributes doesn't matter (mathematically)."
+  },
+  {
+    "id": "DBMS052",
+    "domain": "dbms",
+    "topic": "SQL",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL command is used to grant privileges to a user?",
+    "options": [
+      "PERMIT",
+      "GRANT",
+      "AUTHORIZE",
+      "ALLOW"
+    ],
+    "answer": "GRANT",
+    "explanation": "DCL (Data Control Language) commands: GRANT gives privileges to users (GRANT SELECT, INSERT ON table TO user). REVOKE removes privileges (REVOKE SELECT ON table FROM user). Privileges: SELECT, INSERT, UPDATE, DELETE, EXECUTE, ALL PRIVILEGES. WITH GRANT OPTION allows user to grant the privilege to others."
+  },
+  {
+    "id": "DBMS053",
+    "domain": "dbms",
+    "topic": "SQL",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which category does the SQL ROLLBACK command belong to?",
+    "options": [
+      "TCL (Transaction Control Language)",
+      "DCL (Data Control Language)",
+      "DDL (Data Definition Language)",
+      "DML (Data Manipulation Language)"
+    ],
+    "answer": "TCL (Transaction Control Language)",
+    "explanation": "SQL command categories: DDL (CREATE, ALTER, DROP, TRUNCATE), DML (SELECT, INSERT, UPDATE, DELETE), DCL (GRANT, REVOKE), TCL (COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION). ROLLBACK undoes all changes since the last COMMIT or SAVEPOINT."
+  },
+  {
+    "id": "DBMS054",
+    "domain": "dbms",
+    "topic": "Views",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is an updatable view in SQL?",
+    "options": [
+      "A view with the REFRESH option",
+      "A materialized view",
+      "A view on which INSERT/UPDATE/DELETE operations can be performed, subject to certain conditions",
+      "A view that automatically refreshes"
+    ],
+    "answer": "A view on which INSERT/UPDATE/DELETE operations can be performed, subject to certain conditions",
+    "explanation": "Updatable view: DML operations on the view propagate to the base table. Conditions: based on single table (no JOIN), no GROUP BY/HAVING/DISTINCT/aggregate functions, no subqueries in SELECT. WITH CHECK OPTION ensures DML through view doesn't create rows invisible to the view. Non-updatable views are read-only."
+  },
+  {
+    "id": "DBMS055",
+    "domain": "dbms",
+    "topic": "Stored Procedures",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the advantage of stored procedures over ad-hoc SQL queries?",
+    "options": [
+      "Stored procedures are precompiled, reusable, reduce network traffic, and encapsulate business logic in the database",
+      "Stored procedures always return faster results",
+      "Stored procedures cannot use parameters",
+      "Stored procedures replace all need for indexes"
+    ],
+    "answer": "Stored procedures are precompiled, reusable, reduce network traffic, and encapsulate business logic in the database",
+    "explanation": "Stored procedure advantages: precompiled (execution plan cached), reduced network traffic (one call instead of multiple queries), security (grant EXECUTE without table access), code reuse, encapsulation of business logic. Disadvantages: harder to version control, tight coupling of logic to DB, portability issues across DBMS."
+  },
+  {
+    "id": "DBMS056",
+    "domain": "dbms",
+    "topic": "Triggers",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a BEFORE trigger used for?",
+    "options": [
+      "To execute after a commit",
+      "To log queries after they run",
+      "To audit database changes",
+      "To validate or modify data before the DML operation executes, potentially preventing the operation"
+    ],
+    "answer": "To validate or modify data before the DML operation executes, potentially preventing the operation",
+    "explanation": "BEFORE trigger: fires before the DML operation executes. Use cases: input validation, data transformation (normalize data before insert), security checks, preventing invalid operations by raising an error. AFTER trigger: fires after successful DML. INSTEAD OF trigger: fires instead of the DML (common for views)."
+  },
+  {
+    "id": "DBMS057",
+    "domain": "dbms",
+    "topic": "Cursors",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a cursor in DBMS?",
+    "options": [
+      "A database object that allows row-by-row processing of a query result set",
+      "A type of index",
+      "A mouse pointer for database GUI",
+      "A transaction savepoint"
+    ],
+    "answer": "A database object that allows row-by-row processing of a query result set",
+    "explanation": "Cursor: a pointer to the result set of a query. Steps: DECLARE (define query), OPEN (execute query), FETCH (retrieve one row at a time), CLOSE (release resources). Types: implicit (automatically created for DML), explicit (manually defined). Cursors are slow for large datasets \u2014 prefer set-based SQL operations whenever possible."
+  },
+  {
+    "id": "DBMS058",
+    "domain": "dbms",
+    "topic": "Integrity Constraints",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a referential integrity constraint?",
+    "options": [
+      "A constraint ensuring a foreign key value must match an existing primary key value in the referenced table or be NULL",
+      "A constraint ensuring data is formatted correctly",
+      "A constraint limiting the number of rows",
+      "A constraint on column data types"
+    ],
+    "answer": "A constraint ensuring a foreign key value must match an existing primary key value in the referenced table or be NULL",
+    "explanation": "Referential integrity: foreign key values must exist as primary key values in the referenced table (or be NULL if nullable). Prevents orphaned records. ON DELETE CASCADE/SET NULL/RESTRICT controls what happens when referenced row is deleted. Enforced by DBMS automatically when FOREIGN KEY constraint is defined."
+  },
+  {
+    "id": "DBMS059",
+    "domain": "dbms",
+    "topic": "Integrity Constraints",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What are the different types of integrity constraints in DBMS?",
+    "options": [
+      "Check and Default constraints only",
+      "Only NOT NULL and UNIQUE",
+      "Only primary key and foreign key constraints",
+      "Domain, Entity, Referential, and Key constraints"
+    ],
+    "answer": "Domain, Entity, Referential, and Key constraints",
+    "explanation": "Types: Domain integrity (valid values for an attribute \u2014 data type, CHECK, NOT NULL). Entity integrity (primary key cannot be NULL \u2014 every row must be uniquely identifiable). Referential integrity (foreign key values must exist in referenced table). Key integrity (candidate keys are unique). These ensure data accuracy and consistency throughout the database."
+  },
+  {
+    "id": "DBMS060",
+    "domain": "dbms",
+    "topic": "Database Design",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a strong entity and a weak entity in database design?",
+    "options": [
+      "Weak entities have no attributes",
+      "Strong entities have more attributes",
+      "Strong entities cannot have relationships",
+      "Strong entities can be uniquely identified by their own attributes; weak entities require association with a strong entity"
+    ],
+    "answer": "Strong entities can be uniquely identified by their own attributes; weak entities require association with a strong entity",
+    "explanation": "Strong entity: has its own primary key, independent existence. Example: Employee, Product. Weak entity: no sufficient attributes to form its own primary key, existence depends on owner entity. Has a discriminator (partial key). Example: Order_Item depends on Order. Relationship between weak and owner is an identifying relationship."
+  },
+  {
+    "id": "DBMS061",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Fourth Normal Form (4NF)?",
+    "options": [
+      "A relation with no partial dependencies",
+      "An extension of 3NF removing transitive dependencies",
+      "A relation in BCNF with no non-trivial multi-valued dependencies",
+      "A relation with exactly four attributes"
+    ],
+    "answer": "A relation in BCNF with no non-trivial multi-valued dependencies",
+    "explanation": "4NF: must be in BCNF AND have no non-trivial multi-valued dependencies. Multi-valued dependency A\u21a0B: for each value of A there is a set of values of B independent of other attributes. Example: Employee(emp, skill, hobby) \u2014 skills and hobbies are independent multi-values of emp. Fix: decompose into Employee_Skills and Employee_Hobbies."
+  },
+  {
+    "id": "DBMS062",
+    "domain": "dbms",
+    "topic": "Concurrency Control",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is timestamp-based concurrency control?",
+    "options": [
+      "A locking protocol using time-limited locks",
+      "Timestamping each database record",
+      "Assigning each transaction a timestamp and using these to order operations, ensuring conflict-serializability without locks",
+      "Using timestamps to log transaction times"
+    ],
+    "answer": "Assigning each transaction a timestamp and using these to order operations, ensuring conflict-serializability without locks",
+    "explanation": "Timestamp ordering: each transaction gets a unique timestamp (TS). For data item Q with read_TS(Q) and write_TS(Q): if T tries to read Q but TS(T) < write_TS(Q) \u2192 abort T (too old). If T tries to write Q but TS(T) < read_TS(Q) \u2192 abort T. No locks needed \u2014 eliminates deadlocks but may cause more rollbacks than 2PL."
+  },
+  {
+    "id": "DBMS063",
+    "domain": "dbms",
+    "topic": "Optimistic Concurrency",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is optimistic concurrency control?",
+    "options": [
+      "A lock-free approach where transactions execute without restrictions, and conflicts are checked only at commit time",
+      "Assuming all transactions will succeed without conflicts",
+      "A type of index optimization",
+      "A query optimization technique"
+    ],
+    "answer": "A lock-free approach where transactions execute without restrictions, and conflicts are checked only at commit time",
+    "explanation": "Optimistic CC: three phases: 1) Read phase \u2014 transaction reads data and executes with tentative writes in private workspace. 2) Validation phase \u2014 check if any conflict occurred with other committed transactions. 3) Write phase \u2014 if valid, write to database; else rollback. Good for low-conflict workloads \u2014 high throughput since no locking overhead."
+  },
+  {
+    "id": "DBMS064",
+    "domain": "dbms",
+    "topic": "Database Security",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is role-based access control (RBAC) in DBMS?",
+    "options": [
+      "Assigning permissions to roles, then assigning roles to users \u2014 simplifying permission management",
+      "Assigning permissions directly to each user",
+      "A network security protocol",
+      "A type of database encryption"
+    ],
+    "answer": "Assigning permissions to roles, then assigning roles to users \u2014 simplifying permission management",
+    "explanation": "RBAC: permissions are assigned to ROLES (e.g., admin, analyst, readonly), then users are assigned ROLES. Benefits: easier management (change role affects all users with that role), principle of least privilege, clear separation of duties. Example: GRANT SELECT ON all_tables TO analyst_role; GRANT analyst_role TO user_john."
+  },
+  {
+    "id": "DBMS065",
+    "domain": "dbms",
+    "topic": "Database Security",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is SQL injection and what is the primary defense against it in DBMS applications?",
+    "options": [
+      "An attack where malicious SQL is embedded in user input; defended by parameterized queries/prepared statements",
+      "A type of database trigger",
+      "A performance optimization technique",
+      "A database backup technique"
+    ],
+    "answer": "An attack where malicious SQL is embedded in user input; defended by parameterized queries/prepared statements",
+    "explanation": "SQL injection: attacker inserts SQL into input fields (e.g., ' OR '1'='1 in login). Primary defense: parameterized queries (prepared statements) \u2014 SQL structure compiled separately from user data. DBMS treats input as data, never SQL code. Additional defenses: input validation, stored procedures, principle of least privilege, WAF."
+  },
+  {
+    "id": "DBMS066",
+    "domain": "dbms",
+    "topic": "Object-Relational",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is an Object-Relational DBMS (ORDBMS)?",
+    "options": [
+      "A NoSQL database",
+      "A database that stores only objects",
+      "A relational DBMS extended with object-oriented features like user-defined types, inheritance, and complex objects",
+      "A database exclusively for object-oriented programming languages"
+    ],
+    "answer": "A relational DBMS extended with object-oriented features like user-defined types, inheritance, and complex objects",
+    "explanation": "ORDBMS extends relational model with OO features: user-defined data types (UDT), user-defined functions (UDF), complex objects, inheritance, arrays/nested tables as column types. Examples: PostgreSQL (strongly ORDBMS), Oracle. Bridges relational and OO worlds. Supports complex real-world data that doesn't fit neatly in flat tables."
+  },
+  {
+    "id": "DBMS067",
+    "domain": "dbms",
+    "topic": "Data Warehouse",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a data warehouse and how does it differ from a transactional database (OLTP)?",
+    "options": [
+      "OLTP stores historical data; data warehouse stores current data",
+      "Data warehouse: read-heavy, historical, aggregated data optimized for analytics (OLAP); OLTP: write-heavy, current data optimized for transactions",
+      "They are identical in design",
+      "A data warehouse is just a large OLTP database"
+    ],
+    "answer": "Data warehouse: read-heavy, historical, aggregated data optimized for analytics (OLAP); OLTP: write-heavy, current data optimized for transactions",
+    "explanation": "OLTP: many short read/write transactions, normalized schema, current operational data, row storage, optimized for INSERT/UPDATE/DELETE. Data Warehouse (OLAP): complex analytical queries on historical data, denormalized (star/snowflake schema), column storage, optimized for aggregations. ETL processes load OLTP data into the warehouse."
+  },
+  {
+    "id": "DBMS068",
+    "domain": "dbms",
+    "topic": "Data Warehouse",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the ETL process in data warehousing?",
+    "options": [
+      "Encrypt, Transfer, Log",
+      "Execute, Test, Launch",
+      "Export, Translate, Link",
+      "Extract, Transform, Load \u2014 the process of moving data from source systems to a data warehouse"
+    ],
+    "answer": "Extract, Transform, Load \u2014 the process of moving data from source systems to a data warehouse",
+    "explanation": "ETL: Extract (pull data from OLTP databases, APIs, flat files), Transform (clean, validate, standardize, aggregate, handle NULLs, convert formats), Load (write to data warehouse). Runs on scheduled basis (nightly batch). Modern alternative: ELT (Extract, Load, Transform) \u2014 load raw data first, transform in warehouse using its compute power."
+  },
+  {
+    "id": "DBMS069",
+    "domain": "dbms",
+    "topic": "Parallel Databases",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between shared-memory, shared-disk, and shared-nothing parallel database architectures?",
+    "options": [
+      "They all have the same performance",
+      "Shared-nothing is the least scalable",
+      "Shared-memory: all CPUs share RAM; Shared-disk: all CPUs share disk, own RAM; Shared-nothing: each node has own CPU, RAM, disk \u2014 most scalable",
+      "Shared-memory always outperforms the others"
+    ],
+    "answer": "Shared-memory: all CPUs share RAM; Shared-disk: all CPUs share disk, own RAM; Shared-nothing: each node has own CPU, RAM, disk \u2014 most scalable",
+    "explanation": "Parallel DB architectures: Shared-memory (SMP): all processors share RAM and disk \u2014 simple programming, limited scalability (~few hundred CPUs). Shared-disk: own memory, shared disk (Oracle RAC) \u2014 medium scalability, disk can be bottleneck. Shared-nothing (MPP): complete independent nodes \u2014 highest scalability, used by Teradata, Redshift, Snowflake, but complex for cross-node queries."
+  },
+  {
+    "id": "DBMS070",
+    "domain": "dbms",
+    "topic": "Database Replication",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between synchronous and asynchronous database replication?",
+    "options": [
+      "Asynchronous is always more consistent",
+      "Synchronous replication is always preferred",
+      "No performance difference",
+      "Synchronous: primary waits for all replicas to confirm write before committing (strong consistency, slower); Asynchronous: primary commits immediately, replicas update in background (faster, eventual consistency)"
+    ],
+    "answer": "Synchronous: primary waits for all replicas to confirm write before committing (strong consistency, slower); Asynchronous: primary commits immediately, replicas update in background (faster, eventual consistency)",
+    "explanation": "Synchronous replication: zero data loss (all copies updated before commit), but adds latency to every write. Good for financial systems. Asynchronous: primary commits without waiting \u2014 fast writes, low latency, but replica may lag (potential data loss on primary failure). Most systems use async or semi-sync (wait for at least one replica). Trade-off: consistency vs. performance."
+  },
+  {
+    "id": "DBMS071",
+    "domain": "dbms",
+    "topic": "Query Optimization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a query execution plan and what information does it provide?",
+    "options": [
+      "A list of all SQL queries in a database",
+      "A stored procedure execution log",
+      "A schedule for running queries on a timer",
+      "A tree of operations showing how the DBMS will execute a query \u2014 including access methods, join algorithms, estimated costs, and row counts"
+    ],
+    "answer": "A tree of operations showing how the DBMS will execute a query \u2014 including access methods, join algorithms, estimated costs, and row counts",
+    "explanation": "Execution plan (EXPLAIN in MySQL/PostgreSQL, EXPLAIN PLAN in Oracle): shows how the optimizer decided to execute a query. Key info: access method (index scan vs full table scan), join type (nested loop, hash join, merge join), estimated vs actual rows, cost estimates. Essential for query performance tuning \u2014 change joins, add indexes, rewrite subqueries based on plan analysis."
+  },
+  {
+    "id": "DBMS072",
+    "domain": "dbms",
+    "topic": "Join Algorithms",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a hash join and when is it preferred over a nested loop join?",
+    "options": [
+      "Hash join requires sorted input",
+      "Hash join is never preferred",
+      "Hash join: builds hash table on smaller relation, probes with larger \u2014 O(n+m); preferred for large tables without indexes. Nested loop: O(n*m); preferred for small tables or when indexes exist on join column",
+      "Nested loop is always faster"
+    ],
+    "answer": "Hash join: builds hash table on smaller relation, probes with larger \u2014 O(n+m); preferred for large tables without indexes. Nested loop: O(n*m); preferred for small tables or when indexes exist on join column",
+    "explanation": "Join algorithms: Nested Loop Join: O(n*m) \u2014 good when inner table is small or has an index on join column. Hash Join: O(n+m) average \u2014 builds in-memory hash table on smaller relation, scans larger. Best for large unsorted tables without useful indexes. Merge Join: O(n log n + m log m) \u2014 requires sorted input, good for pre-sorted or indexed data, produces sorted output."
+  },
+  {
+    "id": "DBMS073",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a lossless join decomposition?",
+    "options": [
+      "A decomposition where the original relation can be exactly reconstructed by joining the decomposed relations",
+      "A decomposition that splits primary keys",
+      "A decomposition where data is permanently lost",
+      "A decomposition that loses foreign keys"
+    ],
+    "answer": "A decomposition where the original relation can be exactly reconstructed by joining the decomposed relations",
+    "explanation": "Lossless join: decomposing relation R into R1 and R2 such that R = R1 \u22c8 R2 (natural join produces exactly R with no extra or missing tuples). Test: at least one of the intersection attributes is a key of R1 or R2. Without lossless property, decomposition introduces 'spurious tuples' \u2014 incorrect data that wasn't in original relation."
+  },
+  {
+    "id": "DBMS074",
+    "domain": "dbms",
+    "topic": "Functional Dependencies",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the closure of a set of attributes F+ (attribute closure)?",
+    "options": [
+      "The set of all attributes that can be functionally determined from a given set of attributes using Armstrong's Axioms",
+      "The primary key of a relation",
+      "The set of all candidate keys",
+      "The set of all functional dependencies derivable from F"
+    ],
+    "answer": "The set of all attributes that can be functionally determined from a given set of attributes using Armstrong's Axioms",
+    "explanation": "Attribute closure {A}+: the set of all attributes functionally determined by A (using Armstrong's axioms). Algorithm: start with {A}, repeatedly apply FDs \u2014 if X\u2192Y and X is in closure, add Y. Used to: find all candidate keys (if {A}+ = all attributes, A is a super key), check if an FD follows from a set, compute canonical cover."
+  },
+  {
+    "id": "DBMS075",
+    "domain": "dbms",
+    "topic": "ER to Relational",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How is a many-to-many relationship converted to relational tables?",
+    "options": [
+      "Using a single table with repeated columns",
+      "Many-to-many cannot be represented in relational model",
+      "By creating a new junction/bridge table with foreign keys referencing both entities' primary keys",
+      "By adding a foreign key to one of the entity tables"
+    ],
+    "answer": "By creating a new junction/bridge table with foreign keys referencing both entities' primary keys",
+    "explanation": "Many-to-many (M:N) conversion: create a separate junction/bridge/association table containing foreign keys to both entities. Example: Student and Course (M:N) \u2192 Enrollment(student_id FK, course_id FK, enrollment_date). The junction table's primary key is typically the composite of both foreign keys. Can also add additional attributes to the junction table."
+  },
+  {
+    "id": "DBMS076",
+    "domain": "dbms",
+    "topic": "Physical Design",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is RAID and why is it relevant to database storage?",
+    "options": [
+      "Redundant Array of Independent Disks \u2014 uses multiple disks for performance and/or fault tolerance, critical for database availability",
+      "A type of database index",
+      "A database replication strategy",
+      "A type of SQL query"
+    ],
+    "answer": "Redundant Array of Independent Disks \u2014 uses multiple disks for performance and/or fault tolerance, critical for database availability",
+    "explanation": "RAID levels for databases: RAID 0 (striping \u2014 fast, no redundancy), RAID 1 (mirroring \u2014 redundancy, read speed), RAID 5 (striping + distributed parity \u2014 good balance), RAID 10 (mirror + stripe \u2014 best for DB: fast reads/writes + fault tolerance). DBMS benefits: parallel disk reads, data redundancy, faster throughput for I/O-bound database workloads."
+  },
+  {
+    "id": "DBMS077",
+    "domain": "dbms",
+    "topic": "Concurrency",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a shared lock and an exclusive lock?",
+    "options": [
+      "Exclusive lock allows multiple readers",
+      "Shared lock prevents all reads",
+      "Shared lock (S): multiple transactions can read simultaneously; Exclusive lock (X): only one transaction can write, blocking all others",
+      "No difference \u2014 both prevent all access"
+    ],
+    "answer": "Shared lock (S): multiple transactions can read simultaneously; Exclusive lock (X): only one transaction can write, blocking all others",
+    "explanation": "Shared (S) lock: acquired for reading \u2014 multiple transactions can hold S locks on the same item simultaneously (readers don't block readers). Exclusive (X) lock: acquired for writing \u2014 only ONE transaction can hold it, and it blocks both readers and writers. Compatibility: S+S allowed, S+X not allowed, X+X not allowed."
+  },
+  {
+    "id": "DBMS078",
+    "domain": "dbms",
+    "topic": "Transactions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a savepoint in a database transaction?",
+    "options": [
+      "An automatic database backup point",
+      "A checkpoint in the transaction log",
+      "A transaction commit marker",
+      "A named point within a transaction to which you can partially roll back without rolling back the entire transaction"
+    ],
+    "answer": "A named point within a transaction to which you can partially roll back without rolling back the entire transaction",
+    "explanation": "SAVEPOINT sp1: marks a point in a transaction. ROLLBACK TO sp1: undoes operations after sp1 but keeps work before sp1. RELEASE sp1: removes the savepoint. Useful in long transactions where you want to undo part of the work on an error without restarting completely. Available in Oracle, PostgreSQL; limited in MySQL."
+  },
+  {
+    "id": "DBMS079",
+    "domain": "dbms",
+    "topic": "Relational Model",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a relation schema and a relation instance?",
+    "options": [
+      "Relation instance defines the structure",
+      "Schema is the data; instance is the definition",
+      "Relation schema: the structure definition (name, attributes, domains, constraints); Relation instance: the actual set of tuples (data) at a given point in time",
+      "They are the same thing"
+    ],
+    "answer": "Relation schema: the structure definition (name, attributes, domains, constraints); Relation instance: the actual set of tuples (data) at a given point in time",
+    "explanation": "Relation schema R(A1, A2, ..., An): defines structure \u2014 attribute names, domains, constraints. Like a class definition. Relation instance r(R): actual data \u2014 a specific set of tuples conforming to the schema at a given time. Like an object of a class. Schema changes rarely; instance changes with every INSERT/UPDATE/DELETE."
+  },
+  {
+    "id": "DBMS080",
+    "domain": "dbms",
+    "topic": "Query Language",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between procedural and non-procedural query languages?",
+    "options": [
+      "No difference",
+      "SQL is procedural",
+      "Procedural (relational algebra): user specifies HOW to retrieve data step by step; Non-procedural (SQL, relational calculus): user specifies WHAT data to retrieve",
+      "Relational calculus is procedural"
+    ],
+    "answer": "Procedural (relational algebra): user specifies HOW to retrieve data step by step; Non-procedural (SQL, relational calculus): user specifies WHAT data to retrieve",
+    "explanation": "Procedural (relational algebra): specify exact sequence of operations to get result \u2014 like a recipe. Non-procedural/Declarative (SQL, relational calculus): specify what you want, not how to get it \u2014 the DBMS's query optimizer decides the execution plan. SQL is declarative (non-procedural) which is why query optimization is crucial and why rewriting SQL can improve performance."
+  },
+  {
+    "id": "DBMS081",
+    "domain": "dbms",
+    "topic": "Integrity",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a domain constraint in DBMS?",
+    "options": [
+      "A constraint specifying valid values for an attribute based on its data type, range, or enumerated set",
+      "A foreign key constraint",
+      "A constraint on database size",
+      "A constraint on the number of tables"
+    ],
+    "answer": "A constraint specifying valid values for an attribute based on its data type, range, or enumerated set",
+    "explanation": "Domain constraint: defines the set of permissible values for an attribute. Enforced by: data type (INT, VARCHAR, DATE), CHECK constraint (CHECK age >= 0), NOT NULL, DEFAULT value, ENUM type. Ensures domain integrity \u2014 only valid values for an attribute can be stored."
+  },
+  {
+    "id": "DBMS082",
+    "domain": "dbms",
+    "topic": "Data Dictionary",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the system catalog (data dictionary) in a DBMS?",
+    "options": [
+      "A user-created reference table",
+      "A type of index",
+      "The transaction log",
+      "A DBMS-maintained repository storing metadata about the database: tables, columns, indexes, constraints, users, and statistics"
+    ],
+    "answer": "A DBMS-maintained repository storing metadata about the database: tables, columns, indexes, constraints, users, and statistics",
+    "explanation": "System catalog (data dictionary / information schema): stores metadata \u2014 table names, column names and types, primary/foreign keys, indexes, views, user privileges, table sizes and statistics. Query optimizer uses statistics from catalog for plan cost estimation. SQL: SELECT * FROM information_schema.tables \u2014 queries the catalog. DBAs query catalog for schema documentation."
+  },
+  {
+    "id": "DBMS083",
+    "domain": "dbms",
+    "topic": "Concurrency",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a serializable schedule in DBMS?",
+    "options": [
+      "A schedule that runs only one transaction at a time",
+      "A schedule that prevents all reads",
+      "A concurrent schedule whose outcome is equivalent to some serial execution of the same transactions",
+      "A schedule with timestamps"
+    ],
+    "answer": "A concurrent schedule whose outcome is equivalent to some serial execution of the same transactions",
+    "explanation": "Serializable schedule: a concurrent execution that produces the same result as if the transactions executed one after another (serially) in some order. Conflict serializability: a schedule is conflict-serializable if it can be converted to a serial schedule by swapping non-conflicting operations. Tested using a precedence graph \u2014 if acyclic, the schedule is conflict-serializable."
+  },
+  {
+    "id": "DBMS084",
+    "domain": "dbms",
+    "topic": "Advanced Topics",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is MVCC (Multi-Version Concurrency Control)?",
+    "options": [
+      "A concurrency control method that maintains multiple versions of data, allowing readers and writers to not block each other",
+      "Multiple backup copies of the database",
+      "A type of replication strategy",
+      "A locking protocol"
+    ],
+    "answer": "A concurrency control method that maintains multiple versions of data, allowing readers and writers to not block each other",
+    "explanation": "MVCC: each write creates a new version of the data item instead of overwriting. Readers see a consistent snapshot of data as of their transaction start time \u2014 reads don't block writes, writes don't block reads. Used by PostgreSQL, Oracle, MySQL InnoDB. Transaction sees only versions committed before it started. Old versions are periodically cleaned up (vacuum in PostgreSQL)."
+  },
+  {
+    "id": "DBMS085",
+    "domain": "dbms",
+    "topic": "Advanced Topics",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a materialized view and how does it differ from a regular view?",
+    "options": [
+      "They are the same",
+      "A materialized view physically stores the query result and must be refreshed; a regular view re-executes the query each time",
+      "Regular views store data; materialized views don't",
+      "Materialized views cannot be queried"
+    ],
+    "answer": "A materialized view physically stores the query result and must be refreshed; a regular view re-executes the query each time",
+    "explanation": "Regular view: virtual \u2014 query is stored, not data. Re-executed every time view is accessed. Always up-to-date. Materialized view: physically stores query result. Fast to query (pre-computed). Must be refreshed (manual or automatic) to reflect base table changes. Used in data warehouses for expensive aggregations. Trade-off: staleness vs. query speed."
+  },
+  {
+    "id": "DBMS086",
+    "domain": "dbms",
+    "topic": "Distributed Transactions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the Two-Phase Commit (2PC) protocol in distributed databases?",
+    "options": [
+      "A backup protocol",
+      "A distributed protocol ensuring all nodes either commit or rollback a transaction atomically: Phase 1 (Voting) \u2014 coordinator asks all participants to vote; Phase 2 (Commit/Abort) \u2014 coordinator commits if all vote yes, else aborts",
+      "A replication strategy",
+      "A local transaction commit process"
+    ],
+    "answer": "A distributed protocol ensuring all nodes either commit or rollback a transaction atomically: Phase 1 (Voting) \u2014 coordinator asks all participants to vote; Phase 2 (Commit/Abort) \u2014 coordinator commits if all vote yes, else aborts",
+    "explanation": "2PC: Phase 1 (Prepare/Voting): coordinator sends PREPARE to all participants. Each participant logs and replies VOTE-COMMIT or VOTE-ABORT. Phase 2 (Commit/Abort): if ALL vote commit \u2192 coordinator sends COMMIT. If ANY vote abort \u2192 sends ABORT. Participants apply decision. Weakness: coordinator failure after Phase 1 can leave participants in uncertain (blocking) state."
+  },
+  {
+    "id": "DBMS087",
+    "domain": "dbms",
+    "topic": "Object Storage",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a BLOB (Binary Large Object) in DBMS?",
+    "options": [
+      "A type of index for large tables",
+      "A type of database schema",
+      "A network protocol",
+      "A data type for storing large binary data like images, audio, video, and documents directly in the database"
+    ],
+    "answer": "A data type for storing large binary data like images, audio, video, and documents directly in the database",
+    "explanation": "BLOB: stores binary data up to several GBs. CLOB (Character Large Object): stores large text. Pros of DB storage: transactional integrity, security, backup consistency. Cons: increases DB size, slower than file system for streaming, backup complexity. Best practice for production: store files in object storage (S3, Azure Blob) and store the URL/path in the DB."
+  },
+  {
+    "id": "DBMS088",
+    "domain": "dbms",
+    "topic": "Full Text Search",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is an inverted index and why is it used for full-text search?",
+    "options": [
+      "A reversed B+ tree",
+      "An index built in descending order",
+      "An index that stores negative values",
+      "A mapping from words/terms to the documents containing them, enabling fast full-text search"
+    ],
+    "answer": "A mapping from words/terms to the documents containing them, enabling fast full-text search",
+    "explanation": "Inverted index: maps each unique word to the list of documents containing it (with positions). Example: 'database' \u2192 [doc1, doc3, doc7]. Query 'database management': find intersection of posting lists. Fundamental structure in search engines (Elasticsearch, Solr), full-text search in PostgreSQL/MySQL. Enables fast keyword search without scanning all documents."
+  },
+  {
+    "id": "DBMS089",
+    "domain": "dbms",
+    "topic": "Columnar Storage",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is columnar storage and why is it better for analytical queries?",
+    "options": [
+      "Storing data column-by-column instead of row-by-row, enabling efficient compression and column-level scans for analytics",
+      "A normalization technique",
+      "A type of index",
+      "Storing data in columns of different database tables"
+    ],
+    "answer": "Storing data column-by-column instead of row-by-row, enabling efficient compression and column-level scans for analytics",
+    "explanation": "Row storage (OLTP): stores entire rows together \u2014 good for retrieving all columns of specific rows. Columnar storage (OLAP): stores each column separately \u2014 reads only needed columns (avoids reading entire row), better compression (same-type values compress better), vectorized processing. Used by: Amazon Redshift, Snowflake, Apache Parquet, ClickHouse. Analytical queries typically touch few columns across many rows."
+  },
+  {
+    "id": "DBMS090",
+    "domain": "dbms",
+    "topic": "Database Tuning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is connection pooling in DBMS and why is it important?",
+    "options": [
+      "Maintaining a pool of pre-established database connections that can be reused, avoiding the overhead of creating new connections for each request",
+      "A database backup strategy",
+      "A network routing technique",
+      "A type of query optimization"
+    ],
+    "answer": "Maintaining a pool of pre-established database connections that can be reused, avoiding the overhead of creating new connections for each request",
+    "explanation": "Creating a DB connection is expensive (TCP handshake, authentication, session setup). Connection pooling maintains a pool of open connections \u2014 applications borrow and return connections instead of creating new ones. Tools: PgBouncer (PostgreSQL), HikariCP (Java), connection_pool in most ORMs. Crucial for web apps handling many concurrent requests \u2014 without pooling, connection overhead dominates response time."
+  },
+  {
+    "id": "DBMS091",
+    "domain": "dbms",
+    "topic": "Time Complexity",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the time complexity of a B+ tree search operation?",
+    "options": [
+      "O(log n)",
+      "O(n log n)",
+      "O(n)",
+      "O(1)"
+    ],
+    "answer": "O(log n)",
+    "explanation": "B+ tree: balanced tree of order m where each node has m/2 to m children. Height = O(log_m(n)). For typical order (hundreds of children per node), tree is very flat \u2014 databases with millions of records need only 3-4 levels. Search, insert, delete all O(log n). This is why B+ trees are universal for database indexes."
+  },
+  {
+    "id": "DBMS092",
+    "domain": "dbms",
+    "topic": "Partitioning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is range partitioning in a database and what is its main benefit?",
+    "options": [
+      "Dividing table rows into partitions based on value ranges of a partition key \u2014 enables partition pruning where queries skip irrelevant partitions",
+      "Distributing data randomly across partitions",
+      "Vertical partitioning by columns",
+      "Partitioning by hash of the primary key"
+    ],
+    "answer": "Dividing table rows into partitions based on value ranges of a partition key \u2014 enables partition pruning where queries skip irrelevant partitions",
+    "explanation": "Range partitioning: e.g., partition orders table by year \u2014 orders_2022, orders_2023, orders_2024. Query WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31' scans only orders_2024 partition (partition pruning). Benefits: faster queries on partitioned key, easier archiving (drop old partition), parallel query processing. Best for date/time data."
+  },
+  {
+    "id": "DBMS093",
+    "domain": "dbms",
+    "topic": "Advanced Indexing",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a composite (compound) index and what is the 'leading column' rule?",
+    "options": [
+      "A type of clustered index",
+      "An index on multiple columns where queries can use the index only if they include the leftmost columns in the WHERE clause",
+      "An index on computed columns only",
+      "An index that covers all columns in a table"
+    ],
+    "answer": "An index on multiple columns where queries can use the index only if they include the leftmost columns in the WHERE clause",
+    "explanation": "Composite index on (A, B, C): usable when query filters on A, or A+B, or A+B+C. NOT usable if query only filters on B or C alone. Leading column rule: always filter on leftmost indexed columns. Design composites based on query patterns \u2014 most selective column first is common advice, but consider query patterns over cardinality alone."
+  },
+  {
+    "id": "DBMS094",
+    "domain": "dbms",
+    "topic": "Graph Databases",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which query language is used by Neo4j graph database?",
+    "options": [
+      "SPARQL",
+      "GraphQL",
+      "Cypher",
+      "SQL"
+    ],
+    "answer": "Cypher",
+    "explanation": "Cypher is Neo4j's graph query language. Pattern matching syntax: MATCH (p:Person)-[:KNOWS]->(friend:Person) WHERE p.name = 'Alice' RETURN friend.name. Nodes in (), relationships in []. Intuitive visual syntax. Other graph query languages: SPARQL (RDF/semantic web), Gremlin (Apache TinkerPop, used by Amazon Neptune, JanusGraph)."
+  },
+  {
+    "id": "DBMS095",
+    "domain": "dbms",
+    "topic": "Backup and Recovery",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a full backup and an incremental backup?",
+    "options": [
+      "Full backup copies all data every time; incremental backup copies only data changed since the last backup",
+      "No difference",
+      "Full backup is slower and incremental is faster for all scenarios",
+      "Incremental backup copies all data; full backup copies changes"
+    ],
+    "answer": "Full backup copies all data every time; incremental backup copies only data changed since the last backup",
+    "explanation": "Full backup: complete copy of all data \u2014 slow to create, fast to restore (single backup needed). Incremental: copies only changes since last backup (full or incremental) \u2014 fast to create, slow to restore (need full + all incrementals). Differential: changes since last FULL backup \u2014 faster restore than incremental but larger than incremental. Most strategies combine: weekly full + daily incremental."
+  },
+  {
+    "id": "DBMS096",
+    "domain": "dbms",
+    "topic": "Database Middleware",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is an ORM (Object-Relational Mapping) and what problem does it solve?",
+    "options": [
+      "A type of database index",
+      "A network protocol for database connections",
+      "A programming technique mapping database tables to programming language objects, eliminating raw SQL for most operations",
+      "A database security layer"
+    ],
+    "answer": "A programming technique mapping database tables to programming language objects, eliminating raw SQL for most operations",
+    "explanation": "ORM maps DB tables to classes, rows to objects, columns to fields. Developers interact with objects instead of writing SQL. Examples: Hibernate (Java), SQLAlchemy (Python), Sequelize (Node.js), ActiveRecord (Ruby). Benefits: database-agnostic code, reduced boilerplate, type safety. Downsides: N+1 query problem, less control over SQL, performance overhead for complex queries."
+  },
+  {
+    "id": "DBMS097",
+    "domain": "dbms",
+    "topic": "Normalization",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What are the three types of anomalies that normalization helps prevent?",
+    "options": [
+      "Read, Write, and Delete anomalies",
+      "Insertion, Update, and Deletion anomalies",
+      "Primary key, Foreign key, and Check anomalies",
+      "Syntax, Semantic, and Runtime anomalies"
+    ],
+    "answer": "Insertion, Update, and Deletion anomalies",
+    "explanation": "Data anomalies in un-normalized tables: Insertion anomaly \u2014 cannot insert data without also inserting unrelated data (e.g., can't add a department without an employee). Update anomaly \u2014 changing one fact requires updating multiple rows (inconsistency if some missed). Deletion anomaly \u2014 deleting one fact unintentionally deletes other facts. Normalization eliminates these by ensuring each fact is stored once."
+  },
+  {
+    "id": "DBMS098",
+    "domain": "dbms",
+    "topic": "Query Processing",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is query rewriting in DBMS query optimization?",
+    "options": [
+      "A user interface feature for editing queries",
+      "Rewriting queries in a different language",
+      "Transforming a query into an equivalent but more efficient form before cost-based optimization, using rules like pushing selections early and removing redundant operations",
+      "Correcting syntax errors in SQL"
+    ],
+    "answer": "Transforming a query into an equivalent but more efficient form before cost-based optimization, using rules like pushing selections early and removing redundant operations",
+    "explanation": "Query rewriting (logical optimization): transform relational algebra expression into equivalent, cheaper form. Rules: push selections down (filter early to reduce rows), push projections down (reduce width early), eliminate redundant subqueries, convert subqueries to joins, apply de-Morgan's laws. Done before cost-based optimization \u2014 reduces search space for the optimizer."
+  },
+  {
+    "id": "DBMS099",
+    "domain": "dbms",
+    "topic": "Advanced Normalization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a minimal cover (canonical cover) of a set of functional dependencies?",
+    "options": [
+      "The primary key of a relation",
+      "The largest set of functional dependencies for a relation",
+      "The set of all FDs derivable from Armstrong's axioms",
+      "A minimal equivalent set of FDs with no redundant FDs, no redundant attributes in left-hand sides, and each FD having a single attribute on the right"
+    ],
+    "answer": "A minimal equivalent set of FDs with no redundant FDs, no redundant attributes in left-hand sides, and each FD having a single attribute on the right",
+    "explanation": "Minimal cover (canonical cover) Fc of F: equivalent to F (same closure), RHS has single attribute, no extraneous attribute in LHS (removing any attribute from LHS changes the closure), no redundant FD (removing any FD changes closure). Used in 3NF synthesis algorithm to generate the minimum set of tables needed. Algorithm: decompose RHS, remove extraneous attributes, remove redundant FDs."
+  },
+  {
+    "id": "DBMS100",
+    "domain": "dbms",
+    "topic": "Emerging Trends",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is NewSQL and how does it differ from both traditional SQL and NoSQL?",
+    "options": [
+      "A deprecated SQL standard",
+      "A class of modern relational databases that provide NoSQL-like scalability while maintaining ACID guarantees and SQL interface \u2014 combining the best of SQL and NoSQL",
+      "A new SQL syntax standard",
+      "A type of NoSQL database"
+    ],
+    "answer": "A class of modern relational databases that provide NoSQL-like scalability while maintaining ACID guarantees and SQL interface \u2014 combining the best of SQL and NoSQL",
+    "explanation": "NewSQL: addresses SQL scalability limitations without sacrificing ACID. Traditional SQL: ACID but limited horizontal scalability. NoSQL: horizontal scale but weaker consistency (BASE). NewSQL: distributed ACID transactions + SQL interface + horizontal scale. Examples: CockroachDB, YugabyteDB, Google Spanner, TiDB. Use distributed consensus (Raft/Paxos) for ACID across nodes. Best of both worlds for globally distributed transactional systems."
+  }
+]

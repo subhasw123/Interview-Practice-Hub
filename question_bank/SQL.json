@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "SQL001",
+    "domain": "sql",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does SQL stand for?",
+    "options": [
+      "Sequential Query Language",
+      "Structured Query Language",
+      "Standard Query Language",
+      "Simple Query Language"
+    ],
+    "answer": "Structured Query Language",
+    "explanation": "SQL stands for Structured Query Language. It is the standard language used to communicate with relational databases for querying, inserting, updating, and deleting data."
+  },
+  {
+    "id": "SQL002",
+    "domain": "sql",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL statement is used to retrieve data from a database?",
+    "options": [
+      "FETCH",
+      "SELECT",
+      "GET",
+      "RETRIEVE"
+    ],
+    "answer": "SELECT",
+    "explanation": "SELECT is the most commonly used SQL statement. It retrieves data from one or more tables. Example: SELECT * FROM employees;"
+  },
+  {
+    "id": "SQL003",
+    "domain": "sql",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which clause is used to filter rows in a SQL query?",
+    "options": [
+      "WHERE",
+      "GROUP BY",
+      "HAVING",
+      "ORDER BY"
+    ],
+    "answer": "WHERE",
+    "explanation": "WHERE clause filters rows based on a condition before any grouping. Example: SELECT * FROM employees WHERE salary > 50000;"
+  },
+  {
+    "id": "SQL004",
+    "domain": "sql",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL keyword removes duplicate rows from the result set?",
+    "options": [
+      "DISTINCT",
+      "NODUPLICATE",
+      "DIFFERENT",
+      "UNIQUE"
+    ],
+    "answer": "DISTINCT",
+    "explanation": "SELECT DISTINCT eliminates duplicate rows from the result. Example: SELECT DISTINCT department FROM employees; returns each department only once."
+  },
+  {
+    "id": "SQL005",
+    "domain": "sql",
+    "topic": "Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL clause is used to sort the result set?",
+    "options": [
+      "SORT BY",
+      "ORDER BY",
+      "ARRANGE BY",
+      "GROUP BY"
+    ],
+    "answer": "ORDER BY",
+    "explanation": "ORDER BY sorts the result set by one or more columns. Default is ASC (ascending). Use DESC for descending. Example: SELECT * FROM employees ORDER BY salary DESC;"
+  },
+  {
+    "id": "SQL006",
+    "domain": "sql",
+    "topic": "DDL",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL command is used to create a new table?",
+    "options": [
+      "NEW TABLE",
+      "MAKE TABLE",
+      "CREATE TABLE",
+      "BUILD TABLE"
+    ],
+    "answer": "CREATE TABLE",
+    "explanation": "CREATE TABLE is a DDL (Data Definition Language) command that creates a new table with specified columns and data types. Example: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100));"
+  },
+  {
+    "id": "SQL007",
+    "domain": "sql",
+    "topic": "DDL",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which command permanently removes a table and its data from the database?",
+    "options": [
+      "TRUNCATE TABLE",
+      "DROP TABLE",
+      "REMOVE TABLE",
+      "DELETE TABLE"
+    ],
+    "answer": "DROP TABLE",
+    "explanation": "DROP TABLE removes the table definition and all its data permanently. TRUNCATE removes only data but keeps the table structure. DELETE removes rows one by one with optional WHERE clause."
+  },
+  {
+    "id": "SQL008",
+    "domain": "sql",
+    "topic": "DDL",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between DROP, DELETE, and TRUNCATE?",
+    "options": [
+      "DELETE is DDL; DROP is DML; TRUNCATE is TCL",
+      "All three are identical",
+      "DROP removes table; DELETE removes rows with WHERE; TRUNCATE removes all rows but keeps table",
+      "TRUNCATE removes table; DELETE removes rows; DROP removes database"
+    ],
+    "answer": "DROP removes table; DELETE removes rows with WHERE; TRUNCATE removes all rows but keeps table",
+    "explanation": "DROP: DDL \u2014 removes table structure and data entirely. DELETE: DML \u2014 removes rows, can use WHERE, fires triggers, logged row by row, can rollback. TRUNCATE: DDL \u2014 removes all rows instantly, cannot use WHERE, minimal logging, faster, cannot rollback in most databases."
+  },
+  {
+    "id": "SQL009",
+    "domain": "sql",
+    "topic": "DDL",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which ALTER TABLE statement is used to change the data type of an existing column?",
+    "options": [
+      "ALTER TABLE emp ADD COLUMN salary",
+      "ALTER TABLE emp RENAME TO employees",
+      "ALTER TABLE emp DROP salary",
+      "ALTER TABLE emp MODIFY salary DECIMAL(10,2)"
+    ],
+    "answer": "ALTER TABLE emp MODIFY salary DECIMAL(10,2)",
+    "explanation": "ALTER TABLE MODIFY (MySQL/Oracle) or ALTER COLUMN (SQL Server) changes an existing column's data type or constraints. ALTER TABLE ADD adds a new column. MODIFY may fail if existing data is incompatible with the new type."
+  },
+  {
+    "id": "SQL010",
+    "domain": "sql",
+    "topic": "DML",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL command is used to add new rows to a table?",
+    "options": [
+      "INSERT INTO",
+      "ADD",
+      "APPEND",
+      "UPDATE"
+    ],
+    "answer": "INSERT INTO",
+    "explanation": "INSERT INTO adds new rows to a table. Syntax: INSERT INTO table (col1, col2) VALUES (val1, val2). Can insert multiple rows: INSERT INTO table VALUES (1,'A'), (2,'B');"
+  },
+  {
+    "id": "SQL011",
+    "domain": "sql",
+    "topic": "DML",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL command modifies existing rows in a table?",
+    "options": [
+      "MODIFY",
+      "ALTER",
+      "CHANGE",
+      "UPDATE"
+    ],
+    "answer": "UPDATE",
+    "explanation": "UPDATE modifies existing rows. Always use WHERE to target specific rows \u2014 without WHERE, all rows are updated. Example: UPDATE employees SET salary = 60000 WHERE id = 5;"
+  },
+  {
+    "id": "SQL012",
+    "domain": "sql",
+    "topic": "Constraints",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which constraint ensures a column has no duplicate values?",
+    "options": [
+      "UNIQUE",
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "NOT NULL"
+    ],
+    "answer": "UNIQUE",
+    "explanation": "UNIQUE constraint ensures all values in a column are different. Unlike PRIMARY KEY, a table can have multiple UNIQUE constraints and UNIQUE columns can contain NULL values (one NULL typically allowed)."
+  },
+  {
+    "id": "SQL013",
+    "domain": "sql",
+    "topic": "Constraints",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does a PRIMARY KEY constraint enforce?",
+    "options": [
+      "Values must be not null only",
+      "Values must be unique only",
+      "Values must be a foreign key reference",
+      "Values must be unique and not null"
+    ],
+    "answer": "Values must be unique and not null",
+    "explanation": "PRIMARY KEY combines NOT NULL + UNIQUE. It uniquely identifies each row. A table can have only one PRIMARY KEY, which can be composite (multiple columns)."
+  },
+  {
+    "id": "SQL014",
+    "domain": "sql",
+    "topic": "Constraints",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does a FOREIGN KEY constraint enforce?",
+    "options": [
+      "Ensures value is in a range",
+      "Referential integrity between two tables",
+      "Uniqueness in parent table",
+      "Prevents NULL values"
+    ],
+    "answer": "Referential integrity between two tables",
+    "explanation": "FOREIGN KEY ensures that a value in one table (child) must exist in another table's (parent) referenced column. Prevents orphaned records. Example: orders.customer_id must exist in customers.id."
+  },
+  {
+    "id": "SQL015",
+    "domain": "sql",
+    "topic": "Constraints",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which SQL constraint ensures a value satisfies a specific condition?",
+    "options": [
+      "FOREIGN KEY",
+      "UNIQUE",
+      "DEFAULT",
+      "CHECK"
+    ],
+    "answer": "CHECK",
+    "explanation": "CHECK constraint validates that column values satisfy a boolean condition. Example: CHECK (age >= 18) or CHECK (salary > 0). If a row violates the CHECK constraint, the INSERT/UPDATE is rejected. DEFAULT provides a fallback value but doesn't validate."
+  },
+  {
+    "id": "SQL016",
+    "domain": "sql",
+    "topic": "Joins",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which JOIN returns only the rows where there is a match in both tables?",
+    "options": [
+      "FULL OUTER JOIN",
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN"
+    ],
+    "answer": "INNER JOIN",
+    "explanation": "INNER JOIN returns only rows where the join condition is satisfied in both tables. Non-matching rows from either table are excluded. It is the most commonly used join type."
+  },
+  {
+    "id": "SQL017",
+    "domain": "sql",
+    "topic": "Joins",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which JOIN returns all rows from the left table and matching rows from the right table?",
+    "options": [
+      "LEFT JOIN",
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "CROSS JOIN"
+    ],
+    "answer": "LEFT JOIN",
+    "explanation": "LEFT JOIN (LEFT OUTER JOIN) returns all rows from the left table. For rows with no match in the right table, NULL is returned for right table columns. Useful for finding records with no related records."
+  },
+  {
+    "id": "SQL018",
+    "domain": "sql",
+    "topic": "Joins",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a CROSS JOIN?",
+    "options": [
+      "Returns only unmatched rows",
+      "Joins a table with itself",
+      "Joins tables on a condition",
+      "Returns the Cartesian product of two tables"
+    ],
+    "answer": "Returns the Cartesian product of two tables",
+    "explanation": "CROSS JOIN produces all possible combinations of rows from both tables. If table A has 3 rows and table B has 4 rows, CROSS JOIN returns 12 rows. No ON clause needed."
+  },
+  {
+    "id": "SQL019",
+    "domain": "sql",
+    "topic": "Joins",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which SQL join is used to find employee-manager relationships stored in the same table?",
+    "options": [
+      "SELF JOIN using table aliases",
+      "CROSS JOIN",
+      "FULL OUTER JOIN",
+      "INNER JOIN between two tables"
+    ],
+    "answer": "SELF JOIN using table aliases",
+    "explanation": "SELF JOIN joins a table with itself using aliases: SELECT a.name, b.name AS manager FROM employees a JOIN employees b ON a.manager_id = b.id. The key is using two aliases to treat the single table as two separate 'copies'. Used for hierarchical data like org charts."
+  },
+  {
+    "id": "SQL020",
+    "domain": "sql",
+    "topic": "Joins",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between LEFT JOIN and LEFT EXCLUDING JOIN?",
+    "options": [
+      "LEFT EXCLUDING JOIN returns only left rows with NO match in right",
+      "They are the same",
+      "LEFT EXCLUDING JOIN returns all rows from both tables",
+      "LEFT JOIN excludes NULL rows"
+    ],
+    "answer": "LEFT EXCLUDING JOIN returns only left rows with NO match in right",
+    "explanation": "LEFT EXCLUDING JOIN: SELECT * FROM A LEFT JOIN B ON A.id = B.id WHERE B.id IS NULL \u2014 returns rows in A with no match in B. Useful for finding records in one table not present in another (set difference)."
+  },
+  {
+    "id": "SQL021",
+    "domain": "sql",
+    "topic": "Joins",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which JOIN type returns all customers even if they have no orders, and all orders even if the customer record is missing?",
+    "options": [
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "INNER JOIN",
+      "LEFT JOIN"
+    ],
+    "answer": "FULL OUTER JOIN",
+    "explanation": "FULL OUTER JOIN returns all rows from both tables \u2014 NULLs for missing matches on either side. INNER JOIN: only matching rows. LEFT JOIN: all from left, NULLs for unmatched right. RIGHT JOIN: all from right, NULLs for unmatched left. FULL OUTER JOIN is the union of LEFT and RIGHT JOINs."
+  },
+  {
+    "id": "SQL022",
+    "domain": "sql",
+    "topic": "Aggregation",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which aggregate function returns the number of rows?",
+    "options": [
+      "SUM()",
+      "COUNT()",
+      "MAX()",
+      "AVG()"
+    ],
+    "answer": "COUNT()",
+    "explanation": "COUNT(*) counts all rows including NULLs. COUNT(column) counts non-NULL values in that column. COUNT(DISTINCT column) counts unique non-NULL values."
+  },
+  {
+    "id": "SQL023",
+    "domain": "sql",
+    "topic": "Aggregation",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the difference between COUNT(*) and COUNT(column_name)?",
+    "options": [
+      "COUNT(*) is faster always",
+      "COUNT(column) counts all rows; COUNT(*) counts non-NULL values",
+      "No difference",
+      "COUNT(*) counts all rows; COUNT(column) counts non-NULL values in that column"
+    ],
+    "answer": "COUNT(*) counts all rows; COUNT(column) counts non-NULL values in that column",
+    "explanation": "COUNT(*): counts every row regardless of NULL values. COUNT(column_name): counts only rows where that column is NOT NULL. This distinction matters when a column has NULL values."
+  },
+  {
+    "id": "SQL024",
+    "domain": "sql",
+    "topic": "Aggregation",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between WHERE and HAVING?",
+    "options": [
+      "HAVING filters rows; WHERE filters groups",
+      "WHERE filters rows before grouping; HAVING filters groups after GROUP BY",
+      "WHERE works with aggregate functions; HAVING does not",
+      "No difference"
+    ],
+    "answer": "WHERE filters rows before grouping; HAVING filters groups after GROUP BY",
+    "explanation": "WHERE: filters individual rows before GROUP BY. Cannot use aggregate functions. HAVING: filters groups after GROUP BY. Can use aggregate functions. Example: SELECT dept, AVG(salary) FROM emp GROUP BY dept HAVING AVG(salary) > 60000;"
+  },
+  {
+    "id": "SQL025",
+    "domain": "sql",
+    "topic": "Aggregation",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which SQL clause filters results after GROUP BY based on an aggregate condition?",
+    "options": [
+      "HAVING AVG(salary) > 60000",
+      "ORDER BY AVG(salary) > 60000",
+      "WHERE AVG(salary) > 60000",
+      "FILTER AVG(salary) > 60000"
+    ],
+    "answer": "HAVING AVG(salary) > 60000",
+    "explanation": "HAVING filters groups after GROUP BY and can reference aggregate functions. WHERE filters individual rows before grouping and cannot use aggregates. To find departments with avg salary > 60000: SELECT dept, AVG(salary) FROM emp GROUP BY dept HAVING AVG(salary) > 60000."
+  },
+  {
+    "id": "SQL026",
+    "domain": "sql",
+    "topic": "Subqueries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a correlated subquery?",
+    "options": [
+      "A subquery that runs once independently",
+      "A subquery with multiple SELECT statements",
+      "A subquery in the FROM clause",
+      "A subquery that references columns from the outer query and runs once per row"
+    ],
+    "answer": "A subquery that references columns from the outer query and runs once per row",
+    "explanation": "Correlated subquery references the outer query's column and is re-executed for each row of the outer query. Example: SELECT * FROM employees e WHERE salary > (SELECT AVG(salary) FROM employees WHERE dept = e.dept). Slower than regular subqueries \u2014 often replaceable with JOINs."
+  },
+  {
+    "id": "SQL027",
+    "domain": "sql",
+    "topic": "Subqueries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between IN and EXISTS in SQL?",
+    "options": [
+      "IN checks value against a list; EXISTS checks if subquery returns any rows",
+      "EXISTS is faster always",
+      "IN works with correlated subqueries",
+      "No difference"
+    ],
+    "answer": "IN checks value against a list; EXISTS checks if subquery returns any rows",
+    "explanation": "IN: evaluates the subquery, returns the result set, then checks each outer row against it. EXISTS: stops as soon as first matching row is found (short-circuit). EXISTS is generally faster for large subquery results; IN is faster for small lists. EXISTS handles NULLs better."
+  },
+  {
+    "id": "SQL028",
+    "domain": "sql",
+    "topic": "Subqueries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which approach is more efficient for finding employees earning above their department average?",
+    "options": [
+      "Correlated subquery re-executing per row",
+      "Window function AVG() OVER (PARTITION BY department)",
+      "UNION of individual department queries",
+      "Self JOIN on salary"
+    ],
+    "answer": "Window function AVG() OVER (PARTITION BY department)",
+    "explanation": "Window function approach: SELECT * FROM (SELECT name, salary, AVG(salary) OVER (PARTITION BY department) AS dept_avg FROM employees) t WHERE salary > dept_avg. Single pass vs correlated subquery re-executing for every row. Window functions are the modern, efficient solution."
+  },
+  {
+    "id": "SQL029",
+    "domain": "sql",
+    "topic": "Window Functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a window function in SQL?",
+    "options": [
+      "A function that creates views",
+      "A function that performs calculations across a set of rows related to current row without collapsing them",
+      "A function for string windowing",
+      "A function that partitions tables"
+    ],
+    "answer": "A function that performs calculations across a set of rows related to current row without collapsing them",
+    "explanation": "Window functions (e.g., ROW_NUMBER, RANK, SUM OVER) perform calculations over a 'window' of related rows, returning a value for each row without reducing the result set like GROUP BY does."
+  },
+  {
+    "id": "SQL030",
+    "domain": "sql",
+    "topic": "Window Functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between RANK() and DENSE_RANK()?",
+    "options": [
+      "DENSE_RANK() skips numbers; RANK() does not",
+      "RANK() is for numbers; DENSE_RANK() is for strings",
+      "No difference",
+      "RANK() skips numbers after ties; DENSE_RANK() does not skip"
+    ],
+    "answer": "RANK() skips numbers after ties; DENSE_RANK() does not skip",
+    "explanation": "If two rows tie at rank 2: RANK() gives both rank 2, next gets rank 4 (skips 3). DENSE_RANK() gives both rank 2, next gets rank 3 (no skip). ROW_NUMBER() gives unique numbers regardless of ties."
+  },
+  {
+    "id": "SQL031",
+    "domain": "sql",
+    "topic": "Window Functions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Why is DENSE_RANK() preferred over RANK() when finding the Nth highest salary?",
+    "options": [
+      "DENSE_RANK doesn't skip rank numbers after ties, so rank N always exists if N salaries exist",
+      "DENSE_RANK() includes NULL values",
+      "RANK() doesn't work with PARTITION BY",
+      "DENSE_RANK is faster"
+    ],
+    "answer": "DENSE_RANK doesn't skip rank numbers after ties, so rank N always exists if N salaries exist",
+    "explanation": "If two employees tie at rank 1, RANK() assigns both rank 1 and the next gets rank 3 (skipping 2). WHERE rnk=2 returns nothing. DENSE_RANK() gives both rank 1 and next gets rank 2. WHERE rnk=2 correctly finds the second highest. DENSE_RANK is always preferred for Nth highest queries."
+  },
+  {
+    "id": "SQL032",
+    "domain": "sql",
+    "topic": "Window Functions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does the LEAD() function do in SQL?",
+    "options": [
+      "Returns the next row's value",
+      "Returns running average",
+      "Returns the previous row's value",
+      "Returns cumulative total"
+    ],
+    "answer": "Returns the next row's value",
+    "explanation": "LEAD(column, offset, default) returns the value from the next row (or offset rows ahead). LAG() returns the previous row's value. Both are useful for comparing current row with adjacent rows without self-joins."
+  },
+  {
+    "id": "SQL033",
+    "domain": "sql",
+    "topic": "Indexes",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the primary purpose of an index in SQL?",
+    "options": [
+      "To speed up data retrieval",
+      "To enforce data integrity",
+      "To prevent duplicate data",
+      "To sort data permanently"
+    ],
+    "answer": "To speed up data retrieval",
+    "explanation": "An index is a data structure (usually B-Tree) that speeds up SELECT queries by allowing the database to find rows without scanning the entire table. Trade-off: indexes slow down INSERT/UPDATE/DELETE and consume storage."
+  },
+  {
+    "id": "SQL034",
+    "domain": "sql",
+    "topic": "Indexes",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a clustered and non-clustered index?",
+    "options": [
+      "Clustered index allows duplicates; non-clustered does not",
+      "No difference",
+      "Clustered index determines physical row order (one per table); non-clustered is a separate structure with pointers",
+      "Non-clustered determines physical order"
+    ],
+    "answer": "Clustered index determines physical row order (one per table); non-clustered is a separate structure with pointers",
+    "explanation": "Clustered index: physically sorts table rows by index key. Only one per table (PRIMARY KEY is usually clustered). Non-clustered: separate B-Tree structure with pointers back to actual rows. Multiple allowed per table. Clustered is faster for range queries; non-clustered adds lookup overhead."
+  },
+  {
+    "id": "SQL035",
+    "domain": "sql",
+    "topic": "Indexes",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which of the following is a reason to AVOID adding an index to a column?",
+    "options": [
+      "The column is used in WHERE clause frequently",
+      "The column is used in JOIN conditions",
+      "The column has high cardinality (many unique values)",
+      "The column has very low cardinality (e.g., boolean with only 2 values)"
+    ],
+    "answer": "The column has very low cardinality (e.g., boolean with only 2 values)",
+    "explanation": "Indexes on low-cardinality columns (boolean, status with 2-3 values) are ineffective \u2014 the DB still scans ~50% of rows. Index overhead (slower writes, extra storage) outweighs the benefit. Create indexes on high-cardinality columns used in WHERE/JOIN/ORDER BY."
+  },
+  {
+    "id": "SQL036",
+    "domain": "sql",
+    "topic": "Normalization",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the goal of database normalization?",
+    "options": [
+      "To create more tables",
+      "To speed up all queries",
+      "To remove all indexes",
+      "To eliminate data redundancy and ensure data integrity"
+    ],
+    "answer": "To eliminate data redundancy and ensure data integrity",
+    "explanation": "Normalization organizes tables to reduce data duplication and dependency, preventing anomalies (insert, update, delete anomalies). It involves dividing large tables into smaller related tables."
+  },
+  {
+    "id": "SQL037",
+    "domain": "sql",
+    "topic": "Normalization",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which normal form requires that all non-key attributes are fully functionally dependent on the primary key?",
+    "options": [
+      "2NF",
+      "BCNF",
+      "1NF",
+      "3NF"
+    ],
+    "answer": "2NF",
+    "explanation": "2NF: must be in 1NF AND every non-key attribute must be fully dependent on the entire primary key (no partial dependency). This mainly applies to composite primary keys."
+  },
+  {
+    "id": "SQL038",
+    "domain": "sql",
+    "topic": "Normalization",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which normal form violation occurs when a non-key column depends on another non-key column?",
+    "options": [
+      "Second Normal Form (2NF) \u2014 partial dependency",
+      "BCNF",
+      "Third Normal Form (3NF) \u2014 transitive dependency",
+      "First Normal Form (1NF)"
+    ],
+    "answer": "Third Normal Form (3NF) \u2014 transitive dependency",
+    "explanation": "3NF violation (transitive dependency): a non-key column depends on another non-key column. Example: employee table with dept_id and dept_name \u2014 dept_name depends on dept_id (non-key), not on employee_id (key). Fix: move dept_name to a departments table. 2NF covers partial dependency on part of a composite key."
+  },
+  {
+    "id": "SQL039",
+    "domain": "sql",
+    "topic": "Normalization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is denormalization and when is it used?",
+    "options": [
+      "Merging all tables into one",
+      "Removing all foreign keys",
+      "Converting to higher normal forms",
+      "Intentionally introducing redundancy for performance"
+    ],
+    "answer": "Intentionally introducing redundancy for performance",
+    "explanation": "Denormalization adds redundancy (e.g., storing calculated values, duplicating columns) to improve read performance by reducing JOIN operations. Used in data warehouses, reporting systems, and read-heavy applications where query speed matters more than update efficiency."
+  },
+  {
+    "id": "SQL040",
+    "domain": "sql",
+    "topic": "Transactions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does ACID stand for in database transactions?",
+    "options": [
+      "Availability, Consistency, Isolation, Dependency",
+      "Atomicity, Consistency, Isolation, Durability",
+      "Atomicity, Concurrency, Integrity, Durability",
+      "Atomicity, Consistency, Integrity, Distribution"
+    ],
+    "answer": "Atomicity, Consistency, Isolation, Durability",
+    "explanation": "ACID properties ensure reliable transaction processing: Atomicity (all or nothing), Consistency (valid state before and after), Isolation (transactions don't interfere), Durability (committed data persists even after crash)."
+  },
+  {
+    "id": "SQL041",
+    "domain": "sql",
+    "topic": "Transactions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which transaction isolation level prevents dirty reads but allows non-repeatable reads?",
+    "options": [
+      "Read Committed",
+      "Repeatable Read",
+      "Serializable",
+      "Read Uncommitted"
+    ],
+    "answer": "Read Committed",
+    "explanation": "Read Committed: prevents dirty reads (cannot read uncommitted data of other transactions) but allows non-repeatable reads (re-reading same row may return different value if another transaction committed between reads). Default in many databases (PostgreSQL, Oracle, SQL Server)."
+  },
+  {
+    "id": "SQL042",
+    "domain": "sql",
+    "topic": "Transactions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which isolation level prevents both dirty reads and non-repeatable reads but allows phantom reads?",
+    "options": [
+      "Read Committed",
+      "Repeatable Read",
+      "Serializable",
+      "Read Uncommitted"
+    ],
+    "answer": "Repeatable Read",
+    "explanation": "Repeatable Read prevents dirty reads (no uncommitted data) and non-repeatable reads (same row returns same value within transaction). Phantom reads still possible (new rows added by other transactions). Default in MySQL InnoDB. Serializable prevents all three anomalies but is slowest."
+  },
+  {
+    "id": "SQL043",
+    "domain": "sql",
+    "topic": "Views",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a SQL View?",
+    "options": [
+      "A physical copy of a table",
+      "A type of index",
+      "A stored procedure",
+      "A virtual table based on a SELECT query"
+    ],
+    "answer": "A virtual table based on a SELECT query",
+    "explanation": "A View is a saved SELECT query that acts like a virtual table. It doesn't store data itself (unless materialized). Simplifies complex queries, provides security (hide columns), and creates abstraction layer."
+  },
+  {
+    "id": "SQL044",
+    "domain": "sql",
+    "topic": "Views",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a View and a Materialized View?",
+    "options": [
+      "View stores no data (runs query each time); Materialized View stores results physically",
+      "Materialized View is dynamic; View is static",
+      "No difference",
+      "Views are faster always"
+    ],
+    "answer": "View stores no data (runs query each time); Materialized View stores results physically",
+    "explanation": "View: virtual, query is re-executed each time view is accessed \u2014 always up-to-date but slower for complex queries. Materialized View: stores query results physically \u2014 much faster to query but needs to be refreshed to reflect underlying data changes."
+  },
+  {
+    "id": "SQL045",
+    "domain": "sql",
+    "topic": "Stored Procedures",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the advantage of using a Stored Procedure?",
+    "options": [
+      "Stored procedures cannot be reused",
+      "They are always faster than regular queries",
+      "They compile once and execute many times, reducing network traffic and improving performance",
+      "They allow only SELECT operations"
+    ],
+    "answer": "They compile once and execute many times, reducing network traffic and improving performance",
+    "explanation": "Stored procedures are precompiled SQL blocks stored in the database. Benefits: better performance (compiled execution plan), reduced network traffic (single call executes multiple statements), code reuse, security (grant execute without table access), and encapsulation."
+  },
+  {
+    "id": "SQL046",
+    "domain": "sql",
+    "topic": "Stored Procedures",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which key distinction determines whether you should use a stored procedure or a function in SQL?",
+    "options": [
+      "Procedures return values; functions do not",
+      "Functions are faster; procedures are slower",
+      "Functions return a value and can be used in SELECT expressions; procedures cannot be used in SELECT and are called independently",
+      "Functions handle transactions; procedures do not"
+    ],
+    "answer": "Functions return a value and can be used in SELECT expressions; procedures cannot be used in SELECT and are called independently",
+    "explanation": "Function: must return a value (scalar or table), usable in SELECT/WHERE/HAVING, typically cannot modify DB state, used for computation. Stored Procedure: called with EXEC/CALL, may use OUT parameters, can perform INSERT/UPDATE/DELETE, used for business logic. Key rule: functions go in expressions; procedures are standalone calls."
+  },
+  {
+    "id": "SQL047",
+    "domain": "sql",
+    "topic": "Triggers",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "When does an AFTER trigger fire?",
+    "options": [
+      "During the DML operation",
+      "Before the DML operation",
+      "After the DML operation completes",
+      "Only on SELECT statements"
+    ],
+    "answer": "After the DML operation completes",
+    "explanation": "AFTER trigger fires after the DML (INSERT/UPDATE/DELETE) operation completes successfully. BEFORE trigger fires before the operation, allowing validation or modification of data before it's written."
+  },
+  {
+    "id": "SQL048",
+    "domain": "sql",
+    "topic": "Triggers",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the main risk of using database triggers?",
+    "options": [
+      "Triggers cannot be nested",
+      "Triggers improve performance significantly",
+      "Triggers are only for SELECT statements",
+      "Triggers contain hidden logic that fires invisibly, making debugging and maintenance difficult"
+    ],
+    "answer": "Triggers contain hidden logic that fires invisibly, making debugging and maintenance difficult",
+    "explanation": "Triggers fire automatically on DML operations \u2014 their logic is hidden from application developers. This makes debugging hard (unexpected data changes), testing difficult, and creates hidden performance overhead. Cascading triggers (trigger firing another trigger) can cause complex behavior. Use sparingly; prefer application-level logic."
+  },
+  {
+    "id": "SQL049",
+    "domain": "sql",
+    "topic": "CTEs",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a CTE (Common Table Expression) in SQL?",
+    "options": [
+      "A function that returns tables",
+      "A type of index",
+      "A named temporary result set defined with the WITH clause",
+      "A permanent table in the database"
+    ],
+    "answer": "A named temporary result set defined with the WITH clause",
+    "explanation": "CTE is a named temporary result set (using WITH keyword) that exists only for the duration of the query. Improves readability by breaking complex queries into named parts. Syntax: WITH cte_name AS (SELECT ...) SELECT * FROM cte_name;"
+  },
+  {
+    "id": "SQL050",
+    "domain": "sql",
+    "topic": "CTEs",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What makes a recursive CTE different from a regular CTE?",
+    "options": [
+      "It permanently stores data",
+      "It references itself in its definition to traverse hierarchical data",
+      "It can only be used with SELECT",
+      "It runs faster than regular CTEs"
+    ],
+    "answer": "It references itself in its definition to traverse hierarchical data",
+    "explanation": "Recursive CTE has two parts joined with UNION ALL: anchor member (base case, no self-reference) and recursive member (references the CTE itself). Executes until no new rows are produced. Used for org hierarchies, category trees, graph traversal \u2014 replacing complex self-joins."
+  },
+  {
+    "id": "SQL051",
+    "domain": "sql",
+    "topic": "Set Operations",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL operator combines results of two SELECT statements and removes duplicates?",
+    "options": [
+      "INTERSECT",
+      "UNION",
+      "UNION ALL",
+      "MINUS"
+    ],
+    "answer": "UNION",
+    "explanation": "UNION combines results of two SELECT statements and removes duplicates. Both queries must have the same number of columns with compatible data types. UNION ALL keeps duplicates and is faster."
+  },
+  {
+    "id": "SQL052",
+    "domain": "sql",
+    "topic": "Set Operations",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the INTERSECT operator return?",
+    "options": [
+      "All rows with duplicates",
+      "Rows in first query but not in second",
+      "Only rows present in both query results",
+      "All rows from both queries"
+    ],
+    "answer": "Only rows present in both query results",
+    "explanation": "INTERSECT returns only the rows that appear in BOTH result sets (like a mathematical intersection). EXCEPT/MINUS returns rows in the first result set but not in the second."
+  },
+  {
+    "id": "SQL053",
+    "domain": "sql",
+    "topic": "String Functions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL function returns the length of a string?",
+    "options": [
+      "SIZE()",
+      "LEN() or LENGTH()",
+      "COUNT()",
+      "STRLEN()"
+    ],
+    "answer": "LEN() or LENGTH()",
+    "explanation": "LEN() is used in SQL Server; LENGTH() in MySQL, Oracle, PostgreSQL. Both return the number of characters in a string. Example: SELECT LENGTH('Hello') returns 5."
+  },
+  {
+    "id": "SQL054",
+    "domain": "sql",
+    "topic": "String Functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which function is used to replace part of a string in SQL?",
+    "options": [
+      "SUBSTITUTE()",
+      "CHANGE()",
+      "REPLACE()",
+      "MODIFY()"
+    ],
+    "answer": "REPLACE()",
+    "explanation": "REPLACE(string, old_substring, new_substring) replaces all occurrences of old_substring with new_substring. Example: SELECT REPLACE('Hello World', 'World', 'SQL') returns 'Hello SQL'."
+  },
+  {
+    "id": "SQL055",
+    "domain": "sql",
+    "topic": "Date Functions",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which SQL function returns the current date and time?",
+    "options": [
+      "CURRENT()",
+      "NOW() or GETDATE()",
+      "GETTIME()",
+      "TODAY()"
+    ],
+    "answer": "NOW() or GETDATE()",
+    "explanation": "NOW() is used in MySQL/PostgreSQL; GETDATE() in SQL Server; SYSDATE in Oracle. All return the current date and time. CURDATE()/CURRENT_DATE returns only the date."
+  },
+  {
+    "id": "SQL056",
+    "domain": "sql",
+    "topic": "Date Functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Why should you avoid using DATEDIFF() in a WHERE clause on an indexed date column?",
+    "options": [
+      "DATEDIFF returns incorrect values",
+      "DATEDIFF is deprecated in modern SQL",
+      "DATEDIFF is slower than BETWEEN",
+      "Wrapping an indexed column in a function prevents the index from being used"
+    ],
+    "answer": "Wrapping an indexed column in a function prevents the index from being used",
+    "explanation": "Functions in WHERE clause on indexed columns (WHERE DATEDIFF(created_at, NOW()) <= 30) disable the index, causing a full table scan. Write instead as: WHERE created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY) \u2014 the indexed column is bare on the left, enabling index range scan."
+  },
+  {
+    "id": "SQL057",
+    "domain": "sql",
+    "topic": "NULL Handling",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which operator is used to test for NULL values in SQL?",
+    "options": [
+      "= NULL",
+      "IS NULL",
+      "== NULL",
+      "!= NULL"
+    ],
+    "answer": "IS NULL",
+    "explanation": "NULL cannot be compared with = or != because NULL is unknown. Use IS NULL to check for null values and IS NOT NULL to check for non-null. Any comparison with NULL using =, <, > returns NULL (unknown), not TRUE."
+  },
+  {
+    "id": "SQL058",
+    "domain": "sql",
+    "topic": "NULL Handling",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does COALESCE() function do?",
+    "options": [
+      "Converts NULL to zero",
+      "Returns the first non-NULL value from a list",
+      "Removes NULL rows",
+      "Counts non-NULL values"
+    ],
+    "answer": "Returns the first non-NULL value from a list",
+    "explanation": "COALESCE(val1, val2, ..., valN) returns the first non-NULL value in the list. Example: COALESCE(phone, email, 'N/A') returns phone if not null, else email if not null, else 'N/A'. NULLIF(a,b) returns NULL if a=b, else a."
+  },
+  {
+    "id": "SQL059",
+    "domain": "sql",
+    "topic": "NULL Handling",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does COUNT(column_name) return when the column contains NULL values?",
+    "options": [
+      "Returns NULL",
+      "Excludes NULL values from the count",
+      "Throws an error",
+      "Includes NULL in the count"
+    ],
+    "answer": "Excludes NULL values from the count",
+    "explanation": "COUNT(column_name) counts only non-NULL values. COUNT(*) counts all rows including those with NULLs. Example: column has (1, NULL, 3, NULL) \u2014 COUNT(*) = 4, COUNT(column) = 2. This also affects SUM/AVG/MAX/MIN which all ignore NULLs."
+  },
+  {
+    "id": "SQL060",
+    "domain": "sql",
+    "topic": "Performance Tuning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a query execution plan and why is it useful?",
+    "options": [
+      "A document listing all queries",
+      "A schedule for running queries",
+      "A log of past queries",
+      "A visual/textual representation of how the database engine will execute a query"
+    ],
+    "answer": "A visual/textual representation of how the database engine will execute a query",
+    "explanation": "EXPLAIN (MySQL/PostgreSQL) or EXPLAIN PLAN (Oracle) shows the execution plan: which indexes are used, join types, estimated rows, cost. Essential for identifying performance bottlenecks like full table scans."
+  },
+  {
+    "id": "SQL061",
+    "domain": "sql",
+    "topic": "Performance Tuning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which of the following SQL optimization techniques allows an index to be used for an ORDER BY query?",
+    "options": [
+      "Using SELECT * instead of specific columns",
+      "Creating an index on the ORDER BY column and avoiding functions on it",
+      "Adding DISTINCT to the query",
+      "Wrapping the column in a function: ORDER BY UPPER(name)"
+    ],
+    "answer": "Creating an index on the ORDER BY column and avoiding functions on it",
+    "explanation": "Index on ORDER BY column allows the DB to retrieve rows in sorted order without a filesort. Wrapping a column in a function (UPPER, YEAR, etc.) in WHERE or ORDER BY disables the index. Use functional indexes if you must filter/sort by a function. Covering index (including SELECT columns) eliminates table lookups entirely."
+  },
+  {
+    "id": "SQL062",
+    "domain": "sql",
+    "topic": "Keys",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a composite key?",
+    "options": [
+      "A primary key that consists of two or more columns",
+      "A key that references another table",
+      "A key made of encrypted values",
+      "A key that allows NULL values"
+    ],
+    "answer": "A primary key that consists of two or more columns",
+    "explanation": "A composite key (or composite primary key) uses two or more columns together to uniquely identify a row. Example: (student_id, course_id) as primary key in an enrollment table, where neither alone is unique."
+  },
+  {
+    "id": "SQL063",
+    "domain": "sql",
+    "topic": "Keys",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the advantage of a surrogate key over a natural key as a primary key?",
+    "options": [
+      "Surrogate keys are stable (never change) and simple (single column), making joins faster",
+      "Surrogate keys have business meaning",
+      "Natural keys are always shorter",
+      "Surrogate keys enforce business rules automatically"
+    ],
+    "answer": "Surrogate keys are stable (never change) and simple (single column), making joins faster",
+    "explanation": "Surrogate key (auto-increment ID, UUID): no business meaning, stable (won't change if business data changes), always single column (simple joins). Natural key (email, SSN): has meaning but may change (email update breaks FK references), may be composite (complex joins). Most DBs prefer surrogate keys."
+  },
+  {
+    "id": "SQL064",
+    "domain": "sql",
+    "topic": "Case Expression",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the CASE expression do in SQL?",
+    "options": [
+      "Groups rows by condition",
+      "Creates a new table based on conditions",
+      "Returns different values based on conditions (like if-else)",
+      "Converts data types"
+    ],
+    "answer": "Returns different values based on conditions (like if-else)",
+    "explanation": "CASE WHEN condition THEN result ELSE default END is SQL's conditional expression, like if-else. Example: SELECT name, CASE WHEN salary > 80000 THEN 'High' WHEN salary > 50000 THEN 'Mid' ELSE 'Low' END AS band FROM employees;"
+  },
+  {
+    "id": "SQL065",
+    "domain": "sql",
+    "topic": "Case Expression",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What SQL technique is used to convert row-based data into column-based output?",
+    "options": [
+      "UNION ALL",
+      "CASE with GROUP BY (pivot)",
+      "UNPIVOT",
+      "CROSS JOIN"
+    ],
+    "answer": "CASE with GROUP BY (pivot)",
+    "explanation": "Pivot: SELECT product, SUM(CASE WHEN month='Jan' THEN amount ELSE 0 END) AS Jan FROM sales GROUP BY product. CASE WHEN converts row values to columns; GROUP BY + SUM aggregates. SQL Server/Oracle have PIVOT keyword; CASE approach is cross-database compatible."
+  },
+  {
+    "id": "SQL066",
+    "domain": "sql",
+    "topic": "Schema Design",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "In an e-commerce schema, why should unit_price be stored in the OrderItems table rather than only in the Products table?",
+    "options": [
+      "It reduces query complexity",
+      "OrderItems needs more columns",
+      "Product table has a size limit",
+      "Product prices can change over time; storing price at order time preserves historical accuracy"
+    ],
+    "answer": "Product prices can change over time; storing price at order time preserves historical accuracy",
+    "explanation": "Storing unit_price in OrderItems captures the price at the moment of purchase. If only Products.price is used, changing the product price would alter historical order totals \u2014 breaking financial records. This is a common schema design decision for audit integrity."
+  },
+  {
+    "id": "SQL067",
+    "domain": "sql",
+    "topic": "Locking",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which locking strategy is better suited for high-contention, write-heavy scenarios?",
+    "options": [
+      "Optimistic locking \u2014 no lock on read, verify on write",
+      "Neither; use no locking",
+      "Both are equally suited",
+      "Pessimistic locking \u2014 lock resource on read, block other writers"
+    ],
+    "answer": "Pessimistic locking \u2014 lock resource on read, block other writers",
+    "explanation": "Pessimistic locking (SELECT FOR UPDATE) locks the row on read, preventing concurrent modifications \u2014 safe for high contention. Optimistic locking (version column check on update) is better for low-contention, read-heavy workloads. Banking/inventory updates need pessimistic locking; social media likes can use optimistic."
+  },
+  {
+    "id": "SQL068",
+    "domain": "sql",
+    "topic": "Partitioning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which type of table partitioning distributes data evenly across partitions using a hash function?",
+    "options": [
+      "Composite partitioning",
+      "Hash partitioning",
+      "Range partitioning",
+      "List partitioning"
+    ],
+    "answer": "Hash partitioning",
+    "explanation": "Hash partitioning applies a hash function to a column (e.g., customer_id % 4) to distribute rows evenly across partitions. Best when no natural range or list criteria exists. Range partitioning: by value ranges (dates). List partitioning: by specific discrete values (regions)."
+  },
+  {
+    "id": "SQL069",
+    "domain": "sql",
+    "topic": "OLTP vs OLAP",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between OLTP and OLAP databases?",
+    "options": [
+      "OLTP is NoSQL; OLAP is SQL",
+      "No difference",
+      "OLAP handles transactions; OLTP handles analytics",
+      "OLTP optimized for transactional reads/writes; OLAP optimized for analytical queries"
+    ],
+    "answer": "OLTP optimized for transactional reads/writes; OLAP optimized for analytical queries",
+    "explanation": "OLTP (Online Transaction Processing): many short transactions, normalized schema, optimized for INSERT/UPDATE/DELETE, row-oriented. OLAP (Online Analytical Processing): complex analytical queries, denormalized/star schema, optimized for aggregations on large datasets, column-oriented storage often used."
+  },
+  {
+    "id": "SQL070",
+    "domain": "sql",
+    "topic": "Star Schema",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the main query performance advantage of a star schema over a snowflake schema?",
+    "options": [
+      "Snowflake schema is better for OLAP",
+      "Star schema uses less storage",
+      "Star schema requires fewer JOINs due to denormalized dimensions, making queries faster",
+      "Star schema enforces stronger data integrity"
+    ],
+    "answer": "Star schema requires fewer JOINs due to denormalized dimensions, making queries faster",
+    "explanation": "Star schema: central fact table + denormalized flat dimension tables = fewer JOINs, faster queries, simpler SQL. Snowflake schema: normalized dimensions split into multiple tables = more JOINs, slower queries, less storage. Most production data warehouses use star schema for query performance."
+  },
+  {
+    "id": "SQL071",
+    "domain": "sql",
+    "topic": "Window Functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Given salaries 90k, 85k, 85k, 75k, what does RANK() assign to the two 85k employees?",
+    "options": [
+      "Rank 1 and 2",
+      "Rank 2 and 3",
+      "Both get rank 2, next gets rank 4",
+      "Both get rank 2, next gets rank 3"
+    ],
+    "answer": "Both get rank 2, next gets rank 4",
+    "explanation": "RANK() gives tied rows the same rank but skips the next rank. So: 90k\u21921, 85k\u21922, 85k\u21922, 75k\u21924 (rank 3 is skipped). DENSE_RANK() doesn't skip: 90k\u21921, 85k\u21922, 85k\u21922, 75k\u21923. ROW_NUMBER() gives unique: 1,2,3,4 regardless of ties."
+  },
+  {
+    "id": "SQL072",
+    "domain": "sql",
+    "topic": "Indexes",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a covering index?",
+    "options": [
+      "An index on all columns",
+      "An index that contains all columns needed by a query so no table lookup is needed",
+      "An index that covers the entire table",
+      "A clustered index"
+    ],
+    "answer": "An index that contains all columns needed by a query so no table lookup is needed",
+    "explanation": "A covering index includes all columns a specific query needs (both filter and select columns). The query can be satisfied entirely from the index without accessing the actual table rows (index-only scan). Significantly improves performance for frequently run queries."
+  },
+  {
+    "id": "SQL073",
+    "domain": "sql",
+    "topic": "Subqueries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between a scalar subquery and a derived table?",
+    "options": [
+      "No difference",
+      "Scalar subquery returns single value used in expression; derived table is subquery in FROM clause returning rows",
+      "Scalar subqueries are not allowed in WHERE",
+      "Derived table returns one value; scalar returns many"
+    ],
+    "answer": "Scalar subquery returns single value used in expression; derived table is subquery in FROM clause returning rows",
+    "explanation": "Scalar subquery: returns exactly one row, one column \u2014 used in SELECT or WHERE. Example: WHERE salary = (SELECT MAX(salary) FROM emp). Derived table (inline view): subquery in FROM clause \u2014 returns a result set used as a table. Example: SELECT * FROM (SELECT dept, AVG(salary) avg FROM emp GROUP BY dept) t WHERE avg > 60000."
+  },
+  {
+    "id": "SQL074",
+    "domain": "sql",
+    "topic": "Aggregation",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which window frame specification calculates a running total from the beginning to the current row?",
+    "options": [
+      "ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING",
+      "ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING",
+      "ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING",
+      "ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW"
+    ],
+    "answer": "ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW",
+    "explanation": "Running total: SUM(amount) OVER (ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW). UNBOUNDED PRECEDING = start of partition. CURRENT ROW = current row. This accumulates sum from first row to current row. This is the default frame when using ORDER BY in a window function."
+  },
+  {
+    "id": "SQL075",
+    "domain": "sql",
+    "topic": "Joins",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Why is explicit JOIN syntax preferred over implicit WHERE-style joins?",
+    "options": [
+      "Explicit JOIN is more readable, separates join from filter conditions, and avoids accidental CROSS JOINs",
+      "Explicit JOIN is always faster",
+      "Implicit WHERE joins support more join types",
+      "Databases only optimize explicit JOINs"
+    ],
+    "answer": "Explicit JOIN is more readable, separates join from filter conditions, and avoids accidental CROSS JOINs",
+    "explanation": "Explicit: SELECT * FROM a JOIN b ON a.id = b.a_id WHERE b.status='active'. Implicit: SELECT * FROM a, b WHERE a.id=b.a_id AND b.status='active'. Explicit is clearer (join vs filter conditions), easier to convert to LEFT JOIN, and forgetting the WHERE in implicit style creates a CROSS JOIN bug."
+  },
+  {
+    "id": "SQL076",
+    "domain": "sql",
+    "topic": "Advanced Queries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which query correctly finds all duplicate email addresses in a users table?",
+    "options": [
+      "SELECT email, COUNT(*) FROM users GROUP BY email HAVING COUNT(*) > 1",
+      "SELECT email FROM users GROUP BY email WHERE COUNT(*) > 1",
+      "SELECT DISTINCT email FROM users",
+      "SELECT email FROM users WHERE email = email"
+    ],
+    "answer": "SELECT email, COUNT(*) FROM users GROUP BY email HAVING COUNT(*) > 1",
+    "explanation": "GROUP BY email groups identical emails together. COUNT(*) counts how many rows share each email. HAVING COUNT(*) > 1 filters to groups with duplicates. WHERE cannot be used with aggregate functions \u2014 that's HAVING's job. This is the standard duplicate detection pattern."
+  },
+  {
+    "id": "SQL077",
+    "domain": "sql",
+    "topic": "Advanced Queries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which approach correctly finds the Nth highest salary without using window functions?",
+    "options": [
+      "SELECT salary FROM employees ORDER BY salary DESC OFFSET N",
+      "SELECT salary FROM employees LIMIT N",
+      "SELECT MAX(salary) FROM employees WHERE salary NOT IN (SELECT TOP N-1 salary FROM employees ORDER BY salary DESC)",
+      "SELECT MIN(salary) FROM employees WHERE salary > 0"
+    ],
+    "answer": "SELECT MAX(salary) FROM employees WHERE salary NOT IN (SELECT TOP N-1 salary FROM employees ORDER BY salary DESC)",
+    "explanation": "Subquery approach: exclude the top N-1 salaries, then get the MAX of remaining = Nth highest. For N=2: SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees). Window function approach is cleaner: DENSE_RANK() OVER (ORDER BY salary DESC) and filter rnk = N."
+  },
+  {
+    "id": "SQL078",
+    "domain": "sql",
+    "topic": "String Functions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which SQL function extracts a substring from a string starting at position 3 with length 4?",
+    "options": [
+      "RIGHT(str, 4)",
+      "CHARINDEX(str, 3)",
+      "SUBSTRING(str, 3, 4)",
+      "LEFT(str, 4)"
+    ],
+    "answer": "SUBSTRING(str, 3, 4)",
+    "explanation": "SUBSTRING(string, start_position, length) extracts a substring. SUBSTRING('HelloWorld', 3, 4) returns 'lloW' (starts at position 3, takes 4 characters). LEFT(str, n) takes n chars from left. RIGHT(str, n) from right. CHARINDEX finds position of a substring."
+  },
+  {
+    "id": "SQL079",
+    "domain": "sql",
+    "topic": "JSON in SQL",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which SQL function extracts a value from a JSON column in PostgreSQL?",
+    "options": [
+      "EXTRACT_JSON()",
+      "->  operator or JSON_EXTRACT()",
+      "JSON_GET()",
+      "JSON.parse()"
+    ],
+    "answer": "->  operator or JSON_EXTRACT()",
+    "explanation": "PostgreSQL uses -> to return JSON and ->> to return text. MySQL uses JSON_EXTRACT(col, '$.key') or col->>'$.key'. Modern databases support JSON natively for semi-structured data storage and querying."
+  },
+  {
+    "id": "SQL080",
+    "domain": "sql",
+    "topic": "Query Clauses Order",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the correct order of SQL clauses in a SELECT statement?",
+    "options": [
+      "SELECT, FROM, HAVING, WHERE, GROUP BY, ORDER BY",
+      "SELECT, WHERE, FROM, GROUP BY, ORDER BY, HAVING",
+      "FROM, SELECT, WHERE, GROUP BY, HAVING, ORDER BY",
+      "SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY"
+    ],
+    "answer": "SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY",
+    "explanation": "Correct syntax order: SELECT \u2192 FROM \u2192 JOIN \u2192 WHERE \u2192 GROUP BY \u2192 HAVING \u2192 ORDER BY \u2192 LIMIT. Logical execution order is different: FROM \u2192 WHERE \u2192 GROUP BY \u2192 HAVING \u2192 SELECT \u2192 ORDER BY \u2192 LIMIT."
+  },
+  {
+    "id": "SQL081",
+    "domain": "sql",
+    "topic": "Execution Order",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Why can't you use a SELECT column alias in the WHERE clause of the same query?",
+    "options": [
+      "It's a syntax restriction with no logical reason",
+      "WHERE only accepts column names, not expressions",
+      "WHERE executes before SELECT in logical query order, so aliases aren't yet defined",
+      "Aliases can only be used in ORDER BY"
+    ],
+    "answer": "WHERE executes before SELECT in logical query order, so aliases aren't yet defined",
+    "explanation": "Logical execution: FROM \u2192 WHERE \u2192 GROUP BY \u2192 HAVING \u2192 SELECT \u2192 ORDER BY. WHERE runs before SELECT, so column aliases defined in SELECT don't exist yet when WHERE runs. You CAN use aliases in ORDER BY (runs after SELECT). Use a subquery or CTE to filter by a SELECT expression."
+  },
+  {
+    "id": "SQL082",
+    "domain": "sql",
+    "topic": "Pagination",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which clause is used to limit the number of rows returned in MySQL?",
+    "options": [
+      "FETCH FIRST",
+      "TOP",
+      "LIMIT",
+      "ROWNUM"
+    ],
+    "answer": "LIMIT",
+    "explanation": "MySQL and PostgreSQL use LIMIT n OFFSET m for pagination. SQL Server uses TOP n or FETCH FIRST n ROWS ONLY. Oracle uses ROWNUM or FETCH FIRST n ROWS ONLY (12c+). Standard SQL uses FETCH FIRST n ROWS ONLY."
+  },
+  {
+    "id": "SQL083",
+    "domain": "sql",
+    "topic": "UNION vs JOIN",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the fundamental difference between UNION and JOIN?",
+    "options": [
+      "UNION combines rows vertically (same columns); JOIN combines columns horizontally (related tables)",
+      "They are interchangeable",
+      "UNION requires matching primary keys",
+      "UNION combines columns horizontally; JOIN combines rows vertically"
+    ],
+    "answer": "UNION combines rows vertically (same columns); JOIN combines columns horizontally (related tables)",
+    "explanation": "JOIN: merges columns from two tables into wider rows \u2014 requires a relationship (key). Result has more columns. UNION: appends rows from two queries \u2014 requires same column count and compatible types. Result has more rows. Example: JOIN customer+order data (wider row); UNION current+archived orders (more rows, same structure)."
+  },
+  {
+    "id": "SQL084",
+    "domain": "sql",
+    "topic": "Advanced Joins",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a Non-Equi Join?",
+    "options": [
+      "A join that returns unmatched rows",
+      "A join using operators other than = (like <, >, BETWEEN)",
+      "A join with no ON clause",
+      "A join between more than two tables"
+    ],
+    "answer": "A join using operators other than = (like <, >, BETWEEN)",
+    "explanation": "Non-equi join uses comparison operators other than = in the join condition. Example: SELECT e.name, s.grade FROM employees e JOIN salary_grades s ON e.salary BETWEEN s.min_sal AND s.max_sal. Used for range lookups like salary bands, date ranges."
+  },
+  {
+    "id": "SQL085",
+    "domain": "sql",
+    "topic": "Rollup & Cube",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does ROLLUP in GROUP BY generate that regular GROUP BY does not?",
+    "options": [
+      "It sorts results automatically",
+      "It removes NULL rows from results",
+      "It generates all possible grouping combinations",
+      "It generates subtotals along a hierarchy plus a grand total"
+    ],
+    "answer": "It generates subtotals along a hierarchy plus a grand total",
+    "explanation": "GROUP BY ROLLUP(year, quarter) generates: (year,quarter), (year), () \u2014 subtotals per year + grand total. n+1 levels for n columns. CUBE generates all 2^n combinations. GROUPING SETS lets you specify exactly which groupings. GROUPING() function identifies subtotal rows (returns 1 for subtotal)."
+  },
+  {
+    "id": "SQL086",
+    "domain": "sql",
+    "topic": "Data Types",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which data type should be used to store precise monetary values in SQL?",
+    "options": [
+      "DOUBLE",
+      "FLOAT",
+      "DECIMAL or NUMERIC",
+      "MONEY"
+    ],
+    "answer": "DECIMAL or NUMERIC",
+    "explanation": "DECIMAL(precision, scale) or NUMERIC stores exact decimal values without floating-point rounding errors, making it ideal for monetary values. FLOAT and DOUBLE are approximate and can cause rounding errors (e.g., 0.1 + 0.2 \u2260 0.3 exactly)."
+  },
+  {
+    "id": "SQL087",
+    "domain": "sql",
+    "topic": "Database Security",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which technique is the most effective defense against SQL injection?",
+    "options": [
+      "Parameterized queries (prepared statements)",
+      "Using stored procedures only",
+      "Input length validation",
+      "Escaping special characters manually"
+    ],
+    "answer": "Parameterized queries (prepared statements)",
+    "explanation": "Parameterized queries separate SQL code from data \u2014 the SQL structure is compiled first, user input passed as parameters later and treated as pure data (never parsed as SQL). Even if input contains SQL syntax, it's harmless. All modern ORMs and JDBC/ODBC support parameterized queries."
+  },
+  {
+    "id": "SQL088",
+    "domain": "sql",
+    "topic": "Database Security",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "In a parameterized query, what is the placeholder for user input in JDBC?",
+    "options": [
+      "${value}",
+      "?",
+      "@input",
+      "#param#"
+    ],
+    "answer": "?",
+    "explanation": "JDBC PreparedStatement uses ? as placeholder: PreparedStatement ps = conn.prepareStatement('SELECT * FROM users WHERE name = ?'); ps.setString(1, userInput); The DB engine compiles the SQL template once and binds the parameter value separately \u2014 user input is never interpreted as SQL code."
+  },
+  {
+    "id": "SQL089",
+    "domain": "sql",
+    "topic": "Temporary Tables",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "When should you prefer a temporary table over a CTE?",
+    "options": [
+      "When you need the result multiple times, add indexes, or use it across multiple statements",
+      "When you need the result only once in a single query",
+      "CTEs are always preferred",
+      "Temp tables are not available in modern SQL"
+    ],
+    "answer": "When you need the result multiple times, add indexes, or use it across multiple statements",
+    "explanation": "CTE: inline, single-query scope, no indexes, re-evaluated each reference. Temporary table: physically stored in tempdb/temp space, persists for session/transaction, can have indexes (great for large intermediate results), reusable across multiple queries. Use CTE for readability in one query; temp table for complex multi-step logic."
+  },
+  {
+    "id": "SQL090",
+    "domain": "sql",
+    "topic": "MERGE Statement",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does the WHEN NOT MATCHED BY TARGET clause do in a SQL MERGE statement?",
+    "options": [
+      "Deletes rows in source not in target",
+      "Inserts source rows that have no match in target",
+      "Updates matching rows",
+      "Rolls back the entire merge"
+    ],
+    "answer": "Inserts source rows that have no match in target",
+    "explanation": "MERGE WHEN MATCHED THEN UPDATE. WHEN NOT MATCHED BY TARGET THEN INSERT (rows in source but not in target). WHEN NOT MATCHED BY SOURCE THEN DELETE (rows in target but not in source). This three-way sync makes MERGE ideal for ETL and table synchronization."
+  },
+  {
+    "id": "SQL091",
+    "domain": "sql",
+    "topic": "EXPLAIN",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "In an EXPLAIN output, which 'type' value indicates a full table scan that should be optimized?",
+    "options": [
+      "ALL",
+      "ref",
+      "const",
+      "eq_ref"
+    ],
+    "answer": "ALL",
+    "explanation": "EXPLAIN type values from best to worst: const (single row by PK), eq_ref (one match per row from other table), ref (index lookup), range (index range scan), index (full index scan), ALL (full table scan \u2014 worst). 'ALL' means no index used \u2014 add an index on the WHERE/JOIN column. 'Using filesort' in Extra also signals optimization need."
+  },
+  {
+    "id": "SQL092",
+    "domain": "sql",
+    "topic": "Recursion",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which SQL clause is used to write recursive queries?",
+    "options": [
+      "REPEAT QUERY",
+      "WITH RECURSIVE",
+      "LOOP SELECT",
+      "RECURSIVE SELECT"
+    ],
+    "answer": "WITH RECURSIVE",
+    "explanation": "WITH RECURSIVE (or WITH in SQL Server which supports recursion by default) enables recursive CTEs. The recursive CTE has an anchor member (base case) and a recursive member joined with UNION ALL, repeatedly executed until no new rows are produced."
+  },
+  {
+    "id": "SQL093",
+    "domain": "sql",
+    "topic": "Advanced Queries",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which window function helps detect gaps in a sequence by looking at the next row's ID?",
+    "options": [
+      "LAG()",
+      "LEAD()",
+      "ROW_NUMBER()",
+      "FIRST_VALUE()"
+    ],
+    "answer": "LEAD()",
+    "explanation": "LEAD(id) OVER (ORDER BY id) gets the next row's id. If next_id > current_id + 1, there's a gap. SELECT id+1 AS gap_start, next_id-1 AS gap_end FROM (SELECT id, LEAD(id) OVER (ORDER BY id) AS next_id FROM t) x WHERE next_id > id+1. LEAD looks forward; LAG looks backward."
+  },
+  {
+    "id": "SQL094",
+    "domain": "sql",
+    "topic": "Partitioning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is partition pruning in SQL?",
+    "options": [
+      "Splitting a partition into two",
+      "Compressing partitions",
+      "The optimizer skipping irrelevant partitions when querying",
+      "Deleting old partitions"
+    ],
+    "answer": "The optimizer skipping irrelevant partitions when querying",
+    "explanation": "Partition pruning is when the query optimizer scans only relevant partitions based on WHERE clause conditions, ignoring others. Example: querying orders WHERE year = 2024 on a year-partitioned table only scans the 2024 partition \u2014 dramatically reducing I/O."
+  },
+  {
+    "id": "SQL095",
+    "domain": "sql",
+    "topic": "Transactions",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does SAVEPOINT do in a SQL transaction?",
+    "options": [
+      "Starts a new transaction",
+      "Creates a point within a transaction to which you can roll back",
+      "Commits the transaction",
+      "Permanently saves data"
+    ],
+    "answer": "Creates a point within a transaction to which you can roll back",
+    "explanation": "SAVEPOINT creates a named checkpoint within a transaction. ROLLBACK TO savepoint_name rolls back to that point without rolling back the entire transaction. Useful for partial rollbacks in complex multi-step transactions."
+  },
+  {
+    "id": "SQL096",
+    "domain": "sql",
+    "topic": "Advanced Analytics",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which window function is used to get the previous period's value for month-over-month growth calculation?",
+    "options": [
+      "LAG()",
+      "LEAD()",
+      "FIRST_VALUE()",
+      "NTILE()"
+    ],
+    "answer": "LAG()",
+    "explanation": "LAG(SUM(amount)) OVER (ORDER BY month) gets the previous month's revenue. MoM growth = (current - previous) / previous * 100. Use NULLIF(previous, 0) to avoid division by zero for the first month. LAG looks backward; LEAD looks forward."
+  },
+  {
+    "id": "SQL097",
+    "domain": "sql",
+    "topic": "Data Integrity",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does ON DELETE CASCADE do when a parent row is deleted?",
+    "options": [
+      "Automatically deletes all child rows referencing the parent",
+      "Sets foreign key in child rows to NULL",
+      "Prevents deletion of parent if children exist",
+      "Marks child rows as inactive"
+    ],
+    "answer": "Automatically deletes all child rows referencing the parent",
+    "explanation": "ON DELETE CASCADE: deleting parent automatically deletes all child rows. ON DELETE SET NULL: sets FK in child to NULL. ON DELETE RESTRICT (default): prevents parent deletion if children exist. Choose based on business rules: CASCADE for ownership (order\u2192items), SET NULL for optional relationships, RESTRICT for protected data."
+  },
+  {
+    "id": "SQL098",
+    "domain": "sql",
+    "topic": "SQL vs NoSQL",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which scenario is best suited for NoSQL over a relational SQL database?",
+    "options": [
+      "Massive horizontal scaling of user session data with flexible schema",
+      "E-commerce orders with complex reporting",
+      "Employee HR system with complex relationships",
+      "Banking transactions requiring ACID compliance"
+    ],
+    "answer": "Massive horizontal scaling of user session data with flexible schema",
+    "explanation": "NoSQL excels at: flexible/evolving schema (MongoDB), horizontal scale (Cassandra), high-speed key-value (Redis for sessions/cache), graph relationships (Neo4j). SQL excels at: ACID transactions, complex JOINs, referential integrity, reporting. Session data (key-value, high throughput, no relations) is a classic NoSQL use case."
+  },
+  {
+    "id": "SQL099",
+    "domain": "sql",
+    "topic": "Window Functions",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which combination of window functions and clauses correctly finds the top 3 products per category by sales?",
+    "options": [
+      "DENSE_RANK() OVER (PARTITION BY category ORDER BY SUM(amount) DESC) filtered WHERE rnk <= 3",
+      "RANK() OVER (ORDER BY SUM(amount) DESC) LIMIT 3",
+      "TOP 3 WITH PARTITION BY category",
+      "GROUP BY category ORDER BY SUM(sales) LIMIT 3"
+    ],
+    "answer": "DENSE_RANK() OVER (PARTITION BY category ORDER BY SUM(amount) DESC) filtered WHERE rnk <= 3",
+    "explanation": "PARTITION BY category resets ranking per category. ORDER BY SUM(amount) DESC ranks by sales. DENSE_RANK() handles ties (both tied products included). Filter WHERE rnk <= 3 in outer query. This is the standard 'top N per group' pattern using window functions."
+  },
+  {
+    "id": "SQL100",
+    "domain": "sql",
+    "topic": "Real-World Problem",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which SQL approach identifies customers who made purchases in all 6 of the last 6 months?",
+    "options": [
+      "ORDER BY purchase_count DESC LIMIT 6",
+      "WHERE order_date > 6 months ago GROUP BY customer_id",
+      "WHERE consecutive_months = 6",
+      "GROUP BY customer_id HAVING COUNT(DISTINCT YEAR_MONTH(order_date)) = 6"
+    ],
+    "answer": "GROUP BY customer_id HAVING COUNT(DISTINCT YEAR_MONTH(order_date)) = 6",
+    "explanation": "Filter to last 6 months, group by customer, count DISTINCT year-month combinations. HAVING = 6 ensures the customer has at least one order in each of the 6 months. COUNT DISTINCT prevents multiple orders in one month inflating the count. Clean and efficient \u2014 no cursors or loops needed."
+  }
+]

@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "ML001",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the primary goal of supervised learning?",
+    "options": [
+      "To find hidden patterns in unlabeled data",
+      "To maximize a reward signal through trial and error",
+      "To reduce the dimensionality of data",
+      "To learn a mapping from inputs to outputs using labeled training data"
+    ],
+    "answer": "To learn a mapping from inputs to outputs using labeled training data",
+    "explanation": "Supervised learning uses labeled examples (input-output pairs) to train a model that can predict outputs for new unseen inputs."
+  },
+  {
+    "id": "ML002",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is an example of a classification problem?",
+    "options": [
+      "Detecting whether an email is spam or not spam",
+      "Predicting the price of a house",
+      "Estimating tomorrow's temperature",
+      "Forecasting monthly sales revenue"
+    ],
+    "answer": "Detecting whether an email is spam or not spam",
+    "explanation": "Classification predicts a discrete category or class label. Spam detection (spam vs. not spam) is a binary classification problem."
+  },
+  {
+    "id": "ML003",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does 'overfitting' mean in machine learning?",
+    "options": [
+      "The model performs poorly on both training and test data",
+      "The model has too few parameters to learn the data",
+      "The model performs well on training data but poorly on unseen data",
+      "The model takes too long to train"
+    ],
+    "answer": "The model performs well on training data but poorly on unseen data",
+    "explanation": "Overfitting occurs when the model memorizes training data noise instead of learning generalizable patterns, causing poor performance on new data."
+  },
+  {
+    "id": "ML004",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following best describes 'underfitting'?",
+    "options": [
+      "Model is too simple to capture the underlying patterns in the data",
+      "Model learns too many details from training data",
+      "Model generalizes perfectly to new data",
+      "Model is trained for too many epochs"
+    ],
+    "answer": "Model is too simple to capture the underlying patterns in the data",
+    "explanation": "Underfitting occurs when a model lacks the capacity to learn the patterns in the data, resulting in high error on both training and test sets."
+  },
+  {
+    "id": "ML005",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the purpose of a train-test split in machine learning?",
+    "options": [
+      "To evaluate model performance on unseen data and detect overfitting",
+      "To increase the size of the dataset",
+      "To balance class distributions",
+      "To normalize feature values"
+    ],
+    "answer": "To evaluate model performance on unseen data and detect overfitting",
+    "explanation": "Splitting data into train and test sets allows us to train on one portion and evaluate generalization on the held-out portion the model has never seen."
+  },
+  {
+    "id": "ML006",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which metric is most appropriate for evaluating a regression model?",
+    "options": [
+      "Accuracy",
+      "F1-Score",
+      "Mean Squared Error (MSE)",
+      "ROC-AUC"
+    ],
+    "answer": "Mean Squared Error (MSE)",
+    "explanation": "MSE measures the average squared difference between predicted and actual values, making it ideal for regression tasks. Accuracy and F1 are for classification."
+  },
+  {
+    "id": "ML007",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does the term 'feature' refer to in machine learning?",
+    "options": [
+      "The target variable we are trying to predict",
+      "The model's prediction output",
+      "A hyperparameter of the model",
+      "An individual measurable input variable used by the model"
+    ],
+    "answer": "An individual measurable input variable used by the model",
+    "explanation": "Features (also called attributes or independent variables) are the input columns used to train the model to predict the target variable."
+  },
+  {
+    "id": "ML008",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which algorithm is based on finding the best-fit line through data points to predict a continuous output?",
+    "options": [
+      "K-Nearest Neighbors",
+      "Linear Regression",
+      "Decision Tree",
+      "K-Means Clustering"
+    ],
+    "answer": "Linear Regression",
+    "explanation": "Linear Regression models the relationship between input features and a continuous output by fitting a straight line (or hyperplane) that minimizes prediction error."
+  },
+  {
+    "id": "ML009",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What type of machine learning does k-means clustering belong to?",
+    "options": [
+      "Supervised Learning",
+      "Reinforcement Learning",
+      "Semi-supervised Learning",
+      "Unsupervised Learning"
+    ],
+    "answer": "Unsupervised Learning",
+    "explanation": "K-means clustering groups data points without any labeled output. It discovers natural groupings in unlabeled data \u2014 a core unsupervised learning task."
+  },
+  {
+    "id": "ML010",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does 'cross-validation' help us do?",
+    "options": [
+      "Train the model on multiple datasets simultaneously",
+      "Automatically tune hyperparameters",
+      "Get a more reliable estimate of model performance by training/evaluating on different data splits",
+      "Increase training speed"
+    ],
+    "answer": "Get a more reliable estimate of model performance by training/evaluating on different data splits",
+    "explanation": "Cross-validation (e.g., k-fold) rotates the training and validation sets to reduce variance in performance estimates compared to a single train-test split."
+  },
+  {
+    "id": "ML011",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is a hyperparameter in a k-Nearest Neighbors (KNN) model?",
+    "options": [
+      "The distance between two training points",
+      "The value of k (number of neighbors)",
+      "The predicted class label",
+      "The feature weights learned during training"
+    ],
+    "answer": "The value of k (number of neighbors)",
+    "explanation": "Hyperparameters are set before training. In KNN, 'k' (the number of neighbors to consider) is a hyperparameter. Distances are computed, not set."
+  },
+  {
+    "id": "ML012",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the role of the activation function in a neural network?",
+    "options": [
+      "To initialize the weights of the network",
+      "To introduce non-linearity so the network can learn complex patterns",
+      "To compute the loss between prediction and actual output",
+      "To normalize the input features"
+    ],
+    "answer": "To introduce non-linearity so the network can learn complex patterns",
+    "explanation": "Without activation functions, a neural network would just be a linear model. Non-linear activations (ReLU, sigmoid, tanh) allow learning complex, non-linear mappings."
+  },
+  {
+    "id": "ML013",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does 'label' refer to in a supervised learning dataset?",
+    "options": [
+      "The name of a feature column",
+      "The index of a data row",
+      "The target output variable the model is trained to predict",
+      "The model's confidence score"
+    ],
+    "answer": "The target output variable the model is trained to predict",
+    "explanation": "In supervised learning, the label (also called the target, ground truth, or y-value) is the known output used to train and evaluate the model."
+  },
+  {
+    "id": "ML014",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the bias-variance tradeoff in machine learning?",
+    "options": [
+      "Increasing model complexity reduces both bias and variance simultaneously",
+      "High bias means overfitting; high variance means underfitting",
+      "Increasing model complexity reduces bias but increases variance; the goal is to minimize total error",
+      "Bias and variance are unrelated to model performance"
+    ],
+    "answer": "Increasing model complexity reduces bias but increases variance; the goal is to minimize total error",
+    "explanation": "Simple models have high bias (underfitting). Complex models have high variance (overfitting). The tradeoff is finding the model complexity that minimizes bias + variance + irreducible error."
+  },
+  {
+    "id": "ML015",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the learning rate control in gradient descent?",
+    "options": [
+      "The number of training epochs",
+      "The number of hidden layers in the network",
+      "The proportion of training data used per batch",
+      "The size of each step taken toward the minimum of the loss function"
+    ],
+    "answer": "The size of each step taken toward the minimum of the loss function",
+    "explanation": "A high learning rate may overshoot the minimum; a low rate converges slowly. Learning rate is one of the most critical hyperparameters to tune."
+  },
+  {
+    "id": "ML016",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is the correct formula for accuracy in classification?",
+    "options": [
+      "(TP + TN) / (TP + TN + FP + FN)",
+      "TP / (TP + FP)",
+      "TP / (TP + FN)",
+      "2 * (Precision * Recall) / (Precision + Recall)"
+    ],
+    "answer": "(TP + TN) / (TP + TN + FP + FN)",
+    "explanation": "Accuracy is the fraction of total predictions that are correct. TP=True Positive, TN=True Negative, FP=False Positive, FN=False Negative."
+  },
+  {
+    "id": "ML017",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is precision in a binary classification context?",
+    "options": [
+      "The fraction of actual positives correctly identified",
+      "The overall fraction of correct predictions",
+      "The harmonic mean of sensitivity and specificity",
+      "The fraction of predicted positives that are actually positive"
+    ],
+    "answer": "The fraction of predicted positives that are actually positive",
+    "explanation": "Precision = TP / (TP + FP). It answers: of all the positive predictions made, how many were actually positive? High precision means few false alarms."
+  },
+  {
+    "id": "ML018",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is recall (sensitivity) in binary classification?",
+    "options": [
+      "TP / (TP + FP)",
+      "(TP + TN) / Total",
+      "TN / (TN + FP)",
+      "TP / (TP + FN)"
+    ],
+    "answer": "TP / (TP + FN)",
+    "explanation": "Recall = TP / (TP + FN). It measures how many actual positives were correctly identified. High recall means few false negatives \u2014 critical in medical diagnosis."
+  },
+  {
+    "id": "ML019",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the F1-score measure?",
+    "options": [
+      "The harmonic mean of precision and recall",
+      "The accuracy of the model on the test set",
+      "The area under the ROC curve",
+      "The mean squared error of predictions"
+    ],
+    "answer": "The harmonic mean of precision and recall",
+    "explanation": "F1 = 2 * (Precision * Recall) / (Precision + Recall). It balances precision and recall, making it useful for imbalanced datasets."
+  },
+  {
+    "id": "ML020",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of regularization in machine learning?",
+    "options": [
+      "To penalize model complexity and reduce overfitting",
+      "To speed up model training",
+      "To normalize input features to the same scale",
+      "To increase the number of features"
+    ],
+    "answer": "To penalize model complexity and reduce overfitting",
+    "explanation": "Regularization adds a penalty term to the loss function for large weights, discouraging overly complex models. L1 (Lasso) and L2 (Ridge) are common techniques."
+  },
+  {
+    "id": "ML021",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the key difference between L1 and L2 regularization?",
+    "options": [
+      "L1 squares the weights; L2 takes the absolute value",
+      "L1 uses absolute value of weights (can zero them out); L2 uses squared weights (shrinks them toward zero)",
+      "L1 is used for regression only; L2 for classification only",
+      "L1 and L2 are identical in effect"
+    ],
+    "answer": "L1 uses absolute value of weights (can zero them out); L2 uses squared weights (shrinks them toward zero)",
+    "explanation": "L1 (Lasso) can produce sparse models by zeroing out coefficients, performing implicit feature selection. L2 (Ridge) shrinks all weights but rarely zeroes them."
+  },
+  {
+    "id": "ML022",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is Principal Component Analysis (PCA) used for?",
+    "options": [
+      "Reducing the dimensionality of data while retaining maximum variance",
+      "Classifying data into multiple categories",
+      "Clustering similar data points together",
+      "Predicting continuous output values"
+    ],
+    "answer": "Reducing the dimensionality of data while retaining maximum variance",
+    "explanation": "PCA transforms data into a new coordinate system where the axes (principal components) are ordered by the variance they explain, allowing dimensionality reduction."
+  },
+  {
+    "id": "ML023",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "In a decision tree, what does 'information gain' measure?",
+    "options": [
+      "The total number of nodes in the tree",
+      "The depth of the tree after training",
+      "The reduction in entropy after splitting on a feature",
+      "The accuracy of the tree on training data"
+    ],
+    "answer": "The reduction in entropy after splitting on a feature",
+    "explanation": "Information gain measures how much a feature reduces uncertainty (entropy) in the target variable. Higher gain means the feature is a better split point."
+  },
+  {
+    "id": "ML024",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the main advantage of Random Forest over a single Decision Tree?",
+    "options": [
+      "Random Forest reduces overfitting by averaging predictions from many trees trained on random subsets",
+      "Random Forest trains faster than a single tree",
+      "Random Forest uses only one feature for splitting",
+      "Random Forest requires less memory than a single tree"
+    ],
+    "answer": "Random Forest reduces overfitting by averaging predictions from many trees trained on random subsets",
+    "explanation": "Random Forest is an ensemble that combines many decision trees, each trained on a random bootstrap sample with random feature subsets. Averaging reduces variance and overfitting."
+  },
+  {
+    "id": "ML025",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does 'bagging' stand for in ensemble learning?",
+    "options": [
+      "Boosting and Aggregating",
+      "Batch Aggregating",
+      "Backward Aggregating",
+      "Bootstrap Aggregating"
+    ],
+    "answer": "Bootstrap Aggregating",
+    "explanation": "Bagging = Bootstrap AGGregating. It trains multiple models on different bootstrap samples of the training data and aggregates their predictions. Random Forest is built on bagging."
+  },
+  {
+    "id": "ML026",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How does Gradient Boosting differ from Bagging?",
+    "options": [
+      "Bagging trains trees sequentially; Gradient Boosting trains them in parallel",
+      "Gradient Boosting trains trees sequentially where each tree corrects errors of the previous; Bagging trains in parallel",
+      "They are identical approaches",
+      "Gradient Boosting uses random subsets; Bagging uses the full dataset"
+    ],
+    "answer": "Gradient Boosting trains trees sequentially where each tree corrects errors of the previous; Bagging trains in parallel",
+    "explanation": "Gradient Boosting builds trees one at a time, each fitting the residual errors of the previous ensemble. Bagging builds trees independently in parallel and averages them."
+  },
+  {
+    "id": "ML027",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the softmax function in a neural network's output layer?",
+    "options": [
+      "To normalize inputs between -1 and 1",
+      "To introduce sparsity in the weights",
+      "To compute the gradient during backpropagation",
+      "To convert raw output scores into probabilities that sum to 1 for multi-class classification"
+    ],
+    "answer": "To convert raw output scores into probabilities that sum to 1 for multi-class classification",
+    "explanation": "Softmax exponentiates each output and normalizes by the sum, producing a probability distribution over all classes. Used in the output layer for multi-class problems."
+  },
+  {
+    "id": "ML028",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is backpropagation in neural networks?",
+    "options": [
+      "The process of feeding data forward through the network",
+      "A method to initialize network weights",
+      "An algorithm that computes gradients of the loss with respect to weights using the chain rule, enabling weight updates",
+      "A regularization technique to prevent overfitting"
+    ],
+    "answer": "An algorithm that computes gradients of the loss with respect to weights using the chain rule, enabling weight updates",
+    "explanation": "Backpropagation applies the chain rule of calculus to propagate the loss gradient backward through the network, computing how each weight should change to reduce the loss."
+  },
+  {
+    "id": "ML029",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the ROC curve plot?",
+    "options": [
+      "Precision vs Recall at various thresholds",
+      "Training loss vs Validation loss over epochs",
+      "True Positive Rate (Recall) vs False Positive Rate at various classification thresholds",
+      "Model accuracy vs number of features"
+    ],
+    "answer": "True Positive Rate (Recall) vs False Positive Rate at various classification thresholds",
+    "explanation": "The ROC (Receiver Operating Characteristic) curve plots TPR vs FPR across all thresholds. The AUC (area under curve) summarizes overall classifier performance."
+  },
+  {
+    "id": "ML030",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is a correct description of the Naive Bayes classifier?",
+    "options": [
+      "It applies Bayes' theorem assuming all features are independent of each other given the class",
+      "It builds a decision tree using entropy minimization",
+      "It finds the optimal hyperplane to separate classes",
+      "It predicts the class of the k nearest training examples"
+    ],
+    "answer": "It applies Bayes' theorem assuming all features are independent of each other given the class",
+    "explanation": "Naive Bayes uses Bayes' theorem with the 'naive' assumption of feature independence. Despite this simplification, it works well for text classification and spam detection."
+  },
+  {
+    "id": "ML031",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the 'kernel trick' in Support Vector Machines (SVM)?",
+    "options": [
+      "A way to implicitly map data to a higher-dimensional space to make it linearly separable without computing the transformation explicitly",
+      "A method to reduce the number of support vectors",
+      "A technique to set the regularization parameter C",
+      "A pruning strategy to simplify the decision boundary"
+    ],
+    "answer": "A way to implicitly map data to a higher-dimensional space to make it linearly separable without computing the transformation explicitly",
+    "explanation": "The kernel trick computes dot products in high-dimensional space using kernel functions (RBF, polynomial) without explicit transformation, allowing SVMs to handle non-linear boundaries efficiently."
+  },
+  {
+    "id": "ML032",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'feature engineering'?",
+    "options": [
+      "Selecting the best ML algorithm for a task",
+      "Tuning the hyperparameters of a model",
+      "The process of creating, transforming, or selecting input features to improve model performance",
+      "Deploying the model to a production environment"
+    ],
+    "answer": "The process of creating, transforming, or selecting input features to improve model performance",
+    "explanation": "Feature engineering involves domain knowledge to create better input representations \u2014 e.g., extracting day-of-week from a date, combining features, or encoding categoricals."
+  },
+  {
+    "id": "ML033",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is one-hot encoding used for?",
+    "options": [
+      "Normalizing numerical features to [0, 1]",
+      "Reducing the number of features",
+      "Converting categorical variables into binary columns for each category",
+      "Handling missing values in numerical columns"
+    ],
+    "answer": "Converting categorical variables into binary columns for each category",
+    "explanation": "One-hot encoding creates a binary column for each unique category value (1 if present, 0 otherwise), making categorical data usable by most ML algorithms."
+  },
+  {
+    "id": "ML034",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between normalization and standardization?",
+    "options": [
+      "Normalization removes outliers; standardization does not",
+      "Standardization scales to [0,1]; normalization transforms to mean=0 and std=1",
+      "Normalization scales to [0,1]; standardization transforms to mean=0 and std=1",
+      "They are identical preprocessing steps"
+    ],
+    "answer": "Normalization scales to [0,1]; standardization transforms to mean=0 and std=1",
+    "explanation": "Normalization (Min-Max scaling) rescales to [0,1]. Standardization (Z-score) transforms data to have zero mean and unit variance. Standardization is preferred when data follows a Gaussian distribution."
+  },
+  {
+    "id": "ML035",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does dropout do in a neural network?",
+    "options": [
+      "Removes neurons with the lowest weights permanently",
+      "Randomly deactivates a fraction of neurons during each training step to prevent overfitting",
+      "Reduces the learning rate during training",
+      "Initializes weights to zero"
+    ],
+    "answer": "Randomly deactivates a fraction of neurons during each training step to prevent overfitting",
+    "explanation": "Dropout randomly sets a fraction of neuron outputs to zero during training, forcing the network to learn redundant representations and acting as a powerful regularizer."
+  },
+  {
+    "id": "ML036",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which loss function is most commonly used for binary classification?",
+    "options": [
+      "Mean Squared Error",
+      "Binary Cross-Entropy (Log Loss)",
+      "Hinge Loss",
+      "Mean Absolute Error"
+    ],
+    "answer": "Binary Cross-Entropy (Log Loss)",
+    "explanation": "Binary cross-entropy measures the divergence between predicted probabilities and actual binary labels. It penalizes confident wrong predictions heavily."
+  },
+  {
+    "id": "ML037",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the 'curse of dimensionality'?",
+    "options": [
+      "The problem of having too few features for a model to learn",
+      "The tendency for data to become increasingly sparse as the number of dimensions grows, making distance metrics unreliable",
+      "The issue of having too many training samples",
+      "The difficulty of choosing the right activation function"
+    ],
+    "answer": "The tendency for data to become increasingly sparse as the number of dimensions grows, making distance metrics unreliable",
+    "explanation": "As dimensions increase, data points become exponentially more spread out. Distance-based algorithms (KNN, k-means) suffer greatly. PCA and feature selection help mitigate this."
+  },
+  {
+    "id": "ML038",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'transfer learning' in deep learning?",
+    "options": [
+      "Using a pre-trained model on a large dataset as a starting point for a different but related task",
+      "Moving a model from one server to another",
+      "Training a model from scratch on a new task",
+      "Transferring hyperparameters between different model architectures"
+    ],
+    "answer": "Using a pre-trained model on a large dataset as a starting point for a different but related task",
+    "explanation": "Transfer learning leverages knowledge from a model trained on a large dataset (e.g., ImageNet) and fine-tunes it on a smaller domain-specific dataset, saving time and data."
+  },
+  {
+    "id": "ML039",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is a disadvantage of K-Nearest Neighbors (KNN)?",
+    "options": [
+      "It is computationally expensive at prediction time since it computes distances to all training points",
+      "It cannot be used for classification tasks",
+      "It requires a training phase longer than deep learning",
+      "It cannot handle numerical features"
+    ],
+    "answer": "It is computationally expensive at prediction time since it computes distances to all training points",
+    "explanation": "KNN has no explicit training phase, but prediction requires computing distances to all training samples \u2014 O(n*d) per query. It becomes impractical for large datasets."
+  },
+  {
+    "id": "ML040",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the elbow method used for in k-means clustering?",
+    "options": [
+      "Choosing the optimal value of k by finding where adding more clusters gives diminishing returns in inertia reduction",
+      "Determining the optimal learning rate",
+      "Selecting the best regularization parameter",
+      "Initializing cluster centroids optimally"
+    ],
+    "answer": "Choosing the optimal value of k by finding where adding more clusters gives diminishing returns in inertia reduction",
+    "explanation": "The elbow method plots inertia (within-cluster sum of squares) vs. k. The 'elbow' \u2014 where the rate of decrease slows \u2014 suggests the optimal number of clusters."
+  },
+  {
+    "id": "ML041",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the vanishing gradient problem in deep neural networks?",
+    "options": [
+      "Gradients become too large and cause weight updates to diverge",
+      "Gradients become extremely small during backpropagation through many layers, making early layers learn very slowly",
+      "The model loses gradient information after too many epochs",
+      "Gradients are rounded to zero due to floating-point precision"
+    ],
+    "answer": "Gradients become extremely small during backpropagation through many layers, making early layers learn very slowly",
+    "explanation": "In deep networks with sigmoid/tanh activations, repeated multiplication of small gradients causes them to vanish. Solutions: ReLU activation, batch normalization, residual connections."
+  },
+  {
+    "id": "ML042",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is batch normalization and why is it used?",
+    "options": [
+      "It normalizes inputs to the neural network before training",
+      "It randomly drops batches during training to prevent overfitting",
+      "It normalizes the loss function to improve convergence",
+      "It normalizes the activations of each layer to have zero mean and unit variance, stabilizing and accelerating training"
+    ],
+    "answer": "It normalizes the activations of each layer to have zero mean and unit variance, stabilizing and accelerating training",
+    "explanation": "Batch normalization normalizes layer inputs within a mini-batch, reducing internal covariate shift. It allows higher learning rates, acts as regularizer, and speeds up training."
+  },
+  {
+    "id": "ML043",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between generative and discriminative models?",
+    "options": [
+      "Generative models predict class labels; discriminative models generate new data",
+      "Discriminative models are always more accurate than generative models",
+      "Generative models only work for image data",
+      "Generative models learn P(X|Y) and P(Y) to model data distribution; discriminative models learn P(Y|X) directly"
+    ],
+    "answer": "Generative models learn P(X|Y) and P(Y) to model data distribution; discriminative models learn P(Y|X) directly",
+    "explanation": "Generative models (GANs, VAEs, Naive Bayes) model the joint or conditional distribution of data. Discriminative models (logistic regression, SVM, neural classifiers) learn the decision boundary directly."
+  },
+  {
+    "id": "ML044",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the purpose of attention mechanism in deep learning?",
+    "options": [
+      "To drop irrelevant neurons during training",
+      "To initialize weights based on input importance",
+      "To allow the model to focus on the most relevant parts of the input when producing an output",
+      "To speed up matrix multiplication in transformers"
+    ],
+    "answer": "To allow the model to focus on the most relevant parts of the input when producing an output",
+    "explanation": "Attention assigns learned weights to different parts of the input sequence, allowing the model to dynamically focus on the most relevant tokens. It is the core of Transformer models."
+  },
+  {
+    "id": "ML045",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the exploding gradient problem and how is it commonly addressed?",
+    "options": [
+      "Gradients become zero; addressed by using sigmoid activations",
+      "Gradients become very large causing unstable weight updates; commonly addressed with gradient clipping",
+      "Gradients explode in the forward pass; addressed by batch normalization",
+      "Gradients conflict between layers; addressed by dropout"
+    ],
+    "answer": "Gradients become very large causing unstable weight updates; commonly addressed with gradient clipping",
+    "explanation": "Exploding gradients occur when backpropagated gradients grow exponentially (common in RNNs). Gradient clipping caps the gradient norm to a threshold, preventing divergence."
+  },
+  {
+    "id": "ML046",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a confusion matrix and what four values does it contain?",
+    "options": [
+      "It contains MSE, MAE, RMSE, and R\u00b2 values",
+      "It contains Precision, Recall, F1, and Accuracy",
+      "It contains True Positive, False Positive, True Negative, and False Negative counts",
+      "It contains training error, validation error, test error, and overfitting score"
+    ],
+    "answer": "It contains True Positive, False Positive, True Negative, and False Negative counts",
+    "explanation": "A confusion matrix is a 2x2 table for binary classification showing TP (correctly predicted positive), TN (correctly predicted negative), FP (predicted positive, actually negative), FN (predicted negative, actually positive)."
+  },
+  {
+    "id": "ML047",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the term 'epoch' mean in neural network training?",
+    "options": [
+      "One forward pass through a single training sample",
+      "One complete pass through the entire training dataset",
+      "One weight update step",
+      "One batch of training samples"
+    ],
+    "answer": "One complete pass through the entire training dataset",
+    "explanation": "An epoch is one full cycle through all training data. Models are typically trained for many epochs. Each epoch consists of multiple batches."
+  },
+  {
+    "id": "ML048",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between stochastic, mini-batch, and batch gradient descent?",
+    "options": [
+      "Stochastic uses all data; mini-batch uses one sample; batch uses a subset",
+      "Batch uses one sample per update; mini-batch uses the full dataset; stochastic uses a subset",
+      "Stochastic updates weights using one sample; mini-batch uses a small subset; batch uses the full dataset",
+      "They differ only in the number of epochs used"
+    ],
+    "answer": "Stochastic updates weights using one sample; mini-batch uses a small subset; batch uses the full dataset",
+    "explanation": "SGD (one sample) is noisy but fast per update. Mini-batch (typical in deep learning) balances noise and efficiency. Batch (full dataset) is stable but slow for large data."
+  },
+  {
+    "id": "ML049",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the main idea behind AdaBoost?",
+    "options": [
+      "Sequentially training weak learners where each focuses more on the misclassified samples from the previous round",
+      "Training multiple models in parallel on random feature subsets",
+      "Averaging predictions from independently trained deep networks",
+      "Using gradient descent to combine predictions from multiple trees"
+    ],
+    "answer": "Sequentially training weak learners where each focuses more on the misclassified samples from the previous round",
+    "explanation": "AdaBoost assigns higher weights to misclassified samples so subsequent weak learners focus on harder examples. The final prediction is a weighted vote of all weak learners."
+  },
+  {
+    "id": "ML050",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a hyperparameter in machine learning?",
+    "options": [
+      "A weight learned during model training",
+      "The output of the model's last layer",
+      "A configuration value set before training that controls the learning process",
+      "A feature derived from the input data"
+    ],
+    "answer": "A configuration value set before training that controls the learning process",
+    "explanation": "Hyperparameters (learning rate, depth, k, regularization strength) are set by the practitioner before training and are not learned from data, unlike model parameters (weights)."
+  },
+  {
+    "id": "ML051",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which technique is used to find the best set of hyperparameters automatically?",
+    "options": [
+      "Grid Search or Random Search (Hyperparameter Tuning)",
+      "Gradient Descent",
+      "Backpropagation",
+      "Early Stopping"
+    ],
+    "answer": "Grid Search or Random Search (Hyperparameter Tuning)",
+    "explanation": "Grid search exhaustively tries all combinations. Random search samples random combinations. Both are used with cross-validation to find optimal hyperparameters."
+  },
+  {
+    "id": "ML052",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is early stopping in neural network training?",
+    "options": [
+      "Stopping training after a fixed number of epochs regardless of performance",
+      "Reducing learning rate when training loss plateaus",
+      "Monitoring validation loss and stopping training when it stops improving to prevent overfitting",
+      "Stopping training when accuracy reaches 100% on training data"
+    ],
+    "answer": "Monitoring validation loss and stopping training when it stops improving to prevent overfitting",
+    "explanation": "Early stopping halts training when the validation metric stops improving (with a patience window), preventing the model from overfitting by continuing to train."
+  },
+  {
+    "id": "ML053",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a Convolutional Neural Network (CNN) best suited for?",
+    "options": [
+      "Processing sequential and time-series data",
+      "Learning spatial hierarchies in grid-like data such as images",
+      "Clustering unlabeled tabular data",
+      "Generating text sequences token by token"
+    ],
+    "answer": "Learning spatial hierarchies in grid-like data such as images",
+    "explanation": "CNNs use convolutional layers to detect local features (edges, textures, objects) hierarchically. They are the go-to architecture for image classification, detection, and segmentation."
+  },
+  {
+    "id": "ML054",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the role of pooling layers in a CNN?",
+    "options": [
+      "To reduce the spatial dimensions of feature maps, decreasing computation and providing translation invariance",
+      "To increase the spatial resolution of feature maps",
+      "To add non-linearity to the network",
+      "To normalize activations across the batch"
+    ],
+    "answer": "To reduce the spatial dimensions of feature maps, decreasing computation and providing translation invariance",
+    "explanation": "Max/average pooling downsamples feature maps spatially, reducing parameters and computation. It also provides some invariance to small translations in the input."
+  },
+  {
+    "id": "ML055",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What problem do Recurrent Neural Networks (RNNs) solve that standard feedforward networks cannot?",
+    "options": [
+      "Image classification with high accuracy",
+      "Handling sequential data with temporal dependencies by maintaining a hidden state across time steps",
+      "Classifying tabular data with mixed feature types",
+      "Reducing dimensionality of input features"
+    ],
+    "answer": "Handling sequential data with temporal dependencies by maintaining a hidden state across time steps",
+    "explanation": "RNNs process sequences step by step, maintaining a hidden state that captures context from previous inputs. This makes them suitable for NLP, speech, and time-series tasks."
+  },
+  {
+    "id": "ML056",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What advantage do LSTMs have over standard RNNs?",
+    "options": [
+      "LSTMs train faster than standard RNNs",
+      "LSTMs use convolutional layers instead of recurrent ones",
+      "LSTMs do not require backpropagation",
+      "LSTMs use gating mechanisms (forget, input, output gates) to selectively remember or forget information over long sequences"
+    ],
+    "answer": "LSTMs use gating mechanisms (forget, input, output gates) to selectively remember or forget information over long sequences",
+    "explanation": "Standard RNNs suffer from vanishing gradients, losing context over long sequences. LSTM's cell state and gates allow gradients to flow over many timesteps, capturing long-range dependencies."
+  },
+  {
+    "id": "ML057",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a Generative Adversarial Network (GAN)?",
+    "options": [
+      "A network that classifies images into multiple categories using adversarial training",
+      "A network that generates features automatically using autoencoders",
+      "Two networks (generator and discriminator) trained adversarially: the generator creates fake data; the discriminator tries to distinguish real from fake",
+      "A reinforcement learning agent that learns through adversarial rewards"
+    ],
+    "answer": "Two networks (generator and discriminator) trained adversarially: the generator creates fake data; the discriminator tries to distinguish real from fake",
+    "explanation": "In GANs, the generator learns to produce realistic data to fool the discriminator, while the discriminator learns to detect fakes. This adversarial process results in a generator that produces high-quality synthetic data."
+  },
+  {
+    "id": "ML058",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the Transformer architecture primarily based on?",
+    "options": [
+      "Convolutional layers applied to sequences",
+      "Recurrent layers with gated memory cells",
+      "Self-attention mechanisms that compute relationships between all positions in a sequence in parallel",
+      "Markov chain assumptions about sequential dependencies"
+    ],
+    "answer": "Self-attention mechanisms that compute relationships between all positions in a sequence in parallel",
+    "explanation": "Transformers use multi-head self-attention to model dependencies between all tokens simultaneously (unlike RNNs which process sequentially). They are the foundation of BERT, GPT, and modern LLMs."
+  },
+  {
+    "id": "ML059",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'fine-tuning' in the context of pre-trained models?",
+    "options": [
+      "Continuing training of a pre-trained model on a domain-specific dataset with a low learning rate to adapt its knowledge",
+      "Training a model from scratch on a small dataset",
+      "Adjusting only the hyperparameters of a pre-trained model",
+      "Converting a classification model into a regression model"
+    ],
+    "answer": "Continuing training of a pre-trained model on a domain-specific dataset with a low learning rate to adapt its knowledge",
+    "explanation": "Fine-tuning updates some or all weights of a pre-trained model on task-specific data. A low learning rate preserves general knowledge while adapting to the new task."
+  },
+  {
+    "id": "ML060",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'data augmentation' in machine learning?",
+    "options": [
+      "Generating synthetic training examples by applying transformations to existing data",
+      "Collecting more data from external sources",
+      "Removing noisy samples from the training set",
+      "Combining multiple datasets from different domains"
+    ],
+    "answer": "Generating synthetic training examples by applying transformations to existing data",
+    "explanation": "Data augmentation creates additional training examples through transformations like rotation, flipping, cropping (images) or synonym replacement (text), helping models generalize better."
+  },
+  {
+    "id": "ML061",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the silhouette score used for?",
+    "options": [
+      "Evaluating regression model accuracy",
+      "Selecting the optimal learning rate for neural networks",
+      "Measuring feature importance in decision trees",
+      "Measuring the quality of clustering by comparing intra-cluster cohesion and inter-cluster separation"
+    ],
+    "answer": "Measuring the quality of clustering by comparing intra-cluster cohesion and inter-cluster separation",
+    "explanation": "Silhouette score ranges from -1 to 1. A score near 1 means clusters are well-separated and compact. Near 0 means overlapping clusters. Negative means likely wrong cluster assignment."
+  },
+  {
+    "id": "ML062",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of weight initialization in neural networks?",
+    "options": [
+      "To set starting weight values that promote stable gradient flow and avoid symmetry breaking issues",
+      "To set the final values of the model's weights after training",
+      "To normalize the input features before training",
+      "To determine the architecture of the network"
+    ],
+    "answer": "To set starting weight values that promote stable gradient flow and avoid symmetry breaking issues",
+    "explanation": "Poor initialization (e.g., all zeros) causes symmetry \u2014 all neurons learn the same thing. Good initialization (Xavier, He) keeps gradients in a healthy range for stable training."
+  },
+  {
+    "id": "ML063",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a parametric and a non-parametric model?",
+    "options": [
+      "Parametric models have more accuracy; non-parametric models are always simpler",
+      "Parametric models have a fixed number of parameters independent of training data size; non-parametric models grow with data",
+      "Non-parametric models require explicit feature engineering; parametric do not",
+      "Parametric models cannot be regularized"
+    ],
+    "answer": "Parametric models have a fixed number of parameters independent of training data size; non-parametric models grow with data",
+    "explanation": "Parametric (linear regression, neural nets) have a fixed number of parameters set by architecture. Non-parametric (KNN, kernel SVM) can increase complexity with more data."
+  },
+  {
+    "id": "ML064",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the term 'imbalanced dataset' mean and why is it a problem?",
+    "options": [
+      "A dataset with missing values in most columns",
+      "A dataset where classes are not equally distributed, causing the model to be biased toward the majority class",
+      "A dataset with too many numerical features",
+      "A dataset with duplicate rows"
+    ],
+    "answer": "A dataset where classes are not equally distributed, causing the model to be biased toward the majority class",
+    "explanation": "If 95% of data is class 0, a model predicting always class 0 gets 95% accuracy but learns nothing. Solutions: oversampling (SMOTE), undersampling, class weights, or using F1/AUC metrics."
+  },
+  {
+    "id": "ML065",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is SMOTE and when is it used?",
+    "options": [
+      "A synthetic oversampling technique that generates new minority class samples by interpolating between existing ones",
+      "A dimensionality reduction technique for image data",
+      "A boosting algorithm that focuses on hard examples",
+      "A feature selection method based on mutual information"
+    ],
+    "answer": "A synthetic oversampling technique that generates new minority class samples by interpolating between existing ones",
+    "explanation": "SMOTE (Synthetic Minority Over-sampling Technique) creates synthetic minority samples by interpolating between a sample and its k nearest neighbors, helping address class imbalance."
+  },
+  {
+    "id": "ML066",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the R-squared (R\u00b2) score in regression?",
+    "options": [
+      "The average squared error between predictions and actual values",
+      "The correlation coefficient between two features",
+      "The ratio of training error to test error",
+      "The proportion of variance in the target variable explained by the model, ranging from 0 to 1"
+    ],
+    "answer": "The proportion of variance in the target variable explained by the model, ranging from 0 to 1",
+    "explanation": "R\u00b2 = 1 - (SS_res / SS_tot). A score of 1 means perfect prediction; 0 means the model explains no variance. Negative R\u00b2 means worse than predicting the mean."
+  },
+  {
+    "id": "ML067",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'model interpretability' and why does it matter?",
+    "options": [
+      "The speed at which a model makes predictions",
+      "The ability to understand and explain how a model arrives at its predictions",
+      "The accuracy of a model on the test set",
+      "The ability of a model to handle multiple data types"
+    ],
+    "answer": "The ability to understand and explain how a model arrives at its predictions",
+    "explanation": "Interpretability is critical in high-stakes domains (healthcare, finance, legal) where decisions must be explained. Tools like SHAP and LIME help explain black-box model predictions."
+  },
+  {
+    "id": "ML068",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is SHAP (SHapley Additive exPlanations)?",
+    "options": [
+      "A neural network architecture for sequential data",
+      "A regularization technique that penalizes feature weights",
+      "A game-theory based method to explain individual model predictions by attributing contribution to each feature",
+      "A clustering algorithm based on hierarchical decomposition"
+    ],
+    "answer": "A game-theory based method to explain individual model predictions by attributing contribution to each feature",
+    "explanation": "SHAP uses Shapley values from cooperative game theory to assign each feature a contribution to a specific prediction. It provides both local (per-prediction) and global explanations."
+  },
+  {
+    "id": "ML069",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between XGBoost and standard Gradient Boosting?",
+    "options": [
+      "XGBoost is unsupervised; standard gradient boosting is supervised",
+      "Standard gradient boosting uses neural networks; XGBoost uses only decision stumps",
+      "XGBoost uses bagging while standard gradient boosting uses boosting",
+      "XGBoost adds regularization, handles missing values natively, uses parallel tree construction, and second-order gradients \u2014 making it faster and more accurate"
+    ],
+    "answer": "XGBoost adds regularization, handles missing values natively, uses parallel tree construction, and second-order gradients \u2014 making it faster and more accurate",
+    "explanation": "XGBoost extends gradient boosting with L1/L2 regularization, second-order Taylor expansion of the loss, tree pruning, and optimized parallel computation, making it significantly faster and more powerful."
+  },
+  {
+    "id": "ML070",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between hard and soft voting in ensemble classifiers?",
+    "options": [
+      "Hard voting uses neural networks; soft voting uses decision trees",
+      "Soft voting is only used for regression; hard voting for classification",
+      "Hard voting requires all classifiers to agree; soft voting requires a majority",
+      "Hard voting predicts the class with the most votes; soft voting averages predicted probabilities across classifiers and predicts the class with the highest average probability"
+    ],
+    "answer": "Hard voting predicts the class with the most votes; soft voting averages predicted probabilities across classifiers and predicts the class with the highest average probability",
+    "explanation": "Hard voting: majority vote of class labels. Soft voting: average predicted probabilities \u2014 often performs better as it accounts for confidence levels of individual classifiers."
+  },
+  {
+    "id": "ML071",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following best describes Logistic Regression?",
+    "options": [
+      "A classification model that estimates the probability of a class using the sigmoid function applied to a linear combination of features",
+      "A regression model that predicts continuous values using a logistic curve",
+      "A clustering algorithm that groups data using logistic functions",
+      "A deep learning model with logistic activation in all layers"
+    ],
+    "answer": "A classification model that estimates the probability of a class using the sigmoid function applied to a linear combination of features",
+    "explanation": "Despite its name, logistic regression is used for classification. It applies sigmoid to a linear equation to output probabilities, with a threshold (typically 0.5) for class assignment."
+  },
+  {
+    "id": "ML072",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'stacking' in ensemble learning?",
+    "options": [
+      "Training models sequentially where each corrects the previous",
+      "Training a meta-model on the predictions of base models to produce the final output",
+      "Training multiple models in parallel on random subsets",
+      "Stacking layers of a neural network to increase depth"
+    ],
+    "answer": "Training a meta-model on the predictions of base models to produce the final output",
+    "explanation": "Stacking trains diverse base models and uses their out-of-fold predictions as features to train a meta-learner (blender), combining their strengths for better performance."
+  },
+  {
+    "id": "ML073",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does 'model generalization' mean?",
+    "options": [
+      "The model performs well only on training data",
+      "The model processes multiple data types simultaneously",
+      "The model is deployed across multiple environments",
+      "The model's ability to perform well on new, unseen data beyond the training set"
+    ],
+    "answer": "The model's ability to perform well on new, unseen data beyond the training set",
+    "explanation": "Generalization is the ultimate goal of ML \u2014 building models that perform well not just on training data but on real-world, previously unseen inputs."
+  },
+  {
+    "id": "ML074",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is an unsupervised learning algorithm?",
+    "options": [
+      "Random Forest",
+      "Logistic Regression",
+      "DBSCAN",
+      "Support Vector Machine"
+    ],
+    "answer": "DBSCAN",
+    "explanation": "DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsupervised clustering algorithm. Random Forest, Logistic Regression, and SVM are supervised."
+  },
+  {
+    "id": "ML075",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of a validation set (separate from the test set)?",
+    "options": [
+      "To tune hyperparameters and select the best model without touching the test set",
+      "To train the model alongside the training set",
+      "To increase the total amount of training data",
+      "To evaluate final model performance before deployment"
+    ],
+    "answer": "To tune hyperparameters and select the best model without touching the test set",
+    "explanation": "The validation set is used during development for hyperparameter tuning. The test set is held out until the very end for unbiased final evaluation. Using the test set for tuning leaks information."
+  },
+  {
+    "id": "ML076",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'data leakage' in machine learning?",
+    "options": [
+      "When training data is accidentally deleted",
+      "When private data is exposed to unauthorized users",
+      "When the model's predictions are leaked to the competition",
+      "When information from outside the training period (future data or test data) is used to build the model, causing overly optimistic performance estimates"
+    ],
+    "answer": "When information from outside the training period (future data or test data) is used to build the model, causing overly optimistic performance estimates",
+    "explanation": "Data leakage causes the model to appear to perform better than it actually will in production. Common sources: scaling before splitting, including target-related features, or using future data for time-series."
+  },
+  {
+    "id": "ML077",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between 'model parameters' and 'hyperparameters'?",
+    "options": [
+      "Parameters are set before training; hyperparameters are learned during training",
+      "Hyperparameters are learned during training; parameters are fixed and never change",
+      "They are the same thing in modern deep learning",
+      "Parameters (weights/biases) are learned from data during training; hyperparameters are set manually before training"
+    ],
+    "answer": "Parameters (weights/biases) are learned from data during training; hyperparameters are set manually before training",
+    "explanation": "Parameters (weights, biases) are updated via gradient descent. Hyperparameters (learning rate, depth, k, regularization) are set externally and control how training proceeds."
+  },
+  {
+    "id": "ML078",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does AUC-ROC of 0.5 indicate about a classifier?",
+    "options": [
+      "The classifier has perfect performance",
+      "The classifier is performing at the same level as random guessing",
+      "The classifier has the worst possible performance",
+      "The classifier is perfectly calibrated"
+    ],
+    "answer": "The classifier is performing at the same level as random guessing",
+    "explanation": "AUC of 1.0 = perfect. AUC of 0.5 = random classifier. AUC below 0.5 means the classifier is worse than random (predictions are consistently wrong)."
+  },
+  {
+    "id": "ML079",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the purpose of the Adam optimizer in deep learning?",
+    "options": [
+      "To initialize weights using adaptive techniques",
+      "To combine momentum-based gradient updates with adaptive per-parameter learning rates for faster and more stable convergence",
+      "To normalize activations at each layer",
+      "To automatically determine the optimal network architecture"
+    ],
+    "answer": "To combine momentum-based gradient updates with adaptive per-parameter learning rates for faster and more stable convergence",
+    "explanation": "Adam (Adaptive Moment Estimation) maintains exponential moving averages of gradients and squared gradients, providing momentum and adaptive learning rates per parameter \u2014 the most popular optimizer in deep learning."
+  },
+  {
+    "id": "ML080",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'feature importance' in tree-based models?",
+    "options": [
+      "The order in which features were added to the training set",
+      "The correlation between each feature and the target variable",
+      "The number of times a feature appears in the dataset",
+      "A measure of how much each feature contributes to reducing impurity across all splits in the tree(s)"
+    ],
+    "answer": "A measure of how much each feature contributes to reducing impurity across all splits in the tree(s)",
+    "explanation": "Feature importance in decision trees and random forests is computed as the total reduction in Gini impurity or entropy weighted by the number of samples affected by splits on that feature."
+  },
+  {
+    "id": "ML081",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the Gini impurity in a decision tree?",
+    "options": [
+      "A measure of how deep the tree grows",
+      "The proportion of the majority class in a leaf node",
+      "The total number of training samples incorrectly classified",
+      "A measure of how often a randomly chosen element would be incorrectly labeled if labeled according to the class distribution in a node"
+    ],
+    "answer": "A measure of how often a randomly chosen element would be incorrectly labeled if labeled according to the class distribution in a node",
+    "explanation": "Gini = 1 - \u03a3(p_i\u00b2). A Gini of 0 means a pure node (all one class). A Gini of 0.5 (binary) is maximally impure. Decision trees choose splits that minimize the weighted Gini of child nodes."
+  },
+  {
+    "id": "ML082",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which technique best handles missing values in a tabular dataset?",
+    "options": [
+      "Always delete rows with missing values",
+      "Replace all missing values with the string 'missing'",
+      "Use imputation (mean/median/mode or model-based) depending on the data type and missingness pattern",
+      "Missing values do not require any treatment"
+    ],
+    "answer": "Use imputation (mean/median/mode or model-based) depending on the data type and missingness pattern",
+    "explanation": "Mean/median imputation works for numerical features without many outliers. Model-based (KNN imputer, iterative imputer) is more sophisticated. Mode suits categoricals. Choice depends on the missingness pattern."
+  },
+  {
+    "id": "ML083",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What type of problem is predicting tomorrow's stock price?",
+    "options": [
+      "Classification",
+      "Clustering",
+      "Dimensionality Reduction",
+      "Regression"
+    ],
+    "answer": "Regression",
+    "explanation": "Predicting a continuous numeric value (stock price) is a regression problem. If we were predicting whether the stock goes up or down, it would be classification."
+  },
+  {
+    "id": "ML084",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the sigmoid activation function?",
+    "options": [
+      "To zero out negative values",
+      "To normalize layer activations during training",
+      "To map any real number to a value between 0 and 1, useful for binary probability outputs",
+      "To create sparse representations in the hidden layer"
+    ],
+    "answer": "To map any real number to a value between 0 and 1, useful for binary probability outputs",
+    "explanation": "Sigmoid: \u03c3(x) = 1/(1+e^-x). Output range (0,1) makes it ideal for binary classification output layers. However, it suffers from vanishing gradients for large |x|."
+  },
+  {
+    "id": "ML085",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the ReLU activation function and why is it preferred over sigmoid in hidden layers?",
+    "options": [
+      "ReLU outputs values between -1 and 1; sigmoid is unbounded",
+      "ReLU is differentiable everywhere; sigmoid is not",
+      "ReLU always produces sparse outputs unlike sigmoid",
+      "ReLU outputs max(0, x), is computationally simple, and does not saturate for positive values \u2014 avoiding the vanishing gradient problem"
+    ],
+    "answer": "ReLU outputs max(0, x), is computationally simple, and does not saturate for positive values \u2014 avoiding the vanishing gradient problem",
+    "explanation": "ReLU(x) = max(0, x) is cheap to compute and doesn't saturate for positive inputs, so gradients flow well. Sigmoid saturates at both extremes, causing vanishing gradients in deep networks."
+  },
+  {
+    "id": "ML086",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'concept drift' in deployed machine learning systems?",
+    "options": [
+      "The model's weights drifting during inference",
+      "The model's hyperparameters becoming outdated",
+      "A bug where predictions drift toward incorrect classes gradually",
+      "The statistical properties of the input data or target variable changing over time, causing model performance to degrade"
+    ],
+    "answer": "The statistical properties of the input data or target variable changing over time, causing model performance to degrade",
+    "explanation": "Concept drift occurs when the relationship between inputs and outputs changes in production (e.g., user behaviour shifts). Solutions: monitoring, retraining pipelines, and drift detection algorithms."
+  },
+  {
+    "id": "ML087",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between online learning and batch learning?",
+    "options": [
+      "Online learning uses the internet; batch learning uses local data",
+      "Batch learning is always more accurate; online learning is only for streaming data",
+      "Online learning updates the model incrementally with each new sample or mini-batch; batch learning trains on the full dataset at once",
+      "Online learning requires labeled data; batch learning does not"
+    ],
+    "answer": "Online learning updates the model incrementally with each new sample or mini-batch; batch learning trains on the full dataset at once",
+    "explanation": "Online learning (SGD, river) updates the model in real time as new data arrives \u2014 ideal for streaming or when data is too large to fit in memory. Batch learning retrains from scratch periodically."
+  },
+  {
+    "id": "ML088",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does 'precision-recall tradeoff' mean?",
+    "options": [
+      "Increasing model complexity improves both precision and recall",
+      "Precision and recall always move in the same direction",
+      "The tradeoff only applies to multi-class classification problems",
+      "Lowering the classification threshold increases recall but typically decreases precision, and vice versa"
+    ],
+    "answer": "Lowering the classification threshold increases recall but typically decreases precision, and vice versa",
+    "explanation": "Lowering the threshold catches more positives (higher recall) but also more false positives (lower precision). Raising the threshold does the opposite. The optimal threshold depends on the use case."
+  },
+  {
+    "id": "ML089",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is t-SNE used for in machine learning?",
+    "options": [
+      "Supervised classification of high-dimensional data",
+      "A clustering algorithm similar to k-means",
+      "A non-linear dimensionality reduction technique for visualizing high-dimensional data in 2D or 3D",
+      "A regularization technique for neural networks"
+    ],
+    "answer": "A non-linear dimensionality reduction technique for visualizing high-dimensional data in 2D or 3D",
+    "explanation": "t-SNE (t-distributed Stochastic Neighbor Embedding) maps high-dimensional data to 2D/3D while preserving local structure. It is widely used for exploring clusters in embeddings and high-dimensional datasets."
+  },
+  {
+    "id": "ML090",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does 'training loss' measure during neural network training?",
+    "options": [
+      "The model's performance on the test set",
+      "The error of the model's predictions on the training data during the current epoch",
+      "The number of misclassified samples in the validation set",
+      "The total number of parameters in the model"
+    ],
+    "answer": "The error of the model's predictions on the training data during the current epoch",
+    "explanation": "Training loss measures how well the model fits the training data. It decreases as training progresses. If training loss falls but validation loss rises, the model is overfitting."
+  },
+  {
+    "id": "ML091",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'class imbalance' and which metric is least suitable for evaluating models on imbalanced data?",
+    "options": [
+      "Class imbalance is having too many features; F1-score is least suitable",
+      "Class imbalance is unequal class distribution; Accuracy is least suitable as it is misleading",
+      "Class imbalance is duplicate records; Recall is least suitable",
+      "Class imbalance is missing labels; AUC is least suitable"
+    ],
+    "answer": "Class imbalance is unequal class distribution; Accuracy is least suitable as it is misleading",
+    "explanation": "With 95% class 0, a model predicting always class 0 achieves 95% accuracy but is useless. F1-score, AUC-ROC, or balanced accuracy are better metrics for imbalanced data."
+  },
+  {
+    "id": "ML092",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'model calibration' in machine learning?",
+    "options": [
+      "Ensuring the predicted probabilities of a model accurately reflect the true likelihood of an outcome",
+      "The process of tuning hyperparameters using grid search",
+      "Adjusting the model's weights after deployment",
+      "Normalizing the model's output to sum to 1"
+    ],
+    "answer": "Ensuring the predicted probabilities of a model accurately reflect the true likelihood of an outcome",
+    "explanation": "A calibrated model where P(y=1|score=0.8) means 80% of such cases are actually positive. Miscalibration is common in neural nets and boosting. Platt scaling and isotonic regression are calibration methods."
+  },
+  {
+    "id": "ML093",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'multi-task learning' in neural networks?",
+    "options": [
+      "Training a single model on multiple related tasks simultaneously, sharing representations to improve performance on all tasks",
+      "Training separate models for each task and combining their outputs",
+      "Using multiple GPUs to train one model faster",
+      "A technique to handle multi-class classification with binary classifiers"
+    ],
+    "answer": "Training a single model on multiple related tasks simultaneously, sharing representations to improve performance on all tasks",
+    "explanation": "Multi-task learning shares lower-level representations across tasks (e.g., NER + POS tagging in NLP), acting as a regularizer. The shared signal from related tasks often improves performance on each individual task."
+  },
+  {
+    "id": "ML094",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between MAE and MSE as regression metrics?",
+    "options": [
+      "MAE squares the errors; MSE takes the absolute value",
+      "MAE takes the mean of absolute errors (less sensitive to outliers); MSE takes the mean of squared errors (penalizes outliers more heavily)",
+      "MSE is always larger than MAE regardless of the data",
+      "They produce identical results when errors are symmetric"
+    ],
+    "answer": "MAE takes the mean of absolute errors (less sensitive to outliers); MSE takes the mean of squared errors (penalizes outliers more heavily)",
+    "explanation": "MAE = mean(|y - \u0177|): robust to outliers. MSE = mean((y - \u0177)\u00b2): squaring amplifies large errors, so outliers have a much bigger impact. Use MSE when large errors are especially undesirable."
+  },
+  {
+    "id": "ML095",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'federated learning'?",
+    "options": [
+      "Training a single large model on a central server with all data combined",
+      "A distributed training approach where models are trained locally on edge devices and only model updates (not raw data) are shared with a central server",
+      "A method of combining predictions from multiple independently trained models",
+      "A regulatory framework for machine learning in government"
+    ],
+    "answer": "A distributed training approach where models are trained locally on edge devices and only model updates (not raw data) are shared with a central server",
+    "explanation": "Federated learning enables model training on decentralized data without sharing raw data, preserving privacy. Widely used in mobile keyboards (Google Gboard) and healthcare applications."
+  },
+  {
+    "id": "ML096",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the 'momentum' term in gradient descent optimization?",
+    "options": [
+      "To accelerate updates in the consistent gradient direction and dampen oscillations by accumulating a moving average of past gradients",
+      "To increase the learning rate over time",
+      "To add noise to gradients for better exploration",
+      "To prevent the model from updating weights too quickly"
+    ],
+    "answer": "To accelerate updates in the consistent gradient direction and dampen oscillations by accumulating a moving average of past gradients",
+    "explanation": "Momentum accumulates a velocity vector (exponential moving average of gradients), accelerating convergence in the right direction and reducing oscillations in ravines of the loss landscape."
+  },
+  {
+    "id": "ML097",
+    "domain": "machine_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "In machine learning, what does 'inference' refer to?",
+    "options": [
+      "The process of training the model on new data",
+      "The process of evaluating a model's performance using cross-validation",
+      "The process of selecting features for the model",
+      "The process of using a trained model to make predictions on new, unseen data"
+    ],
+    "answer": "The process of using a trained model to make predictions on new, unseen data",
+    "explanation": "Inference (also called prediction or scoring) is the deployment phase where the trained model is applied to new inputs to generate outputs. It is distinct from training."
+  },
+  {
+    "id": "ML098",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'knowledge distillation' in machine learning?",
+    "options": [
+      "Extracting rules from a decision tree into a rule-based system",
+      "Compressing a large, complex model (teacher) into a smaller, efficient model (student) by training the student on the teacher's soft outputs",
+      "Converting a neural network model into a traditional ML model",
+      "Summarizing training data into a smaller representative subset"
+    ],
+    "answer": "Compressing a large, complex model (teacher) into a smaller, efficient model (student) by training the student on the teacher's soft outputs",
+    "explanation": "Knowledge distillation trains a small student model to mimic a large teacher model's predictions (soft labels with temperature). The student learns more than from hard labels alone, matching teacher performance at lower cost."
+  },
+  {
+    "id": "ML099",
+    "domain": "machine_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between 'instance-based' and 'model-based' learning?",
+    "options": [
+      "Instance-based learns a model during training; model-based memorizes data",
+      "Instance-based stores training data and generalizes at prediction time (lazy); model-based builds an explicit model during training (eager)",
+      "Model-based learning never generalizes beyond training data",
+      "They are different names for supervised and unsupervised learning"
+    ],
+    "answer": "Instance-based stores training data and generalizes at prediction time (lazy); model-based builds an explicit model during training (eager)",
+    "explanation": "Instance-based (KNN) doesn't train a model \u2014 it generalizes by comparing new inputs to stored training examples. Model-based (linear regression, trees) learns a compact model from data."
+  },
+  {
+    "id": "ML100",
+    "domain": "machine_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is 'reinforcement learning' and how does it differ from supervised learning?",
+    "options": [
+      "Reinforcement learning uses labeled data; supervised learning uses rewards",
+      "They are both trained using labeled datasets but differ in evaluation methods",
+      "Reinforcement learning trains an agent to make sequential decisions by maximizing cumulative rewards through trial-and-error interaction with an environment; supervised learning learns from labeled input-output pairs",
+      "Reinforcement learning is only applicable to robotics; supervised learning covers all other domains"
+    ],
+    "answer": "Reinforcement learning trains an agent to make sequential decisions by maximizing cumulative rewards through trial-and-error interaction with an environment; supervised learning learns from labeled input-output pairs",
+    "explanation": "In RL, an agent takes actions in an environment, receives rewards or penalties, and learns a policy to maximize long-term reward (e.g., AlphaGo, ChatGPT RLHF). No labeled examples \u2014 only feedback signals."
+  }
+]

@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "MERN001",
+    "domain": "mern",
+    "topic": "MongoDB Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What type of database is MongoDB?",
+    "options": [
+      "Relational database",
+      "NoSQL document database",
+      "Key-value store",
+      "Graph database"
+    ],
+    "answer": "NoSQL document database",
+    "explanation": "MongoDB is a NoSQL document-oriented database that stores data in flexible, JSON-like BSON documents instead of rows and columns like relational databases."
+  },
+  {
+    "id": "MERN002",
+    "domain": "mern",
+    "topic": "MongoDB Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the equivalent of a 'table' in MongoDB?",
+    "options": [
+      "Collection",
+      "Schema",
+      "Database",
+      "Document"
+    ],
+    "answer": "Collection",
+    "explanation": "In MongoDB, a Collection is equivalent to a table in relational databases. A collection holds multiple documents, just as a table holds rows."
+  },
+  {
+    "id": "MERN003",
+    "domain": "mern",
+    "topic": "MongoDB Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which field does MongoDB automatically add to every document as a unique identifier?",
+    "options": [
+      "id",
+      "_id",
+      "docId",
+      "uuid"
+    ],
+    "answer": "_id",
+    "explanation": "MongoDB automatically adds an '_id' field to every document if not provided. By default it's an ObjectId \u2014 a 12-byte BSON type that is unique across the collection."
+  },
+  {
+    "id": "MERN004",
+    "domain": "mern",
+    "topic": "MongoDB Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which format does MongoDB use to store documents internally?",
+    "options": [
+      "XML",
+      "CSV",
+      "BSON",
+      "JSON"
+    ],
+    "answer": "BSON",
+    "explanation": "MongoDB stores data in BSON (Binary JSON) format, which is a binary-encoded serialization of JSON-like documents. BSON supports more data types than JSON, such as Date and Binary."
+  },
+  {
+    "id": "MERN005",
+    "domain": "mern",
+    "topic": "MongoDB Queries",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which MongoDB method is used to retrieve all documents from a collection?",
+    "options": [
+      "collection.select()",
+      "collection.find({})",
+      "collection.fetchAll()",
+      "collection.getAll()"
+    ],
+    "answer": "collection.find({})",
+    "explanation": "db.collection.find({}) retrieves all documents from a collection. An empty filter {} matches all documents. find() returns a cursor; findOne() returns a single document."
+  },
+  {
+    "id": "MERN006",
+    "domain": "mern",
+    "topic": "MongoDB Queries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which MongoDB operator is used to find documents where a field value is in a given array?",
+    "options": [
+      "$any",
+      "$in",
+      "$includes",
+      "$contains"
+    ],
+    "answer": "$in",
+    "explanation": "The $in operator selects documents where the field value equals any value in the specified array. Example: db.users.find({ status: { $in: ['active', 'pending'] } })"
+  },
+  {
+    "id": "MERN007",
+    "domain": "mern",
+    "topic": "MongoDB Queries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the MongoDB aggregation pipeline's $group stage do?",
+    "options": [
+      "Groups documents by a specified expression and computes aggregates",
+      "Filters documents",
+      "Joins two collections",
+      "Sorts documents"
+    ],
+    "answer": "Groups documents by a specified expression and computes aggregates",
+    "explanation": "$group groups input documents by a specified _id expression and applies accumulator expressions (like $sum, $avg, $count, $push). It's MongoDB's equivalent of SQL's GROUP BY."
+  },
+  {
+    "id": "MERN008",
+    "domain": "mern",
+    "topic": "MongoDB Queries",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which MongoDB operator performs a left outer join between two collections?",
+    "options": [
+      "$link",
+      "$merge",
+      "$join",
+      "$lookup"
+    ],
+    "answer": "$lookup",
+    "explanation": "$lookup performs a left outer join to a collection in the same database. It adds a new array field with matching documents from the joined collection. Equivalent to SQL LEFT JOIN."
+  },
+  {
+    "id": "MERN009",
+    "domain": "mern",
+    "topic": "MongoDB Indexes",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the explain() method do in MongoDB?",
+    "options": [
+      "Adds comments to a query",
+      "Shows the query execution plan including index usage",
+      "Validates documents against a schema",
+      "Explains the schema of a collection"
+    ],
+    "answer": "Shows the query execution plan including index usage",
+    "explanation": "db.collection.find({}).explain('executionStats') shows how MongoDB executes a query \u2014 which index was used, documents examined, time taken. Essential for query optimization, similar to SQL's EXPLAIN."
+  },
+  {
+    "id": "MERN010",
+    "domain": "mern",
+    "topic": "MongoDB Schema",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between embedding and referencing documents in MongoDB?",
+    "options": [
+      "Referencing is always faster",
+      "Embedding stores related data in a single document for fast reads; referencing stores a foreign ID and requires additional queries",
+      "Embedding only works for arrays",
+      "No difference \u2014 both store data the same way"
+    ],
+    "answer": "Embedding stores related data in a single document for fast reads; referencing stores a foreign ID and requires additional queries",
+    "explanation": "Embedding (denormalization): store related data nested in one document \u2014 fast single-query reads, good for one-to-few relationships, data duplication. Referencing (normalization): store ObjectId to related document \u2014 requires $lookup or multiple queries, good for one-to-many or frequently updated shared data."
+  },
+  {
+    "id": "MERN011",
+    "domain": "mern",
+    "topic": "Mongoose",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is Mongoose in the context of MongoDB and Node.js?",
+    "options": [
+      "An ODM (Object Data Modeling) library that provides schema validation and model abstraction for MongoDB",
+      "A MongoDB hosting service",
+      "A query language for MongoDB",
+      "A MongoDB GUI tool"
+    ],
+    "answer": "An ODM (Object Data Modeling) library that provides schema validation and model abstraction for MongoDB",
+    "explanation": "Mongoose is an ODM library for MongoDB and Node.js. It provides schema definition, validation, middleware (hooks), and a model-based abstraction over MongoDB's native driver, making it easier to work with MongoDB in Node.js applications."
+  },
+  {
+    "id": "MERN012",
+    "domain": "mern",
+    "topic": "Mongoose",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which Mongoose method saves a new document to the database?",
+    "options": [
+      "Model.add()",
+      "Model.push()",
+      "Model.create() or instance.save()",
+      "Model.insert()"
+    ],
+    "answer": "Model.create() or instance.save()",
+    "explanation": "Two ways to create documents: Model.create({ field: value }) \u2014 creates and saves in one step. new Model({ field: value }).save() \u2014 creates an instance then saves. Both return a promise."
+  },
+  {
+    "id": "MERN013",
+    "domain": "mern",
+    "topic": "Mongoose",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a Mongoose middleware (hook)?",
+    "options": [
+      "A type of database index",
+      "A connection pooling strategy",
+      "A validation rule for schema fields",
+      "A function that runs before or after a document operation like save, find, or delete"
+    ],
+    "answer": "A function that runs before or after a document operation like save, find, or delete",
+    "explanation": "Mongoose middleware (pre/post hooks) runs functions before (pre) or after (post) certain operations. Example: schema.pre('save', function() { this.updatedAt = Date.now() }) \u2014 runs before every save. Useful for hashing passwords, logging, validation."
+  },
+  {
+    "id": "MERN014",
+    "domain": "mern",
+    "topic": "Mongoose",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which Mongoose method finds a document by its _id field?",
+    "options": [
+      "Model.getById(id)",
+      "Model.fetch(id)",
+      "Model.findById(id)",
+      "Model.findOne({ _id: id })"
+    ],
+    "answer": "Model.findById(id)",
+    "explanation": "Model.findById(id) is shorthand for Model.findOne({ _id: id }). It automatically handles ObjectId conversion. Returns null if not found. Use findByIdAndUpdate() or findByIdAndDelete() for combined operations."
+  },
+  {
+    "id": "MERN015",
+    "domain": "mern",
+    "topic": "Mongoose",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does the { new: true } option do in Mongoose's findByIdAndUpdate()?",
+    "options": [
+      "Adds a new field to the schema",
+      "Creates a new document if not found",
+      "Returns the updated document instead of the original pre-update document",
+      "Prevents validation on update"
+    ],
+    "answer": "Returns the updated document instead of the original pre-update document",
+    "explanation": "By default, findByIdAndUpdate() returns the original document before the update. Passing { new: true } returns the updated document after changes. Also commonly used with { runValidators: true } to enforce schema validation on updates."
+  },
+  {
+    "id": "MERN016",
+    "domain": "mern",
+    "topic": "Express Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is Express.js?",
+    "options": [
+      "A frontend JavaScript framework",
+      "A MongoDB client library",
+      "A CSS preprocessor",
+      "A minimal and flexible Node.js web application framework for building APIs and web apps"
+    ],
+    "answer": "A minimal and flexible Node.js web application framework for building APIs and web apps",
+    "explanation": "Express.js is a fast, unopinionated, minimalist web framework for Node.js. It provides routing, middleware support, and HTTP utility methods, making it the most popular choice for building REST APIs with Node.js."
+  },
+  {
+    "id": "MERN017",
+    "domain": "mern",
+    "topic": "Express Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which HTTP method is typically used to create a new resource in a REST API?",
+    "options": [
+      "PUT",
+      "POST",
+      "GET",
+      "DELETE"
+    ],
+    "answer": "POST",
+    "explanation": "REST conventions: GET (read), POST (create), PUT/PATCH (update), DELETE (delete). POST sends data in the request body to create a new resource. The server typically responds with the created resource and status 201 Created."
+  },
+  {
+    "id": "MERN018",
+    "domain": "mern",
+    "topic": "Express Routing",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "How do you define a route parameter in Express.js?",
+    "options": [
+      "Using {param} syntax",
+      "Using [param] syntax",
+      "Using $param syntax",
+      "Using :param syntax"
+    ],
+    "answer": "Using :param syntax",
+    "explanation": "Express route parameters use colon prefix: app.get('/users/:id', (req, res) => { const id = req.params.id }). Multiple params: '/users/:userId/posts/:postId'. Query strings use req.query; request body uses req.body."
+  },
+  {
+    "id": "MERN019",
+    "domain": "mern",
+    "topic": "Express Middleware",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is middleware in Express.js?",
+    "options": [
+      "The frontend layer of the MERN stack",
+      "A database connection layer",
+      "A type of route handler",
+      "Functions that have access to req, res, and next \u2014 executing during the request-response cycle"
+    ],
+    "answer": "Functions that have access to req, res, and next \u2014 executing during the request-response cycle",
+    "explanation": "Middleware functions execute in sequence during the request-response cycle. They can modify req/res, end the cycle, or call next() to pass to the next middleware. Types: application-level, router-level, error-handling, built-in (express.json()), third-party (cors, morgan)."
+  },
+  {
+    "id": "MERN020",
+    "domain": "mern",
+    "topic": "Express Middleware",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which Express middleware is needed to parse incoming JSON request bodies?",
+    "options": [
+      "express.json()",
+      "express.text()",
+      "express.bodyParser()",
+      "express.urlencoded()"
+    ],
+    "answer": "express.json()",
+    "explanation": "express.json() is a built-in middleware that parses incoming requests with JSON payloads. Without it, req.body will be undefined for JSON requests. Add it globally: app.use(express.json()) before your routes."
+  },
+  {
+    "id": "MERN021",
+    "domain": "mern",
+    "topic": "Express Error Handling",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How does Express identify a middleware as an error-handling middleware?",
+    "options": [
+      "By returning a 500 status code",
+      "By placing it first in the chain",
+      "By having four parameters: (err, req, res, next)",
+      "By using the keyword 'error'"
+    ],
+    "answer": "By having four parameters: (err, req, res, next)",
+    "explanation": "Express error-handling middleware must have exactly four parameters: (err, req, res, next). It's defined after all other routes and middleware. Errors are passed to it by calling next(err) from any middleware or route handler."
+  },
+  {
+    "id": "MERN022",
+    "domain": "mern",
+    "topic": "Express REST API",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What HTTP status code should a successful POST (resource creation) request return?",
+    "options": [
+      "202 Accepted",
+      "200 OK",
+      "201 Created",
+      "204 No Content"
+    ],
+    "answer": "201 Created",
+    "explanation": "REST conventions: 200 OK (successful GET/PUT/PATCH), 201 Created (successful POST \u2014 new resource created), 204 No Content (successful DELETE \u2014 no body), 400 Bad Request (validation error), 401 Unauthorized, 404 Not Found, 500 Internal Server Error."
+  },
+  {
+    "id": "MERN023",
+    "domain": "mern",
+    "topic": "Express REST API",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the purpose of the Express Router?",
+    "options": [
+      "To create modular, mountable route handlers that can be organized in separate files",
+      "To serve static files",
+      "To connect to MongoDB",
+      "To handle CORS"
+    ],
+    "answer": "To create modular, mountable route handlers that can be organized in separate files",
+    "explanation": "express.Router() creates a mini Express app with its own middleware and routing. Routes are defined on the router and mounted on the main app: app.use('/api/users', userRouter). This enables modular code organization \u2014 each resource has its own router file."
+  },
+  {
+    "id": "MERN024",
+    "domain": "mern",
+    "topic": "Node.js Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is Node.js?",
+    "options": [
+      "A JavaScript runtime built on Chrome's V8 engine that allows JavaScript to run on the server",
+      "A browser-based JavaScript engine",
+      "A JavaScript framework for building UIs",
+      "A database for JavaScript applications"
+    ],
+    "answer": "A JavaScript runtime built on Chrome's V8 engine that allows JavaScript to run on the server",
+    "explanation": "Node.js is a server-side JavaScript runtime built on Chrome's V8 engine. It uses an event-driven, non-blocking I/O model, making it efficient for I/O-heavy applications like REST APIs, real-time apps, and microservices."
+  },
+  {
+    "id": "MERN025",
+    "domain": "mern",
+    "topic": "Node.js Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is npm?",
+    "options": [
+      "Node Package Manager \u2014 used to install and manage JavaScript packages",
+      "A JavaScript minifier",
+      "A Node.js testing tool",
+      "A Node.js framework"
+    ],
+    "answer": "Node Package Manager \u2014 used to install and manage JavaScript packages",
+    "explanation": "npm (Node Package Manager) is the default package manager for Node.js. It manages project dependencies via package.json, hosts the npm registry (world's largest software registry), and provides CLI commands: npm install, npm start, npm run, npm publish."
+  },
+  {
+    "id": "MERN026",
+    "domain": "mern",
+    "topic": "Node.js Async",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the event loop in Node.js?",
+    "options": [
+      "A MongoDB event listener",
+      "A real-time event system",
+      "The mechanism that allows Node.js to perform non-blocking I/O by offloading operations and executing callbacks when complete",
+      "A type of for loop for DOM events"
+    ],
+    "answer": "The mechanism that allows Node.js to perform non-blocking I/O by offloading operations and executing callbacks when complete",
+    "explanation": "Node.js event loop: single-threaded but non-blocking. I/O operations (file, network, DB) are offloaded to the OS/thread pool. When complete, callbacks are queued in the event loop and executed. This enables high concurrency without multiple threads."
+  },
+  {
+    "id": "MERN027",
+    "domain": "mern",
+    "topic": "Node.js Async",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between async/await and Promises in JavaScript?",
+    "options": [
+      "async/await is syntactic sugar over Promises, making asynchronous code look synchronous",
+      "async/await cannot handle errors",
+      "They are completely different mechanisms",
+      "Promises are newer than async/await"
+    ],
+    "answer": "async/await is syntactic sugar over Promises, making asynchronous code look synchronous",
+    "explanation": "Promises: handle async operations with .then()/.catch() chaining. async/await: syntactic sugar built on Promises \u2014 async function always returns a Promise, await pauses execution until Promise resolves. async/await is more readable than nested .then() chains. Error handling: try/catch with await vs .catch() with Promises."
+  },
+  {
+    "id": "MERN028",
+    "domain": "mern",
+    "topic": "Node.js Async",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What happens when you use await without an async function?",
+    "options": [
+      "It causes a SyntaxError \u2014 await can only be used inside async functions (or top-level modules)",
+      "It returns undefined",
+      "It works normally",
+      "It converts the function to synchronous"
+    ],
+    "answer": "It causes a SyntaxError \u2014 await can only be used inside async functions (or top-level modules)",
+    "explanation": "await is only valid inside functions declared with async keyword (or at the top level of ES modules). Using await in a regular function causes SyntaxError. The async keyword makes the function return a Promise automatically."
+  },
+  {
+    "id": "MERN029",
+    "domain": "mern",
+    "topic": "Node.js Modules",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which keyword is used to export a module in Node.js (CommonJS)?",
+    "options": [
+      "export",
+      "module.exports",
+      "export default",
+      "exports.default"
+    ],
+    "answer": "module.exports",
+    "explanation": "Node.js uses CommonJS modules by default: module.exports = myFunction or exports.myProp = value to export. import with require(): const myFunc = require('./myModule'). ES Modules (import/export) require .mjs extension or 'type': 'module' in package.json."
+  },
+  {
+    "id": "MERN030",
+    "domain": "mern",
+    "topic": "Node.js Environment",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you access environment variables in a Node.js application?",
+    "options": [
+      "process.env.VARIABLE_NAME",
+      "env.get('VARIABLE')",
+      "global.env.VARIABLE",
+      "window.env.VARIABLE"
+    ],
+    "answer": "process.env.VARIABLE_NAME",
+    "explanation": "Environment variables are accessed via process.env.VARIABLE_NAME. The dotenv package (require('dotenv').config()) loads variables from a .env file into process.env. Never commit .env files with secrets \u2014 add to .gitignore. Use different .env files per environment."
+  },
+  {
+    "id": "MERN031",
+    "domain": "mern",
+    "topic": "React Basics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is React?",
+    "options": [
+      "A JavaScript library for building user interfaces using a component-based architecture",
+      "A full-stack JavaScript framework",
+      "A Node.js web framework",
+      "A CSS framework"
+    ],
+    "answer": "A JavaScript library for building user interfaces using a component-based architecture",
+    "explanation": "React is a declarative, component-based JavaScript library developed by Meta for building UIs. It uses a virtual DOM for efficient updates and JSX for component templating. React focuses only on the View layer \u2014 it's not a full framework like Angular."
+  },
+  {
+    "id": "MERN032",
+    "domain": "mern",
+    "topic": "React Components",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is JSX in React?",
+    "options": [
+      "A CSS-in-JS solution",
+      "A React state management tool",
+      "A JavaScript extension for writing XML-like syntax that gets compiled to React.createElement() calls",
+      "A new JavaScript standard"
+    ],
+    "answer": "A JavaScript extension for writing XML-like syntax that gets compiled to React.createElement() calls",
+    "explanation": "JSX (JavaScript XML) allows writing HTML-like syntax inside JavaScript. Babel compiles JSX to React.createElement() calls. JSX is not required but makes React code more readable. Rules: one root element, className instead of class, self-closing tags must close (< br />)."
+  },
+  {
+    "id": "MERN033",
+    "domain": "mern",
+    "topic": "React Components",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the difference between a class component and a functional component in React?",
+    "options": [
+      "Class components are the modern standard",
+      "Functional components are plain JavaScript functions; class components extend React.Component. Hooks allow functional components to use state and lifecycle",
+      "Functional components cannot accept props",
+      "Class components are faster"
+    ],
+    "answer": "Functional components are plain JavaScript functions; class components extend React.Component. Hooks allow functional components to use state and lifecycle",
+    "explanation": "Class components: extend React.Component, use this.state, lifecycle methods (componentDidMount etc). Functional components: simpler functions, use Hooks (useState, useEffect) for state and lifecycle. Hooks (React 16.8) made functional components the modern standard \u2014 they're simpler and require less boilerplate."
+  },
+  {
+    "id": "MERN034",
+    "domain": "mern",
+    "topic": "React Props",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What are props in React?",
+    "options": [
+      "Read-only data passed from parent to child components",
+      "A React lifecycle method",
+      "CSS styles for components",
+      "Internal state of a component"
+    ],
+    "answer": "Read-only data passed from parent to child components",
+    "explanation": "Props (properties) are read-only inputs passed from parent to child components. They allow data and event handlers to flow down the component tree. Props cannot be modified by the child \u2014 a component must not modify its own props (one-way data flow)."
+  },
+  {
+    "id": "MERN035",
+    "domain": "mern",
+    "topic": "React State",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which React Hook is used to add state to a functional component?",
+    "options": [
+      "useContext",
+      "useReducer",
+      "useEffect",
+      "useState"
+    ],
+    "answer": "useState",
+    "explanation": "useState(initialValue) returns [state, setState] pair. Calling setState triggers a re-render with the new value. For complex state logic, useReducer is preferred. State updates may be batched. Never mutate state directly \u2014 always use setState."
+  },
+  {
+    "id": "MERN036",
+    "domain": "mern",
+    "topic": "React Hooks",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the useEffect Hook in React?",
+    "options": [
+      "To create new state variables",
+      "To memoize expensive calculations",
+      "To access context values",
+      "To perform side effects like data fetching, subscriptions, or DOM manipulation after render"
+    ],
+    "answer": "To perform side effects like data fetching, subscriptions, or DOM manipulation after render",
+    "explanation": "useEffect(callback, deps) runs side effects after render. Dependency array: [] runs once after mount, [dep] runs when dep changes, omitting it runs after every render. Return a cleanup function to prevent memory leaks (unsubscribe, clear timers). Replaces componentDidMount, componentDidUpdate, componentWillUnmount."
+  },
+  {
+    "id": "MERN037",
+    "domain": "mern",
+    "topic": "React Hooks",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the dependency array in useEffect control?",
+    "options": [
+      "When the effect re-runs: empty [] runs once, [val] runs when val changes, no array runs after every render",
+      "The number of state variables",
+      "The order of hooks execution",
+      "Which components re-render"
+    ],
+    "answer": "When the effect re-runs: empty [] runs once, [val] runs when val changes, no array runs after every render",
+    "explanation": "useEffect dependency array: [] \u2014 runs once after initial mount (like componentDidMount). [dep1, dep2] \u2014 runs after mount and whenever listed dependencies change. Omitted \u2014 runs after every render (use carefully, causes infinite loops if effect updates state without deps)."
+  },
+  {
+    "id": "MERN038",
+    "domain": "mern",
+    "topic": "React Hooks",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the useCallback Hook used for?",
+    "options": [
+      "To fetch data from APIs",
+      "To access DOM elements directly",
+      "To memoize a function reference so it doesn't get recreated on every render",
+      "To manage side effects"
+    ],
+    "answer": "To memoize a function reference so it doesn't get recreated on every render",
+    "explanation": "useCallback(fn, deps) returns a memoized version of the callback that only changes when dependencies change. Useful when passing callbacks to child components wrapped in React.memo \u2014 prevents unnecessary re-renders caused by new function references on every parent render."
+  },
+  {
+    "id": "MERN039",
+    "domain": "mern",
+    "topic": "React Hooks",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the useMemo Hook used for?",
+    "options": [
+      "To memoize component state",
+      "To cache API responses",
+      "To memoize an expensive computed value so it's only recalculated when dependencies change",
+      "To prevent all re-renders"
+    ],
+    "answer": "To memoize an expensive computed value so it's only recalculated when dependencies change",
+    "explanation": "useMemo(() => expensiveCalc(), [deps]) caches the result of a computation. Only recomputes when dependencies change. Different from useCallback which memoizes functions \u2014 useMemo memoizes values. Use for expensive calculations, not for all values (memoization has its own overhead)."
+  },
+  {
+    "id": "MERN040",
+    "domain": "mern",
+    "topic": "React Hooks",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the useRef Hook primarily used for?",
+    "options": [
+      "To access DOM elements directly and store mutable values that don't trigger re-renders",
+      "To replace useState for complex state",
+      "To create state that persists across renders",
+      "To create context providers"
+    ],
+    "answer": "To access DOM elements directly and store mutable values that don't trigger re-renders",
+    "explanation": "useRef returns a mutable ref object with a .current property. Two uses: 1) Access DOM elements: const inputRef = useRef(); <input ref={inputRef} /> then inputRef.current.focus(). 2) Store mutable values that persist across renders without triggering re-render (unlike state). Value changes don't cause re-renders."
+  },
+  {
+    "id": "MERN041",
+    "domain": "mern",
+    "topic": "React Context",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What problem does React Context solve?",
+    "options": [
+      "Prop drilling \u2014 passing props through many component levels that don't need them",
+      "Slow rendering performance",
+      "Lack of lifecycle methods in functional components",
+      "Asynchronous state updates"
+    ],
+    "answer": "Prop drilling \u2014 passing props through many component levels that don't need them",
+    "explanation": "React Context provides a way to share values (theme, user, language) between components without explicitly passing props through every level of the tree (prop drilling). Use createContext(), Context.Provider (wraps tree), useContext(Context) (consume value) in any descendant."
+  },
+  {
+    "id": "MERN042",
+    "domain": "mern",
+    "topic": "React Context",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which Hook is used to consume a React Context value in a functional component?",
+    "options": [
+      "useState",
+      "useContext",
+      "useStore",
+      "useProvider"
+    ],
+    "answer": "useContext",
+    "explanation": "useContext(MyContext) returns the current context value from the nearest matching Provider above. The component re-renders when the context value changes. For complex state management, combine useContext with useReducer or use libraries like Redux/Zustand."
+  },
+  {
+    "id": "MERN043",
+    "domain": "mern",
+    "topic": "React Performance",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does React.memo() do?",
+    "options": [
+      "Wraps a functional component and prevents re-renders if props haven't changed",
+      "Replaces the useMemo hook",
+      "Caches API responses in React",
+      "Memoizes the return value of a function"
+    ],
+    "answer": "Wraps a functional component and prevents re-renders if props haven't changed",
+    "explanation": "React.memo() is a higher-order component that memoizes a component. If props are the same as the previous render (shallow comparison), React skips re-rendering and reuses the last rendered output. Useful for pure components that render often. Use with useCallback for callback props."
+  },
+  {
+    "id": "MERN044",
+    "domain": "mern",
+    "topic": "React Router",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which library is commonly used for client-side routing in React applications?",
+    "options": [
+      "React Router (react-router-dom)",
+      "Next.js Router",
+      "express-router",
+      "Angular Router"
+    ],
+    "answer": "React Router (react-router-dom)",
+    "explanation": "React Router (react-router-dom) is the standard routing library for React SPAs. Key components: <BrowserRouter>, <Routes>, <Route path='/path' element={<Component />}>, <Link to='/path'>, <Navigate>. Hooks: useParams(), useNavigate(), useLocation()."
+  },
+  {
+    "id": "MERN045",
+    "domain": "mern",
+    "topic": "React Router",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which React Router hook is used to programmatically navigate to a different route?",
+    "options": [
+      "useNavigate()",
+      "useRedirect()",
+      "useRoute()",
+      "useHistory()"
+    ],
+    "answer": "useNavigate()",
+    "explanation": "useNavigate() (React Router v6) returns a navigate function: const navigate = useNavigate(); navigate('/dashboard'). For back navigation: navigate(-1). Replaces useHistory() from v5. For declarative navigation in JSX, use <Navigate to='/path' /> or <Link to='/path'>."
+  },
+  {
+    "id": "MERN046",
+    "domain": "mern",
+    "topic": "React Router",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you access URL parameters in a React Router v6 component?",
+    "options": [
+      "props.params.id",
+      "this.props.match.params.id",
+      "useParams().id",
+      "useRoute().id"
+    ],
+    "answer": "useParams().id",
+    "explanation": "useParams() hook returns an object of key/value pairs from the URL parameters. For route path='/users/:id', const { id } = useParams() gives the id value. In class components, use this.props.match.params (v5) or wrap with withRouter HOC."
+  },
+  {
+    "id": "MERN047",
+    "domain": "mern",
+    "topic": "State Management",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is Redux used for in a React application?",
+    "options": [
+      "Styling React components",
+      "Database management",
+      "Server-side rendering",
+      "Centralized, predictable state management using a single store"
+    ],
+    "answer": "Centralized, predictable state management using a single store",
+    "explanation": "Redux provides a single global store for application state. State is read-only, changed only by dispatching actions. Pure reducer functions specify how state changes. Benefits: predictable state, time-travel debugging, easy testing. Redux Toolkit simplifies Redux setup significantly."
+  },
+  {
+    "id": "MERN048",
+    "domain": "mern",
+    "topic": "State Management",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What are the three core principles of Redux?",
+    "options": [
+      "Dispatch, Subscribe, Publish",
+      "Components, Props, State",
+      "Single source of truth, State is read-only, Changes made with pure functions (reducers)",
+      "Actions, Reducers, Store"
+    ],
+    "answer": "Single source of truth, State is read-only, Changes made with pure functions (reducers)",
+    "explanation": "Redux principles: 1) Single source of truth \u2014 entire app state in one store. 2) State is read-only \u2014 only way to change state is dispatch an action. 3) Changes via pure functions \u2014 reducers are pure functions taking previous state + action, returning new state. These ensure predictability and testability."
+  },
+  {
+    "id": "MERN049",
+    "domain": "mern",
+    "topic": "State Management",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Redux Toolkit and why is it preferred over vanilla Redux?",
+    "options": [
+      "Redux Toolkit replaces the need for reducers",
+      "Redux Toolkit is a different state management library",
+      "Redux Toolkit is the official, opinionated Redux toolset that reduces boilerplate with createSlice, createAsyncThunk, and configureStore",
+      "Redux Toolkit only works with TypeScript"
+    ],
+    "answer": "Redux Toolkit is the official, opinionated Redux toolset that reduces boilerplate with createSlice, createAsyncThunk, and configureStore",
+    "explanation": "Redux Toolkit (RTK) is the official recommended approach. createSlice() auto-generates actions and reducers. configureStore() sets up Redux DevTools and thunk middleware. createAsyncThunk() handles async actions. Eliminates verbose action type constants and switch statements. Includes Immer for 'mutating' state safely."
+  },
+  {
+    "id": "MERN050",
+    "domain": "mern",
+    "topic": "Authentication",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is JWT (JSON Web Token) and how is it used for authentication?",
+    "options": [
+      "A database encryption standard",
+      "A session storage mechanism",
+      "A self-contained, signed token containing user data used to authenticate API requests without server-side sessions",
+      "A cookie-based authentication system"
+    ],
+    "answer": "A self-contained, signed token containing user data used to authenticate API requests without server-side sessions",
+    "explanation": "JWT is a compact, URL-safe token format. Structure: header.payload.signature (Base64 encoded). Server creates JWT on login and sends to client. Client sends JWT in Authorization: Bearer <token> header. Server verifies signature without database lookup \u2014 stateless. Store in httpOnly cookies (safer) or localStorage (XSS risk)."
+  },
+  {
+    "id": "MERN051",
+    "domain": "mern",
+    "topic": "Authentication",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which package is commonly used to hash passwords before storing in MongoDB?",
+    "options": [
+      "crypto",
+      "sha256",
+      "md5",
+      "bcrypt"
+    ],
+    "answer": "bcrypt",
+    "explanation": "bcrypt is the industry standard for password hashing. It uses a salt (random data) and is intentionally slow (configurable cost factor), making brute-force attacks impractical. Usage: bcrypt.hash(password, saltRounds) to hash, bcrypt.compare(plain, hash) to verify. Never store plaintext passwords."
+  },
+  {
+    "id": "MERN052",
+    "domain": "mern",
+    "topic": "Authentication",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between authentication and authorization?",
+    "options": [
+      "They are the same thing",
+      "Authorization verifies identity; authentication checks permissions",
+      "Authentication verifies who you are (identity); authorization determines what you can do (permissions)",
+      "Authentication is only for APIs"
+    ],
+    "answer": "Authentication verifies who you are (identity); authorization determines what you can do (permissions)",
+    "explanation": "Authentication: verifying identity \u2014 'Who are you?' (login with credentials, JWT verification). Authorization: verifying permissions \u2014 'What are you allowed to do?' (can this user access /admin?). In MERN: authenticate first (verify JWT), then authorize (check user role/permissions) before granting access to protected routes."
+  },
+  {
+    "id": "MERN053",
+    "domain": "mern",
+    "topic": "CORS",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does CORS stand for and why is it needed?",
+    "options": [
+      "Cross-Origin Resource Sharing \u2014 a browser security mechanism that restricts web pages from making requests to a different domain than the one that served the page",
+      "Cross-Origin Rendering System \u2014 a React optimization",
+      "Cross-Object Relational Schema \u2014 a MongoDB concept",
+      "Client-Only Request System \u2014 a Node.js feature"
+    ],
+    "answer": "Cross-Origin Resource Sharing \u2014 a browser security mechanism that restricts web pages from making requests to a different domain than the one that served the page",
+    "explanation": "CORS is enforced by browsers, not servers. When a React app (localhost:3000) calls an Express API (localhost:5000), the browser blocks it (different ports = different origin). Express needs the 'cors' npm package: app.use(cors({ origin: 'http://localhost:3000' })) to allow cross-origin requests."
+  },
+  {
+    "id": "MERN054",
+    "domain": "mern",
+    "topic": "API Design",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is REST and what are its key constraints?",
+    "options": [
+      "A real-time communication protocol",
+      "An architectural style for distributed systems with constraints: stateless, client-server, cacheable, uniform interface, layered system",
+      "A JavaScript framework for APIs",
+      "A database query language"
+    ],
+    "answer": "An architectural style for distributed systems with constraints: stateless, client-server, cacheable, uniform interface, layered system",
+    "explanation": "REST (Representational State Transfer): stateless (no client context stored on server), client-server (separation of concerns), cacheable (responses can be cached), uniform interface (standard HTTP methods + resource-based URLs), layered system. RESTful APIs use HTTP methods on resource URIs: GET /users, POST /users, PUT /users/:id, DELETE /users/:id."
+  },
+  {
+    "id": "MERN055",
+    "domain": "mern",
+    "topic": "API Design",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between PUT and PATCH HTTP methods?",
+    "options": [
+      "PUT replaces the entire resource; PATCH applies partial updates to a resource",
+      "PUT is for creating; PATCH is for deleting",
+      "PATCH replaces entire resource; PUT does partial update",
+      "No difference \u2014 both update resources"
+    ],
+    "answer": "PUT replaces the entire resource; PATCH applies partial updates to a resource",
+    "explanation": "PUT: idempotent, replaces the entire resource with the request body. If fields are missing, they become null/undefined. PATCH: partial update \u2014 only updates specified fields. More efficient for small changes. Both return 200 OK or 204 No Content. PATCH is preferred for most update operations in RESTful APIs."
+  },
+  {
+    "id": "MERN056",
+    "domain": "mern",
+    "topic": "MongoDB Advanced",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a MongoDB transaction and when should you use it?",
+    "options": [
+      "A multi-document operation that guarantees ACID properties \u2014 all operations succeed or all are rolled back",
+      "A type of index",
+      "A backup mechanism",
+      "A way to speed up queries"
+    ],
+    "answer": "A multi-document operation that guarantees ACID properties \u2014 all operations succeed or all are rolled back",
+    "explanation": "MongoDB transactions (4.0+ for replica sets, 4.2+ for sharded clusters) allow multiple operations across multiple documents/collections to be atomic. If one operation fails, all are rolled back. Use for operations that must all succeed together: transferring money between accounts, creating an order + updating inventory. Has performance overhead \u2014 use sparingly."
+  },
+  {
+    "id": "MERN057",
+    "domain": "mern",
+    "topic": "React Forms",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between controlled and uncontrolled components in React forms?",
+    "options": [
+      "Uncontrolled components are always preferred",
+      "Controlled: form data managed by React state; Uncontrolled: form data managed by the DOM using refs",
+      "No difference",
+      "Controlled components don't need onChange handlers"
+    ],
+    "answer": "Controlled: form data managed by React state; Uncontrolled: form data managed by the DOM using refs",
+    "explanation": "Controlled component: value tied to state, onChange updates state \u2014 React is single source of truth. <input value={state} onChange={setState} />. Uncontrolled: value managed by DOM, accessed via ref. Controlled is preferred \u2014 enables instant validation, conditional rendering based on input, and predictable behavior."
+  },
+  {
+    "id": "MERN058",
+    "domain": "mern",
+    "topic": "React Forms",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which library is commonly used for form validation in React?",
+    "options": [
+      "React's built-in FormValidator",
+      "express-validator",
+      "Formik or React Hook Form",
+      "Redux Form only"
+    ],
+    "answer": "Formik or React Hook Form",
+    "explanation": "Formik: manages form state, validation, and submission. Often paired with Yup for schema validation. React Hook Form: hook-based, minimal re-renders (uncontrolled inputs with register), better performance for large forms. React Hook Form is now more popular for its performance advantages."
+  },
+  {
+    "id": "MERN059",
+    "domain": "mern",
+    "topic": "React Data Fetching",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which library is commonly used for data fetching and server state management in React?",
+    "options": [
+      "React Query (TanStack Query)",
+      "Axios alone",
+      "MobX",
+      "Redux"
+    ],
+    "answer": "React Query (TanStack Query)",
+    "explanation": "React Query handles server state: caching, background refetching, loading/error states, pagination, infinite scroll. useQuery() for GET requests, useMutation() for POST/PUT/DELETE. Drastically reduces boilerplate vs manual useEffect + useState fetching. Often replaces Redux for server state management."
+  },
+  {
+    "id": "MERN060",
+    "domain": "mern",
+    "topic": "React Data Fetching",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is Axios and how does it differ from the native fetch API?",
+    "options": [
+      "Axios is an HTTP client library with automatic JSON parsing, request/response interceptors, and better error handling than native fetch",
+      "Axios is a React component; fetch is a browser API",
+      "fetch is better in all ways",
+      "Axios only works in Node.js"
+    ],
+    "answer": "Axios is an HTTP client library with automatic JSON parsing, request/response interceptors, and better error handling than native fetch",
+    "explanation": "Axios advantages over fetch: automatic JSON parsing (no .json() needed), automatic request/response interceptors (for adding auth headers), throws errors for non-2xx status codes (fetch doesn't), supports request cancellation, works in both browser and Node.js. fetch requires more boilerplate but is built-in."
+  },
+  {
+    "id": "MERN061",
+    "domain": "mern",
+    "topic": "Node.js Security",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the purpose of the helmet.js package in an Express application?",
+    "options": [
+      "To set various HTTP security headers to protect against common vulnerabilities",
+      "To add authentication middleware",
+      "To validate request bodies",
+      "To encrypt database connections"
+    ],
+    "answer": "To set various HTTP security headers to protect against common vulnerabilities",
+    "explanation": "helmet() sets HTTP headers like Content-Security-Policy, X-XSS-Protection, X-Frame-Options, Strict-Transport-Security. Protects against XSS, clickjacking, MIME sniffing, and other common web vulnerabilities. Add as early middleware: app.use(helmet()). Essential for production Express apps."
+  },
+  {
+    "id": "MERN062",
+    "domain": "mern",
+    "topic": "Node.js Security",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is rate limiting and why is it important in a MERN API?",
+    "options": [
+      "A React rendering optimization",
+      "Restricting the number of requests a client can make in a time window to prevent abuse, DoS attacks, and brute force",
+      "A database connection limit",
+      "A technique to speed up API responses"
+    ],
+    "answer": "Restricting the number of requests a client can make in a time window to prevent abuse, DoS attacks, and brute force",
+    "explanation": "Rate limiting prevents abuse: DoS/DDoS attacks, brute-force login attempts, API scraping. Express package: express-rate-limit. Example: limit to 100 requests per 15 minutes per IP. Apply globally or per sensitive route (login: stricter limit). Return 429 Too Many Requests when limit exceeded."
+  },
+  {
+    "id": "MERN063",
+    "domain": "mern",
+    "topic": "Deployment",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of a .env file in a MERN project?",
+    "options": [
+      "To store environment-specific configuration like database URIs, API keys, and secrets separate from code",
+      "To configure CSS variables",
+      "To configure webpack settings",
+      "To define React component props"
+    ],
+    "answer": "To store environment-specific configuration like database URIs, API keys, and secrets separate from code",
+    "explanation": ".env file stores environment variables: MONGODB_URI, JWT_SECRET, PORT, API_KEYS. Loaded via dotenv package (process.env.VAR_NAME). Never commit to version control (.gitignore). Different .env files per environment (.env.development, .env.production). Follows 12-factor app methodology."
+  },
+  {
+    "id": "MERN064",
+    "domain": "mern",
+    "topic": "Deployment",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which platform is commonly used to deploy MERN stack applications?",
+    "options": [
+      "Heroku, Render, Railway, AWS, or Vercel for frontend / Railway for backend",
+      "MERN apps cannot be deployed to cloud",
+      "Only AWS",
+      "Only on-premise servers"
+    ],
+    "answer": "Heroku, Render, Railway, AWS, or Vercel for frontend / Railway for backend",
+    "explanation": "Common MERN deployment: Frontend (React): Vercel, Netlify, AWS S3+CloudFront. Backend (Node/Express): Render, Railway, Heroku, AWS EC2/ECS, DigitalOcean. Database (MongoDB): MongoDB Atlas (cloud). Docker + Kubernetes for containerized deployments. Many teams host all on AWS (EC2 + Atlas)."
+  },
+  {
+    "id": "MERN065",
+    "domain": "mern",
+    "topic": "MongoDB Atlas",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is MongoDB Atlas?",
+    "options": [
+      "A MongoDB ORMapping library",
+      "A fully managed cloud database service for MongoDB",
+      "A MongoDB command-line tool",
+      "A MongoDB desktop GUI"
+    ],
+    "answer": "A fully managed cloud database service for MongoDB",
+    "explanation": "MongoDB Atlas is MongoDB's official cloud Database-as-a-Service (DBaaS). Provides managed clusters on AWS/GCP/Azure, automatic backups, monitoring, auto-scaling, and a global free tier (M0). Connection via connection string in MONGOOSE_URI. Eliminates database server management."
+  },
+  {
+    "id": "MERN066",
+    "domain": "mern",
+    "topic": "React Virtual DOM",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the Virtual DOM in React and what problem does it solve?",
+    "options": [
+      "A server-side rendering cache",
+      "A virtual reality interface for React",
+      "A lightweight in-memory representation of the real DOM that minimizes expensive direct DOM manipulation",
+      "A copy of the database stored in browser memory"
+    ],
+    "answer": "A lightweight in-memory representation of the real DOM that minimizes expensive direct DOM manipulation",
+    "explanation": "Virtual DOM: React keeps a lightweight copy of the DOM in memory. On state change, React creates a new Virtual DOM, diffs it against the previous one (reconciliation), and only applies the minimal set of real DOM changes needed. Direct DOM manipulation is slow \u2014 Virtual DOM batches and optimizes updates."
+  },
+  {
+    "id": "MERN067",
+    "domain": "mern",
+    "topic": "React Rendering",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What triggers a re-render in a React functional component?",
+    "options": [
+      "When state changes (setState), when props change, or when a parent re-renders",
+      "Only explicit forceUpdate() calls",
+      "Only when the component is first mounted",
+      "Only on browser events"
+    ],
+    "answer": "When state changes (setState), when props change, or when a parent re-renders",
+    "explanation": "React functional component re-renders when: 1) State changes via useState setter. 2) Props received from parent change. 3) Parent component re-renders (even if props are same \u2014 use React.memo to prevent). 4) Context value changes (if consuming context). Avoid unnecessary re-renders with React.memo, useCallback, useMemo."
+  },
+  {
+    "id": "MERN068",
+    "domain": "mern",
+    "topic": "MongoDB Aggregation",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the correct order of stages in a MongoDB aggregation pipeline?",
+    "options": [
+      "$group must always come first",
+      "$match must always come last",
+      "The order doesn't matter",
+      "Stages execute in the order defined \u2014 output of each stage is input to the next"
+    ],
+    "answer": "Stages execute in the order defined \u2014 output of each stage is input to the next",
+    "explanation": "MongoDB aggregation pipeline processes documents sequentially through stages. Best practice order: $match first (filter early to reduce documents), $sort before $limit, $project late (shape output). Common stages: $match, $group, $sort, $limit, $skip, $project, $lookup, $unwind, $addFields. Order significantly impacts performance."
+  },
+  {
+    "id": "MERN069",
+    "domain": "mern",
+    "topic": "Express Authentication",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "How do you protect an Express route with JWT authentication?",
+    "options": [
+      "Use HTTPS only",
+      "Create middleware that verifies the JWT from the Authorization header and calls next() on success or sends 401 on failure",
+      "Add 'protected: true' to route definition",
+      "Store JWT in MongoDB"
+    ],
+    "answer": "Create middleware that verifies the JWT from the Authorization header and calls next() on success or sends 401 on failure",
+    "explanation": "JWT middleware: extract token from Authorization: Bearer <token> header, verify with jwt.verify(token, JWT_SECRET), attach user to req.user, call next(). On failure send 401. Apply to protected routes: router.get('/profile', authMiddleware, profileController). Keep middleware reusable across routes."
+  },
+  {
+    "id": "MERN070",
+    "domain": "mern",
+    "topic": "React Error Handling",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is an Error Boundary in React?",
+    "options": [
+      "A try-catch block in a component",
+      "A class component that catches JavaScript errors in its child component tree and displays a fallback UI",
+      "A React Hook for error handling",
+      "An Express error middleware for React"
+    ],
+    "answer": "A class component that catches JavaScript errors in its child component tree and displays a fallback UI",
+    "explanation": "Error Boundaries are class components implementing componentDidCatch() and/or getDerivedStateFromError(). They catch rendering errors in child components and display fallback UI instead of crashing the whole app. Note: Error Boundaries cannot be functional components (no Hook equivalent yet). Don't catch errors in event handlers \u2014 use try/catch there."
+  },
+  {
+    "id": "MERN071",
+    "domain": "mern",
+    "topic": "React Patterns",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a Higher-Order Component (HOC) in React?",
+    "options": [
+      "A component with more than 100 lines of code",
+      "A component that renders other components",
+      "A function that takes a component and returns a new enhanced component with additional functionality",
+      "The top-level component in a React app"
+    ],
+    "answer": "A function that takes a component and returns a new enhanced component with additional functionality",
+    "explanation": "HOC pattern: const EnhancedComponent = withAuth(WrappedComponent). The HOC adds functionality (authentication check, logging, theming) without modifying the original component. Examples: React.memo, Redux connect(). HOCs are being replaced by Custom Hooks in modern React, which achieve the same with less complexity."
+  },
+  {
+    "id": "MERN072",
+    "domain": "mern",
+    "topic": "Custom Hooks",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a Custom Hook in React?",
+    "options": [
+      "A React component that only renders hooks",
+      "A JavaScript function starting with 'use' that encapsulates reusable stateful logic using built-in Hooks",
+      "A built-in React function",
+      "A third-party React library"
+    ],
+    "answer": "A JavaScript function starting with 'use' that encapsulates reusable stateful logic using built-in Hooks",
+    "explanation": "Custom Hooks are functions starting with 'use' that can call other Hooks. They extract stateful logic into reusable functions without changing component hierarchy. Example: useFetch(url) encapsulates useState + useEffect for data fetching. They replace HOCs and render props for logic reuse."
+  },
+  {
+    "id": "MERN073",
+    "domain": "mern",
+    "topic": "MongoDB Performance",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which MongoDB index type is most efficient for text search queries?",
+    "options": [
+      "Single field index",
+      "Hashed index",
+      "Compound index",
+      "Text index"
+    ],
+    "answer": "Text index",
+    "explanation": "Text index (db.collection.createIndex({ field: 'text' })) enables full-text search using $text operator. Supports stemming, stop words, text scoring for relevance. Example: db.posts.find({ $text: { $search: 'mongodb tutorial' } }). For production-grade search, consider Elasticsearch or MongoDB Atlas Search."
+  },
+  {
+    "id": "MERN074",
+    "domain": "mern",
+    "topic": "WebSockets",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What library is commonly used to implement real-time bidirectional communication in a MERN application?",
+    "options": [
+      "express-realtime",
+      "axios",
+      "WebRTC",
+      "Socket.io"
+    ],
+    "answer": "Socket.io",
+    "explanation": "Socket.io provides real-time, bidirectional, event-based communication. Server: io.on('connection', socket => { socket.emit('message', data) }). Client: socket.on('message', data => {}). Falls back to polling if WebSockets unavailable. Used for chat apps, live notifications, collaborative tools, real-time dashboards."
+  },
+  {
+    "id": "MERN075",
+    "domain": "mern",
+    "topic": "Testing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which testing library is commonly used for testing React components?",
+    "options": [
+      "Selenium",
+      "React Testing Library + Jest",
+      "Mocha",
+      "Cypress only"
+    ],
+    "answer": "React Testing Library + Jest",
+    "explanation": "React Testing Library (RTL) tests components as users interact with them \u2014 querying by text, role, label. Jest is the test runner with mocking, assertions, coverage. RTL discourages testing implementation details (component internals) and focuses on behavior. Enzyme (older) tested implementation details \u2014 RTL is now the standard."
+  },
+  {
+    "id": "MERN076",
+    "domain": "mern",
+    "topic": "Testing",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of mocking in unit tests for a MERN backend?",
+    "options": [
+      "To make tests slower",
+      "To test the real database",
+      "To replace real dependencies (like database calls) with controlled fake implementations, isolating the unit being tested",
+      "To generate test data automatically"
+    ],
+    "answer": "To replace real dependencies (like database calls) with controlled fake implementations, isolating the unit being tested",
+    "explanation": "Mocking isolates units: replace MongoDB calls with Jest mocks (jest.fn(), jest.spyOn()) to test route handlers without a real DB connection. Test that the handler calls the model correctly and returns the right response. Makes tests fast, deterministic, and independent of external services."
+  },
+  {
+    "id": "MERN077",
+    "domain": "mern",
+    "topic": "React Lazy Loading",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is code splitting in React and how is it achieved?",
+    "options": [
+      "Splitting CSS from JavaScript",
+      "Dynamically loading parts of the app only when needed using React.lazy() and Suspense to reduce initial bundle size",
+      "A Webpack configuration only",
+      "Splitting components into multiple files"
+    ],
+    "answer": "Dynamically loading parts of the app only when needed using React.lazy() and Suspense to reduce initial bundle size",
+    "explanation": "Code splitting: const MyComponent = React.lazy(() => import('./MyComponent')). Wrap with <Suspense fallback={<Loader />}>. Component JS is loaded only when rendered, not in initial bundle. Improves initial load time. Route-based splitting (lazy load each page) is the most common pattern with React Router."
+  },
+  {
+    "id": "MERN078",
+    "domain": "mern",
+    "topic": "API Calls",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Where should API calls be made in a React component?",
+    "options": [
+      "Directly in the JSX",
+      "Inside useEffect with proper dependency array, or in a custom hook",
+      "Inside the component body outside hooks",
+      "In the return statement"
+    ],
+    "answer": "Inside useEffect with proper dependency array, or in a custom hook",
+    "explanation": "API calls are side effects \u2014 make them inside useEffect. Empty deps [] for on-mount fetch, [id] to refetch when id changes. Always handle loading and error states. Better: extract into a custom hook (useFetch) or use React Query/SWR which handle caching, loading, and error states automatically."
+  },
+  {
+    "id": "MERN079",
+    "domain": "mern",
+    "topic": "MongoDB Connection",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you connect a Node.js/Express app to MongoDB using Mongoose?",
+    "options": [
+      "mongoose.open(uri)",
+      "mongoose.connect(uri, options)",
+      "mongoose.link(uri)",
+      "mongoose.start(uri)"
+    ],
+    "answer": "mongoose.connect(uri, options)",
+    "explanation": "mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }) connects to MongoDB. Returns a Promise \u2014 use async/await or .then(). Place in server startup. Handle connection events: mongoose.connection.on('error', ...) for error logging. Use connection pooling (default 5 connections)."
+  },
+  {
+    "id": "MERN080",
+    "domain": "mern",
+    "topic": "React Keys",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Why are keys required when rendering a list of elements in React?",
+    "options": [
+      "Keys are used for sorting elements",
+      "Keys help React identify which items changed, added, or removed \u2014 enabling efficient DOM reconciliation",
+      "Keys are not required, just recommended",
+      "For styling purposes"
+    ],
+    "answer": "Keys help React identify which items changed, added, or removed \u2014 enabling efficient DOM reconciliation",
+    "explanation": "Without keys, React re-renders entire lists on any change. Keys (stable, unique identifiers \u2014 preferably IDs, not array indexes) allow React to match old/new elements and only update what changed. Using array index as key causes bugs when list order changes. Always use stable unique IDs as keys."
+  },
+  {
+    "id": "MERN081",
+    "domain": "mern",
+    "topic": "Express Validation",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which package is commonly used to validate request data in Express.js?",
+    "options": [
+      "express.validate()",
+      "body-checker",
+      "joi or express-validator",
+      "mongoose-validator"
+    ],
+    "answer": "joi or express-validator",
+    "explanation": "express-validator: chain validators as middleware (body('email').isEmail(), body('password').isLength({ min: 6 })). Check validationResult(req) in handler. Joi: schema-based validation. Both validate and sanitize request body/params/query. Always validate on the server \u2014 client-side validation can be bypassed."
+  },
+  {
+    "id": "MERN082",
+    "domain": "mern",
+    "topic": "Mongoose Population",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does Mongoose's populate() method do?",
+    "options": [
+      "Adds new documents to a collection",
+      "Replaces referenced ObjectIds with the actual documents from the referenced collection",
+      "Creates indexes on referenced fields",
+      "Validates all documents in a collection"
+    ],
+    "answer": "Replaces referenced ObjectIds with the actual documents from the referenced collection",
+    "explanation": "populate() performs a secondary query to replace ObjectId references with actual documents: User.findById(id).populate('posts') replaces post ObjectIds in the user document with full Post documents. Like SQL JOIN but done at application level. Can populate nested paths: populate({ path: 'posts', populate: 'author' })."
+  },
+  {
+    "id": "MERN083",
+    "domain": "mern",
+    "topic": "React State Patterns",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "When should you use useReducer instead of useState in React?",
+    "options": [
+      "When you have a single boolean state",
+      "Always \u2014 useReducer is always better",
+      "When props are passed from parent",
+      "When state logic is complex with multiple sub-values, or when next state depends on previous state with multiple action types"
+    ],
+    "answer": "When state logic is complex with multiple sub-values, or when next state depends on previous state with multiple action types",
+    "explanation": "useReducer is preferred when: complex state object with multiple fields, multiple actions that update state in different ways, next state depends on previous state. const [state, dispatch] = useReducer(reducer, initialState). dispatch({ type: 'INCREMENT' }). Similar to Redux but local to component. For simple state, useState is cleaner."
+  },
+  {
+    "id": "MERN084",
+    "domain": "mern",
+    "topic": "Node.js Streams",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What are Node.js Streams and when should you use them?",
+    "options": [
+      "A Node.js event system",
+      "A type of array in JavaScript",
+      "Objects for reading/writing data in chunks rather than all at once, ideal for large files or network data",
+      "A type of Promise for async operations"
+    ],
+    "answer": "Objects for reading/writing data in chunks rather than all at once, ideal for large files or network data",
+    "explanation": "Streams process data in chunks, preventing memory overflow for large data. Types: Readable (fs.createReadStream), Writable (fs.createWriteStream), Duplex (both), Transform (modify data). Pipe: readStream.pipe(writeStream). Use for: file uploads, video streaming, large CSV processing, HTTP request/response objects."
+  },
+  {
+    "id": "MERN085",
+    "domain": "mern",
+    "topic": "MongoDB Validation",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you enforce field validation in a Mongoose schema?",
+    "options": [
+      "Using schema field validators like required, min, max, enum, match, and custom validate functions",
+      "Validation must be done manually in route handlers",
+      "Using database triggers",
+      "Using express-validator only"
+    ],
+    "answer": "Using schema field validators like required, min, max, enum, match, and custom validate functions",
+    "explanation": "Mongoose schema validators: required: true, minlength/maxlength for strings, min/max for numbers, enum: ['admin','user'], match: /regex/ for patterns, custom: validate: { validator: fn, message: 'Error' }. Validators run on save() and create(). Pass { runValidators: true } to run on updates."
+  },
+  {
+    "id": "MERN086",
+    "domain": "mern",
+    "topic": "React Portals",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a React Portal and when would you use it?",
+    "options": [
+      "A way to connect two React apps",
+      "A performance optimization technique",
+      "A routing mechanism",
+      "A method to render a component's children into a DOM node outside the parent component's DOM hierarchy"
+    ],
+    "answer": "A method to render a component's children into a DOM node outside the parent component's DOM hierarchy",
+    "explanation": "ReactDOM.createPortal(child, domNode) renders children into a different DOM node (typically document.body). Events still bubble up through React component tree (not DOM tree). Use for: modals/dialogs (avoid z-index/overflow issues), tooltips, notifications that need to be outside parent's CSS constraints."
+  },
+  {
+    "id": "MERN087",
+    "domain": "mern",
+    "topic": "Express Async",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What problem does express-async-errors or a custom asyncHandler wrapper solve?",
+    "options": [
+      "It speeds up async database queries",
+      "It replaces async/await with Promises",
+      "It handles CORS for async routes",
+      "It automatically catches errors in async route handlers and passes them to Express error middleware without try/catch in every handler"
+    ],
+    "answer": "It automatically catches errors in async route handlers and passes them to Express error middleware without try/catch in every handler",
+    "explanation": "Without wrapper: every async route needs try/catch + next(error). With asyncHandler: const asyncHandler = fn => (req,res,next) => Promise.resolve(fn(req,res,next)).catch(next). Wrap routes: router.get('/', asyncHandler(async (req,res) => { ... })). Uncaught async errors automatically reach error middleware."
+  },
+  {
+    "id": "MERN088",
+    "domain": "mern",
+    "topic": "Caching",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Redis commonly used for in a MERN stack application?",
+    "options": [
+      "For managing CSS files",
+      "For storing React component state",
+      "As an in-memory cache for sessions, frequently accessed data, and rate limiting",
+      "As the primary database replacing MongoDB"
+    ],
+    "answer": "As an in-memory cache for sessions, frequently accessed data, and rate limiting",
+    "explanation": "Redis (in-memory data store) in MERN: caching frequent DB queries (reduces MongoDB load), session storage (express-session with connect-redis), rate limiting counters, pub/sub for real-time messaging. Typical pattern: check Redis first, if miss query MongoDB and cache result with TTL (Time To Live)."
+  },
+  {
+    "id": "MERN089",
+    "domain": "mern",
+    "topic": "File Uploads",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which package is commonly used to handle file uploads in an Express application?",
+    "options": [
+      "express-file",
+      "formdata",
+      "fs-upload",
+      "multer"
+    ],
+    "answer": "multer",
+    "explanation": "Multer is a Node.js middleware for handling multipart/form-data (file uploads). Configure storage (disk or memory), file filters, and size limits. upload.single('file') for one file, upload.array('files', 5) for multiple. Files available at req.file or req.files. Pair with cloud storage (AWS S3, Cloudinary) for production."
+  },
+  {
+    "id": "MERN090",
+    "domain": "mern",
+    "topic": "GraphQL",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the main advantage of GraphQL over REST in a MERN application?",
+    "options": [
+      "GraphQL eliminates the need for a backend",
+      "GraphQL replaces MongoDB",
+      "GraphQL is always faster than REST",
+      "GraphQL allows clients to request exactly the data they need, avoiding over-fetching and under-fetching"
+    ],
+    "answer": "GraphQL allows clients to request exactly the data they need, avoiding over-fetching and under-fetching",
+    "explanation": "REST problems: over-fetching (getting more data than needed), under-fetching (need multiple requests to get related data). GraphQL: single endpoint, client specifies exact fields needed, get nested related data in one query. Apollo Server + Apollo Client are the standard MERN GraphQL tools. Adds complexity \u2014 use for complex data requirements."
+  },
+  {
+    "id": "MERN091",
+    "domain": "mern",
+    "topic": "TypeScript",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the benefit of using TypeScript with the MERN stack?",
+    "options": [
+      "TypeScript replaces JavaScript entirely",
+      "TypeScript is mandatory for React",
+      "TypeScript adds static typing, catching type errors at compile time, improving developer experience, IDE support, and code maintainability",
+      "TypeScript only benefits the backend"
+    ],
+    "answer": "TypeScript adds static typing, catching type errors at compile time, improving developer experience, IDE support, and code maintainability",
+    "explanation": "TypeScript benefits in MERN: type-safe API interfaces, better IDE autocomplete and refactoring, catch bugs at compile time (not runtime), self-documenting code. TypeScript interfaces for API responses, Mongoose document types, React component props. Slight learning curve and compilation step, but large productivity gains for teams."
+  },
+  {
+    "id": "MERN092",
+    "domain": "mern",
+    "topic": "React Suspense",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is React Suspense and what does it enable?",
+    "options": [
+      "A CSS animation tool",
+      "A replacement for useEffect",
+      "A mechanism to declaratively specify loading states while waiting for asynchronous operations like code splitting or data fetching",
+      "A way to handle synchronous errors"
+    ],
+    "answer": "A mechanism to declaratively specify loading states while waiting for asynchronous operations like code splitting or data fetching",
+    "explanation": "React Suspense lets components 'suspend' while waiting for something (lazy loading, data). <Suspense fallback={<Spinner />}> shows fallback while children load. Currently stable for code splitting (React.lazy). Data fetching Suspense is available via React Query / React 18's use() hook. Simplifies loading state management."
+  },
+  {
+    "id": "MERN093",
+    "domain": "mern",
+    "topic": "Next.js",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does Next.js add to a React application?",
+    "options": [
+      "Server-side rendering (SSR), static site generation (SSG), file-based routing, API routes, and performance optimizations built on top of React",
+      "Database management",
+      "MongoDB integration only",
+      "A new component syntax"
+    ],
+    "answer": "Server-side rendering (SSR), static site generation (SSG), file-based routing, API routes, and performance optimizations built on top of React",
+    "explanation": "Next.js is a React framework adding: SSR (pages rendered on server per request \u2014 SEO-friendly), SSG (pre-built at compile time), file-based routing (pages/ or app/ directory), API routes (backend in same project), image optimization, code splitting. Common alternative to separate React frontend + Express backend in MERN."
+  },
+  {
+    "id": "MERN094",
+    "domain": "mern",
+    "topic": "Pagination",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you implement pagination in a MongoDB + Express API?",
+    "options": [
+      "Pagination is not possible in MongoDB",
+      "Fetch all documents and slice in JavaScript",
+      "Use MongoDB's built-in pagination API",
+      "Use .skip(pageSize * (page-1)).limit(pageSize) with a total count query"
+    ],
+    "answer": "Use .skip(pageSize * (page-1)).limit(pageSize) with a total count query",
+    "explanation": "Pagination: const skip = (page - 1) * limit; Model.find().skip(skip).limit(limit). Also return total count for frontend pagination controls. Note: .skip() is inefficient for large offsets (scans many docs). For cursor-based pagination (better performance at scale): use _id > lastSeenId with limit instead of skip."
+  },
+  {
+    "id": "MERN095",
+    "domain": "mern",
+    "topic": "React 18",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is concurrent rendering introduced in React 18?",
+    "options": [
+      "Rendering multiple apps simultaneously",
+      "Server-side rendering optimization only",
+      "A new rendering mode allowing React to interrupt, pause, and resume rendering work to keep the UI responsive",
+      "A way to render on multiple threads"
+    ],
+    "answer": "A new rendering mode allowing React to interrupt, pause, and resume rendering work to keep the UI responsive",
+    "explanation": "React 18 concurrent rendering: React can interrupt a long render to handle urgent updates (like user input), then resume. Enabled via createRoot() instead of ReactDOM.render(). Powers features: useTransition() (mark updates as non-urgent), useDeferredValue() (defer updating part of UI), Suspense improvements, Automatic Batching (batches state updates in async code)."
+  },
+  {
+    "id": "MERN096",
+    "domain": "mern",
+    "topic": "Security",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is XSS (Cross-Site Scripting) and how does React help prevent it?",
+    "options": [
+      "React does not provide any XSS protection",
+      "XSS is a database attack; React prevents it via mongoose",
+      "XSS injects malicious scripts into web pages; React prevents it by automatically escaping values inserted into JSX before rendering",
+      "XSS only affects the backend"
+    ],
+    "answer": "XSS injects malicious scripts into web pages; React prevents it by automatically escaping values inserted into JSX before rendering",
+    "explanation": "XSS: attacker injects malicious script that executes in victims' browsers (steal cookies, redirect). React automatically escapes strings rendered in JSX (converts < > & to HTML entities). Risk: dangerouslySetInnerHTML bypasses this \u2014 never use with user input. Backend: sanitize inputs, set Content-Security-Policy header with helmet."
+  },
+  {
+    "id": "MERN097",
+    "domain": "mern",
+    "topic": "Docker",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Docker and why is it useful for MERN stack deployment?",
+    "options": [
+      "A containerization tool that packages the app and its dependencies into portable containers, ensuring consistent behavior across environments",
+      "A React component library",
+      "A JavaScript testing framework",
+      "A cloud database service"
+    ],
+    "answer": "A containerization tool that packages the app and its dependencies into portable containers, ensuring consistent behavior across environments",
+    "explanation": "Docker containers package app + dependencies + runtime together \u2014 runs identically on any machine. MERN setup: separate containers for React (nginx), Express/Node, MongoDB. docker-compose.yml orchestrates multi-container setup. Benefits: 'works on my machine' problems eliminated, easy scaling, CI/CD integration, environment parity."
+  },
+  {
+    "id": "MERN098",
+    "domain": "mern",
+    "topic": "Performance",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the purpose of indexing in MongoDB for a MERN application's query performance?",
+    "options": [
+      "Indexes only work with the _id field",
+      "Indexes are data structures that allow MongoDB to find documents quickly without scanning every document in a collection",
+      "Indexes slow down reads to improve write performance",
+      "Indexes replace the need for aggregation"
+    ],
+    "answer": "Indexes are data structures that allow MongoDB to find documents quickly without scanning every document in a collection",
+    "explanation": "Without index: MongoDB does a collection scan (COLLSCAN) \u2014 O(n). With index: B-tree lookup \u2014 O(log n). Create on frequently queried fields: db.users.createIndex({ email: 1 }). Compound index: { lastName: 1, firstName: 1 }. Trade-off: indexes speed up reads but slow writes (index maintenance). Analyze with explain() to confirm index usage."
+  },
+  {
+    "id": "MERN099",
+    "domain": "mern",
+    "topic": "CI/CD",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does CI/CD stand for and why is it important for MERN projects?",
+    "options": [
+      "Client Interface / Cloud Deployment",
+      "Component Interface / Component Design",
+      "Continuous Integration / Continuous Deployment \u2014 automating build, test, and deployment pipelines to ship code faster and more reliably",
+      "Code Integration / Code Deployment"
+    ],
+    "answer": "Continuous Integration / Continuous Deployment \u2014 automating build, test, and deployment pipelines to ship code faster and more reliably",
+    "explanation": "CI: automatically run tests and builds on every code push (GitHub Actions, Jenkins, CircleCI). CD: automatically deploy to staging/production after passing CI. MERN pipeline: push \u2192 run Jest tests \u2192 build React \u2192 Docker build \u2192 deploy to cloud. Catches bugs early, reduces manual deployment errors, enables frequent releases."
+  },
+  {
+    "id": "MERN100",
+    "domain": "mern",
+    "topic": "MERN Architecture",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the typical request flow in a full MERN stack application?",
+    "options": [
+      "React (client) \u2192 Express API (Node server) \u2192 Mongoose \u2192 MongoDB, with response flowing back",
+      "MongoDB \u2192 Express \u2192 React \u2192 Node",
+      "All components communicate directly with each other",
+      "Node \u2192 MongoDB \u2192 React \u2192 Express"
+    ],
+    "answer": "React (client) \u2192 Express API (Node server) \u2192 Mongoose \u2192 MongoDB, with response flowing back",
+    "explanation": "MERN flow: 1) React component makes HTTP request (Axios/fetch) to Express API. 2) Express router matches route, runs middleware (auth, validation). 3) Controller calls Mongoose model methods. 4) Mongoose sends query to MongoDB. 5) MongoDB returns data. 6) Controller sends JSON response. 7) React updates state and re-renders. Each layer has distinct responsibilities."
+  }
+]

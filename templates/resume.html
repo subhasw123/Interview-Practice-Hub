@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Analyzer — Interview Practice Hub</title>
+  <meta name="description" content="AI-powered resume analyzer. Get your ATS score, matched skills, missing keywords, and personalized recommendations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/history.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="resume-hero">
+      <div class="container">
+        <span class="eyebrow">✨ AI-POWERED RESUME REVIEW</span>
+        <h1>Resume Analyzer</h1>
+        <p class="sub">Upload your resume and get an instant ATS compatibility score, skill match analysis, and personalized recommendations to land more interviews.</p>
+        <div class="format-badges">
+          <span class="fmt-badge"><span class="swatch pdf">PDF</span> PDF supported</span>
+          <span class="fmt-badge"><span class="swatch doc">DOC</span> DOCX supported</span>
+          <span class="fmt-badge"><span class="swatch txt">TXT</span> Plain text</span>
+          <span class="fmt-badge">📦 Max 5MB</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload -->
+    <section class="upload-section" id="uploadSection">
+      <div class="container">
+        <div class="upload-grid">
+          <div>
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload resume">
+              <div class="icon-wrap">📄</div>
+              <h3>Drag &amp; drop your resume here</h3>
+              <p>or click to browse from your device</p>
+              <div class="format-badges" style="justify-content:center;">
+                <span class="fmt-badge"><span class="swatch pdf">PDF</span> .pdf</span>
+                <span class="fmt-badge"><span class="swatch doc">DOC</span> .docx</span>
+                <span class="fmt-badge"><span class="swatch txt">TXT</span> .txt</span>
+              </div>
+              <div class="hint-row">Your resume stays private — analyzed locally in your browser.</div>
+              <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" hidden />
+            </div>
+
+            <div class="file-pill" id="filePill">
+              <div class="ico" id="fileIco">PDF</div>
+              <div class="meta">
+                <div class="name" id="fileName">resume.pdf</div>
+                <div class="size" id="fileSize">—</div>
+              </div>
+              <button class="remove" id="removeFile" aria-label="Remove file">✕</button>
+            </div>
+
+            <div class="upload-actions">
+              <button class="btn btn-primary" id="analyzeBtn" disabled>🚀 Analyze Resume</button>
+              <button class="btn btn-outline" id="demoBtn">✨ Try Demo</button>
+            </div>
+
+            <div class="analyzing" id="analyzing">
+              <div class="spinner"></div>
+              <p>Analyzing your resume…</p>
+            </div>
+          </div>
+
+          <aside class="tips-card">
+            <h3>What we analyze</h3>
+            <ul class="tips-list">
+              <li><span class="check">✓</span><div class="txt"><strong>ATS Compatibility</strong><small>Formatting, parseability, keyword density</small></div></li>
+              <li><span class="check">✓</span><div class="txt"><strong>Skill Matching</strong><small>Technical and soft skills against role benchmarks</small></div></li>
+              <li><span class="check">✓</span><div class="txt"><strong>Missing Keywords</strong><small>Industry terms recruiters look for</small></div></li>
+              <li><span class="check">✓</span><div class="txt"><strong>Section Coverage</strong><small>Experience, education, projects, contact info</small></div></li>
+              <li><span class="check">✓</span><div class="txt"><strong>Actionable Tips</strong><small>Personalized improvements to boost your score</small></div></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results">
+      <div class="container">
+        <!-- Score hero -->
+        <div class="score-hero">
+          <div class="score-ring-wrap">
+            <svg viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#4f46e5"/>
+                  <stop offset="100%" stop-color="#7c6cff"/>
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="84" stroke="#eef0f7" stroke-width="16" fill="none"/>
+              <circle id="ringFill" cx="100" cy="100" r="84" stroke="url(#ringGrad)" stroke-width="16" fill="none"
+                stroke-linecap="round" stroke-dasharray="527" stroke-dashoffset="527"
+                style="transition: stroke-dashoffset 1.2s ease;"/>
+            </svg>
+            <div class="score-ring-text">
+              <div class="pct" id="atsScore">0%</div>
+              <div class="lbl">ATS Score</div>
+            </div>
+          </div>
+          <div class="score-meta">
+            <h2 id="scoreTitle">Great start!</h2>
+            <p class="verdict" id="scoreVerdict">Your resume passes most ATS checks. A few tweaks will push it into the top tier.</p>
+            <div class="score-pills">
+              <span class="score-pill-2 green" id="pillStrengths">8 strengths</span>
+              <span class="score-pill-2 amber" id="pillImprove">4 improvements</span>
+              <span class="score-pill-2" id="pillRole">Detected: Software Engineer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result cards -->
+        <div class="result-cards-grid">
+          <div class="r-card green">
+            <div class="head">
+              <div class="ico">✓</div>
+              <div>
+                <h3>Skills Found</h3>
+                <p>Keywords detected in your resume</p>
+              </div>
+            </div>
+            <div class="chip-row" id="skillsFound"></div>
+          </div>
+
+          <div class="r-card red">
+            <div class="head">
+              <div class="ico">!</div>
+              <div>
+                <h3>Missing Skills</h3>
+                <p>Consider adding these high-impact keywords</p>
+              </div>
+            </div>
+            <div class="chip-row" id="skillsMissing"></div>
+          </div>
+
+          <div class="r-card amber" style="grid-column: 1 / -1;">
+            <div class="head">
+              <div class="ico">💡</div>
+              <div>
+                <h3>Recommendations</h3>
+                <p>Top improvements ranked by impact</p>
+              </div>
+            </div>
+            <div class="reco-list" id="recoList"></div>
+          </div>
+
+          <div class="r-card" style="grid-column: 1 / -1;">
+            <div class="head">
+              <div class="ico">📋</div>
+              <div>
+                <h3>Section Coverage</h3>
+                <p>Standard resume sections we detected</p>
+              </div>
+            </div>
+            <div class="sections-grid" id="sectionsGrid"></div>
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <button class="btn btn-primary" id="reanalyzeBtn">🔁 Analyze Another</button>
+          <a class="btn btn-outline" href="home.html">🎯 Practice Interview Quiz</a>
+          <a class="btn btn-outline" href="history.html">📊 View Progress</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/resume.js') }}"></script>
+</body>
+</html>

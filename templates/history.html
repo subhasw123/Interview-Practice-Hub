@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Learning Journey — Interview Practice Hub</title>
+  <meta name="description" content="Track your interview preparation progress across all domains with detailed analytics, trends, and weak-area insights." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/history.css') }}">
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section class="history-hero">
+      <div class="container">
+        <h1>My Learning Journey</h1>
+        <p class="sub">Track your interview preparation progress across all domains.</p>
+
+        <div class="summary-grid" id="analyticsSummary">
+          <div class="summary-card">
+            <div class="ico">📝</div>
+            <div class="label">Total Quizzes Taken</div>
+            <div class="value" id="sumTotal">0</div>
+            <div class="hint">Across all domains</div>
+          </div>
+
+          <div class="summary-card alt-1">
+            <div class="ico">🎯</div>
+            <div class="label">Average Accuracy</div>
+            <div class="value" id="sumAvg">0%</div>
+            <div class="hint">Overall performance</div>
+          </div>
+
+          <div class="summary-card alt-2">
+            <div class="ico">🏆</div>
+            <div class="label">Highest Score</div>
+            <div class="value" id="sumBest">0%</div>
+            <div class="hint">Personal best</div>
+          </div>
+
+          <div class="summary-card alt-3">
+            <div class="ico">⭐</div>
+            <div class="label">Best Performing Domain</div>
+            <div class="value" id="sumDomain">—</div>
+            <div class="hint" id="sumDomainHint"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="analytics">
+      <section class="h-section">
+        <div class="container">
+          <div class="grid-two">
+            <div class="panel">
+              <div class="head" style="margin-bottom:14px;">
+                <div>
+                  <h2 class="panel-title">Performance Overview</h2>
+                  <p class="panel-sub">Average accuracy per domain.</p>
+                </div>
+              </div>
+              <div id="perfList"></div>
+            </div>
+
+            <div class="panel">
+              <div class="head" style="margin-bottom:14px;">
+                <div>
+                  <h2 class="panel-title">Accuracy Trend</h2>
+                  <p class="panel-sub">Score progression over time. Hover points for details.</p>
+                </div>
+              </div>
+              <div class="chart-wrap" id="trendWrap"></div>
+              <div class="chart-tooltip" id="trendTooltip"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-section" style="padding-top:0;">
+        <div class="container">
+          <div class="head">
+            <div>
+              <h2>Recent Quiz Attempts</h2>
+              <p>Your latest sessions, scores, and outcomes.</p>
+            </div>
+          </div>
+
+          <div class="attempts">
+            <table>
+              <thead>
+                <tr>
+                  <th>Domain</th>
+                  <th>Score</th>
+                  <th>Accuracy</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="attemptsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="h-section" style="padding-top:0;">
+        <div class="container">
+          <div class="head">
+            <div>
+              <h2>Weak Areas</h2>
+              <p>Topics where focused practice will yield the biggest wins.</p>
+            </div>
+          </div>
+          <div class="weak-grid" id="weakGrid"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container action-bar">
+          <a class="btn btn-primary" href="{{ url_for('home') }}">🚀 Take New Quiz</a>
+          <a class="btn btn-outline" href="{{ url_for('home') }}">📘 Continue Practice</a>
+          <button class="btn btn-danger" id="btnClear" type="button">🗑 Clear History</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="h-section" id="emptyState" style="display:none;">
+      <div class="container">
+        <div class="empty">
+          <div class="art">📊</div>
+          <h3>No quiz history yet</h3>
+          <p>Start your first assessment and track your growth over time with rich analytics and personalized insights.</p>
+
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+            <a class="btn btn-primary" href="{{ url_for('home') }}">🚀 Start Assessment</a>
+            <button class="btn btn-outline" id="btnDemo" type="button">✨ Load Demo Data</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/history.js') }}"></script>
+
+  <script>
+    mountNavbar({ active: 'history' });
+  </script>
+</body>
+
+</html>

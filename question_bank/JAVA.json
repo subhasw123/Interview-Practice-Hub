@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "JAVA001",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is the correct way to declare a variable in Java?",
+    "options": [
+      "variable int x = 5;",
+      "x int = 5;",
+      "int x = 5;",
+      "declare int x = 5;"
+    ],
+    "answer": "int x = 5;",
+    "explanation": "In Java, variable declaration follows the syntax: datatype variableName = value. So 'int x = 5;' is the correct syntax."
+  },
+  {
+    "id": "JAVA002",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the default value of an int variable in Java (as a class field)?",
+    "options": [
+      "null",
+      "undefined",
+      "0",
+      "1"
+    ],
+    "answer": "0",
+    "explanation": "In Java, the default value of an int field (instance or class variable) is 0. Local variables do not have default values and must be initialized before use."
+  },
+  {
+    "id": "JAVA003",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which keyword is used to define a constant in Java?",
+    "options": [
+      "constant",
+      "define",
+      "final",
+      "static"
+    ],
+    "answer": "final",
+    "explanation": "The 'final' keyword in Java is used to define constants. A final variable's value cannot be changed once assigned."
+  },
+  {
+    "id": "JAVA004",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the size of a 'char' data type in Java?",
+    "options": [
+      "1 byte",
+      "2 bytes",
+      "4 bytes",
+      "8 bytes"
+    ],
+    "answer": "2 bytes",
+    "explanation": "In Java, char is a 16-bit Unicode character, occupying 2 bytes. This differs from C/C++ where char is 1 byte."
+  },
+  {
+    "id": "JAVA005",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is NOT a primitive data type in Java?",
+    "options": [
+      "String",
+      "boolean",
+      "double",
+      "int"
+    ],
+    "answer": "String",
+    "explanation": "String is not a primitive type in Java. It is a class (reference type). The 8 primitive types are: byte, short, int, long, float, double, boolean, and char."
+  },
+  {
+    "id": "JAVA006",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the key difference between '==' and '.equals()' in Java?",
+    "options": [
+      "== compares values; .equals() compares references",
+      "They are identical for all types",
+      "== compares object references; .equals() compares content/values",
+      "== is for primitives only and .equals() is for arrays only"
+    ],
+    "answer": "== compares object references; .equals() compares content/values",
+    "explanation": "'==' checks if two references point to the same object (or same value for primitives). '.equals()' checks content equality. For String: 'Hello'=='Hello' may be true (String pool) but new String('Hello')==new String('Hello') is false. Always use .equals() for String comparison."
+  },
+  {
+    "id": "JAVA007",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What will 'System.out.println(10 / 3)' output in Java?",
+    "options": [
+      "3.0",
+      "Error",
+      "3",
+      "3.33"
+    ],
+    "answer": "3",
+    "explanation": "Both 10 and 3 are int literals, so integer division is performed, which truncates the decimal. Result is 3, not 3.33."
+  },
+  {
+    "id": "JAVA008",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following correctly describes Java's 'pass by value'?",
+    "options": [
+      "Java passes objects by reference",
+      "Java passes primitive by value and objects by reference",
+      "Java passes memory addresses for all types",
+      "Java always passes a copy of the value"
+    ],
+    "answer": "Java always passes a copy of the value",
+    "explanation": "Java is strictly pass-by-value. For primitives, a copy of the value is passed. For objects, a copy of the reference (memory address) is passed \u2014 not the object itself."
+  },
+  {
+    "id": "JAVA009",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is autoboxing in Java?",
+    "options": [
+      "Automatic conversion between primitive types and their wrapper classes",
+      "Boxing objects into arrays",
+      "Type casting between classes",
+      "Converting a String to int"
+    ],
+    "answer": "Automatic conversion between primitive types and their wrapper classes",
+    "explanation": "Autoboxing is the automatic conversion Java performs between primitive types (e.g., int) and their corresponding wrapper classes (e.g., Integer). Unboxing is the reverse."
+  },
+  {
+    "id": "JAVA010",
+    "domain": "java",
+    "topic": "Basic Java",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which area of Java memory stores local variables and method call frames?",
+    "options": [
+      "Heap",
+      "Method Area",
+      "Stack",
+      "Native Method Stack"
+    ],
+    "answer": "Stack",
+    "explanation": "Stack stores local variables, method parameters, and call frames in LIFO order. Auto-freed when method returns. Each thread has its own stack. Heap stores objects (new keyword). Stack overflow occurs with deep recursion. Stack holds references; objects live on heap."
+  },
+  {
+    "id": "JAVA011",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which concept in OOP allows a class to inherit properties and methods from another class?",
+    "options": [
+      "Abstraction",
+      "Polymorphism",
+      "Inheritance",
+      "Encapsulation"
+    ],
+    "answer": "Inheritance",
+    "explanation": "Inheritance allows a subclass to inherit fields and methods from a superclass using the 'extends' keyword, enabling code reuse and hierarchical relationships."
+  },
+  {
+    "id": "JAVA012",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is encapsulation in Java?",
+    "options": [
+      "Inheriting from multiple classes",
+      "Hiding implementation details using access modifiers",
+      "Creating multiple methods with same name",
+      "Overriding parent class methods"
+    ],
+    "answer": "Hiding implementation details using access modifiers",
+    "explanation": "Encapsulation bundles data (fields) and methods together in a class, restricting direct access using private access modifiers and providing controlled access via getters/setters."
+  },
+  {
+    "id": "JAVA013",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which keyword is used to call the parent class constructor in Java?",
+    "options": [
+      "parent()",
+      "base()",
+      "this()",
+      "super()"
+    ],
+    "answer": "super()",
+    "explanation": "'super()' calls the parent class constructor. It must be the first statement in the subclass constructor. 'this()' calls another constructor in the same class."
+  },
+  {
+    "id": "JAVA014",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between method overloading and method overriding?",
+    "options": [
+      "Overloading is compile-time; overriding is run-time polymorphism",
+      "Overloading is run-time; overriding is compile-time",
+      "Both are compile-time polymorphism",
+      "Both are run-time polymorphism"
+    ],
+    "answer": "Overloading is compile-time; overriding is run-time polymorphism",
+    "explanation": "Method overloading (same name, different parameters) is resolved at compile time (static binding). Method overriding (same signature in subclass) is resolved at runtime (dynamic binding)."
+  },
+  {
+    "id": "JAVA015",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Can a Java class extend multiple classes?",
+    "options": [
+      "No, Java does not support multiple inheritance for classes",
+      "Yes, using the 'multiple' keyword",
+      "Yes, using 'extends A, B'",
+      "Yes, using 'implements'"
+    ],
+    "answer": "No, Java does not support multiple inheritance for classes",
+    "explanation": "Java does not support multiple inheritance for classes to avoid the diamond problem. A class can extend only one class but can implement multiple interfaces."
+  },
+  {
+    "id": "JAVA016",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which OOP pillar is demonstrated by a 'private' field accessed only through getters and setters?",
+    "options": [
+      "Polymorphism",
+      "Abstraction",
+      "Inheritance",
+      "Encapsulation"
+    ],
+    "answer": "Encapsulation",
+    "explanation": "Encapsulation bundles data and methods together and restricts direct access using access modifiers. Private fields with public getters/setters is the classic example \u2014 it controls how data is accessed and modified, hiding internal implementation details."
+  },
+  {
+    "id": "JAVA017",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the output of calling an overridden method through a parent class reference pointing to a child object?",
+    "options": [
+      "Runtime error",
+      "Parent class method executes",
+      "Child class method executes",
+      "Compilation error"
+    ],
+    "answer": "Child class method executes",
+    "explanation": "This is runtime polymorphism (dynamic dispatch). Java determines the actual method to call based on the runtime type of the object, not the reference type. The child's overridden method executes."
+  },
+  {
+    "id": "JAVA018",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which statement correctly distinguishes an abstract class from an interface in Java?",
+    "options": [
+      "A class can extend multiple abstract classes",
+      "Interfaces cannot have any method implementations",
+      "Abstract classes can have constructors and instance variables; interfaces cannot (before Java 8)",
+      "Interfaces can have constructors; abstract classes cannot"
+    ],
+    "answer": "Abstract classes can have constructors and instance variables; interfaces cannot (before Java 8)",
+    "explanation": "Abstract class: can have constructors, instance variables, any access modifier, concrete + abstract methods. A class can extend only one. Interface: no constructors, fields are public static final, methods public abstract (Java 8+ allows default/static methods). Multiple interfaces can be implemented."
+  },
+  {
+    "id": "JAVA019",
+    "domain": "java",
+    "topic": "OOP",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which design principle does the 'interface' mechanism in Java primarily support?",
+    "options": [
+      "Dependency Inversion Principle",
+      "Liskov Substitution Principle",
+      "Single Responsibility",
+      "Open-Closed Principle"
+    ],
+    "answer": "Dependency Inversion Principle",
+    "explanation": "Interfaces enable Dependency Inversion \u2014 high-level modules depend on abstractions (interfaces), not concrete implementations. This decouples code and improves testability."
+  },
+  {
+    "id": "JAVA020",
+    "domain": "java",
+    "topic": "Arrays",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "How do you declare a one-dimensional array of integers with 5 elements in Java?",
+    "options": [
+      "int array[5];",
+      "int[] array = new int[5];",
+      "array int[5];",
+      "int array = new int(5);"
+    ],
+    "answer": "int[] array = new int[5];",
+    "explanation": "In Java, arrays are declared with type[], allocated with 'new type[size]'. The syntax is: int[] arrayName = new int[size];"
+  },
+  {
+    "id": "JAVA021",
+    "domain": "java",
+    "topic": "Arrays",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the index of the last element in a Java array of size n?",
+    "options": [
+      "0",
+      "n-1",
+      "n",
+      "n+1"
+    ],
+    "answer": "n-1",
+    "explanation": "Java arrays are 0-indexed. For an array of size n, valid indices are 0 through n-1. Accessing index n throws ArrayIndexOutOfBoundsException."
+  },
+  {
+    "id": "JAVA022",
+    "domain": "java",
+    "topic": "Arrays",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: int[] a = {1,2,3}; System.out.println(a.length);",
+    "options": [
+      "Error",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": "3",
+    "explanation": "The 'length' property (not a method, no parentheses) of an array returns the number of elements. Array {1,2,3} has 3 elements, so a.length = 3."
+  },
+  {
+    "id": "JAVA023",
+    "domain": "java",
+    "topic": "Arrays",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which is the main advantage of ArrayList over a regular array?",
+    "options": [
+      "ArrayList can store primitives directly",
+      "ArrayList provides O(1) access",
+      "ArrayList uses less memory",
+      "ArrayList has dynamic size that resizes automatically"
+    ],
+    "answer": "ArrayList has dynamic size that resizes automatically",
+    "explanation": "ArrayList dynamically resizes (doubles when full) unlike arrays which have fixed size. Internally uses an array that is copied to a larger array when capacity is exceeded. Arrays are faster (no overhead) and can store primitives. Use ArrayList when size changes dynamically."
+  },
+  {
+    "id": "JAVA024",
+    "domain": "java",
+    "topic": "Arrays",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What happens when you pass an array to a method and modify its elements inside the method?",
+    "options": [
+      "Original array is unchanged",
+      "A copy of array is created",
+      "Original array is modified",
+      "Compilation error"
+    ],
+    "answer": "Original array is modified",
+    "explanation": "In Java, when an array is passed to a method, the reference (address) is copied, not the array itself. Both the caller and method point to the same array in heap memory, so modifications inside the method affect the original."
+  },
+  {
+    "id": "JAVA025",
+    "domain": "java",
+    "topic": "Strings",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which method is used to find the length of a String in Java?",
+    "options": [
+      "count()",
+      "length",
+      "size()",
+      "length()"
+    ],
+    "answer": "length()",
+    "explanation": "String.length() is a method (with parentheses) that returns the number of characters in the string. Note: arrays use .length (field), Strings use .length() (method)."
+  },
+  {
+    "id": "JAVA026",
+    "domain": "java",
+    "topic": "Strings",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does the String.substring(2, 5) method return for the string 'HelloWorld'?",
+    "options": [
+      "Hell",
+      "llo",
+      "lloW",
+      "lo"
+    ],
+    "answer": "llo",
+    "explanation": "substring(beginIndex, endIndex) returns characters from beginIndex (inclusive) to endIndex (exclusive). 'HelloWorld'.substring(2,5) = characters at index 2,3,4 = 'llo'."
+  },
+  {
+    "id": "JAVA027",
+    "domain": "java",
+    "topic": "Strings",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Why is String immutable in Java?",
+    "options": [
+      "To save memory using String Pool",
+      "For security and thread safety",
+      "Both A and B",
+      "Because Java does not allow mutable objects"
+    ],
+    "answer": "Both A and B",
+    "explanation": "String immutability enables the String Pool (multiple references to same object save memory), ensures security (passwords/class names can't be changed), and provides thread safety (immutable objects are inherently thread-safe)."
+  },
+  {
+    "id": "JAVA028",
+    "domain": "java",
+    "topic": "Strings",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which class should be used for frequent String modifications to avoid creating many objects?",
+    "options": [
+      "StringBuffer",
+      "StringBuilder",
+      "CharArray",
+      "String"
+    ],
+    "answer": "StringBuilder",
+    "explanation": "StringBuilder is preferred for non-thread-safe single-threaded string building. StringBuffer is thread-safe (synchronized) but slower. Both are mutable, avoiding new String object creation on each modification."
+  },
+  {
+    "id": "JAVA029",
+    "domain": "java",
+    "topic": "Strings",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What happens when you use 'new String(\"Hello\")' instead of the literal String s = \"Hello\"?",
+    "options": [
+      "There is no difference in memory behavior",
+      "Both create the same object",
+      "new String() uses the String Pool",
+      "new String() always creates a new heap object outside the String Pool"
+    ],
+    "answer": "new String() always creates a new heap object outside the String Pool",
+    "explanation": "String literal 'Hello' goes to String Pool \u2014 reused if already exists. new String('Hello') always creates a new object on the heap, bypassing the pool. So s1=='Hello' may be true but s2=new String('Hello') makes s2=='Hello' false. Always use .equals() for comparison."
+  },
+  {
+    "id": "JAVA030",
+    "domain": "java",
+    "topic": "Exception Handling",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which keyword is used to manually throw an exception in Java?",
+    "options": [
+      "throw",
+      "throws",
+      "exception",
+      "raise"
+    ],
+    "answer": "throw",
+    "explanation": "'throw' is used to explicitly throw an exception object: throw new Exception('message'). 'throws' is used in method signature to declare that a method may throw checked exceptions."
+  },
+  {
+    "id": "JAVA031",
+    "domain": "java",
+    "topic": "Exception Handling",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which block always executes in a try-catch-finally construct?",
+    "options": [
+      "try",
+      "catch",
+      "None of the above",
+      "finally"
+    ],
+    "answer": "finally",
+    "explanation": "The 'finally' block always executes regardless of whether an exception is thrown or caught, even if there is a return statement in try/catch. Exception: System.exit() prevents finally execution."
+  },
+  {
+    "id": "JAVA032",
+    "domain": "java",
+    "topic": "Exception Handling",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between checked and unchecked exceptions in Java?",
+    "options": [
+      "Checked must be declared/handled at compile time; unchecked don't",
+      "Checked are RuntimeExceptions; unchecked are compile-time",
+      "Checked are errors; unchecked are exceptions",
+      "There is no difference"
+    ],
+    "answer": "Checked must be declared/handled at compile time; unchecked don't",
+    "explanation": "Checked exceptions (e.g., IOException, SQLException) must be either caught or declared with 'throws'. Unchecked exceptions (RuntimeException subclasses like NullPointerException, ArrayIndexOutOfBoundsException) don't require mandatory handling."
+  },
+  {
+    "id": "JAVA033",
+    "domain": "java",
+    "topic": "Exception Handling",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is a checked exception in Java?",
+    "options": [
+      "NullPointerException",
+      "IOException",
+      "ArrayIndexOutOfBoundsException",
+      "StackOverflowError"
+    ],
+    "answer": "IOException",
+    "explanation": "Checked exceptions must be caught or declared with 'throws'. Examples: IOException, SQLException, ClassNotFoundException. Unchecked (RuntimeException subclasses): NullPointerException, ArrayIndexOutOfBoundsException. Errors (not to be caught): StackOverflowError, OutOfMemoryError."
+  },
+  {
+    "id": "JAVA034",
+    "domain": "java",
+    "topic": "Exception Handling",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What happens if an exception is thrown in the 'finally' block?",
+    "options": [
+      "It replaces any exception from try/catch",
+      "It is ignored",
+      "Both exceptions are thrown",
+      "Program terminates silently"
+    ],
+    "answer": "It replaces any exception from try/catch",
+    "explanation": "If an exception is thrown in finally, it replaces (suppresses) any exception from try or catch block. The original exception is lost unless explicitly added as a suppressed exception using addSuppressed()."
+  },
+  {
+    "id": "JAVA035",
+    "domain": "java",
+    "topic": "Collections",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which interface is the root of the Java Collections framework?",
+    "options": [
+      "List",
+      "Map",
+      "Collection",
+      "Iterable"
+    ],
+    "answer": "Collection",
+    "explanation": "Collection is the root interface of the Java Collections Framework (except Map). It is extended by List, Set, and Queue interfaces. Iterable is the super-interface of Collection."
+  },
+  {
+    "id": "JAVA036",
+    "domain": "java",
+    "topic": "Collections",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which Collection class allows duplicate elements and maintains insertion order?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "HashMap",
+      "ArrayList"
+    ],
+    "answer": "ArrayList",
+    "explanation": "ArrayList is a List implementation that allows duplicates and maintains insertion order. HashSet/TreeSet don't allow duplicates. HashMap is a Map, not a Collection (in the strict sense)."
+  },
+  {
+    "id": "JAVA037",
+    "domain": "java",
+    "topic": "Collections",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between HashMap and TreeMap?",
+    "options": [
+      "HashMap is sorted; TreeMap is not",
+      "Both maintain insertion order",
+      "TreeMap allows null keys; HashMap does not",
+      "TreeMap maintains sorted key order; HashMap does not"
+    ],
+    "answer": "TreeMap maintains sorted key order; HashMap does not",
+    "explanation": "TreeMap stores keys in natural sorted order (or Comparator order) using a Red-Black tree \u2014 O(log n) operations. HashMap uses hashing \u2014 O(1) average but no ordering. HashMap allows one null key; TreeMap does not."
+  },
+  {
+    "id": "JAVA038",
+    "domain": "java",
+    "topic": "Collections",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which Set implementation maintains elements in sorted natural order?",
+    "options": [
+      "HashSet",
+      "LinkedHashSet",
+      "TreeSet",
+      "ArraySet"
+    ],
+    "answer": "TreeSet",
+    "explanation": "TreeSet stores elements in sorted natural order (Comparable) or custom Comparator order using a Red-Black tree. O(log n) operations. No null. HashSet: no order, O(1). LinkedHashSet: insertion order, O(1). Choose TreeSet when sorted order is required."
+  },
+  {
+    "id": "JAVA039",
+    "domain": "java",
+    "topic": "Collections",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the initial capacity and load factor of a HashMap in Java?",
+    "options": [
+      "16 capacity, 0.75 load factor",
+      "10 capacity, 0.5 load factor",
+      "100 capacity, 0.75 load factor",
+      "8 capacity, 1.0 load factor"
+    ],
+    "answer": "16 capacity, 0.75 load factor",
+    "explanation": "Java HashMap's default initial capacity is 16 buckets and load factor is 0.75. When the number of entries exceeds 16 * 0.75 = 12, the map is rehashed and capacity doubles."
+  },
+  {
+    "id": "JAVA040",
+    "domain": "java",
+    "topic": "Collections",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What data structure does HashMap use internally to handle collisions in Java 8+?",
+    "options": [
+      "Array of arrays",
+      "Linked list always",
+      "Linked list for < 8 entries, Red-Black tree for >= 8 entries",
+      "Binary heap"
+    ],
+    "answer": "Linked list for < 8 entries, Red-Black tree for >= 8 entries",
+    "explanation": "Java 8+ HashMap: each bucket starts as a linked list. When a bucket has >= 8 entries (and table size >= 64), it converts to a Red-Black tree, improving worst-case from O(n) to O(log n) per bucket. Hash is computed then bucket = (n-1) & hash."
+  },
+  {
+    "id": "JAVA041",
+    "domain": "java",
+    "topic": "Multithreading",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which interface must be implemented to create a thread in Java?",
+    "options": [
+      "Callable",
+      "Executable",
+      "Runnable",
+      "Thread"
+    ],
+    "answer": "Runnable",
+    "explanation": "A thread can be created by implementing the Runnable interface (implementing run() method) or extending the Thread class. Implementing Runnable is preferred as it allows extending other classes."
+  },
+  {
+    "id": "JAVA042",
+    "domain": "java",
+    "topic": "Multithreading",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between 'synchronized' method and 'synchronized' block?",
+    "options": [
+      "Synchronized method locks the entire object; synchronized block locks specified object",
+      "No difference",
+      "Synchronized block is more coarse-grained",
+      "Synchronized method is faster"
+    ],
+    "answer": "Synchronized method locks the entire object; synchronized block locks specified object",
+    "explanation": "Synchronized method acquires lock on 'this' object (or class for static). Synchronized block can lock any specific object, allowing finer-grained control and better performance."
+  },
+  {
+    "id": "JAVA043",
+    "domain": "java",
+    "topic": "Multithreading",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following best prevents deadlock in Java multithreading?",
+    "options": [
+      "Use more synchronized blocks",
+      "Use volatile instead of synchronized",
+      "Always acquire locks in a consistent global order",
+      "Increase thread pool size"
+    ],
+    "answer": "Always acquire locks in a consistent global order",
+    "explanation": "Deadlock requires circular wait. Breaking circular wait by enforcing a consistent lock acquisition order across all threads prevents deadlock. Other strategies: use tryLock() with timeout, avoid nested locks, use higher-level java.util.concurrent utilities."
+  },
+  {
+    "id": "JAVA044",
+    "domain": "java",
+    "topic": "Multithreading",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the volatile keyword used for in Java?",
+    "options": [
+      "To make a variable constant",
+      "To synchronize access to a variable",
+      "To ensure variable is read/written directly from/to main memory",
+      "To prevent garbage collection"
+    ],
+    "answer": "To ensure variable is read/written directly from/to main memory",
+    "explanation": "volatile ensures visibility \u2014 changes to a volatile variable are immediately visible to all threads (no thread-local cache). It prevents reordering but does NOT guarantee atomicity (use AtomicInteger for atomic operations)."
+  },
+  {
+    "id": "JAVA045",
+    "domain": "java",
+    "topic": "File Handling",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which class is used to read character data from a file in Java?",
+    "options": [
+      "FileInputStream",
+      "FileReader",
+      "FileWriter",
+      "BufferedWriter"
+    ],
+    "answer": "FileReader",
+    "explanation": "FileReader reads character streams from files. FileInputStream reads byte streams. For better performance, wrap FileReader in BufferedReader. FileWriter/BufferedWriter are for writing."
+  },
+  {
+    "id": "JAVA046",
+    "domain": "java",
+    "topic": "File Handling",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which Java class is used for reading a file line by line efficiently?",
+    "options": [
+      "FileReader",
+      "Scanner",
+      "FileInputStream",
+      "BufferedReader"
+    ],
+    "answer": "BufferedReader",
+    "explanation": "BufferedReader wraps FileReader and provides readLine() method for efficient line-by-line reading. It uses an internal buffer, making it much faster than reading character by character."
+  },
+  {
+    "id": "JAVA047",
+    "domain": "java",
+    "topic": "File Handling",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between FileInputStream and FileReader?",
+    "options": [
+      "FileReader reads bytes; FileInputStream reads characters",
+      "Both read bytes",
+      "FileInputStream reads bytes; FileReader reads characters",
+      "Both read characters"
+    ],
+    "answer": "FileInputStream reads bytes; FileReader reads characters",
+    "explanation": "FileInputStream reads raw bytes (for binary files like images, audio). FileReader reads character streams and handles encoding. For text files, use FileReader/BufferedReader; for binary, use FileInputStream."
+  },
+  {
+    "id": "JAVA048",
+    "domain": "java",
+    "topic": "File Handling",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the benefit of try-with-resources over traditional try-finally for file handling?",
+    "options": [
+      "try-with-resources only works with Strings",
+      "traditional try-finally is preferred in Java 8+",
+      "Resources are automatically closed in reverse order even if exception occurs, without needing finally",
+      "try-with-resources is slower but safer"
+    ],
+    "answer": "Resources are automatically closed in reverse order even if exception occurs, without needing finally",
+    "explanation": "Try-with-resources (Java 7+): resources declared in try() implementing AutoCloseable are automatically closed after the block, even on exceptions. Eliminates forgetting to close streams in finally. Multiple resources closed in reverse declaration order."
+  },
+  {
+    "id": "JAVA049",
+    "domain": "java",
+    "topic": "File Handling",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which Java NIO class provides efficient file reading using channels and buffers?",
+    "options": [
+      "BufferedReader",
+      "RandomAccessFile",
+      "FileReader",
+      "FileChannel"
+    ],
+    "answer": "FileChannel",
+    "explanation": "Java NIO's FileChannel provides high-performance file I/O using channels and ByteBuffers, supporting memory-mapped files and non-blocking I/O. It's more efficient than traditional I/O for large files."
+  },
+  {
+    "id": "JAVA050",
+    "domain": "java",
+    "topic": "Generics",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the purpose of Generics in Java?",
+    "options": [
+      "To improve runtime performance",
+      "To allow multiple inheritance",
+      "To support dynamic typing",
+      "To enable type-safe code and eliminate casting"
+    ],
+    "answer": "To enable type-safe code and eliminate casting",
+    "explanation": "Generics allow classes and methods to operate on typed parameters, catching type errors at compile time and eliminating explicit casting. Example: List<String> ensures only Strings can be added."
+  },
+  {
+    "id": "JAVA051",
+    "domain": "java",
+    "topic": "Generics",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is type erasure in Java Generics?",
+    "options": [
+      "Generics are enforced at runtime",
+      "Generic type information is removed at compile time",
+      "Types are erased during runtime only",
+      "It prevents boxing of primitives"
+    ],
+    "answer": "Generic type information is removed at compile time",
+    "explanation": "Java Generics use type erasure \u2014 generic type parameters are replaced with Object (or bounds) at compile time. At runtime, no generic type info exists, enabling backward compatibility with pre-generics code."
+  },
+  {
+    "id": "JAVA052",
+    "domain": "java",
+    "topic": "Generics",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does the PECS principle (Producer Extends, Consumer Super) mean in Java Generics?",
+    "options": [
+      "Use extends when writing to a collection; use super when reading",
+      "Use <? extends T> when reading from a collection; use <? super T> when writing to it",
+      "PECS only applies to List not Map",
+      "extends and super are interchangeable"
+    ],
+    "answer": "Use <? extends T> when reading from a collection; use <? super T> when writing to it",
+    "explanation": "PECS: Producer Extends (reading/producing values \u2014 use <? extends T>), Consumer Super (writing/consuming values \u2014 use <? super T>). Example: void copy(List<? extends T> src, List<? super T> dest) \u2014 read from src, write to dest."
+  },
+  {
+    "id": "JAVA053",
+    "domain": "java",
+    "topic": "Lambda & Streams",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a lambda expression in Java?",
+    "options": [
+      "A new type of loop",
+      "A type of class",
+      "An anonymous function that can be passed as argument",
+      "A method for file handling"
+    ],
+    "answer": "An anonymous function that can be passed as argument",
+    "explanation": "Lambda expressions (Java 8+) are anonymous functions: (parameters) -> expression. They implement functional interfaces and enable functional programming. Example: (a, b) -> a + b."
+  },
+  {
+    "id": "JAVA054",
+    "domain": "java",
+    "topic": "Lambda & Streams",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a functional interface in Java?",
+    "options": [
+      "An interface with exactly one abstract method",
+      "An interface with multiple abstract methods",
+      "An interface that only has static methods",
+      "An interface that implements functions"
+    ],
+    "answer": "An interface with exactly one abstract method",
+    "explanation": "A functional interface has exactly one abstract method (SAM \u2014 Single Abstract Method). Examples: Runnable (run()), Comparator (compare()), Predicate (test()). @FunctionalInterface annotation ensures this constraint at compile time."
+  },
+  {
+    "id": "JAVA055",
+    "domain": "java",
+    "topic": "Lambda & Streams",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which terminal operation in Java Streams collects results into a List?",
+    "options": [
+      "stream.filter()",
+      "stream.collect(Collectors.toList())",
+      "stream.map()",
+      "stream.forEach()"
+    ],
+    "answer": "stream.collect(Collectors.toList())",
+    "explanation": "Streams have intermediate ops (filter, map, sorted \u2014 lazy, return Stream) and terminal ops (collect, forEach, reduce, count \u2014 trigger execution). collect(Collectors.toList()) gathers stream elements into a List. Streams are lazy \u2014 nothing executes until a terminal op is called."
+  },
+  {
+    "id": "JAVA056",
+    "domain": "java",
+    "topic": "Lambda & Streams",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between map() and flatMap() in Java Streams?",
+    "options": [
+      "map() returns one element per input; flatMap() flattens nested streams",
+      "No difference",
+      "map() is for primitives; flatMap() is for objects",
+      "flatMap() is faster than map()"
+    ],
+    "answer": "map() returns one element per input; flatMap() flattens nested streams",
+    "explanation": "map() transforms each element 1-to-1. flatMap() transforms each element to a stream and flattens all streams into one. Example: list of lists \u2192 flatMap converts to a single list of all elements."
+  },
+  {
+    "id": "JAVA057",
+    "domain": "java",
+    "topic": "Design Patterns",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which design pattern ensures only one instance of a class is created?",
+    "options": [
+      "Decorator",
+      "Factory",
+      "Observer",
+      "Singleton"
+    ],
+    "answer": "Singleton",
+    "explanation": "Singleton pattern ensures a class has only one instance with global access point. Implemented by making constructor private and providing a static getInstance() method."
+  },
+  {
+    "id": "JAVA058",
+    "domain": "java",
+    "topic": "Design Patterns",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which pattern is used when you want to create objects without specifying the exact class?",
+    "options": [
+      "Singleton",
+      "Observer",
+      "Decorator",
+      "Factory Method"
+    ],
+    "answer": "Factory Method",
+    "explanation": "Factory Method pattern defines an interface for creating objects but lets subclasses decide which class to instantiate. Decouples object creation from usage."
+  },
+  {
+    "id": "JAVA059",
+    "domain": "java",
+    "topic": "Design Patterns",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "When should you use the Builder pattern instead of Factory?",
+    "options": [
+      "When you need a single global instance",
+      "When object creation needs to be delegated to subclasses",
+      "When creating families of related objects",
+      "When you need to create a single type with many optional parameters"
+    ],
+    "answer": "When you need to create a single type with many optional parameters",
+    "explanation": "Builder: constructs complex objects step by step, ideal when an object has many optional parameters (avoids telescoping constructors). Example: Pizza.builder().size('large').cheese().pepperoni().build(). Factory: creates objects when the exact class is determined at runtime. Abstract Factory: families of related objects."
+  },
+  {
+    "id": "JAVA060",
+    "domain": "java",
+    "topic": "JVM Internals",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the role of the JVM in Java?",
+    "options": [
+      "Compiles Java code to machine code",
+      "Interprets/executes Java bytecode on any platform",
+      "Manages database connections",
+      "Handles user interface rendering"
+    ],
+    "answer": "Interprets/executes Java bytecode on any platform",
+    "explanation": "JVM (Java Virtual Machine) executes Java bytecode (.class files). It provides platform independence \u2014 the same bytecode runs on any OS that has a JVM. JVM also handles memory management and garbage collection."
+  },
+  {
+    "id": "JAVA061",
+    "domain": "java",
+    "topic": "JVM Internals",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the role of the JIT compiler in the JVM?",
+    "options": [
+      "Compiles frequently executed bytecode to native machine code at runtime for performance",
+      "Loads class files into memory",
+      "Compiles Java source to bytecode",
+      "Manages garbage collection"
+    ],
+    "answer": "Compiles frequently executed bytecode to native machine code at runtime for performance",
+    "explanation": "JIT (Just-In-Time) compiler identifies hot code (frequently executed methods) and compiles bytecode to native machine code, bypassing interpretation for those calls. This is key to Java's performance \u2014 JIT-compiled code runs nearly as fast as C++."
+  },
+  {
+    "id": "JAVA062",
+    "domain": "java",
+    "topic": "Garbage Collection",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which garbage collection algorithm divides heap into Young and Old generations?",
+    "options": [
+      "Reference Counting",
+      "Generational GC",
+      "Stop-the-world",
+      "Mark and Sweep"
+    ],
+    "answer": "Generational GC",
+    "explanation": "Java uses Generational Garbage Collection based on the observation that most objects die young. Heap is divided into Young Generation (Eden + Survivor) and Old Generation. Young GC is fast (Minor GC); Old GC is slower (Major/Full GC)."
+  },
+  {
+    "id": "JAVA063",
+    "domain": "java",
+    "topic": "Garbage Collection",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the key advantage of G1GC (Garbage First Garbage Collector) over older collectors?",
+    "options": [
+      "It divides heap into regions and prioritizes regions with most garbage, providing predictable pause times",
+      "It never pauses the application",
+      "It uses no heap memory",
+      "It is only for small heaps under 1GB"
+    ],
+    "answer": "It divides heap into regions and prioritizes regions with most garbage, providing predictable pause times",
+    "explanation": "G1GC (default since Java 9): divides heap into equal-sized regions (not fixed generations). Concurrent marking, then collects regions with most garbage first. Key benefit: predictable GC pause times (-XX:MaxGCPauseMillis). Best for large heaps (>4GB) needing low latency."
+  },
+  {
+    "id": "JAVA064",
+    "domain": "java",
+    "topic": "Java 8+ Features",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the Optional class in Java 8 help avoid?",
+    "options": [
+      "NullPointerException",
+      "ClassCastException",
+      "ArrayIndexOutOfBoundsException",
+      "StackOverflowError"
+    ],
+    "answer": "NullPointerException",
+    "explanation": "Optional<T> is a container object that may or may not contain a non-null value. It forces explicit null handling through methods like isPresent(), orElse(), map(), ifPresent(), replacing risky null checks."
+  },
+  {
+    "id": "JAVA065",
+    "domain": "java",
+    "topic": "Java 8+ Features",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is an example of a constructor method reference?",
+    "options": [
+      "System.out::println",
+      "Math::sqrt",
+      "String::toUpperCase",
+      "ArrayList::new"
+    ],
+    "answer": "ArrayList::new",
+    "explanation": "Constructor reference ClassName::new refers to a constructor as a lambda. ArrayList::new = () -> new ArrayList<>(). Four types: static (Math::sqrt), instance of particular object (System.out::println), instance of arbitrary object (String::toUpperCase), constructor (ArrayList::new)."
+  },
+  {
+    "id": "JAVA066",
+    "domain": "java",
+    "topic": "Java 8+ Features",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a default method in Java interfaces?",
+    "options": [
+      "A method with default access modifier",
+      "An abstract method",
+      "A static method in interface",
+      "A method with implementation in interface"
+    ],
+    "answer": "A method with implementation in interface",
+    "explanation": "Java 8 introduced default methods \u2014 concrete methods in interfaces with the 'default' keyword. This allows adding new methods to interfaces without breaking existing implementations, enabling backward compatibility."
+  },
+  {
+    "id": "JAVA067",
+    "domain": "java",
+    "topic": "Access Modifiers",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which access modifier makes a member accessible only within the same class?",
+    "options": [
+      "public",
+      "protected",
+      "default (package-private)",
+      "private"
+    ],
+    "answer": "private",
+    "explanation": "'private' is the most restrictive modifier \u2014 accessible only within the declaring class. Order from most to least restrictive: private < default < protected < public."
+  },
+  {
+    "id": "JAVA068",
+    "domain": "java",
+    "topic": "Access Modifiers",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which access modifier allows access to subclasses in different packages?",
+    "options": [
+      "private",
+      "default",
+      "public",
+      "protected"
+    ],
+    "answer": "protected",
+    "explanation": "'protected' members are accessible within the same class, same package, and any subclasses (even in different packages). This enables controlled inheritance without fully public access."
+  },
+  {
+    "id": "JAVA069",
+    "domain": "java",
+    "topic": "Static Keyword",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does the 'static' keyword mean for a class member?",
+    "options": [
+      "The member cannot be changed",
+      "The member is thread-safe",
+      "The member belongs to the class itself, not instances",
+      "The member belongs to an object instance"
+    ],
+    "answer": "The member belongs to the class itself, not instances",
+    "explanation": "Static members (fields/methods) belong to the class, shared by all instances. They can be accessed via ClassName.member without creating an object."
+  },
+  {
+    "id": "JAVA070",
+    "domain": "java",
+    "topic": "Static Keyword",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Why can't a static method access non-static instance variables directly?",
+    "options": [
+      "Java syntax does not allow it",
+      "Static methods belong to the class and may run without any instance existing",
+      "Non-static variables are always private",
+      "Static methods are only for utility operations"
+    ],
+    "answer": "Static methods belong to the class and may run without any instance existing",
+    "explanation": "Static methods belong to the class, not any object. When a static method runs, no instance may exist (called as ClassName.method()). Non-static variables belong to instances. Without an instance, there's no 'this' reference \u2014 so no non-static member access. Create an instance inside the static method to access instance members."
+  },
+  {
+    "id": "JAVA071",
+    "domain": "java",
+    "topic": "Constructors",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a constructor in Java?",
+    "options": [
+      "A special method called automatically when an object is created",
+      "A method that returns a value",
+      "A static method for initializing class variables",
+      "A method for destroying objects"
+    ],
+    "answer": "A special method called automatically when an object is created",
+    "explanation": "A constructor has the same name as the class, no return type, and is called automatically via 'new'. It initializes the object's state. If no constructor is defined, Java provides a default no-arg constructor."
+  },
+  {
+    "id": "JAVA072",
+    "domain": "java",
+    "topic": "Constructors",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is constructor chaining in Java?",
+    "options": [
+      "Calling superclass constructor from subclass",
+      "Calling one constructor from another in same or different class",
+      "Overloading constructors",
+      "Chaining method calls"
+    ],
+    "answer": "Calling one constructor from another in same or different class",
+    "explanation": "Constructor chaining: using this() to call another constructor in the same class, or super() to call parent's constructor. this() or super() must be the first statement in constructor body."
+  },
+  {
+    "id": "JAVA073",
+    "domain": "java",
+    "topic": "Inner Classes",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which type of inner class can be instantiated without an outer class instance?",
+    "options": [
+      "Non-static inner class",
+      "Anonymous class",
+      "Static nested class",
+      "Local class"
+    ],
+    "answer": "Static nested class",
+    "explanation": "Static nested classes don't have a reference to outer class instance and can be instantiated independently: OuterClass.StaticNested obj = new OuterClass.StaticNested(). Non-static inner classes require outer instance."
+  },
+  {
+    "id": "JAVA074",
+    "domain": "java",
+    "topic": "Inner Classes",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which type of inner class can be defined and instantiated directly within a method?",
+    "options": [
+      "Static nested class",
+      "Anonymous class is defined and instantiated in one expression",
+      "Non-static inner class",
+      "Local class"
+    ],
+    "answer": "Anonymous class is defined and instantiated in one expression",
+    "explanation": "Anonymous class: defined and instantiated simultaneously, no name. Example: Runnable r = new Runnable() { public void run() {} }. Local class: named class inside a method, instantiated separately. Both can access effectively final local variables from the enclosing scope."
+  },
+  {
+    "id": "JAVA075",
+    "domain": "java",
+    "topic": "Enums",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Can enums have methods and constructors in Java?",
+    "options": [
+      "Only methods are allowed",
+      "No, enums are just constants",
+      "Only constructors are allowed",
+      "Yes, enums can have methods, constructors, and fields"
+    ],
+    "answer": "Yes, enums can have methods, constructors, and fields",
+    "explanation": "Java enums are full-fledged classes. They can have fields, constructors (always private), and methods. Each enum constant can override methods. This makes Java enums much more powerful than in other languages."
+  },
+  {
+    "id": "JAVA076",
+    "domain": "java",
+    "topic": "Annotations",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the @Override annotation do in Java?",
+    "options": [
+      "Creates a new method",
+      "Tells compiler to check if method actually overrides a parent method",
+      "Marks a method as deprecated",
+      "Makes a method synchronized"
+    ],
+    "answer": "Tells compiler to check if method actually overrides a parent method",
+    "explanation": "@Override is a marker annotation that instructs the compiler to verify that the annotated method does override a method in a superclass or implements an interface method. It catches typos and incorrect signatures at compile time."
+  },
+  {
+    "id": "JAVA077",
+    "domain": "java",
+    "topic": "Serialization",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is serialization in Java?",
+    "options": [
+      "Converting objects to JSON",
+      "Converting byte arrays to String",
+      "Compressing objects in memory",
+      "Converting objects to byte streams for storage/transmission"
+    ],
+    "answer": "Converting objects to byte streams for storage/transmission",
+    "explanation": "Serialization converts an object's state to a byte stream (via ObjectOutputStream). Deserialization reconstructs the object. Class must implement Serializable interface (marker). 'transient' keyword excludes fields from serialization."
+  },
+  {
+    "id": "JAVA078",
+    "domain": "java",
+    "topic": "Serialization",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is serialVersionUID and what happens if you don't explicitly declare it?",
+    "options": [
+      "It is optional and has no effect",
+      "It must always be set to 1L",
+      "It only matters for transient fields",
+      "JVM auto-computes it based on class structure; any class change may generate a different UID causing InvalidClassException on deserialization"
+    ],
+    "answer": "JVM auto-computes it based on class structure; any class change may generate a different UID causing InvalidClassException on deserialization",
+    "explanation": "serialVersionUID is a long identifier for versioning Serializable classes. Without explicit declaration, JVM computes it from class structure \u2014 any change (adding a field) may produce a different UID, causing InvalidClassException when deserializing old data. Best practice: always declare 'private static final long serialVersionUID = 1L;' and increment for incompatible changes."
+  },
+  {
+    "id": "JAVA079",
+    "domain": "java",
+    "topic": "Comparator & Comparable",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between Comparable and Comparator in Java?",
+    "options": [
+      "Comparable is for Collections; Comparator for arrays",
+      "No difference",
+      "Comparator is in java.lang; Comparable in java.util",
+      "Comparable defines natural ordering within class; Comparator defines external custom ordering"
+    ],
+    "answer": "Comparable defines natural ordering within class; Comparator defines external custom ordering",
+    "explanation": "Comparable (java.lang): class implements it, defines single natural ordering via compareTo(). Comparator (java.util): separate class, defines custom ordering via compare(). Use Comparator when you can't modify the class or need multiple sorting orders."
+  },
+  {
+    "id": "JAVA080",
+    "domain": "java",
+    "topic": "Comparator & Comparable",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which Java 8 approach creates a Comparator to sort by name then by age?",
+    "options": [
+      "Collections.sort(list, name, age)",
+      "list.sort(getName, getAge)",
+      "new Comparator().sort(name).sort(age)",
+      "Comparator.comparing(Person::getName).thenComparingInt(Person::getAge)"
+    ],
+    "answer": "Comparator.comparing(Person::getName).thenComparingInt(Person::getAge)",
+    "explanation": "Java 8 Comparator factory methods: Comparator.comparing(Person::getName) for primary sort, .thenComparingInt(Person::getAge) for secondary. These can be chained fluently. Reversed: .reversed(). This replaces verbose anonymous Comparator implementations."
+  },
+  {
+    "id": "JAVA081",
+    "domain": "java",
+    "topic": "Iterator",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the advantage of using an Iterator over a for loop with index for collections?",
+    "options": [
+      "Iterator works for all Collection types including non-indexed",
+      "Iterator allows modifying the collection while iterating",
+      "Both B and C",
+      "Iterator is faster"
+    ],
+    "answer": "Both B and C",
+    "explanation": "Iterator works on any Collection (including LinkedList which has no O(1) index access). Iterator.remove() safely removes elements during iteration \u2014 modifying a list directly during for-each throws ConcurrentModificationException."
+  },
+  {
+    "id": "JAVA082",
+    "domain": "java",
+    "topic": "Multithreading",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does the 'happens-before' relationship guarantee in Java's Memory Model?",
+    "options": [
+      "One thread always runs before another",
+      "All threads see the same values at all times",
+      "volatile makes all operations atomic",
+      "Memory writes by one thread are visible to another thread after a synchronization action"
+    ],
+    "answer": "Memory writes by one thread are visible to another thread after a synchronization action",
+    "explanation": "Happens-before: if A happens-before B, A's writes are visible to B. Established by: synchronized block release\u2192acquire, volatile write\u2192read, Thread.start(), Thread.join(). Without happens-before, threads may read stale cached values due to CPU caching and instruction reordering."
+  },
+  {
+    "id": "JAVA083",
+    "domain": "java",
+    "topic": "Java Collections",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which concurrent collection should be used instead of HashMap in multi-threaded environments?",
+    "options": [
+      "Hashtable",
+      "Collections.synchronizedMap()",
+      "All are equally good",
+      "ConcurrentHashMap"
+    ],
+    "answer": "ConcurrentHashMap",
+    "explanation": "ConcurrentHashMap uses segment-level locking (Java 7) or CAS operations (Java 8+), allowing concurrent reads and concurrent writes to different segments. Hashtable and synchronizedMap lock the entire map per operation, causing bottlenecks. ConcurrentHashMap offers much better concurrency."
+  },
+  {
+    "id": "JAVA084",
+    "domain": "java",
+    "topic": "Reflection",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the main downside of using Java Reflection?",
+    "options": [
+      "Reflection cannot access private fields",
+      "Reflection only works on interfaces",
+      "Reflection requires external libraries",
+      "Reflection is slower than direct calls, bypasses access control, and hinders refactoring"
+    ],
+    "answer": "Reflection is slower than direct calls, bypasses access control, and hinders refactoring",
+    "explanation": "Reflection (java.lang.reflect) enables runtime class inspection and manipulation. Downsides: slower than direct calls (JIT can't optimize well), bypasses access control (can access private members), breaks encapsulation, hinders IDE refactoring. Use sparingly \u2014 only when framework-level dynamic behavior is truly needed."
+  },
+  {
+    "id": "JAVA085",
+    "domain": "java",
+    "topic": "Cloning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between shallow copy and deep copy in Java?",
+    "options": [
+      "Deep copy only copies primitives",
+      "Shallow copy is not possible in Java",
+      "No difference",
+      "Shallow copy copies object references; deep copy creates copies of referenced objects too"
+    ],
+    "answer": "Shallow copy copies object references; deep copy creates copies of referenced objects too",
+    "explanation": "Shallow copy (Object.clone()): copies field values \u2014 for primitives this is fine, but for object fields only the reference is copied (both copies point to same nested object). Deep copy: recursively copies all nested objects, creating completely independent copies."
+  },
+  {
+    "id": "JAVA086",
+    "domain": "java",
+    "topic": "Nested Classes",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which type of class can access private members of the outer class?",
+    "options": [
+      "Only static nested class",
+      "Only non-static inner class",
+      "Both static and non-static inner classes",
+      "Neither"
+    ],
+    "answer": "Only non-static inner class",
+    "explanation": "Non-static inner classes have an implicit reference to their outer class instance and can access all its members including private ones. Static nested classes don't have this outer reference and cannot access instance members directly."
+  },
+  {
+    "id": "JAVA087",
+    "domain": "java",
+    "topic": "Java 8+ Features",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which CompletableFuture method allows chaining a dependent async operation that returns another CompletableFuture?",
+    "options": [
+      "thenCompose()",
+      "thenAccept()",
+      "thenCombine()",
+      "thenApply()"
+    ],
+    "answer": "thenCompose()",
+    "explanation": "thenCompose() chains dependent futures (flatMap): result of one feeds into another async operation. thenApply() transforms result synchronously (map). thenAccept() consumes result (no return). thenCombine() merges two independent futures. thenCompose is key for avoiding nested CompletableFutures."
+  },
+  {
+    "id": "JAVA088",
+    "domain": "java",
+    "topic": "Sorting",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What algorithm does Arrays.sort() use for primitive arrays in Java?",
+    "options": [
+      "Dual-Pivot Quick Sort",
+      "Quick Sort",
+      "Heap Sort",
+      "Merge Sort"
+    ],
+    "answer": "Dual-Pivot Quick Sort",
+    "explanation": "Java's Arrays.sort() for primitive arrays uses Dual-Pivot Quicksort (Java 7+) which is faster than traditional single-pivot quicksort. For object arrays, it uses TimSort (a hybrid merge/insertion sort) to guarantee stability."
+  },
+  {
+    "id": "JAVA089",
+    "domain": "java",
+    "topic": "String Methods",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which String method checks if a string starts with a given prefix?",
+    "options": [
+      "contains()",
+      "startsWith()",
+      "indexOf()",
+      "charAt()"
+    ],
+    "answer": "startsWith()",
+    "explanation": "String.startsWith(prefix) returns true if the string begins with the specified prefix. Similarly, endsWith(suffix) checks the end. Both are O(prefix length) operations."
+  },
+  {
+    "id": "JAVA090",
+    "domain": "java",
+    "topic": "Wrapper Classes",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the wrapper class for 'int' in Java?",
+    "options": [
+      "Integer",
+      "INTEGER",
+      "IntClass",
+      "Int"
+    ],
+    "answer": "Integer",
+    "explanation": "Java provides wrapper classes for all primitives: int \u2192 Integer, double \u2192 Double, boolean \u2192 Boolean, char \u2192 Character, etc. Wrappers allow primitives to be used in Collections and provide utility methods like Integer.parseInt()."
+  },
+  {
+    "id": "JAVA091",
+    "domain": "java",
+    "topic": "Type Casting",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between upcasting and downcasting in Java?",
+    "options": [
+      "No difference",
+      "Upcasting is always unsafe",
+      "Upcasting: subclass to superclass (implicit, safe); Downcasting: superclass to subclass (explicit, may throw ClassCastException)",
+      "Downcasting is always safe"
+    ],
+    "answer": "Upcasting: subclass to superclass (implicit, safe); Downcasting: superclass to subclass (explicit, may throw ClassCastException)",
+    "explanation": "Upcasting (Dog \u2192 Animal) is implicit and always safe \u2014 subclass IS-A superclass. Downcasting (Animal \u2192 Dog) must be explicit: (Dog) animal, and throws ClassCastException if the actual object isn't a Dog. Use instanceof before downcasting."
+  },
+  {
+    "id": "JAVA092",
+    "domain": "java",
+    "topic": "Keywords",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is a valid use of the 'this' keyword in Java?",
+    "options": [
+      "Calling a static method in the same class",
+      "Accessing a superclass field",
+      "Calling another constructor in the same class using this()",
+      "Creating a new instance of the current class"
+    ],
+    "answer": "Calling another constructor in the same class using this()",
+    "explanation": "'this' has three uses: 1) Refer to current instance variable (disambiguate from local variable). 2) Call current class method explicitly. 3) Constructor chaining: this() or this(args) calls another constructor in same class \u2014 must be first statement. Cannot be used in static context."
+  },
+  {
+    "id": "JAVA093",
+    "domain": "java",
+    "topic": "Recursion",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What exception is thrown when a recursive method runs indefinitely in Java?",
+    "options": [
+      "OutOfMemoryError",
+      "ArrayIndexOutOfBoundsException",
+      "StackOverflowError",
+      "RecursionException"
+    ],
+    "answer": "StackOverflowError",
+    "explanation": "Each recursive call adds a stack frame to the call stack. Without a base case or with infinite recursion, the stack runs out of space, throwing StackOverflowError (an Error, not Exception, so it shouldn't be caught)."
+  },
+  {
+    "id": "JAVA094",
+    "domain": "java",
+    "topic": "Java IO",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between Serializable and Externalizable in Java?",
+    "options": [
+      "Serializable is automatic; Externalizable gives full control over serialization",
+      "No difference",
+      "Externalizable is for primitives only",
+      "Serializable is faster"
+    ],
+    "answer": "Serializable is automatic; Externalizable gives full control over serialization",
+    "explanation": "Serializable: JVM handles serialization automatically, serializing all non-transient fields. Externalizable: programmer implements writeExternal() and readExternal() for complete control over what's serialized. Externalizable is faster but requires more code."
+  },
+  {
+    "id": "JAVA095",
+    "domain": "java",
+    "topic": "Multithreading",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between wait() and sleep() in Java?",
+    "options": [
+      "wait() releases lock; sleep() does not release lock",
+      "sleep() releases lock; wait() does not",
+      "Both release the lock",
+      "No difference"
+    ],
+    "answer": "wait() releases lock; sleep() does not release lock",
+    "explanation": "wait() (from Object) releases the synchronized lock and waits until notify()/notifyAll() is called, must be called in synchronized block. sleep() (from Thread) pauses thread without releasing any lock, used for timed delays. Both are interruptible."
+  },
+  {
+    "id": "JAVA096",
+    "domain": "java",
+    "topic": "Java 8+ Features",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which feature introduced in Java 8 enables declarative, functional-style data processing on collections?",
+    "options": [
+      "Stream API with lambda expressions",
+      "Reflection",
+      "Enhanced for-loop",
+      "Generics"
+    ],
+    "answer": "Stream API with lambda expressions",
+    "explanation": "Java 8 Stream API enables declarative data processing: filter(), map(), reduce(), collect(). Combined with lambda expressions and method references, it replaces verbose for-loops. Key operations: intermediate (lazy \u2014 filter, map, sorted) and terminal (trigger execution \u2014 collect, forEach, count). Streams can be sequential or parallel."
+  },
+  {
+    "id": "JAVA097",
+    "domain": "java",
+    "topic": "Exception Handling",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the key benefit of multi-catch syntax (catch (IOException | SQLException e)) in Java 7?",
+    "options": [
+      "It avoids duplicate catch blocks for multiple exception types",
+      "It catches all exceptions including Errors",
+      "It automatically retries the try block",
+      "It makes the exception variable mutable"
+    ],
+    "answer": "It avoids duplicate catch blocks for multiple exception types",
+    "explanation": "Multi-catch (Java 7): catch multiple exception types in one block, avoiding duplicated handling code. The caught exception variable is implicitly final. Combined with try-with-resources, Java 7 made exception handling significantly cleaner and less boilerplate-heavy."
+  },
+  {
+    "id": "JAVA098",
+    "domain": "java",
+    "topic": "Interfaces",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a marker interface in Java?",
+    "options": [
+      "An interface with no methods used to provide metadata to JVM",
+      "An interface that marks deprecated code",
+      "An interface with marker annotations",
+      "An interface with one method"
+    ],
+    "answer": "An interface with no methods used to provide metadata to JVM",
+    "explanation": "Marker interfaces have no methods \u2014 they 'mark' a class to signal capability to JVM or frameworks. Examples: Serializable (enables serialization), Cloneable (allows cloning), RandomAccess (signals O(1) access for Lists). Java annotations have largely replaced marker interfaces in modern code."
+  },
+  {
+    "id": "JAVA099",
+    "domain": "java",
+    "topic": "Collections",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "When is LinkedList genuinely faster than ArrayList in Java?",
+    "options": [
+      "Random access by index",
+      "Frequent insertions/deletions at the beginning when you already have the node reference",
+      "Iterating through all elements",
+      "Sorting elements"
+    ],
+    "answer": "Frequent insertions/deletions at the beginning when you already have the node reference",
+    "explanation": "LinkedList O(1) insert/delete only when you have the node reference. ArrayList insert at beginning is O(n) due to shifting. However, ArrayList's cache-friendly memory layout often makes it faster in practice even for insertions. LinkedList has extra per-node memory overhead (next/prev pointers)."
+  },
+  {
+    "id": "JAVA100",
+    "domain": "java",
+    "topic": "Java Best Practices",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does 'Program to Interface, not Implementation' mean in Java?",
+    "options": [
+      "Declare variables using interface types (List) rather than concrete types (ArrayList) for flexibility",
+      "Always use abstract classes instead of concrete classes",
+      "Avoid using any concrete classes",
+      "Use only Java's built-in interfaces"
+    ],
+    "answer": "Declare variables using interface types (List) rather than concrete types (ArrayList) for flexibility",
+    "explanation": "List<String> list = new ArrayList<>() instead of ArrayList<String> list = new ArrayList<>(). This decouples code from specific implementations \u2014 you can swap ArrayList for LinkedList without changing dependent code. Enables easy mocking for testing. Core to Dependency Inversion Principle (SOLID)."
+  }
+]

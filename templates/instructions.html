@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Domain — Interview Practice Hub</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <main class="container section" style="max-width: 860px;">
+        <a href="{{ url_for('home') }}" class="text-muted" style="font-size:13px;">← Back to domains</a>
+        <div id="domainHead" class="mt-12"></div>
+
+        <div class="card card-pad mt-24">
+            <h2 style="font-family:var(--font-display); margin:0 0 12px;">Assessment overview</h2>
+            <div class="hero-stats" style="margin-left:0;">
+                <div class="stat">
+                    <div class="stat-label">Questions</div>
+                    <div class="stat-value">50</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Duration</div>
+                    <div class="stat-value">60 min</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Format</div>
+                    <div class="stat-value">MCQ + Short</div>
+                </div>
+            </div>
+            <ul style="margin:18px 0 0; padding-left:18px; line-height:1.9; color: var(--muted); font-size:14px;">
+                <li>You can move between questions and revisit answers anytime.</li>
+                <li>Timer auto-submits when it reaches zero.</li>
+                <li>You'll receive instant scoring with a detailed review.</li>
+            </ul>
+            <div class="mt-24"><a id="startBtn" class="btn btn-primary" href="#">Start assessment →</a></div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+    <script>
+        mountNavbar({ active: 'home' });
+        const slug = qs('slug');
+        const d = getDomain(slug);
+        const head = document.getElementById('domainHead');
+        if (!d) {
+            head.innerHTML = '<h1>Domain not found</h1>';
+        } else {
+            document.title = `${d.name} — Interview Practice Hub`;
+            head.innerHTML = `
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div class="domain-icon" style="width:60px;height:60px;font-size:30px;">${d.icon}</div>
+          <div>
+            <h1 style="font-family:var(--font-display); margin:0; font-size:32px;">${d.name}</h1>
+            <p class="text-muted" style="margin:4px 0 0;">${d.desc}</p>
+          </div>
+        </div>`;
+            document.getElementById('startBtn').href = `quiz.html?slug=${slug}`;
+        }
+    </script>
+</body>
+
+</html>

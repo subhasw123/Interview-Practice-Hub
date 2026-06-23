@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Interview Practice Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container section" style="max-width: 860px;">
+    <div class="card card-pad">
+      <h1 style="font-family:var(--font-display); text-align:left; margin:0 0 16px;">About Interview Practice Hub</h1>
+      <p class="text-muted">
+        Interview Practice Hub is designed to help software engineers prepare for technical interviews.
+        Our tool offers simulated real-world assessments with realistic constraints.
+      </p>
+      <h3 style="margin-top:24px;">Key Features</h3>
+      <ul style="margin:12px 0 0; padding-left:18px; line-height:1.9; color: var(--muted); font-size:14px;">
+        <li>50 random questions per domain from curated topic pools.</li>
+        <li>Mixed Multiple Choice and Short Answer formats.</li>
+        <li>Time-boxed environments to simulate interview pressure.</li>
+        <li>Instant scoring and dynamic review explanation.</li>
+      </ul>
+      <div class="mt-24">
+        <a href="index.html" class="btn btn-primary">Browse domains →</a>
+      </div>
+    </div>
+  </main>
+  <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+  <script>
+    mountNavbar({ active: 'about' });
+  </script>
+</body>
+</html>

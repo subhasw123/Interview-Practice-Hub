@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "PY001",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is mutable?",
+    "options": [
+      "Tuple",
+      "List",
+      "String",
+      "Integer"
+    ],
+    "answer": "List",
+    "explanation": "Lists are mutable \u2014 their elements can be changed after creation. Tuples, strings, and integers are immutable."
+  },
+  {
+    "id": "PY002",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the output of type((1,)) in Python?",
+    "options": [
+      "<class 'list'>",
+      "<class 'tuple'>",
+      "<class 'int'>",
+      "<class 'set'>"
+    ],
+    "answer": "<class 'tuple'>",
+    "explanation": "(1,) is a single-element tuple. Without the trailing comma, (1) would just be an integer."
+  },
+  {
+    "id": "PY003",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which method adds an element to the end of a list?",
+    "options": [
+      "insert()",
+      "add()",
+      "extend()",
+      "append()"
+    ],
+    "answer": "append()",
+    "explanation": "append() adds a single element to the end of a list. extend() adds multiple elements. insert() adds at a specific index."
+  },
+  {
+    "id": "PY004",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What keyword is used to define a function in Python?",
+    "options": [
+      "def",
+      "func",
+      "define",
+      "function"
+    ],
+    "answer": "def",
+    "explanation": "The 'def' keyword is used to define a function in Python."
+  },
+  {
+    "id": "PY005",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does the 'pass' statement do in Python?",
+    "options": [
+      "Exits the loop",
+      "Skips the current iteration",
+      "Does nothing; acts as a placeholder",
+      "Raises an exception"
+    ],
+    "answer": "Does nothing; acts as a placeholder",
+    "explanation": "'pass' is a null statement used as a placeholder where syntax requires a statement but no action is needed."
+  },
+  {
+    "id": "PY006",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following creates an empty dictionary?",
+    "options": [
+      "[]",
+      "()",
+      "{}",
+      "set()"
+    ],
+    "answer": "{}",
+    "explanation": "{} creates an empty dictionary. [] creates an empty list, () an empty tuple, and set() an empty set."
+  },
+  {
+    "id": "PY007",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the correct way to start a for loop that iterates 5 times?",
+    "options": [
+      "for i in range(5):",
+      "for i in range(1, 5):",
+      "for i from 0 to 5:",
+      "loop i in 5:"
+    ],
+    "answer": "for i in range(5):",
+    "explanation": "range(5) generates numbers 0 through 4, giving exactly 5 iterations."
+  },
+  {
+    "id": "PY008",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which built-in function returns the number of elements in a list?",
+    "options": [
+      "count()",
+      "size()",
+      "len()",
+      "length()"
+    ],
+    "answer": "len()",
+    "explanation": "len() returns the number of items in an object like a list, string, tuple, or dictionary."
+  },
+  {
+    "id": "PY009",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What will be the output of: print(10 // 3)?",
+    "options": [
+      "3",
+      "3.33",
+      "4",
+      "1"
+    ],
+    "answer": "3",
+    "explanation": "// is the floor division operator. 10 // 3 = 3 (quotient without remainder)."
+  },
+  {
+    "id": "PY010",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is NOT a valid Python data type?",
+    "options": [
+      "int",
+      "float",
+      "str",
+      "char"
+    ],
+    "answer": "char",
+    "explanation": "Python does not have a 'char' data type like C/Java. Single characters are represented as strings of length 1."
+  },
+  {
+    "id": "PY011",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following best describes the key difference between a list and a tuple in Python?",
+    "options": [
+      "Lists are immutable; tuples are mutable",
+      "Tuples use square brackets; lists use parentheses",
+      "Lists are mutable; tuples are immutable",
+      "Lists and tuples are identical in behavior"
+    ],
+    "answer": "Lists are mutable; tuples are immutable",
+    "explanation": "A list can be modified after creation (add, remove, update). A tuple cannot be changed once created, making it faster and suitable for fixed data."
+  },
+  {
+    "id": "PY012",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "How do you safely access a value from a dictionary without raising a KeyError if the key is missing?",
+    "options": [
+      "dict.get('key')",
+      "dict['key']",
+      "dict.fetch('key')",
+      "dict.find('key')"
+    ],
+    "answer": "dict.get('key')",
+    "explanation": "dict.get('key') returns None (or a default value) if the key doesn't exist, unlike dict['key'] which raises KeyError."
+  },
+  {
+    "id": "PY013",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: [x**2 for x in range(4)]?",
+    "options": [
+      "[1, 4, 9, 16]",
+      "[0, 1, 2, 3]",
+      "[0, 1, 4, 9]",
+      "[1, 2, 3, 4]"
+    ],
+    "answer": "[0, 1, 4, 9]",
+    "explanation": "List comprehension squares each element in range(4) which is [0,1,2,3], giving [0,1,4,9]."
+  },
+  {
+    "id": "PY014",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which keyword is used to skip the current iteration in a loop?",
+    "options": [
+      "break",
+      "pass",
+      "continue",
+      "return"
+    ],
+    "answer": "continue",
+    "explanation": "'continue' skips the rest of the current iteration and moves to the next. 'break' exits the loop entirely."
+  },
+  {
+    "id": "PY015",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the *args parameter in a function allow?",
+    "options": [
+      "Passing keyword arguments",
+      "Passing only one argument",
+      "Passing a variable number of positional arguments",
+      "Passing a dictionary as an argument"
+    ],
+    "answer": "Passing a variable number of positional arguments",
+    "explanation": "*args collects extra positional arguments into a tuple, allowing functions to accept any number of arguments."
+  },
+  {
+    "id": "PY016",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the result of: list(set([1, 2, 2, 3, 3, 3]))?",
+    "options": [
+      "[1, 2, 2, 3, 3, 3]",
+      "[1, 2, 3]",
+      "{1, 2, 3}",
+      "Error"
+    ],
+    "answer": "[1, 2, 3]",
+    "explanation": "set() removes duplicates, then list() converts it back. The result contains unique elements [1, 2, 3]."
+  },
+  {
+    "id": "PY017",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a lambda function in Python?",
+    "options": [
+      "A function defined using the 'def' keyword with no name",
+      "An anonymous single-expression function defined with the 'lambda' keyword",
+      "A recursive function",
+      "A function that runs asynchronously"
+    ],
+    "answer": "An anonymous single-expression function defined with the 'lambda' keyword",
+    "explanation": "Lambda functions are anonymous, one-liner functions often used with map(), filter(), and sorted()."
+  },
+  {
+    "id": "PY018",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: 'Hello'[::-1]?",
+    "options": [
+      "Hello",
+      "HllH",
+      "Error",
+      "olleH"
+    ],
+    "answer": "olleH",
+    "explanation": "[::-1] is a slice with step -1, which reverses the string."
+  },
+  {
+    "id": "PY019",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following correctly defines a decorator in Python?",
+    "options": [
+      "A class that wraps another class",
+      "A built-in Python keyword for optimization",
+      "A module for UI decoration",
+      "A function that takes another function as argument and extends its behavior"
+    ],
+    "answer": "A function that takes another function as argument and extends its behavior",
+    "explanation": "Decorators are higher-order functions that wrap another function to extend or modify its behavior without changing its source code."
+  },
+  {
+    "id": "PY020",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the 'self' parameter in a class method represent?",
+    "options": [
+      "The class itself",
+      "The current instance of the class",
+      "A global variable",
+      "The parent class"
+    ],
+    "answer": "The current instance of the class",
+    "explanation": "'self' refers to the specific object calling the method, allowing access to instance variables and other methods."
+  },
+  {
+    "id": "PY021",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between 'break' and 'continue' in Python loops?",
+    "options": [
+      "'break' skips one iteration; 'continue' exits the loop",
+      "'break' exits the loop entirely; 'continue' skips to the next iteration",
+      "Both exit the loop immediately",
+      "They are interchangeable"
+    ],
+    "answer": "'break' exits the loop entirely; 'continue' skips to the next iteration",
+    "explanation": "'break' terminates the loop completely. 'continue' only skips the remaining code in the current iteration and moves to the next one."
+  },
+  {
+    "id": "PY022",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is TRUE about Python sets compared to lists?",
+    "options": [
+      "Sets do not allow duplicates and are unordered",
+      "Sets are ordered and allow duplicates",
+      "Sets support indexing just like lists",
+      "Sets are slower for membership testing than lists"
+    ],
+    "answer": "Sets do not allow duplicates and are unordered",
+    "explanation": "Sets store only unique elements and have no guaranteed order. They use hash tables, making membership testing O(1) \u2014 faster than lists."
+  },
+  {
+    "id": "PY023",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the output of the following code?\n\ndef f(x, lst=[]):\n    lst.append(x)\n    return lst\nprint(f(1))\nprint(f(2))",
+    "options": [
+      "[1] and [2]",
+      "[1] and [1, 2]",
+      "[1, 2] and [1, 2]",
+      "Error"
+    ],
+    "answer": "[1] and [1, 2]",
+    "explanation": "Default mutable arguments are created once and shared across all calls. After f(1), lst=[1]. After f(2), the same list is reused, so lst=[1,2]. This is a classic Python gotcha."
+  },
+  {
+    "id": "PY024",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which method is used to remove and return the last element of a list?",
+    "options": [
+      "remove()",
+      "delete()",
+      "discard()",
+      "pop()"
+    ],
+    "answer": "pop()",
+    "explanation": "pop() removes and returns the element at the given index (default: last). remove() removes by value, not index."
+  },
+  {
+    "id": "PY025",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of __init__ in a Python class?",
+    "options": [
+      "To destroy an object",
+      "To define class-level variables",
+      "To import the class",
+      "To initialize an object's attributes when it is created"
+    ],
+    "answer": "To initialize an object's attributes when it is created",
+    "explanation": "__init__ is the constructor method called automatically when a new instance of a class is created."
+  },
+  {
+    "id": "PY026",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What will 'print(bool(0))' output?",
+    "options": [
+      "True",
+      "False",
+      "0",
+      "None"
+    ],
+    "answer": "False",
+    "explanation": "In Python, 0, empty strings, empty lists, None, and empty dicts are all falsy. bool(0) is False."
+  },
+  {
+    "id": "PY027",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the 'enumerate()' function do?",
+    "options": [
+      "Returns only the indexes of a list",
+      "Counts the elements in a list",
+      "Sorts a list with indexes",
+      "Returns both index and value pairs when iterating"
+    ],
+    "answer": "Returns both index and value pairs when iterating",
+    "explanation": "enumerate() adds a counter to an iterable, returning (index, value) pairs. Commonly used in for loops."
+  },
+  {
+    "id": "PY028",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between '==' and 'is' in Python?",
+    "options": [
+      "They are identical",
+      "'==' checks value equality; 'is' checks identity (same object in memory)",
+      "'is' checks value equality; '==' checks identity",
+      "'is' is only for strings"
+    ],
+    "answer": "'==' checks value equality; 'is' checks identity (same object in memory)",
+    "explanation": "a == b checks if values are equal. a is b checks if both variables point to the exact same object."
+  },
+  {
+    "id": "PY029",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which of the following best describes a Python generator?",
+    "options": [
+      "A function that returns all values at once as a list",
+      "A class that generates random numbers",
+      "A built-in that generates sequences like range()",
+      "A function that uses 'yield' to produce values one at a time lazily"
+    ],
+    "answer": "A function that uses 'yield' to produce values one at a time lazily",
+    "explanation": "Generators use 'yield' to pause and resume execution, producing values one at a time without storing them all in memory \u2014 ideal for large or infinite sequences."
+  },
+  {
+    "id": "PY030",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following correctly describes Polymorphism in Python OOP?",
+    "options": [
+      "Hiding internal data using private attributes",
+      "Different classes implementing the same method in their own way",
+      "A child class inheriting all methods of a parent class",
+      "Bundling data and methods in a single class"
+    ],
+    "answer": "Different classes implementing the same method in their own way",
+    "explanation": "Polymorphism allows different objects to respond to the same method call in their own specific way, achieved through method overriding in Python."
+  },
+  {
+    "id": "PY031",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following is used to import a specific function from a module?",
+    "options": [
+      "from math import sqrt",
+      "import math.sqrt",
+      "include math.sqrt",
+      "use math import sqrt"
+    ],
+    "answer": "from math import sqrt",
+    "explanation": "The 'from module import function' syntax imports only a specific function from a module into the current namespace."
+  },
+  {
+    "id": "PY032",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the 'zip()' function do?",
+    "options": [
+      "Compresses files",
+      "Pairs elements from two or more iterables into tuples",
+      "Sorts two lists simultaneously",
+      "Merges two dictionaries"
+    ],
+    "answer": "Pairs elements from two or more iterables into tuples",
+    "explanation": "zip() takes multiple iterables and returns an iterator of tuples where each tuple contains corresponding elements."
+  },
+  {
+    "id": "PY033",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which NumPy function creates an array of zeros?",
+    "options": [
+      "np.empty()",
+      "np.none()",
+      "np.zeros()",
+      "np.null()"
+    ],
+    "answer": "np.zeros()",
+    "explanation": "np.zeros(shape) creates a NumPy array filled with zeros of the given shape."
+  },
+  {
+    "id": "PY034",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "In NumPy, what is broadcasting?",
+    "options": [
+      "Sending data over a network",
+      "Converting arrays to lists",
+      "Performing arithmetic operations on arrays of different shapes by expanding them",
+      "Printing all array elements"
+    ],
+    "answer": "Performing arithmetic operations on arrays of different shapes by expanding them",
+    "explanation": "Broadcasting allows NumPy to perform element-wise operations on arrays of different shapes without explicit loops."
+  },
+  {
+    "id": "PY035",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which Pandas method is used to read a CSV file?",
+    "options": [
+      "pd.open_csv()",
+      "pd.load_csv()",
+      "pd.read_csv()",
+      "pd.import_csv()"
+    ],
+    "answer": "pd.read_csv()",
+    "explanation": "pd.read_csv('filename.csv') reads a CSV file and returns a DataFrame."
+  },
+  {
+    "id": "PY036",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which Pandas method returns the first 5 rows of a DataFrame?",
+    "options": [
+      "df.first()",
+      "df.head()",
+      "df.top()",
+      "df.start()"
+    ],
+    "answer": "df.head()",
+    "explanation": "df.head(n) returns the first n rows (default 5) of a DataFrame."
+  },
+  {
+    "id": "PY037",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does df.isnull().sum() do in Pandas?",
+    "options": [
+      "Deletes null values",
+      "Fills null values with 0",
+      "Checks if the DataFrame is empty",
+      "Returns the count of missing values per column"
+    ],
+    "answer": "Returns the count of missing values per column",
+    "explanation": "isnull() returns a boolean DataFrame of null checks; .sum() aggregates True counts per column showing missing value counts."
+  },
+  {
+    "id": "PY038",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the output of: np.array([1,2,3]) * 2?",
+    "options": [
+      "[1,2,3,1,2,3]",
+      "Error",
+      "[2,4,6]",
+      "[1,2,3,2]"
+    ],
+    "answer": "[2,4,6]",
+    "explanation": "NumPy supports element-wise operations. Multiplying an array by a scalar multiplies each element by that scalar."
+  },
+  {
+    "id": "PY039",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the key difference between loc and iloc in Pandas?",
+    "options": [
+      "loc uses integer positions; iloc uses column names",
+      "loc is for columns only; iloc is for rows only",
+      "They are identical in behavior",
+      "loc uses label-based indexing; iloc uses integer position-based indexing"
+    ],
+    "answer": "loc uses label-based indexing; iloc uses integer position-based indexing",
+    "explanation": "loc selects by label/name (e.g., df.loc['row', 'col']). iloc selects by integer index (e.g., df.iloc[0, 1]). loc includes the endpoint in slices; iloc does not."
+  },
+  {
+    "id": "PY040",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does np.reshape() do and what must remain the same before and after?",
+    "options": [
+      "It changes the array shape; the total number of elements must remain the same",
+      "It sorts the array; the number of dimensions must stay the same",
+      "It transposes the array; only the dtype must stay the same",
+      "It flattens the array; no constraint is needed"
+    ],
+    "answer": "It changes the array shape; the total number of elements must remain the same",
+    "explanation": "reshape() changes dimensions without changing data. np.arange(12).reshape(3,4) creates a 3x4 matrix. Total elements (12) must match before and after."
+  },
+  {
+    "id": "PY041",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a closure in Python?",
+    "options": [
+      "A class with no methods",
+      "A function that retains access to variables from its enclosing scope even after that scope has finished",
+      "A function that can only be called once",
+      "A sealed module"
+    ],
+    "answer": "A function that retains access to variables from its enclosing scope even after that scope has finished",
+    "explanation": "Closures capture the enclosing environment. They are often used to create factory functions and are the foundation of decorators."
+  },
+  {
+    "id": "PY042",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is the correct syntax for applying a decorator?",
+    "options": [
+      "@decorator_name above the function definition",
+      "function decorator(func):",
+      "decorator = function()",
+      "#decorator before the function"
+    ],
+    "answer": "@decorator_name above the function definition",
+    "explanation": "The '@' symbol followed by the decorator name placed above a function definition applies the decorator to that function."
+  },
+  {
+    "id": "PY043",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "In a decorator, what does the inner 'wrapper' function typically do?",
+    "options": [
+      "It deletes the original function",
+      "It runs code before and/or after calling the original function and returns the result",
+      "It renames the original function",
+      "It converts the function into a class method"
+    ],
+    "answer": "It runs code before and/or after calling the original function and returns the result",
+    "explanation": "The wrapper function wraps the original by executing extra logic (logging, timing, auth) before/after calling func(*args, **kwargs) and returning its result."
+  },
+  {
+    "id": "PY044",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is method overriding in Python?",
+    "options": [
+      "Defining two methods with the same name in one class",
+      "A child class providing a specific implementation for a method already defined in its parent class",
+      "Renaming a method",
+      "Calling a parent method from a child class"
+    ],
+    "answer": "A child class providing a specific implementation for a method already defined in its parent class",
+    "explanation": "Method overriding is a key aspect of polymorphism where subclasses redefine inherited methods."
+  },
+  {
+    "id": "PY045",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does 'super()' do in Python?",
+    "options": [
+      "Calls a method or constructor from the parent class",
+      "Calls a method from a sibling class",
+      "Deletes the current class",
+      "Makes a method static"
+    ],
+    "answer": "Calls a method or constructor from the parent class",
+    "explanation": "super() returns a proxy object that delegates method calls to the parent class, commonly used in __init__ to initialize parent attributes."
+  },
+  {
+    "id": "PY046",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which exception is raised when dividing by zero?",
+    "options": [
+      "ValueError",
+      "TypeError",
+      "ZeroDivisionError",
+      "ArithmeticException"
+    ],
+    "answer": "ZeroDivisionError",
+    "explanation": "Python raises ZeroDivisionError when you attempt to divide a number by zero."
+  },
+  {
+    "id": "PY047",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the correct syntax for a try-except block?",
+    "options": [
+      "try: ... catch Exception:",
+      "attempt: ... except:",
+      "try: ... except Exception:",
+      "try: ... handle Exception:"
+    ],
+    "answer": "try: ... except Exception:",
+    "explanation": "Python uses 'except' (not 'catch') to handle exceptions in a try block."
+  },
+  {
+    "id": "PY048",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between shallow copy and deep copy in Python?",
+    "options": [
+      "Shallow copy duplicates nested objects; deep copy only copies the top level",
+      "Deep copy creates a new object but shares nested references; shallow copy is fully independent",
+      "Shallow copy shares nested references; deep copy creates a fully independent copy of all nested objects",
+      "They are the same for immutable objects and lists"
+    ],
+    "answer": "Shallow copy shares nested references; deep copy creates a fully independent copy of all nested objects",
+    "explanation": "copy.copy() creates a new object but nested objects are still shared. copy.deepcopy() recursively copies everything \u2014 changes to a deep copy never affect the original."
+  },
+  {
+    "id": "PY049",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the 'with' statement do in Python?",
+    "options": [
+      "Defines a context manager that handles resource setup and teardown automatically",
+      "Starts a while loop",
+      "Imports a module",
+      "Creates a new scope"
+    ],
+    "answer": "Defines a context manager that handles resource setup and teardown automatically",
+    "explanation": "The 'with' statement ensures proper acquisition and release of resources (like file handles), even if exceptions occur."
+  },
+  {
+    "id": "PY050",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the output of: print(type([]))?",
+    "options": [
+      "<class 'tuple'>",
+      "<class 'list'>",
+      "<class 'dict'>",
+      "<class 'set'>"
+    ],
+    "answer": "<class 'list'>",
+    "explanation": "[] is an empty list literal, so type([]) returns <class 'list'>."
+  },
+  {
+    "id": "PY051",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following correctly demonstrates multiple inheritance in Python?",
+    "options": [
+      "class C extends A, B:",
+      "class C inherits A, B:",
+      "class C(A) and (B):",
+      "class C(A, B):"
+    ],
+    "answer": "class C(A, B):",
+    "explanation": "Python supports multiple inheritance using comma-separated parent classes in the class definition."
+  },
+  {
+    "id": "PY052",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is MRO (Method Resolution Order) in Python?",
+    "options": [
+      "A way to sort methods alphabetically",
+      "The order in which Python searches for a method in a class hierarchy",
+      "The order in which files are imported",
+      "A list of all methods in a class"
+    ],
+    "answer": "The order in which Python searches for a method in a class hierarchy",
+    "explanation": "MRO determines which method is called in case of multiple inheritance. Python uses the C3 linearization algorithm. Inspect it with ClassName.__mro__."
+  },
+  {
+    "id": "PY053",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: dict.get('missing_key', 'default')?",
+    "options": [
+      "default",
+      "KeyError",
+      "None",
+      "0"
+    ],
+    "answer": "default",
+    "explanation": "dict.get(key, default) returns the value if the key exists, otherwise returns the default value without raising a KeyError."
+  },
+  {
+    "id": "PY054",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the key difference between @staticmethod and @classmethod in Python?",
+    "options": [
+      "@staticmethod receives 'cls'; @classmethod receives 'self'",
+      "Both receive 'self' as the first argument",
+      "@staticmethod receives no implicit argument; @classmethod receives 'cls' (the class itself)",
+      "@classmethod cannot access class-level data; @staticmethod can"
+    ],
+    "answer": "@staticmethod receives no implicit argument; @classmethod receives 'cls' (the class itself)",
+    "explanation": "@staticmethod is a utility function with no implicit first argument. @classmethod gets 'cls', allowing it to access or modify class-level state and is used for factory methods."
+  },
+  {
+    "id": "PY055",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is used to handle multiple exceptions in one except clause?",
+    "options": [
+      "except (ValueError, TypeError):",
+      "except ValueError, TypeError:",
+      "except [ValueError, TypeError]:",
+      "except ValueError | TypeError:"
+    ],
+    "answer": "except (ValueError, TypeError):",
+    "explanation": "Multiple exception types can be caught in one except clause using a tuple: except (ExcType1, ExcType2)."
+  },
+  {
+    "id": "PY056",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which string method converts all characters to uppercase?",
+    "options": [
+      "str.capitalize()",
+      "str.upper()",
+      "str.toUpper()",
+      "str.upcase()"
+    ],
+    "answer": "str.upper()",
+    "explanation": "str.upper() returns a copy of the string with all characters converted to uppercase."
+  },
+  {
+    "id": "PY057",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does the 'in' keyword check in Python?",
+    "options": [
+      "If a variable is an integer",
+      "If a module is installed",
+      "If an element exists in an iterable",
+      "If a file exists"
+    ],
+    "answer": "If an element exists in an iterable",
+    "explanation": "'in' is the membership operator. It returns True if the element is found in the list, tuple, string, set, or dict keys."
+  },
+  {
+    "id": "PY058",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of __str__ in a Python class?",
+    "options": [
+      "To convert the class to an integer",
+      "To initialize the object",
+      "To return a human-readable string representation of an object",
+      "To compare two objects"
+    ],
+    "answer": "To return a human-readable string representation of an object",
+    "explanation": "__str__ is called by str() and print(). It should return a readable string. __repr__ is for developer-facing representation."
+  },
+  {
+    "id": "PY059",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What are *args and **kwargs respectively collected into inside a function?",
+    "options": [
+      "*args \u2192 tuple, **kwargs \u2192 dictionary",
+      "*args \u2192 list, **kwargs \u2192 tuple",
+      "*args \u2192 dict, **kwargs \u2192 list",
+      "*args \u2192 set, **kwargs \u2192 tuple"
+    ],
+    "answer": "*args \u2192 tuple, **kwargs \u2192 dictionary",
+    "explanation": "*args collects extra positional arguments into a tuple. **kwargs collects extra keyword arguments into a dictionary. Both are accessible by name inside the function."
+  },
+  {
+    "id": "PY060",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the map() function do in Python?",
+    "options": [
+      "Creates a dictionary from a list",
+      "Filters elements from a list",
+      "Applies a function to every item in an iterable and returns a map object",
+      "Sorts elements using a key function"
+    ],
+    "answer": "Applies a function to every item in an iterable and returns a map object",
+    "explanation": "map(function, iterable) lazily applies the function to each element. Use list(map(...)) to get a list."
+  },
+  {
+    "id": "PY061",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does filter() do in Python?",
+    "options": [
+      "Returns elements from an iterable for which a function returns True",
+      "Removes all elements from a list",
+      "Applies transformation to each element",
+      "Combines two lists"
+    ],
+    "answer": "Returns elements from an iterable for which a function returns True",
+    "explanation": "filter(function, iterable) returns only elements for which the function evaluates to True."
+  },
+  {
+    "id": "PY062",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which module is used for regular expressions in Python?",
+    "options": [
+      "re",
+      "regex",
+      "regexp",
+      "pattern"
+    ],
+    "answer": "re",
+    "explanation": "The 're' module provides support for regular expressions in Python. Key functions: re.match(), re.search(), re.findall()."
+  },
+  {
+    "id": "PY063",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the output of: print(2 ** 3)?",
+    "options": [
+      "8",
+      "6",
+      "9",
+      "5"
+    ],
+    "answer": "8",
+    "explanation": "** is the exponentiation operator in Python. 2 ** 3 = 2 \u00d7 2 \u00d7 2 = 8."
+  },
+  {
+    "id": "PY064",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you open a file for writing in Python?",
+    "options": [
+      "open('file.txt', 'r')",
+      "open('file.txt', 'a')",
+      "open('file.txt', 'w')",
+      "open('file.txt', 'x')"
+    ],
+    "answer": "open('file.txt', 'w')",
+    "explanation": "'w' mode opens for writing (overwrites). 'r' is read, 'a' is append, 'x' creates a new file (fails if exists)."
+  },
+  {
+    "id": "PY065",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Why is list comprehension generally faster than a for loop with append()?",
+    "options": [
+      "List comprehension uses multiple CPU cores",
+      "List comprehension skips type checking",
+      "List comprehension compiles to bytecode while loops do not",
+      "List comprehension is optimized at the C level in CPython and avoids append() call overhead"
+    ],
+    "answer": "List comprehension is optimized at the C level in CPython and avoids append() call overhead",
+    "explanation": "List comprehensions are internally optimized in CPython. They avoid the overhead of repeated append() method calls and attribute lookups, making them faster for building lists."
+  },
+  {
+    "id": "PY066",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What does the @property decorator allow in Python?",
+    "options": [
+      "It allows a method to be accessed like an attribute without parentheses",
+      "It makes a method private",
+      "It converts a method to a class method",
+      "It caches the return value of a method"
+    ],
+    "answer": "It allows a method to be accessed like an attribute without parentheses",
+    "explanation": "The @property decorator lets you call a method as obj.value instead of obj.value(), while still allowing getter/setter/deleter control over the attribute."
+  },
+  {
+    "id": "PY067",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does df.groupby('column').mean() do in Pandas?",
+    "options": [
+      "Sorts the DataFrame by a column",
+      "Filters rows where the mean equals a value",
+      "Renames columns",
+      "Groups rows by unique values of a column and computes the mean of each group"
+    ],
+    "answer": "Groups rows by unique values of a column and computes the mean of each group",
+    "explanation": "groupby() splits the DataFrame by unique values of the specified column, and .mean() computes the average of each numeric column per group."
+  },
+  {
+    "id": "PY068",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which NumPy function computes the dot product of two arrays?",
+    "options": [
+      "np.cross()",
+      "np.dot()",
+      "np.multiply()",
+      "np.product()"
+    ],
+    "answer": "np.dot()",
+    "explanation": "np.dot(a, b) computes the dot product of two arrays. For 2D arrays, it performs matrix multiplication."
+  },
+  {
+    "id": "PY069",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the correct Pythonic way to check if a key exists in a dictionary?",
+    "options": [
+      "if key in dict.keys():",
+      "if dict.has(key):",
+      "if dict.contains(key):",
+      "if key in dict:"
+    ],
+    "answer": "if key in dict:",
+    "explanation": "The 'in' operator on a dictionary checks key membership directly. It is equivalent to but more Pythonic than 'key in dict.keys()'."
+  },
+  {
+    "id": "PY070",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Python's GIL and which type of tasks does it most negatively impact?",
+    "options": [
+      "Global Interpreter Lock; impacts CPU-bound multithreaded tasks",
+      "Global Import Loader; impacts module loading speed",
+      "General Instruction List; impacts memory allocation",
+      "Global Interpreter Lock; impacts I/O-bound tasks most"
+    ],
+    "answer": "Global Interpreter Lock; impacts CPU-bound multithreaded tasks",
+    "explanation": "The GIL allows only one thread to execute Python bytecode at a time. CPU-bound tasks can't achieve true parallelism with threads. Use multiprocessing for CPU-bound work; threads are still fine for I/O-bound tasks since GIL is released during I/O waits."
+  },
+  {
+    "id": "PY071",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the 'finally' block in exception handling?",
+    "options": [
+      "It always runs regardless of whether an exception occurred",
+      "It runs only if no exception occurs",
+      "It runs only if an exception occurs",
+      "It re-raises the exception"
+    ],
+    "answer": "It always runs regardless of whether an exception occurred",
+    "explanation": "'finally' is used for cleanup code that must execute regardless of success or failure, such as closing files or database connections."
+  },
+  {
+    "id": "PY072",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does 'assert' do in Python?",
+    "options": [
+      "Prints a debug message",
+      "Returns True or False",
+      "Logs an error",
+      "Raises AssertionError if a condition is False"
+    ],
+    "answer": "Raises AssertionError if a condition is False",
+    "explanation": "assert condition, message raises AssertionError with an optional message if the condition is False. Used for debugging and testing."
+  },
+  {
+    "id": "PY073",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between a module and a package in Python?",
+    "options": [
+      "A module is a directory; a package is a single file",
+      "A package is a single .py file; a module is a folder with __init__.py",
+      "A module is a single .py file; a package is a directory with __init__.py containing multiple modules",
+      "They are the same thing"
+    ],
+    "answer": "A module is a single .py file; a package is a directory with __init__.py containing multiple modules",
+    "explanation": "A module is one Python file. A package is a folder with an __init__.py file that organizes multiple modules into a namespace hierarchy."
+  },
+  {
+    "id": "PY074",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the output of: 'python'.replace('py', 'Py')?",
+    "options": [
+      "Pyhton",
+      "Pyython",
+      "python",
+      "Python"
+    ],
+    "answer": "Python",
+    "explanation": "replace() returns a copy of the string with 'py' replaced by 'Py', resulting in 'Python'."
+  },
+  {
+    "id": "PY075",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is an abstract class in Python?",
+    "options": [
+      "A class with no methods",
+      "A class that can only have static methods",
+      "A class that cannot be directly instantiated and may define abstract methods subclasses must implement",
+      "A class imported from the abc module with no inheritance"
+    ],
+    "answer": "A class that cannot be directly instantiated and may define abstract methods subclasses must implement",
+    "explanation": "Abstract classes (using ABC and @abstractmethod from the abc module) define an interface that subclasses must implement. Instantiating an abstract class directly raises TypeError."
+  },
+  {
+    "id": "PY076",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the purpose of __slots__ in a Python class?",
+    "options": [
+      "To list available methods",
+      "To define abstract methods",
+      "To enable multiple inheritance",
+      "To restrict the attributes a class instance can have, saving memory"
+    ],
+    "answer": "To restrict the attributes a class instance can have, saving memory",
+    "explanation": "__slots__ prevents the creation of __dict__ per instance, reducing memory usage. Only the listed attributes are allowed on instances."
+  },
+  {
+    "id": "PY077",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: [1, 2].append([3, 4])?",
+    "options": [
+      "[1, 2, 3, 4]",
+      "None \u2014 append() returns None and modifies in place to [1, 2, [3, 4]]",
+      "[1, 2, [3, 4]]",
+      "[[1, 2], [3, 4]]"
+    ],
+    "answer": "None \u2014 append() returns None and modifies in place to [1, 2, [3, 4]]",
+    "explanation": "append() returns None and adds [3,4] as a single nested element. Use extend() to add elements individually: [1,2].extend([3,4]) gives [1,2,3,4]."
+  },
+  {
+    "id": "PY078",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "How do you merge two dictionaries in Python 3.9+?",
+    "options": [
+      "dict1.update(dict2)",
+      "dict1 + dict2",
+      "dict1 | dict2",
+      "merge(dict1, dict2)"
+    ],
+    "answer": "dict1 | dict2",
+    "explanation": "Python 3.9 introduced the | operator for dictionary merging, returning a new dict. dict1.update(dict2) also merges but modifies dict1 in place."
+  },
+  {
+    "id": "PY079",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the output of: sorted([3, 1, 4, 1, 5], reverse=True)?",
+    "options": [
+      "[1, 1, 3, 4, 5]",
+      "[3, 1, 4, 1, 5]",
+      "Error",
+      "[5, 4, 3, 1, 1]"
+    ],
+    "answer": "[5, 4, 3, 1, 1]",
+    "explanation": "sorted() returns a new sorted list. reverse=True sorts in descending order."
+  },
+  {
+    "id": "PY080",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "When should you use 'is' instead of '==' in Python?",
+    "options": [
+      "When comparing two strings",
+      "When comparing two integers",
+      "When comparing two lists",
+      "Only when checking identity against singletons like None, True, or False"
+    ],
+    "answer": "Only when checking identity against singletons like None, True, or False",
+    "explanation": "'is' checks object identity (same memory address). It's only reliable for singletons like None (use 'x is None'). For value comparisons, always use '=='."
+  },
+  {
+    "id": "PY081",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is monkey patching in Python?",
+    "options": [
+      "A design pattern for creating objects",
+      "A technique for optimizing loops",
+      "Dynamically modifying or extending a class or module at runtime without changing its source code",
+      "A way to define abstract methods"
+    ],
+    "answer": "Dynamically modifying or extending a class or module at runtime without changing its source code",
+    "explanation": "Monkey patching replaces methods or attributes of classes at runtime. It's commonly used in testing (mocking) but can make code harder to debug if overused."
+  },
+  {
+    "id": "PY082",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the os module in Python primarily provide?",
+    "options": [
+      "Object serialization",
+      "Operating system interface functions like file and directory manipulation",
+      "Online service API calls",
+      "Output stream management"
+    ],
+    "answer": "Operating system interface functions like file and directory manipulation",
+    "explanation": "The 'os' module provides functions to interact with the operating system: os.getcwd(), os.listdir(), os.path.join(), os.mkdir(), etc."
+  },
+  {
+    "id": "PY083",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which method is used to convert a string to a list of words?",
+    "options": [
+      "str.list()",
+      "str.split()",
+      "str.break()",
+      "str.parse()"
+    ],
+    "answer": "str.split()",
+    "explanation": "split() splits a string by a delimiter (default: whitespace) and returns a list of substrings."
+  },
+  {
+    "id": "PY084",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: ','.join(['a', 'b', 'c'])?",
+    "options": [
+      "['a','b','c']",
+      "a b c",
+      "abc",
+      "a,b,c"
+    ],
+    "answer": "a,b,c",
+    "explanation": "join() concatenates a list of strings with the specified separator between each element."
+  },
+  {
+    "id": "PY085",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a metaclass in Python?",
+    "options": [
+      "A class inside another class",
+      "An abstract base class",
+      "A class with only static methods",
+      "A class that defines the behavior and structure of other classes"
+    ],
+    "answer": "A class that defines the behavior and structure of other classes",
+    "explanation": "Metaclasses are 'classes of classes'. In Python, 'type' is the default metaclass. Custom metaclasses control class creation and are used in ORMs and frameworks."
+  },
+  {
+    "id": "PY086",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What happens when you do: a = [1, [2, 3]]; b = a; b[1].append(4)?",
+    "options": [
+      "Both a and b become [1, [2, 3, 4]] because b = a is not a copy",
+      "Only b changes; a remains [1, [2, 3]]",
+      "It raises a TypeError",
+      "a becomes [1, [2, 3]] and b becomes [1, [2, 3, 4]]"
+    ],
+    "answer": "Both a and b become [1, [2, 3, 4]] because b = a is not a copy",
+    "explanation": "b = a creates another reference to the same object, not a copy. Modifying b modifies a too. Use copy.deepcopy(a) to create a fully independent copy."
+  },
+  {
+    "id": "PY087",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which Pandas method is used to drop rows with missing values?",
+    "options": [
+      "df.remove_na()",
+      "df.drop_null()",
+      "df.dropna()",
+      "df.clean()"
+    ],
+    "answer": "df.dropna()",
+    "explanation": "dropna() removes rows (or columns if axis=1) containing NaN values. Use fillna() to fill them instead."
+  },
+  {
+    "id": "PY088",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does np.arange(0, 10, 2) return?",
+    "options": [
+      "[0,2,4,6,8,10]",
+      "[2,4,6,8,10]",
+      "[0,1,2,3,4]",
+      "[0,2,4,6,8]"
+    ],
+    "answer": "[0,2,4,6,8]",
+    "explanation": "np.arange(start, stop, step) generates values from start (inclusive) to stop (exclusive) with the given step. 10 is excluded."
+  },
+  {
+    "id": "PY089",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the main advantage of Python coroutines (async/await) over threads for I/O-bound tasks?",
+    "options": [
+      "Coroutines are lighter, avoid GIL contention, and cooperatively yield control \u2014 reducing race conditions",
+      "Coroutines use multiple CPU cores simultaneously",
+      "Coroutines are heavier but more reliable than threads",
+      "Coroutines are preemptively scheduled by the OS like threads"
+    ],
+    "answer": "Coroutines are lighter, avoid GIL contention, and cooperatively yield control \u2014 reducing race conditions",
+    "explanation": "Coroutines (asyncio) use cooperative multitasking \u2014 code explicitly yields with 'await'. They are lighter than threads, avoid race conditions, and handle thousands of concurrent I/O operations efficiently."
+  },
+  {
+    "id": "PY090",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: list(zip([1,2,3], ['a','b','c']))?",
+    "options": [
+      "[[1,'a'],[2,'b'],[3,'c']]",
+      "{1:'a',2:'b',3:'c'}",
+      "[(1,'a'),(2,'b'),(3,'c')]",
+      "Error"
+    ],
+    "answer": "[(1,'a'),(2,'b'),(3,'c')]",
+    "explanation": "zip() pairs corresponding elements as tuples. list() materializes the lazy zip iterator."
+  },
+  {
+    "id": "PY091",
+    "domain": "python",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which of the following correctly creates a class in Python?",
+    "options": [
+      "class MyClass{}",
+      "MyClass = class():",
+      "define class MyClass:",
+      "class MyClass():"
+    ],
+    "answer": "class MyClass():",
+    "explanation": "Python class syntax is 'class ClassName():' or 'class ClassName:'. The parentheses are optional for classes with no explicit parent."
+  },
+  {
+    "id": "PY092",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the 'global' keyword in Python?",
+    "options": [
+      "To declare that a variable inside a function refers to a global (module-level) variable",
+      "To import a global module",
+      "To make a variable accessible across multiple files",
+      "To define a constant"
+    ],
+    "answer": "To declare that a variable inside a function refers to a global (module-level) variable",
+    "explanation": "Without 'global', assignments inside a function create a local variable. 'global x' tells Python to use the module-level x instead."
+  },
+  {
+    "id": "PY093",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between __repr__ and __str__ in Python?",
+    "options": [
+      "__str__ is for end-users; __repr__ is for developers and should be unambiguous",
+      "They are the same",
+      "__repr__ is for end-users; __str__ is for developers",
+      "__str__ is called by repr() and __repr__ by str()"
+    ],
+    "answer": "__str__ is for end-users; __repr__ is for developers and should be unambiguous",
+    "explanation": "__str__ provides a readable string (called by print/str). __repr__ provides an unambiguous representation for debugging (called by repr()). If __str__ is not defined, Python falls back to __repr__."
+  },
+  {
+    "id": "PY094",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "Which of the following is NOT a Python dunder (magic) method?",
+    "options": [
+      "__init__",
+      "__create__",
+      "__len__",
+      "__add__"
+    ],
+    "answer": "__create__",
+    "explanation": "__init__, __len__, and __add__ are valid dunder methods. __create__ does not exist. Valid dunder methods include __str__, __repr__, __eq__, __iter__, __next__, __call__, etc."
+  },
+  {
+    "id": "PY095",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Which of the following is the correct use case for multiprocessing over multithreading in Python?",
+    "options": [
+      "Reading from multiple network sockets simultaneously",
+      "Running CPU-intensive numerical computations in parallel",
+      "Waiting for multiple HTTP responses concurrently",
+      "Handling multiple file I/O operations concurrently"
+    ],
+    "answer": "Running CPU-intensive numerical computations in parallel",
+    "explanation": "Multiprocessing spawns separate processes with their own Python interpreter, bypassing the GIL for true parallelism. It's ideal for CPU-bound tasks. Threading is better for I/O-bound tasks."
+  },
+  {
+    "id": "PY096",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does the collections.defaultdict do?",
+    "options": [
+      "Creates an ordered dictionary",
+      "Returns a default value for missing keys instead of raising KeyError",
+      "Limits dictionary size",
+      "Sorts dictionary keys automatically"
+    ],
+    "answer": "Returns a default value for missing keys instead of raising KeyError",
+    "explanation": "defaultdict(type) automatically initializes missing keys with a default factory (e.g., int for 0, list for []). Very useful for grouping data."
+  },
+  {
+    "id": "PY097",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the output of: [i for i in range(10) if i % 2 == 0]?",
+    "options": [
+      "[2,4,6,8,10]",
+      "[1,3,5,7,9]",
+      "[0,1,2,3,4]",
+      "[0,2,4,6,8]"
+    ],
+    "answer": "[0,2,4,6,8]",
+    "explanation": "The list comprehension filters even numbers (i % 2 == 0) from range(10), giving [0,2,4,6,8]."
+  },
+  {
+    "id": "PY098",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "How does Python handle circular references in memory management?",
+    "options": [
+      "Python uses a cyclic garbage collector (gc module) in addition to reference counting to detect and free circular references",
+      "Python raises a MemoryError for circular references",
+      "Python's reference counting alone handles circular references",
+      "Python relies on the OS to free circular references"
+    ],
+    "answer": "Python uses a cyclic garbage collector (gc module) in addition to reference counting to detect and free circular references",
+    "explanation": "Reference counting alone can't detect cycles (A \u2192 B \u2192 A keeps both counts > 0). The gc module periodically runs cycle detection to free such objects."
+  },
+  {
+    "id": "PY099",
+    "domain": "python",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does df.merge() do in Pandas?",
+    "options": [
+      "Joins two DataFrames based on a common column (similar to SQL JOIN)",
+      "Appends rows from one DataFrame to another",
+      "Combines columns from two DataFrames by position",
+      "Splits a DataFrame into two"
+    ],
+    "answer": "Joins two DataFrames based on a common column (similar to SQL JOIN)",
+    "explanation": "df.merge(df2, on='column', how='inner/left/right/outer') performs SQL-like joins between DataFrames on a shared key column."
+  },
+  {
+    "id": "PY100",
+    "domain": "python",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What happens to Python source code (.py) before it is executed by the Python Virtual Machine?",
+    "options": [
+      "It is directly executed line by line without any pre-processing",
+      "It is compiled to machine code like C programs",
+      "It is transpiled to JavaScript before execution",
+      "It is first compiled to bytecode (.pyc) by CPython, then interpreted by the Python Virtual Machine"
+    ],
+    "answer": "It is first compiled to bytecode (.pyc) by CPython, then interpreted by the Python Virtual Machine",
+    "explanation": "CPython compiles .py source to .pyc bytecode (stored in __pycache__), then the PVM interprets the bytecode. This is why Python is slower than C but still cross-platform."
+  }
+]

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Result — Interview Practice Hub</title>
+    <meta name="description" content="Your interview practice assessment result and answer review." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <div class="container" style="padding-top: 24px;">
+    <a href="{{ url_for('home') }}" class="btn btn-outline">← Back home</a>
+</div>
+
+    <main class="container section">
+        <div id="resultRoot"></div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/result.js') }}"></script>
+
+    <script>
+        mountNavbar({ active: 'home' });
+        renderResult();
+    </script>
+</body>
+
+</html>

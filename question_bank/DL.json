@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "DL001",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a neural network in deep learning?",
+    "options": [
+      "A set of if-else rules for decision making",
+      "A computational model inspired by the human brain consisting of layers of interconnected neurons",
+      "A statistical model that fits a straight line to data",
+      "A database of labeled training examples"
+    ],
+    "answer": "A computational model inspired by the human brain consisting of layers of interconnected neurons",
+    "explanation": "Neural networks are composed of input, hidden, and output layers of artificial neurons (nodes) that process data and learn patterns through training."
+  },
+  {
+    "id": "DL002",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What distinguishes 'deep' learning from shallow machine learning?",
+    "options": [
+      "Deep learning uses more training data",
+      "Deep learning uses multiple hidden layers to learn hierarchical representations",
+      "Deep learning is faster than traditional ML",
+      "Deep learning does not require labeled data"
+    ],
+    "answer": "Deep learning uses multiple hidden layers to learn hierarchical representations",
+    "explanation": "The 'deep' in deep learning refers to the depth (many layers) of the network. Each layer learns increasingly abstract representations of the input."
+  },
+  {
+    "id": "DL003",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a perceptron?",
+    "options": [
+      "A multi-layer neural network",
+      "The simplest neural network unit that takes weighted inputs, sums them, and applies an activation function",
+      "An optimization algorithm for neural networks",
+      "A regularization technique in deep learning"
+    ],
+    "answer": "The simplest neural network unit that takes weighted inputs, sums them, and applies an activation function",
+    "explanation": "A perceptron is the basic building block of neural networks — it computes a weighted sum of inputs, adds a bias, and passes the result through an activation function."
+  },
+  {
+    "id": "DL004",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the purpose of the bias term in a neural network neuron?",
+    "options": [
+      "To scale the input features",
+      "To allow the activation function to shift, enabling the model to fit data that doesn't pass through the origin",
+      "To prevent overfitting",
+      "To normalize the output of each neuron"
+    ],
+    "answer": "To allow the activation function to shift, enabling the model to fit data that doesn't pass through the origin",
+    "explanation": "The bias term shifts the activation function horizontally, giving the network more flexibility to fit patterns. Without bias, the network is forced to pass through the origin."
+  },
+  {
+    "id": "DL005",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the ReLU activation function?",
+    "options": [
+      "f(x) = 1 / (1 + e^-x)",
+      "f(x) = (e^x - e^-x) / (e^x + e^-x)",
+      "f(x) = max(0, x)",
+      "f(x) = x for all x"
+    ],
+    "answer": "f(x) = max(0, x)",
+    "explanation": "ReLU (Rectified Linear Unit) outputs x if x > 0, else 0. It is the most widely used activation in hidden layers due to its simplicity and ability to mitigate the vanishing gradient problem."
+  },
+  {
+    "id": "DL006",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the sigmoid activation function's output range?",
+    "options": [
+      "(-∞, +∞)",
+      "(-1, 1)",
+      "(0, 1)",
+      "(0, +∞)"
+    ],
+    "answer": "(0, 1)",
+    "explanation": "Sigmoid maps any real input to a value between 0 and 1, making it suitable for binary classification output layers where outputs represent probabilities."
+  },
+  {
+    "id": "DL007",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does the forward pass in a neural network do?",
+    "options": [
+      "Updates the weights using gradient descent",
+      "Computes gradients with respect to the loss",
+      "Passes input data through each layer to produce a prediction",
+      "Initializes the weights of the network"
+    ],
+    "answer": "Passes input data through each layer to produce a prediction",
+    "explanation": "In the forward pass, input data flows through the network layer by layer — each layer applies weights, biases, and activation functions — until the output layer produces a prediction."
+  },
+  {
+    "id": "DL008",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "Which loss function is typically used for multi-class classification in neural networks?",
+    "options": [
+      "Mean Squared Error",
+      "Binary Cross-Entropy",
+      "Categorical Cross-Entropy",
+      "Hinge Loss"
+    ],
+    "answer": "Categorical Cross-Entropy",
+    "explanation": "Categorical cross-entropy measures the divergence between the predicted probability distribution (softmax output) and the true one-hot encoded class labels."
+  },
+  {
+    "id": "DL009",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is the tanh activation function's output range?",
+    "options": [
+      "(0, 1)",
+      "(-1, 1)",
+      "(-∞, +∞)",
+      "(0, +∞)"
+    ],
+    "answer": "(-1, 1)",
+    "explanation": "tanh maps inputs to values between -1 and 1. It is zero-centered (unlike sigmoid), which can help with gradient updates, but still suffers from vanishing gradients at extremes."
+  },
+  {
+    "id": "DL010",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a fully connected (dense) layer?",
+    "options": [
+      "A layer where each neuron is connected only to nearby neurons",
+      "A layer where every neuron is connected to every neuron in the previous layer",
+      "A layer that only applies pooling operations",
+      "A layer with no trainable parameters"
+    ],
+    "answer": "A layer where every neuron is connected to every neuron in the previous layer",
+    "explanation": "In a fully connected (dense) layer, each neuron receives input from all neurons in the previous layer. This allows the layer to learn any linear transformation of its inputs."
+  },
+  {
+    "id": "DL011",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is weight initialization and why does it matter?",
+    "options": [
+      "Setting weights to their final values before training begins",
+      "Choosing starting values for weights that promote stable gradient flow and prevent symmetry, affecting training speed and convergence",
+      "Resetting weights to zero after each epoch",
+      "Copying weights from a previously trained model"
+    ],
+    "answer": "Choosing starting values for weights that promote stable gradient flow and prevent symmetry, affecting training speed and convergence",
+    "explanation": "Poor initialization (e.g., all zeros) causes neurons to learn identical features (symmetry problem). Good initialization (Xavier, He) keeps activations and gradients in healthy ranges for faster convergence."
+  },
+  {
+    "id": "DL012",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is Xavier (Glorot) initialization and when is it used?",
+    "options": [
+      "Initializes weights from a uniform distribution between 0 and 1; used with ReLU",
+      "Initializes weights proportional to 2/n; used with ReLU activations",
+      "Initializes weights with variance scaled by 1/n or 2/(n_in + n_out); used with tanh and sigmoid activations",
+      "Initializes all weights to a small constant; used with any activation"
+    ],
+    "answer": "Initializes weights with variance scaled by 1/n or 2/(n_in + n_out); used with tanh and sigmoid activations",
+    "explanation": "Xavier initialization sets weight variance to 2/(fan_in + fan_out), keeping signal variance stable through layers. It works well with tanh/sigmoid but He initialization is preferred for ReLU."
+  },
+  {
+    "id": "DL013",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is He initialization and when should it be preferred?",
+    "options": [
+      "Initializes weights from a Gaussian with variance 2/n_in; preferred for ReLU and its variants",
+      "Initializes weights uniformly between -1 and 1; preferred for sigmoid",
+      "Initializes weights to zero with a small noise term; preferred for tanh",
+      "Initializes weights based on the number of output neurons; preferred for softmax layers"
+    ],
+    "answer": "Initializes weights from a Gaussian with variance 2/n_in; preferred for ReLU and its variants",
+    "explanation": "He initialization sets variance to 2/fan_in, accounting for ReLU's zero-output for negative inputs. It ensures activations maintain appropriate scale in deep ReLU networks."
+  },
+  {
+    "id": "DL014",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is backpropagation and which mathematical rule does it rely on?",
+    "options": [
+      "A method for initializing weights; relies on the product rule",
+      "An algorithm that propagates predictions forward; relies on Bayes' theorem",
+      "An algorithm that propagates loss gradients backward through the network using the chain rule to compute weight gradients",
+      "A regularization technique; relies on the law of large numbers"
+    ],
+    "answer": "An algorithm that propagates loss gradients backward through the network using the chain rule to compute weight gradients",
+    "explanation": "Backpropagation computes ∂Loss/∂w for every weight by applying the chain rule layer by layer from output to input. These gradients are then used by an optimizer to update weights."
+  },
+  {
+    "id": "DL015",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the vanishing gradient problem and which activation function helps solve it?",
+    "options": [
+      "Gradients become too large; solved by sigmoid activation",
+      "Gradients shrink exponentially during backpropagation through deep layers, making early layers train very slowly; ReLU helps solve it",
+      "Gradients oscillate during training; solved by tanh activation",
+      "Gradients become NaN due to overflow; solved by softmax activation"
+    ],
+    "answer": "Gradients shrink exponentially during backpropagation through deep layers, making early layers train very slowly; ReLU helps solve it",
+    "explanation": "Sigmoid and tanh saturate, producing tiny gradients. Multiplied across many layers, gradients vanish. ReLU has gradient 1 for positive inputs, preventing vanishing. Residual connections also help."
+  },
+  {
+    "id": "DL016",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the dying ReLU problem?",
+    "options": [
+      "ReLU outputs become too large and saturate",
+      "ReLU neurons output zero for all inputs during inference",
+      "Neurons with ReLU get stuck outputting zero for all inputs when their weights push them permanently into the negative regime",
+      "ReLU causes vanishing gradients just like sigmoid"
+    ],
+    "answer": "Neurons with ReLU get stuck outputting zero for all inputs when their weights push them permanently into the negative regime",
+    "explanation": "When a ReLU neuron's input is always negative, it outputs 0 and its gradient is 0 — it stops learning permanently. Solutions: Leaky ReLU, ELU, or careful learning rate tuning."
+  },
+  {
+    "id": "DL017",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is Leaky ReLU and how does it differ from standard ReLU?",
+    "options": [
+      "Leaky ReLU outputs max(0, x) just like ReLU but adds dropout",
+      "Leaky ReLU allows a small non-zero gradient (αx, where α is small) for negative inputs instead of outputting zero",
+      "Leaky ReLU clips outputs to a maximum value to prevent exploding gradients",
+      "Leaky ReLU uses a learned slope for positive values only"
+    ],
+    "answer": "Leaky ReLU allows a small non-zero gradient (αx, where α is small) for negative inputs instead of outputting zero",
+    "explanation": "Leaky ReLU: f(x) = x if x > 0, else αx (typically α=0.01). The small slope for negatives prevents dead neurons by ensuring gradient always flows, even for negative inputs."
+  },
+  {
+    "id": "DL018",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is batch normalization and what problem does it solve?",
+    "options": [
+      "It normalizes input data before training; solves the problem of different feature scales",
+      "It normalizes layer activations within each mini-batch to zero mean and unit variance, reducing internal covariate shift and stabilizing training",
+      "It normalizes the gradients during backpropagation; solves exploding gradients",
+      "It normalizes the loss function; solves slow convergence"
+    ],
+    "answer": "It normalizes layer activations within each mini-batch to zero mean and unit variance, reducing internal covariate shift and stabilizing training",
+    "explanation": "BatchNorm normalizes activations within each mini-batch, then applies learnable scale (γ) and shift (β). It reduces internal covariate shift, allows higher learning rates, and acts as regularization."
+  },
+  {
+    "id": "DL019",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is dropout regularization?",
+    "options": [
+      "Permanently removing low-importance neurons from the network",
+      "Reducing the learning rate when validation loss plateaus",
+      "Randomly setting a fraction of neuron outputs to zero during each training step to prevent co-adaptation and overfitting",
+      "Dropping training samples that are too easy for the model"
+    ],
+    "answer": "Randomly setting a fraction of neuron outputs to zero during each training step to prevent co-adaptation and overfitting",
+    "explanation": "Dropout randomly deactivates neurons with probability p during training, forcing the network to learn redundant representations. At inference, dropout is disabled and weights are scaled by (1-p)."
+  },
+  {
+    "id": "DL020",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between L1 and L2 regularization in neural networks?",
+    "options": [
+      "L1 penalizes squared weights; L2 penalizes absolute weights",
+      "L2 produces sparse models; L1 shrinks all weights proportionally",
+      "L1 penalizes absolute weight values (promotes sparsity); L2 penalizes squared weight values (shrinks all weights)",
+      "L1 and L2 have identical effects in deep networks"
+    ],
+    "answer": "L1 penalizes absolute weight values (promotes sparsity); L2 penalizes squared weight values (shrinks all weights)",
+    "explanation": "L1 (Lasso) adds λΣ|w| to the loss, encouraging sparse weights (some become exactly zero). L2 (Ridge) adds λΣw² to the loss, penalizing large weights but rarely zeroing them."
+  },
+  {
+    "id": "DL021",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a convolutional layer and what operation does it apply?",
+    "options": [
+      "A layer that applies max pooling to reduce spatial dimensions",
+      "A layer that slides a learnable filter (kernel) across the input to produce feature maps that detect local patterns",
+      "A layer that fully connects all input neurons to all output neurons",
+      "A layer that applies batch normalization to stabilize training"
+    ],
+    "answer": "A layer that slides a learnable filter (kernel) across the input to produce feature maps that detect local patterns",
+    "explanation": "Convolutional layers slide a small filter over the input, computing dot products to produce feature maps. Early filters detect edges; deeper filters detect complex shapes and objects."
+  },
+  {
+    "id": "DL022",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does 'stride' mean in a convolutional neural network?",
+    "options": [
+      "The size of the convolutional filter",
+      "The number of filters applied in each layer",
+      "The step size by which the convolutional filter moves across the input",
+      "The number of padding pixels added around the input"
+    ],
+    "answer": "The step size by which the convolutional filter moves across the input",
+    "explanation": "Stride controls how many pixels the filter moves at each step. Stride=1 produces large feature maps; stride=2 halves the spatial dimensions, reducing computation."
+  },
+  {
+    "id": "DL023",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is 'padding' in convolutional layers and what are its two main types?",
+    "options": [
+      "Adding extra filters to increase model capacity; types are zero-padding and one-padding",
+      "Adding pixels (usually zeros) around the input border; types are 'valid' (no padding) and 'same' (output size equals input size)",
+      "Removing border pixels to reduce overfitting; types are mean-padding and max-padding",
+      "Expanding the feature map by repeating values; types are symmetric and asymmetric"
+    ],
+    "answer": "Adding pixels (usually zeros) around the input border; types are 'valid' (no padding) and 'same' (output size equals input size)",
+    "explanation": "'Valid' padding applies no padding — output is smaller than input. 'Same' padding adds zeros to keep output size equal to input size. Padding preserves spatial information at borders."
+  },
+  {
+    "id": "DL024",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What does max pooling do in a CNN?",
+    "options": [
+      "Takes the average value in each pooling window",
+      "Learns the best way to pool values using trainable parameters",
+      "Applies a convolutional filter and keeps only the maximum activations",
+      "Takes the maximum value in each pooling window to reduce spatial dimensions"
+    ],
+    "answer": "Takes the maximum value in each pooling window to reduce spatial dimensions",
+    "explanation": "Max pooling slides a window (e.g., 2×2) over the feature map and keeps only the maximum value, reducing spatial size by 2×, decreasing parameters, and providing some translation invariance."
+  },
+  {
+    "id": "DL025",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the receptive field in a CNN?",
+    "options": [
+      "The total number of filters in the network",
+      "The region of the input image that a particular neuron in a deeper layer is influenced by",
+      "The size of the output feature map after pooling",
+      "The number of parameters in a convolutional layer"
+    ],
+    "answer": "The region of the input image that a particular neuron in a deeper layer is influenced by",
+    "explanation": "The receptive field grows with depth. A neuron in a deeper layer 'sees' a larger region of the original input. Larger receptive fields capture more global context."
+  },
+  {
+    "id": "DL026",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the key innovation of ResNet (Residual Networks)?",
+    "options": [
+      "Using depthwise separable convolutions to reduce parameters",
+      "Using dilated convolutions to increase receptive field",
+      "Introducing skip (residual) connections that allow gradients to flow directly through identity shortcuts, enabling very deep networks",
+      "Using batch normalization after every activation function"
+    ],
+    "answer": "Introducing skip (residual) connections that allow gradients to flow directly through identity shortcuts, enabling very deep networks",
+    "explanation": "ResNet's skip connections let the network learn residual mappings F(x) + x instead of full mappings. This allows gradients to bypass layers, solving the vanishing gradient problem in networks of 100+ layers."
+  },
+  {
+    "id": "DL027",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the main architectural difference between VGG and Inception (GoogLeNet) networks?",
+    "options": [
+      "VGG uses residual connections; Inception does not",
+      "VGG stacks uniform 3×3 convolutions in a straight line; Inception uses parallel branches with different kernel sizes (1×1, 3×3, 5×5) merged at each module",
+      "Inception uses max pooling only; VGG uses average pooling",
+      "VGG uses attention mechanisms; Inception uses recurrent connections"
+    ],
+    "answer": "VGG stacks uniform 3×3 convolutions in a straight line; Inception uses parallel branches with different kernel sizes (1×1, 3×3, 5×5) merged at each module",
+    "explanation": "VGG (Oxford) uses simple stacks of small 3×3 convolutions. Inception (Google) uses 'Inception modules' with parallel convolutions of different kernel sizes, allowing multi-scale feature detection."
+  },
+  {
+    "id": "DL028",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is depthwise separable convolution and what is its main benefit?",
+    "options": [
+      "It applies convolutions only to the depth dimension; benefit is better feature detection",
+      "It splits a standard convolution into a depthwise convolution (per channel) and a pointwise (1×1) convolution, drastically reducing parameters and computation",
+      "It separates positive and negative activations; benefit is solving the dying ReLU problem",
+      "It applies different filters to each spatial region; benefit is translation invariance"
+    ],
+    "answer": "It splits a standard convolution into a depthwise convolution (per channel) and a pointwise (1×1) convolution, drastically reducing parameters and computation",
+    "explanation": "Used in MobileNet and EfficientNet, depthwise separable convolutions apply a single filter per input channel then mix channels with 1×1 conv, reducing computation by ~8-9x vs standard convolution."
+  },
+  {
+    "id": "DL029",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is object detection in computer vision and how does it differ from image classification?",
+    "options": [
+      "They are the same task",
+      "Object detection classifies the entire image; classification detects multiple objects",
+      "Image classification assigns a single label to the whole image; object detection locates and classifies multiple objects within the image with bounding boxes",
+      "Object detection only works on binary images; classification works on color images"
+    ],
+    "answer": "Image classification assigns a single label to the whole image; object detection locates and classifies multiple objects within the image with bounding boxes",
+    "explanation": "Classification: 'this is a cat.' Detection: 'there is a cat at (x1,y1,x2,y2) with confidence 0.98 and a dog at (...).'"
+  },
+  {
+    "id": "DL030",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the key idea behind YOLO (You Only Look Once) object detection?",
+    "options": [
+      "It processes the image in a sliding window approach examining one region at a time",
+      "It first proposes regions of interest then classifies each one separately",
+      "It divides the image into a grid and predicts bounding boxes and class probabilities for each cell simultaneously in a single forward pass",
+      "It uses an attention mechanism to focus on regions with objects"
+    ],
+    "answer": "It divides the image into a grid and predicts bounding boxes and class probabilities for each cell simultaneously in a single forward pass",
+    "explanation": "YOLO frames detection as a single regression problem. It divides input into an S×S grid, predicts B bounding boxes + confidence + C class probabilities per cell — all in one forward pass, enabling real-time detection."
+  },
+  {
+    "id": "DL031",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is semantic segmentation and how does it differ from instance segmentation?",
+    "options": [
+      "Semantic segmentation labels each object separately; instance segmentation assigns one label per image",
+      "Semantic segmentation assigns a class label to every pixel without distinguishing instances; instance segmentation identifies and separately masks each individual object",
+      "They are identical tasks performed at different resolutions",
+      "Semantic segmentation is supervised; instance segmentation is unsupervised"
+    ],
+    "answer": "Semantic segmentation assigns a class label to every pixel without distinguishing instances; instance segmentation identifies and separately masks each individual object",
+    "explanation": "Semantic: all 'car' pixels get label 'car' — two cars merge. Instance: each car is a separate mask with its own ID. Mask R-CNN does instance segmentation."
+  },
+  {
+    "id": "DL032",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is an autoencoder and what is it used for?",
+    "options": [
+      "A supervised model that automatically encodes labels for classification",
+      "A neural network with encoder and decoder parts trained to compress input into a lower-dimensional latent space and reconstruct it, used for dimensionality reduction and anomaly detection",
+      "A recurrent network that encodes sequences for language modeling",
+      "A network that automatically generates code from natural language descriptions"
+    ],
+    "answer": "A neural network with encoder and decoder parts trained to compress input into a lower-dimensional latent space and reconstruct it, used for dimensionality reduction and anomaly detection",
+    "explanation": "Autoencoders learn to encode input into a bottleneck (latent) representation and reconstruct the original. Applications: anomaly detection, denoising, compression, and feature learning."
+  },
+  {
+    "id": "DL033",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a Variational Autoencoder (VAE) and how does it differ from a standard autoencoder?",
+    "options": [
+      "VAEs use variational dropout; standard autoencoders do not",
+      "VAEs encode inputs to a probability distribution (mean and variance) in latent space and sample from it, enabling generation; standard autoencoders encode to a fixed point",
+      "VAEs have deeper architectures than standard autoencoders",
+      "VAEs are supervised; standard autoencoders are unsupervised"
+    ],
+    "answer": "VAEs encode inputs to a probability distribution (mean and variance) in latent space and sample from it, enabling generation; standard autoencoders encode to a fixed point",
+    "explanation": "VAEs encode to (μ, σ) parameters of a Gaussian distribution in latent space, then sample z ~ N(μ, σ²). This continuous, structured latent space allows generation of new samples."
+  },
+  {
+    "id": "DL034",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What are the two networks in a GAN and what is each one's objective?",
+    "options": [
+      "Encoder and Decoder; encoder compresses, decoder reconstructs",
+      "Generator and Discriminator; generator creates fake data to fool the discriminator, discriminator distinguishes real from fake",
+      "Actor and Critic; actor selects actions, critic evaluates them",
+      "Teacher and Student; teacher provides soft labels, student learns from them"
+    ],
+    "answer": "Generator and Discriminator; generator creates fake data to fool the discriminator, discriminator distinguishes real from fake",
+    "explanation": "Generator G tries to produce realistic samples; Discriminator D tries to classify samples as real or fake. They play a minimax game: G minimizes, D maximizes log-probability of correct classification."
+  },
+  {
+    "id": "DL035",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is mode collapse in GANs?",
+    "options": [
+      "The discriminator collapses to always outputting the same probability",
+      "The generator learns to produce only a few types of outputs instead of the full diversity of the real data distribution",
+      "The GAN training collapses due to exploding gradients",
+      "The generator mode and discriminator mode become equal, stopping training"
+    ],
+    "answer": "The generator learns to produce only a few types of outputs instead of the full diversity of the real data distribution",
+    "explanation": "Mode collapse occurs when the generator finds a few modes that fool the discriminator and stops exploring others. Solutions: Wasserstein GAN, minibatch discrimination, and unrolled GANs."
+  },
+  {
+    "id": "DL036",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a Recurrent Neural Network (RNN) and what makes it suitable for sequential data?",
+    "options": [
+      "An RNN applies convolutions to sequence data; suitable because convolutions detect local patterns",
+      "An RNN processes sequences step by step, maintaining a hidden state that captures information from previous time steps",
+      "An RNN processes all sequence elements simultaneously using attention",
+      "An RNN uses skip connections to model long-range dependencies"
+    ],
+    "answer": "An RNN processes sequences step by step, maintaining a hidden state that captures information from previous time steps",
+    "explanation": "At each time step t, the RNN updates: h_t = f(W_hh * h_{t-1} + W_xh * x_t). The hidden state h_t carries context from all previous inputs, making RNNs suitable for NLP, time series, and speech."
+  },
+  {
+    "id": "DL037",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What are the four gates in an LSTM and what does each do?",
+    "options": [
+      "Input, Output, Memory, Reset gates — input adds information, output reads it, memory stores it, reset clears it",
+      "Forget, Input, Update, Output gates — forget discards cell state, input adds new info, update combines them, output produces hidden state",
+      "Forget, Input, Cell (update), and Output gates — forget decides what to erase from cell state, input decides what new info to add, cell combines them, output produces the hidden state from cell state",
+      "Read, Write, Erase, Add gates — like a neural Turing machine"
+    ],
+    "answer": "Forget, Input, Cell (update), and Output gates — forget decides what to erase from cell state, input decides what new info to add, cell combines them, output produces the hidden state from cell state",
+    "explanation": "Forget gate: σ(Wf*[h,x]+bf). Input gate: σ(Wi*[h,x]+bi) × tanh(Wc*[h,x]+bc). Cell: C_t = forget×C_{t-1} + input. Output: σ(Wo*[h,x]+bo) × tanh(C_t)."
+  },
+  {
+    "id": "DL038",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between LSTM and GRU?",
+    "options": [
+      "GRU has more gates than LSTM and is therefore more powerful",
+      "LSTM uses 4 gates and a separate cell state; GRU uses 2 gates (reset, update) with no separate cell state — simpler but often comparable performance",
+      "LSTM is used for vision; GRU is used for NLP",
+      "GRU cannot model long-range dependencies unlike LSTM"
+    ],
+    "answer": "LSTM uses 4 gates and a separate cell state; GRU uses 2 gates (reset, update) with no separate cell state — simpler but often comparable performance",
+    "explanation": "GRU (Gated Recurrent Unit) merges the cell state and hidden state, using only reset and update gates. Fewer parameters make GRU faster to train. Performance is similar to LSTM on most tasks."
+  },
+  {
+    "id": "DL039",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a word embedding in NLP deep learning?",
+    "options": [
+      "A one-hot encoded vector representation of a word",
+      "A dense, low-dimensional vector representation of a word that captures semantic meaning and relationships",
+      "A sparse bag-of-words representation of a sentence",
+      "A character-level tokenization of text input"
+    ],
+    "answer": "A dense, low-dimensional vector representation of a word that captures semantic meaning and relationships",
+    "explanation": "Word embeddings (Word2Vec, GloVe, FastText) map words to dense vectors where semantically similar words are geometrically close. They replace one-hot encoding in NLP models."
+  },
+  {
+    "id": "DL040",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the key property of Word2Vec's skip-gram model?",
+    "options": [
+      "It predicts the center word given the surrounding context words",
+      "It predicts surrounding context words given a center word, learning embeddings where similar words have similar vector representations",
+      "It uses a bidirectional LSTM to generate word embeddings",
+      "It applies PCA to co-occurrence matrices to produce word vectors"
+    ],
+    "answer": "It predicts surrounding context words given a center word, learning embeddings where similar words have similar vector representations",
+    "explanation": "Skip-gram trains a shallow network to predict context words from a center word. CBOW is the reverse. The learned intermediate weight matrix becomes the word embeddings (e.g., 'king' - 'man' + 'woman' ≈ 'queen')."
+  },
+  {
+    "id": "DL041",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the self-attention mechanism in Transformers?",
+    "options": [
+      "A mechanism where the model attends to the encoder output at each decoder step",
+      "A mechanism where each position in a sequence computes attention scores against all other positions in the same sequence to capture dependencies regardless of distance",
+      "A form of dropout that selectively deactivates attention heads",
+      "A pooling mechanism that compresses sequence representations"
+    ],
+    "answer": "A mechanism where each position in a sequence computes attention scores against all other positions in the same sequence to capture dependencies regardless of distance",
+    "explanation": "Self-attention computes Q, K, V matrices from input, then: Attention(Q,K,V) = softmax(QK^T / √d_k) * V. Every token can directly attend to every other token, capturing long-range dependencies."
+  },
+  {
+    "id": "DL042",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is multi-head attention in the Transformer architecture?",
+    "options": [
+      "Running attention multiple times with different hyperparameters and averaging",
+      "Running self-attention in parallel with multiple sets of learned Q, K, V projection matrices, each capturing different types of relationships, then concatenating results",
+      "Applying attention sequentially, head by head, to build up representations",
+      "Using multiple encoder heads and one decoder head for translation tasks"
+    ],
+    "answer": "Running self-attention in parallel with multiple sets of learned Q, K, V projection matrices, each capturing different types of relationships, then concatenating results",
+    "explanation": "Multi-head attention allows the model to jointly attend to information from different representation subspaces. Each head learns different aspects (syntactic, semantic, positional). Outputs are concatenated and projected."
+  },
+  {
+    "id": "DL043",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "Why does the Transformer need positional encoding?",
+    "options": [
+      "To reduce the dimensionality of token embeddings",
+      "To introduce non-linearity into the attention mechanism",
+      "Because self-attention is permutation-invariant and doesn't inherently know the order of tokens in a sequence",
+      "To normalize the attention scores before applying softmax"
+    ],
+    "answer": "Because self-attention is permutation-invariant and doesn't inherently know the order of tokens in a sequence",
+    "explanation": "Self-attention treats input as a set, not a sequence. Positional encodings (sinusoidal or learned) are added to token embeddings to inject position information, telling the model where each token is in the sequence."
+  },
+  {
+    "id": "DL044",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the architectural difference between BERT and GPT?",
+    "options": [
+      "BERT uses a decoder-only Transformer; GPT uses an encoder-only Transformer",
+      "BERT uses an encoder-only Transformer trained with masked language modeling (bidirectional); GPT uses a decoder-only Transformer trained with causal language modeling (left-to-right)",
+      "BERT and GPT have identical architectures but are trained on different datasets",
+      "GPT uses the full encoder-decoder Transformer; BERT uses only the encoder with causal masking"
+    ],
+    "answer": "BERT uses an encoder-only Transformer trained with masked language modeling (bidirectional); GPT uses a decoder-only Transformer trained with causal language modeling (left-to-right)",
+    "explanation": "BERT sees all tokens bidirectionally — great for understanding (classification, NER, QA). GPT generates tokens left-to-right autoregressively — great for text generation. They suit different downstream tasks."
+  },
+  {
+    "id": "DL045",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is masked language modeling (MLM) used for in BERT pre-training?",
+    "options": [
+      "To prevent the model from seeing future tokens during generation",
+      "To randomly mask 15% of input tokens and train the model to predict them, forcing bidirectional context understanding",
+      "To mask padding tokens so they don't contribute to the loss",
+      "To create binary classification tasks from unlabeled text"
+    ],
+    "answer": "To randomly mask 15% of input tokens and train the model to predict them, forcing bidirectional context understanding",
+    "explanation": "MLM in BERT masks random tokens and trains the model to predict them using context from both left and right. This pre-training objective enables BERT to learn deep bidirectional representations."
+  },
+  {
+    "id": "DL046",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is causal (autoregressive) language modeling used in GPT?",
+    "options": [
+      "Predicting randomly masked tokens using bidirectional context",
+      "Predicting the next token given all previous tokens, using a causal (left-to-right) mask so each token only attends to earlier positions",
+      "Predicting both the next and previous token simultaneously",
+      "Training a model to determine if two sentences are causally related"
+    ],
+    "answer": "Predicting the next token given all previous tokens, using a causal (left-to-right) mask so each token only attends to earlier positions",
+    "explanation": "GPT is trained to predict P(x_t | x_1, ..., x_{t-1}). The causal mask in the attention layer ensures future tokens are never visible. This makes GPT naturally suited for text generation."
+  },
+  {
+    "id": "DL047",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is RLHF (Reinforcement Learning from Human Feedback)?",
+    "options": [
+      "A technique to train robots using human demonstration data",
+      "A method to fine-tune language models using human preference labels to align model outputs with human values and intent",
+      "A reinforcement learning algorithm that uses human-designed reward functions",
+      "A data collection technique where humans label RL episodes"
+    ],
+    "answer": "A method to fine-tune language models using human preference labels to align model outputs with human values and intent",
+    "explanation": "RLHF (used in ChatGPT/InstructGPT): (1) supervised fine-tuning on demonstrations, (2) train a reward model on human preference comparisons, (3) optimize the LLM against the reward model using PPO."
+  },
+  {
+    "id": "DL048",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is parameter-efficient fine-tuning (PEFT) and what is LoRA?",
+    "options": [
+      "PEFT trains only the final layer; LoRA adds new attention heads",
+      "PEFT updates all model parameters efficiently; LoRA uses quantization to reduce memory",
+      "PEFT updates only a small subset of parameters to adapt pre-trained models; LoRA injects low-rank matrices into attention layers to approximate weight updates with far fewer trainable parameters",
+      "PEFT uses knowledge distillation; LoRA uses pruning"
+    ],
+    "answer": "PEFT updates only a small subset of parameters to adapt pre-trained models; LoRA injects low-rank matrices into attention layers to approximate weight updates with far fewer trainable parameters",
+    "explanation": "LoRA (Low-Rank Adaptation) freezes the original weights W and learns ΔW = A×B where A and B are low-rank matrices. This reduces trainable parameters by 10,000x while achieving comparable results to full fine-tuning."
+  },
+  {
+    "id": "DL049",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is model quantization in deep learning?",
+    "options": [
+      "Measuring the quality of a model using quantitative metrics",
+      "Reducing the precision of model weights (e.g., from float32 to int8) to decrease model size and inference latency with minimal accuracy loss",
+      "Converting a regression model into a classification model",
+      "Counting the total number of parameters in a model"
+    ],
+    "answer": "Reducing the precision of model weights (e.g., from float32 to int8) to decrease model size and inference latency with minimal accuracy loss",
+    "explanation": "Quantization reduces memory footprint (4× for int8 vs float32) and speeds up inference. Post-training quantization (PTQ) requires no retraining; quantization-aware training (QAT) fine-tunes with simulated quantization."
+  },
+  {
+    "id": "DL050",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is model pruning in deep learning?",
+    "options": [
+      "Removing training data points that hurt model performance",
+      "Reducing the depth of the network by removing entire layers",
+      "Removing unimportant weights (or neurons/heads) from a trained model to create a smaller, faster model with minimal accuracy loss",
+      "Trimming the training process by stopping early"
+    ],
+    "answer": "Removing unimportant weights (or neurons/heads) from a trained model to create a smaller, faster model with minimal accuracy loss",
+    "explanation": "Pruning removes weights close to zero (unstructured) or entire filters/heads (structured). The pruned model is typically fine-tuned to recover accuracy. It enables deployment on resource-constrained devices."
+  },
+  {
+    "id": "DL051",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is transfer learning and what are the two main strategies?",
+    "options": [
+      "Training from scratch on a new dataset; strategies are supervised and unsupervised",
+      "Using a pre-trained model as a starting point; strategies are feature extraction (freeze backbone, train new head) and fine-tuning (update all or some layers on new data)",
+      "Copying model weights to a different architecture; strategies are horizontal and vertical transfer",
+      "Using one model to teach another; strategies are soft and hard label transfer"
+    ],
+    "answer": "Using a pre-trained model as a starting point; strategies are feature extraction (freeze backbone, train new head) and fine-tuning (update all or some layers on new data)",
+    "explanation": "Feature extraction: freeze pre-trained layers, only train the new task-specific head. Fine-tuning: unfreeze some/all layers and train at a low learning rate. Fine-tuning typically gives better performance."
+  },
+  {
+    "id": "DL052",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the encoder-decoder architecture used for in deep learning?",
+    "options": [
+      "For binary classification of image pairs",
+      "For compressing model weights before deployment",
+      "For sequence-to-sequence tasks where input and output are sequences of different lengths (translation, summarization, image segmentation)",
+      "For training GANs where the encoder generates and the decoder discriminates"
+    ],
+    "answer": "For sequence-to-sequence tasks where input and output are sequences of different lengths (translation, summarization, image segmentation)",
+    "explanation": "The encoder compresses input into a context vector/representations; the decoder generates output from it. Used in machine translation (Transformer), summarization, and U-Net (segmentation)."
+  },
+  {
+    "id": "DL053",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the U-Net architecture primarily used for?",
+    "options": [
+      "Text classification in NLP",
+      "Time-series forecasting with LSTMs",
+      "Image segmentation, using an encoder-decoder with skip connections between encoder and decoder layers",
+      "Object detection with anchor boxes"
+    ],
+    "answer": "Image segmentation, using an encoder-decoder with skip connections between encoder and decoder layers",
+    "explanation": "U-Net (named for its U-shape) uses a contracting encoder path and an expansive decoder path. Skip connections pass high-resolution encoder features to the decoder, preserving spatial detail crucial for precise segmentation."
+  },
+  {
+    "id": "DL054",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between sparse and dense attention?",
+    "options": [
+      "Dense attention uses fewer parameters; sparse attention uses more",
+      "Sparse attention computes only a subset of token pairs; dense (full) attention computes all token pairs — O(n²) complexity",
+      "Dense attention is used only in encoders; sparse attention only in decoders",
+      "Sparse attention uses learned masks; dense attention uses fixed masks"
+    ],
+    "answer": "Sparse attention computes only a subset of token pairs; dense (full) attention computes all token pairs — O(n²) complexity",
+    "explanation": "Full self-attention is O(n²) in sequence length — impractical for long sequences. Sparse attention variants (Longformer, BigBird) reduce this to O(n) by attending only to local windows, global tokens, and random pairs."
+  },
+  {
+    "id": "DL055",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Flash Attention and what problem does it solve?",
+    "options": [
+      "A faster activation function replacing ReLU in Transformers",
+      "An IO-aware exact attention algorithm that tiles the attention computation to avoid reading/writing the full N×N attention matrix from HBM, drastically reducing memory usage and increasing speed",
+      "A sparse attention variant that skips computation for low-scoring token pairs",
+      "A distillation technique that transfers attention patterns from teacher to student"
+    ],
+    "answer": "An IO-aware exact attention algorithm that tiles the attention computation to avoid reading/writing the full N×N attention matrix from HBM, drastically reducing memory usage and increasing speed",
+    "explanation": "Flash Attention computes exact attention without materializing the full N×N matrix by fusing operations and tiling across SRAM. It reduces memory from O(n²) to O(n) and is 2-4× faster — critical for long-context LLMs."
+  },
+  {
+    "id": "DL056",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the learning rate scheduler in deep learning training?",
+    "options": [
+      "To automatically select the best optimizer",
+      "To adjust the learning rate during training according to a schedule, improving convergence and final model quality",
+      "To determine the number of training epochs needed",
+      "To balance the learning rates of different layers in the network"
+    ],
+    "answer": "To adjust the learning rate during training according to a schedule, improving convergence and final model quality",
+    "explanation": "Common schedules: step decay (reduce by factor at milestones), cosine annealing (smooth decay to minimum), warmup then decay (common in Transformers). Adaptive schedulers prevent overshooting and improve final accuracy."
+  },
+  {
+    "id": "DL057",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is gradient clipping and when is it used?",
+    "options": [
+      "Removing gradients that are exactly zero to speed up training",
+      "Scaling down gradients when their norm exceeds a threshold to prevent exploding gradients, commonly used in RNN training",
+      "Clipping weight values to a fixed range to prevent overfitting",
+      "Stopping gradient flow through certain layers during fine-tuning"
+    ],
+    "answer": "Scaling down gradients when their norm exceeds a threshold to prevent exploding gradients, commonly used in RNN training",
+    "explanation": "If ‖g‖ > threshold, scale g = g * (threshold / ‖g‖). This prevents gradient explosions in RNNs and deep networks without changing direction. Widely used in LSTM and Transformer training."
+  },
+  {
+    "id": "DL058",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is mixed precision training?",
+    "options": [
+      "Training with a mix of supervised and unsupervised data",
+      "Using both CNN and RNN layers in the same model",
+      "Training with float16 for forward/backward passes and float32 for weight updates, speeding up training while maintaining numerical stability",
+      "Using different learning rates for different layers"
+    ],
+    "answer": "Training with float16 for forward/backward passes and float32 for weight updates, speeding up training while maintaining numerical stability",
+    "explanation": "Mixed precision (AMP) uses FP16 for most operations (2× memory savings, faster on modern GPUs) and FP32 for accumulation and weight updates to avoid underflow/overflow. NVIDIA Apex and PyTorch AMP implement this."
+  },
+  {
+    "id": "DL059",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is data parallelism in distributed deep learning training?",
+    "options": [
+      "Splitting the model layers across multiple GPUs",
+      "Replicating the full model on each GPU and splitting the training data across GPUs, synchronizing gradients after each step",
+      "Training multiple smaller models in parallel and averaging their predictions",
+      "Parallelizing data preprocessing on CPU while GPU trains the model"
+    ],
+    "answer": "Replicating the full model on each GPU and splitting the training data across GPUs, synchronizing gradients after each step",
+    "explanation": "Data parallelism: each GPU holds a full model copy and processes a different data shard. Gradients are averaged (all-reduce) across GPUs before updating weights. PyTorch DistributedDataParallel (DDP) implements this."
+  },
+  {
+    "id": "DL060",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is model parallelism and when is it necessary?",
+    "options": [
+      "Training multiple models simultaneously on the same data",
+      "Splitting model layers or tensors across multiple GPUs when the model is too large to fit on a single GPU",
+      "Using different model architectures for different data modalities",
+      "Distributing evaluation of the model across different machines"
+    ],
+    "answer": "Splitting model layers or tensors across multiple GPUs when the model is too large to fit on a single GPU",
+    "explanation": "When a model (e.g., LLMs with billions of parameters) exceeds single GPU memory, model parallelism splits layers (pipeline parallelism) or tensors (tensor parallelism) across GPUs. Megatron-LM and DeepSpeed implement this."
+  },
+  {
+    "id": "DL061",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is a skip connection in deep learning?",
+    "options": [
+      "A connection that bypasses the activation function in a layer",
+      "A shortcut path that adds the input of a block directly to its output, allowing gradients to flow through an identity path",
+      "A connection between non-adjacent layers for feature reuse",
+      "A regularization mechanism that randomly skips certain layers during training"
+    ],
+    "answer": "A shortcut path that adds the input of a block directly to its output, allowing gradients to flow through an identity path",
+    "explanation": "Skip connections (residual connections) compute F(x) + x. During backprop, the gradient flows directly through the shortcut, solving the vanishing gradient problem in very deep networks (ResNet, Transformer)."
+  },
+  {
+    "id": "DL062",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is layer normalization and how does it differ from batch normalization?",
+    "options": [
+      "Layer normalization normalizes across batches; batch normalization normalizes across feature dimensions",
+      "Layer normalization normalizes across the feature dimension for each sample independently; batch normalization normalizes across the batch dimension for each feature",
+      "They are identical except layer normalization uses learnable parameters",
+      "Layer normalization is only used in CNNs; batch normalization only in Transformers"
+    ],
+    "answer": "Layer normalization normalizes across the feature dimension for each sample independently; batch normalization normalizes across the batch dimension for each feature",
+    "explanation": "LayerNorm normalizes across the hidden dimension of a single sample — no dependence on batch size. This makes it preferred in Transformers (variable-length sequences, small batches). BatchNorm normalizes across the batch."
+  },
+  {
+    "id": "DL063",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the 1×1 convolution in deep networks?",
+    "options": [
+      "To detect very fine-grained local features in an image",
+      "To increase spatial dimensions of feature maps",
+      "To perform channel-wise linear transformation for dimensionality reduction or expansion without changing spatial dimensions",
+      "To apply batch normalization across channels"
+    ],
+    "answer": "To perform channel-wise linear transformation for dimensionality reduction or expansion without changing spatial dimensions",
+    "explanation": "1×1 convolutions operate across channels at each spatial position. They are used in Inception and ResNet bottlenecks to reduce/expand channels cheaply, mixing cross-channel information without spatial processing."
+  },
+  {
+    "id": "DL064",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the EfficientNet scaling approach?",
+    "options": [
+      "Scaling only the depth (number of layers) to improve accuracy",
+      "Compound scaling of width (channels), depth (layers), and resolution simultaneously using a fixed set of scaling coefficients",
+      "Scaling the model by increasing only the input image resolution",
+      "Using neural architecture search to find the optimal number of parameters"
+    ],
+    "answer": "Compound scaling of width (channels), depth (layers), and resolution simultaneously using a fixed set of scaling coefficients",
+    "explanation": "EfficientNet uses a compound coefficient φ to uniformly scale depth, width, and resolution: depth=α^φ, width=β^φ, resolution=γ^φ. This balanced scaling achieves better accuracy/efficiency than scaling one dimension alone."
+  },
+  {
+    "id": "DL065",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Neural Architecture Search (NAS)?",
+    "options": [
+      "A technique to search for optimal hyperparameters using grid search",
+      "Automatically searching for the optimal neural network architecture (layer types, connectivity, sizes) using algorithms like reinforcement learning, evolutionary methods, or gradient-based approaches",
+      "A method to search for the best pre-trained model for fine-tuning",
+      "Searching the internet for existing network architectures to use as baselines"
+    ],
+    "answer": "Automatically searching for the optimal neural network architecture (layer types, connectivity, sizes) using algorithms like reinforcement learning, evolutionary methods, or gradient-based approaches",
+    "explanation": "NAS automates architecture design. DARTS uses gradient-based search; RL-based NAS (Google Brain) trained a controller to propose architectures. NAS discovered EfficientNet, MnasNet, and NASNet."
+  },
+  {
+    "id": "DL066",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between generative and discriminative models in deep learning?",
+    "options": [
+      "Generative models predict class labels directly; discriminative models generate new samples",
+      "Generative models learn the joint distribution P(X,Y) or P(X) to generate new data; discriminative models learn P(Y|X) to classify or predict",
+      "Generative models are always more accurate; discriminative models are faster",
+      "Generative models require labeled data; discriminative models work with unlabeled data"
+    ],
+    "answer": "Generative models learn the joint distribution P(X,Y) or P(X) to generate new data; discriminative models learn P(Y|X) to classify or predict",
+    "explanation": "Discriminative (CNN classifiers, Transformers for classification) learn the boundary between classes. Generative (GANs, VAEs, diffusion models) learn to model the data distribution and can sample new examples."
+  },
+  {
+    "id": "DL067",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is a diffusion model in generative deep learning?",
+    "options": [
+      "A model that generates data by diffusing information across attention heads",
+      "A generative model that learns to reverse a gradual noising process, generating high-quality samples by iteratively denoising random Gaussian noise",
+      "A model that applies Gaussian blur to generated images to smooth artifacts",
+      "A model that diffuses gradients from the output layer to prevent vanishing gradients"
+    ],
+    "answer": "A generative model that learns to reverse a gradual noising process, generating high-quality samples by iteratively denoising random Gaussian noise",
+    "explanation": "Diffusion models (DDPM, Stable Diffusion) define a forward process that gradually adds Gaussian noise to data, then train a neural network to reverse this process. They currently produce state-of-the-art image quality."
+  },
+  {
+    "id": "DL068",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is contrastive learning in self-supervised deep learning?",
+    "options": [
+      "Training a model by comparing its predictions against a teacher model",
+      "Learning representations by training the model to bring similar samples (positive pairs) closer and push dissimilar samples (negative pairs) apart in embedding space",
+      "A technique to train models on contrasting datasets from different domains",
+      "Training using a contrastive loss derived from the difference between train and validation accuracy"
+    ],
+    "answer": "Learning representations by training the model to bring similar samples (positive pairs) closer and push dissimilar samples (negative pairs) apart in embedding space",
+    "explanation": "Contrastive learning (SimCLR, MoCo) creates positive pairs (augmented views of same image) and negatives (different images). The model learns to produce similar embeddings for positives and dissimilar for negatives."
+  },
+  {
+    "id": "DL069",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the Vision Transformer (ViT)?",
+    "options": [
+      "A CNN enhanced with attention mechanisms in the pooling layer",
+      "A Transformer model applied to image patches — the image is split into fixed patches, linearly embedded, and processed with standard Transformer encoder blocks",
+      "A recurrent model that processes image rows sequentially",
+      "A BERT model pre-trained on image captions"
+    ],
+    "answer": "A Transformer model applied to image patches — the image is split into fixed patches, linearly embedded, and processed with standard Transformer encoder blocks",
+    "explanation": "ViT (Google, 2020) splits an image into 16×16 patches, linearly projects them into tokens, and applies standard Transformer encoder with positional embeddings. It matches or exceeds CNN performance at scale."
+  },
+  {
+    "id": "DL070",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is knowledge distillation in deep learning?",
+    "options": [
+      "Extracting symbolic rules from neural network weights",
+      "Compressing a large teacher model into a smaller student model by training the student to match the teacher's soft probability outputs",
+      "Fine-tuning a model on domain-specific knowledge bases",
+      "Distilling the most important features from a dataset for training"
+    ],
+    "answer": "Compressing a large teacher model into a smaller student model by training the student to match the teacher's soft probability outputs",
+    "explanation": "The student learns from the teacher's soft labels (class probabilities with temperature T) rather than hard labels. Soft labels carry richer inter-class relationship information, enabling the student to outperform training from scratch."
+  },
+  {
+    "id": "DL071",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is gradient accumulation and why is it used?",
+    "options": [
+      "Storing gradients from all epochs to identify stable update directions",
+      "Accumulating gradients over multiple mini-batches before performing a weight update, simulating a larger effective batch size when GPU memory is limited",
+      "Accumulating momentum terms across training runs for warm starting",
+      "A technique to avoid computing gradients for frozen layers"
+    ],
+    "answer": "Accumulating gradients over multiple mini-batches before performing a weight update, simulating a larger effective batch size when GPU memory is limited",
+    "explanation": "If target batch size is 256 but only 32 fit in memory, accumulate gradients over 8 steps of batch 32 before stepping the optimizer. This achieves the same effective batch size without requiring more GPU memory."
+  },
+  {
+    "id": "DL072",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the temperature parameter in softmax for knowledge distillation?",
+    "options": [
+      "To control the learning rate during fine-tuning",
+      "To scale the input to the softmax to produce softer or sharper probability distributions — higher T gives softer distributions revealing more inter-class information",
+      "To prevent the softmax from outputting probabilities above a threshold",
+      "To stabilize training by annealing the loss function"
+    ],
+    "answer": "To scale the input to the softmax to produce softer or sharper probability distributions — higher T gives softer distributions revealing more inter-class information",
+    "explanation": "Softmax with temperature T: p_i = exp(z_i/T) / Σexp(z_j/T). High T softens the distribution (e.g., 0.7 dog, 0.2 cat, 0.1 wolf), revealing similarity structure. Low T makes it sharper (closer to one-hot)."
+  },
+  {
+    "id": "DL073",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does GPU acceleration bring to deep learning training?",
+    "options": [
+      "GPUs perform better on sequential calculations than CPUs",
+      "GPUs have more memory than CPUs for storing large datasets",
+      "GPUs have thousands of small cores suited for the massive parallel matrix operations in deep learning, dramatically speeding up training",
+      "GPUs automatically optimize neural network architectures"
+    ],
+    "answer": "GPUs have thousands of small cores suited for the massive parallel matrix operations in deep learning, dramatically speeding up training",
+    "explanation": "Deep learning relies on large matrix multiplications that are embarrassingly parallel. GPUs (thousands of cores, high memory bandwidth) execute these 10-100× faster than CPUs."
+  },
+  {
+    "id": "DL074",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the flattening layer in a CNN before fully connected layers?",
+    "options": [
+      "To apply non-linearity before classification",
+      "To reduce the number of channels in the feature maps",
+      "To convert multi-dimensional feature maps into a 1D vector that can be fed into fully connected layers",
+      "To normalize feature maps before the classification head"
+    ],
+    "answer": "To convert multi-dimensional feature maps into a 1D vector that can be fed into fully connected layers",
+    "explanation": "The convolutional layers output 3D feature maps (height × width × channels). Flattening reshapes this to a 1D vector so it can be passed to dense (fully connected) layers for final classification."
+  },
+  {
+    "id": "DL075",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is global average pooling (GAP) and how is it used in modern CNNs?",
+    "options": [
+      "A pooling method that takes the average of all features globally across the entire spatial dimension of each channel, often replacing flatten + dense layers",
+      "A pooling method that averages all pixel values in the input image",
+      "A technique that applies average pooling globally across batch samples",
+      "A method that computes the average activation across all layers"
+    ],
+    "answer": "A pooling method that takes the average of all features globally across the entire spatial dimension of each channel, often replacing flatten + dense layers",
+    "explanation": "GAP averages all H×W values per channel into a single number, producing one value per channel. This creates a compact feature vector with fewer parameters than flattening, reducing overfitting and enabling variable input sizes."
+  },
+  {
+    "id": "DL076",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between encoder-only, decoder-only, and encoder-decoder Transformer models?",
+    "options": [
+      "Encoder-only generates text; decoder-only understands text; encoder-decoder does both",
+      "Encoder-only (BERT) is best for understanding/classification; decoder-only (GPT) is best for text generation; encoder-decoder (T5, BART) is best for seq2seq tasks like translation and summarization",
+      "All three architectures are equivalent and interchangeable",
+      "Encoder-only uses causal masking; decoder-only uses bidirectional attention"
+    ],
+    "answer": "Encoder-only (BERT) is best for understanding/classification; decoder-only (GPT) is best for text generation; encoder-decoder (T5, BART) is best for seq2seq tasks like translation and summarization",
+    "explanation": "Encoder-only: bidirectional context, great for understanding. Decoder-only: autoregressive generation. Encoder-decoder: encodes input to representations, decoder generates output conditioned on them — ideal for translation."
+  },
+  {
+    "id": "DL077",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the role of the [CLS] token in BERT?",
+    "options": [
+      "It marks the end of the input sequence",
+      "It separates two sentences in the input",
+      "It is a special token prepended to the input whose final hidden state is used as the aggregate sequence representation for classification tasks",
+      "It is a padding token used to align input sequences to a fixed length"
+    ],
+    "answer": "It is a special token prepended to the input whose final hidden state is used as the aggregate sequence representation for classification tasks",
+    "explanation": "[CLS] is prepended to every BERT input. Through self-attention, its final embedding aggregates information from all tokens and is used as the sequence-level representation for downstream classification tasks."
+  },
+  {
+    "id": "DL078",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between tokenization and embedding in NLP deep learning?",
+    "options": [
+      "Tokenization converts text to embeddings; embedding converts embeddings to tokens",
+      "They are the same process applied at different stages",
+      "Tokenization splits text into discrete tokens (words, subwords); embedding maps each token to a dense numerical vector for the model to process",
+      "Tokenization is only for characters; embedding is only for words"
+    ],
+    "answer": "Tokenization splits text into discrete tokens (words, subwords); embedding maps each token to a dense numerical vector for the model to process",
+    "explanation": "Tokenization: 'Hello world' → [15496, 995]. Embedding: 15496 → [0.3, -0.1, 0.7, ...] (dense vector). Modern tokenizers (BPE, WordPiece) work at subword level to handle OOV words efficiently."
+  },
+  {
+    "id": "DL079",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Byte-Pair Encoding (BPE) tokenization?",
+    "options": [
+      "A tokenization method that splits text at every byte boundary",
+      "A method that encodes each word as a pair of bytes for compression",
+      "An iterative subword tokenization algorithm that merges the most frequent byte pairs, balancing vocabulary size with coverage of rare and common words",
+      "A character-level tokenizer that pairs adjacent characters into bigrams"
+    ],
+    "answer": "An iterative subword tokenization algorithm that merges the most frequent byte pairs, balancing vocabulary size with coverage of rare and common words",
+    "explanation": "BPE starts with characters, repeatedly merges the most frequent pair until reaching vocabulary size. 'uncharacteristically' might become ['un', 'character', 'istic', 'ally']. Used in GPT-2/3/4 and RoBERTa."
+  },
+  {
+    "id": "DL080",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is retrieval-augmented generation (RAG)?",
+    "options": [
+      "A GAN variant that retrieves training samples to augment the discriminator",
+      "A technique where a language model retrieves relevant documents from an external knowledge base at inference time and uses them as context to generate more accurate, up-to-date responses",
+      "A data augmentation method for training language models with more diverse text",
+      "A technique where the model retrieves its own previous outputs to maintain conversation context"
+    ],
+    "answer": "A technique where a language model retrieves relevant documents from an external knowledge base at inference time and uses them as context to generate more accurate, up-to-date responses",
+    "explanation": "RAG combines retrieval (dense vector search over a knowledge base) with generation (LLM). The retrieved documents are injected into the prompt as context, grounding the model's response in factual, current information."
+  },
+  {
+    "id": "DL081",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between prompt engineering and fine-tuning a language model?",
+    "options": [
+      "Prompt engineering modifies model weights; fine-tuning modifies the input",
+      "Prompt engineering crafts input text to guide model behavior without changing weights; fine-tuning updates model weights on task-specific data",
+      "Fine-tuning is faster than prompt engineering",
+      "Prompt engineering requires labeled data; fine-tuning does not"
+    ],
+    "answer": "Prompt engineering crafts input text to guide model behavior without changing weights; fine-tuning updates model weights on task-specific data",
+    "explanation": "Prompt engineering steers the model via input design (zero-shot, few-shot, chain-of-thought). Fine-tuning adapts model weights to a specific domain/task. Fine-tuning gives better performance but requires data and compute."
+  },
+  {
+    "id": "DL082",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the purpose of the feed-forward network (FFN) in a Transformer block?",
+    "options": [
+      "To compute attention weights between tokens",
+      "To normalize activations across the sequence dimension",
+      "To apply a position-wise non-linear transformation independently to each token's representation after attention, increasing model capacity",
+      "To convert token embeddings to query, key, and value vectors"
+    ],
+    "answer": "To apply a position-wise non-linear transformation independently to each token's representation after attention, increasing model capacity",
+    "explanation": "The FFN (two linear layers with ReLU/GELU) in each Transformer block applies the same transformation to each position independently. It typically expands (×4) then contracts dimensions. It stores factual knowledge."
+  },
+  {
+    "id": "DL083",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What does 'epoch' mean in neural network training?",
+    "options": [
+      "A single weight update step",
+      "One complete pass through the entire training dataset",
+      "The total number of batches in the dataset",
+      "One forward pass through a single training example"
+    ],
+    "answer": "One complete pass through the entire training dataset",
+    "explanation": "An epoch is one complete iteration over all training samples. Multiple epochs allow the model to see each example many times and refine its weights progressively."
+  },
+  {
+    "id": "DL084",
+    "domain": "deep_learning",
+    "difficulty": "easy",
+    "type": "mcq",
+    "question": "What is a mini-batch in deep learning training?",
+    "options": [
+      "A small version of the neural network for testing",
+      "A subset of the training data used for one gradient update step",
+      "A single training example used in stochastic gradient descent",
+      "The first batch of data used to initialize training"
+    ],
+    "answer": "A subset of the training data used for one gradient update step",
+    "explanation": "Mini-batch gradient descent uses a small batch (typically 32-512 samples) per update, balancing the stability of batch gradient descent and the speed of stochastic gradient descent."
+  },
+  {
+    "id": "DL085",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the GELU activation function and where is it commonly used?",
+    "options": [
+      "GELU is identical to ReLU but applied to the output layer; used in CNNs",
+      "GELU is a smooth approximation of ReLU that weights inputs by their probability under a Gaussian distribution; commonly used in Transformers (BERT, GPT)",
+      "GELU adds Gaussian noise to activations as a regularizer; used in LSTMs",
+      "GELU stands for Gated Exponential Linear Unit; used in ResNet architectures"
+    ],
+    "answer": "GELU is a smooth approximation of ReLU that weights inputs by their probability under a Gaussian distribution; commonly used in Transformers (BERT, GPT)",
+    "explanation": "GELU(x) ≈ x * Φ(x) where Φ is the Gaussian CDF. It is smooth (differentiable everywhere) and slightly outperforms ReLU in Transformer architectures. Used by BERT, GPT-2/3/4, and most modern LLMs."
+  },
+  {
+    "id": "DL086",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is attention masking in Transformer models?",
+    "options": [
+      "Randomly masking attention heads during training as regularization",
+      "Using masks to prevent certain token positions from attending to others — e.g., causal masking hides future tokens; padding masking hides padding tokens",
+      "Masking out the lowest attention scores to create sparse attention",
+      "Applying dropout to attention weights during training"
+    ],
+    "answer": "Using masks to prevent certain token positions from attending to others — e.g., causal masking hides future tokens; padding masking hides padding tokens",
+    "explanation": "Causal mask: each token can only attend to previous tokens (used in GPT decoders). Padding mask: prevents attending to [PAD] tokens in variable-length batches. Masks are applied by setting attention logits to -∞ before softmax."
+  },
+  {
+    "id": "DL087",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the computational complexity of standard self-attention with respect to sequence length n?",
+    "options": [
+      "O(n) — linear in sequence length",
+      "O(n log n) — log-linear",
+      "O(n²) — quadratic, because every token attends to every other token",
+      "O(n³) — cubic, because of the three Q, K, V matrices"
+    ],
+    "answer": "O(n²) — quadratic, because every token attends to every other token",
+    "explanation": "Computing QK^T produces an n×n attention matrix — O(n²) in time and memory. This makes standard attention impractical for very long sequences (e.g., n=100k). Sparse and linear attention variants address this."
+  },
+  {
+    "id": "DL088",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the role of the KV cache in LLM inference?",
+    "options": [
+      "A cache that stores the most frequently used vocabulary tokens",
+      "A memory buffer that caches the Key and Value matrices from previously generated tokens, avoiding recomputing them at each new generation step",
+      "A key-value store for retrieved documents in RAG systems",
+      "A hardware cache that stores gradient computations during training"
+    ],
+    "answer": "A memory buffer that caches the Key and Value matrices from previously generated tokens, avoiding recomputing them at each new generation step",
+    "explanation": "During autoregressive generation, each new token needs attention over all previous tokens' K, V. KV cache stores computed K, V so they don't need recomputation — reducing per-token inference from O(n²) to O(n)."
+  },
+  {
+    "id": "DL089",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is speculative decoding in LLM inference?",
+    "options": [
+      "Using a large model to speculatively predict future user queries",
+      "A technique where a small draft model proposes multiple tokens at once and a larger verifier model accepts or rejects them in parallel, speeding up generation",
+      "Decoding tokens in parallel using beam search with a large beam width",
+      "Speculating the best temperature setting for sampling at inference time"
+    ],
+    "answer": "A technique where a small draft model proposes multiple tokens at once and a larger verifier model accepts or rejects them in parallel, speeding up generation",
+    "explanation": "Speculative decoding uses a fast small model (drafter) to generate k token candidates. The large model verifies all k in one parallel forward pass. Accepted tokens are kept, rejected ones are resampled. 2-3× speedup."
+  },
+  {
+    "id": "DL090",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is data augmentation in deep learning and why is it important?",
+    "options": [
+      "Adding more labeled data by hiring annotators",
+      "Creating additional training examples by applying label-preserving transformations (flips, crops, color jitter) to existing data, improving generalization with limited data",
+      "Augmenting the model architecture with additional layers",
+      "Increasing batch size to improve gradient estimates"
+    ],
+    "answer": "Creating additional training examples by applying label-preserving transformations (flips, crops, color jitter) to existing data, improving generalization with limited data",
+    "explanation": "Data augmentation artificially expands the training set, exposes the model to more variation, and acts as regularization. For images: random crop, flip, color jitter, rotation. For text: synonym replacement, back-translation."
+  },
+  {
+    "id": "DL091",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between zero-shot and few-shot inference in large language models?",
+    "options": [
+      "Zero-shot uses no model weights; few-shot uses pre-trained weights",
+      "Zero-shot provides no examples in the prompt; few-shot provides a small number of input-output examples in the prompt to guide the model",
+      "Few-shot requires fine-tuning; zero-shot does not",
+      "Zero-shot uses beam search; few-shot uses greedy decoding"
+    ],
+    "answer": "Zero-shot provides no examples in the prompt; few-shot provides a small number of input-output examples in the prompt to guide the model",
+    "explanation": "Zero-shot: just a task description. Few-shot: 2-5 examples in the prompt demonstrate the task format. Few-shot often significantly improves performance by showing the model the expected output structure."
+  },
+  {
+    "id": "DL092",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is chain-of-thought (CoT) prompting?",
+    "options": [
+      "Prompting the model to generate shorter, more direct answers",
+      "Linking multiple models in a chain where each model refines the previous output",
+      "Encouraging the model to produce intermediate reasoning steps before the final answer, improving performance on complex multi-step reasoning tasks",
+      "A prompting technique that chains multiple API calls automatically"
+    ],
+    "answer": "Encouraging the model to produce intermediate reasoning steps before the final answer, improving performance on complex multi-step reasoning tasks",
+    "explanation": "CoT prompting (Wei et al., 2022) adds 'Let's think step by step' or shows examples with reasoning traces. It dramatically improves LLM performance on math, logic, and multi-step reasoning tasks."
+  },
+  {
+    "id": "DL093",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is catastrophic forgetting in neural networks?",
+    "options": [
+      "When a network forgets the training data after deployment",
+      "When a model's performance collapses due to a vanishing gradient",
+      "The tendency of a neural network to abruptly lose previously learned knowledge when trained on new data",
+      "When a model forgets its hyperparameter settings between training runs"
+    ],
+    "answer": "The tendency of a neural network to abruptly lose previously learned knowledge when trained on new data",
+    "explanation": "When fine-tuning on task B, the network overwrites weights important for task A. Solutions: Elastic Weight Consolidation (EWC), experience replay, and progressive neural networks. Critical in continual/lifelong learning."
+  },
+  {
+    "id": "DL094",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the Mixture of Experts (MoE) architecture in deep learning?",
+    "options": [
+      "An ensemble of separately trained models whose outputs are averaged",
+      "A model where only a sparse subset of expert sub-networks is activated for each input token by a gating mechanism, enabling very large models without proportional compute increase",
+      "A knowledge distillation approach using multiple teacher models",
+      "A multi-task learning approach where different experts handle different tasks"
+    ],
+    "answer": "A model where only a sparse subset of expert sub-networks is activated for each input token by a gating mechanism, enabling very large models without proportional compute increase",
+    "explanation": "MoE layers replace dense FFN layers with N expert networks. A router selects top-k experts per token. Only k experts compute for each token — massive parameter count, constant FLOPs. Used in Switch Transformer, Mixtral, GPT-4."
+  },
+  {
+    "id": "DL095",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is Grouped Query Attention (GQA) and why was it introduced?",
+    "options": [
+      "An attention variant where queries are grouped into clusters for sparse attention",
+      "A variant where multiple query heads share a single key-value head within a group, reducing KV cache memory during inference compared to multi-head attention",
+      "An attention mechanism that groups tokens by semantic similarity before attending",
+      "A multi-head attention variant that groups heads by attention pattern similarity"
+    ],
+    "answer": "A variant where multiple query heads share a single key-value head within a group, reducing KV cache memory during inference compared to multi-head attention",
+    "explanation": "GQA (used in Llama 2, Mistral) is between Multi-Head Attention (MHA) and Multi-Query Attention (MQA). It groups Q heads to share K,V projections, reducing KV cache size (faster inference) while maintaining quality close to MHA."
+  },
+  {
+    "id": "DL096",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is activation checkpointing (gradient checkpointing) in deep learning?",
+    "options": [
+      "Saving model checkpoints when validation accuracy improves",
+      "A memory-saving technique that trades compute for memory by not storing intermediate activations during the forward pass and recomputing them during backpropagation",
+      "Checking that activations remain within a healthy numerical range during training",
+      "Storing activation statistics for batch normalization during inference"
+    ],
+    "answer": "A memory-saving technique that trades compute for memory by not storing intermediate activations during the forward pass and recomputing them during backpropagation",
+    "explanation": "Standard backprop stores all intermediate activations (O(n layers) memory). Gradient checkpointing stores only a subset and recomputes others during backward pass — ~33% more compute but reduces activation memory by sqrt(n)."
+  },
+  {
+    "id": "DL097",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the difference between fine-tuning and instruction tuning for LLMs?",
+    "options": [
+      "Fine-tuning uses labeled data; instruction tuning uses unlabeled data",
+      "Fine-tuning adapts model weights for a specific downstream task; instruction tuning fine-tunes on diverse instruction-following examples to teach the model to follow natural language instructions across many tasks",
+      "Instruction tuning is identical to RLHF",
+      "Fine-tuning is unsupervised; instruction tuning is supervised"
+    ],
+    "answer": "Fine-tuning adapts model weights for a specific downstream task; instruction tuning fine-tunes on diverse instruction-following examples to teach the model to follow natural language instructions across many tasks",
+    "explanation": "Standard fine-tuning specializes for one task (e.g., sentiment). Instruction tuning (FLAN, InstructGPT Step 1) trains on thousands of (instruction, output) pairs across tasks, making the model generally helpful for any instruction."
+  },
+  {
+    "id": "DL098",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is perplexity as a metric for language models?",
+    "options": [
+      "The percentage of tokens the model predicts incorrectly",
+      "The exponential of the average negative log-likelihood per token — lower perplexity means the model is less 'surprised' by the text and assigns higher probabilities to correct tokens",
+      "A measure of how complex the model architecture is",
+      "The variance in the model's predictions across different temperature settings"
+    ],
+    "answer": "The exponential of the average negative log-likelihood per token — lower perplexity means the model is less 'surprised' by the text and assigns higher probabilities to correct tokens",
+    "explanation": "PP = exp(-1/N * Σ log P(x_i)). A perplexity of 20 means the model is as uncertain as if it had to uniformly choose from 20 options per token. Lower perplexity = better language model."
+  },
+  {
+    "id": "DL099",
+    "domain": "deep_learning",
+    "difficulty": "medium",
+    "type": "mcq",
+    "question": "What is the difference between beam search and greedy decoding in text generation?",
+    "options": [
+      "Greedy decoding considers multiple hypotheses; beam search picks the single best token",
+      "They produce identical outputs at temperature=1",
+      "Greedy decoding picks the single most probable token at each step; beam search maintains k hypotheses (beam width) at each step, selecting the overall highest probability sequence",
+      "Beam search is only used during training; greedy decoding at inference"
+    ],
+    "answer": "Greedy decoding picks the single most probable token at each step; beam search maintains k hypotheses (beam width) at each step, selecting the overall highest probability sequence",
+    "explanation": "Greedy can get stuck in local optima. Beam search with width k explores k parallel sequences simultaneously and returns the highest overall log-probability sequence, generally producing better outputs than greedy."
+  },
+  {
+    "id": "DL100",
+    "domain": "deep_learning",
+    "difficulty": "hard",
+    "type": "mcq",
+    "question": "What is the scaling law in deep learning and why does it matter?",
+    "options": [
+      "A law that states accuracy scales linearly with the number of training epochs",
+      "Empirical laws showing that model performance improves predictably as a power law with increases in model size, dataset size, and compute budget — guiding decisions on resource allocation for training large models",
+      "A rule that larger models always overfit more than smaller ones",
+      "A mathematical proof that neural networks of sufficient size can approximate any function"
+    ],
+    "answer": "Empirical laws showing that model performance improves predictably as a power law with increases in model size, dataset size, and compute budget — guiding decisions on resource allocation for training large models",
+    "explanation": "Kaplan et al. (OpenAI, 2020) and Hoffmann et al. (Chinchilla, 2022) showed that loss follows power laws in N (parameters), D (tokens), and C (compute). Chinchilla's law: optimal training requires ~20 tokens per parameter."
+  }
+]

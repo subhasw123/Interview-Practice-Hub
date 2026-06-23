@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assessment — Interview Practice Hub</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <main class="container" style="padding: 24px 24px 60px;">
+        <div id="quizRoot"></div>
+    </main>
+
+    <!-- Submit modal -->
+    <div id="submitModal" class="modal-backdrop">
+        <div class="modal">
+            <h3>Submit assessment?</h3>
+            <p>You won't be able to change your answers after submission.</p>
+            <div class="modal-summary">
+                <div class="summary-stat">
+                    <div class="summary-value" id="sumTotal">0</div>
+                    <div class="summary-label">Total</div>
+                </div>
+                <div class="summary-stat success">
+                    <div class="summary-value" id="sumAns">0</div>
+                    <div class="summary-label">Answered</div>
+                </div>
+                <div class="summary-stat danger">
+                    <div class="summary-value" id="sumUn">0</div>
+                    <div class="summary-label">Unanswered</div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeModal('submitModal')">Continue Assessment</button>
+                <button class="btn btn-primary" onclick="submitQuiz()">Submit Assessment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quit modal -->
+    <div id="quitModal" class="modal-backdrop">
+        <div class="modal">
+            <h3>Quit assessment?</h3>
+            <p>Your progress will be lost. You can always start a new attempt from the home page.</p>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeModal('quitModal')">Keep going</button>
+                <button class="btn" style="background:var(--destructive); color:#fff;"
+                    onclick="location.href='home.html'">Quit assessment</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+    <script>
+        mountNavbar({ inQuiz: true });
+        initQuiz();
+    </script>
+</body>
+
+</html>
