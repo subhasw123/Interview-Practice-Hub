@@ -10,6 +10,9 @@ function renderNavbar(opts = {}) {
           <div class="brand-sub">Sharpen your interview edge</div>
         </div>
       </a>
+      <button class="hamburger" onclick="toggleMenu()">
+    ☰
+</button>
       <nav class="nav-links">
     <a href="/" class="${active === 'home' ? 'active' : ''}">Home</a>
 
@@ -45,6 +48,10 @@ function renderNavbar(opts = {}) {
 }
 
 function mountNavbar(opts) {
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show");
+}
     const el = document.getElementById('navbar');
     if (el) el.innerHTML = renderNavbar(opts);
 }
