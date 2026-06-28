@@ -6,9 +6,8 @@ const DOMAINS = [
   { slug: 'ml', name: 'Machine Learning', icon: '🤖', desc: 'Models, metrics, regularization.', questions: 50, duration: 60 },
   { slug: 'dl', name: 'Deep Learning', icon: '🧬', desc: 'CNNs, RNNs, transformers, training.', questions: 50, duration: 60 },
   { slug: 'mern', name: 'MERN Stack', icon: '⚛️', desc: 'Mongo, Express, React, Node.', questions: 50, duration: 60 },
-  { slug: 'os', name: 'Operating Systems', icon: '🖥️', desc: 'Processes, memory, scheduling.', questions: 50, duration: 60 },
   { slug: 'dbms', name: 'DBMS', icon: '📚', desc: 'Normalization, ACID, indexing.', questions: 50, duration: 60 },
-  { slug: 'networks', name: 'Networking', icon: '🌐', desc: 'OSI, TCP/IP, HTTP, security.', questions: 50, duration: 60 },
+  { slug: 'genai', name: 'Gen AI', icon: '✨', desc: 'LLMs, prompting, RAG, agents & more.', questions: 50, duration: 60 },
 ];
 
 function getDomain(slug) {

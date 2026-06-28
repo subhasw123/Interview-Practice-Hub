@@ -141,6 +141,19 @@ QUESTION_POOL = {
             {"type": "technical", "question": "What is CORS and how do you handle it in an Express server?"},
         ],
     },
+    "genai": {
+        "intro": {"type": "hr", "question": "Tell me about yourself."},
+        "hr": [
+            {"type": "hr", "question": "Why are you interested in Generative AI?"},
+            {"type": "hr", "question": "Describe a project where you used or explored Gen AI tools."},
+            {"type": "hr", "question": "How do you keep up with the fast pace of AI advancements?"},
+        ],
+        "technical": [
+            {"type": "technical", "question": "What is a Large Language Model (LLM) and how does it work at a high level?"},
+            {"type": "technical", "question": "What is prompt engineering and why does it matter?"},
+            {"type": "technical", "question": "Explain Retrieval-Augmented Generation (RAG) and its use cases."},
+        ],
+    },
 }
 
 
