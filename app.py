@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, redirect, render_template, request, session, url_for
-from question_bank import QUESTION_BANK
+from question_bank import QUESTION_BANK, get_interview_questions
 
 from utils.question_loader import get_available_domains, get_random_questions
 import pdfplumber
@@ -130,9 +130,11 @@ def start_interview():
             "error": f"Domain {domain} not found"
         }), 400
 
+    # Randomly pick 2 HR + 2 technical questions, always starts with intro
+    questions = get_interview_questions(domain, num_hr=2, num_tech=2)
+
     session["domain"] = domain
     session["current_question"] = 0
-
     session["scores"] = {
         "technical": [],
         "communication": [],
@@ -140,9 +142,9 @@ def start_interview():
     }
 
     return jsonify({
-    "success": True,
-    "questions": QUESTION_BANK[domain]
-})
+        "success": True,
+        "questions": questions
+    })
 
 @app.route("/api/interview/chat", methods=["POST"])
 def interview_chat():
@@ -167,27 +169,20 @@ def evaluate_interview_answer():
     domain = data.get("domain")
 
     prompt = f"""
-You are a professional technical interviewer.
+You are a concise technical interviewer. Evaluate this answer briefly.
 
 Domain: {domain}
+Question: {question}
+Candidate Answer: {answer}
 
-Question:
-{question}
-
-Candidate Answer:
-{answer}
-
-Evaluate the answer.
-
-Return ONLY valid JSON.
+Return ONLY valid JSON with scores (0-100) and a SHORT one-line feedback (max 10 words, like "Good answer!" or "Nice — could mention trade-offs.").
 
 Example:
-
 {{
     "technical": 85,
     "communication": 80,
     "confidence": 75,
-    "feedback": "Good answer. Add more technical depth."
+    "feedback": "Good answer! Be more specific next time."
 }}
 """
 

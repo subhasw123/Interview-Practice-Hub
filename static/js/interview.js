@@ -76,16 +76,17 @@ async function startInterview() {
   updateProgress();
 
   pushAI(
-    `Hi! I'm your AI interviewer for ${STATE.domain.name}. We'll go through 5 questions.`
+    `Hi! I'm your AI interviewer for ${STATE.domain.name}. Let's begin — I'll ask you ${STATE.questions.length} questions. Ready? 🚀`
   );
 
-  setTimeout(() => askNext(), 1000);
+  setTimeout(() => askNext(), 1200);
 }
 
 function updateProgress() {
+  const total = STATE.questions.length;
   const n = STATE.current + 1;
-  document.getElementById('q-progress-text').textContent = `Question ${Math.min(n, 5)} of 5`;
-  document.getElementById('q-progress-fill').style.width = `${(Math.min(n, 5) / 5) * 100}%`;
+  document.getElementById('q-progress-text').textContent = `Question ${Math.min(n, total)} of ${total}`;
+  document.getElementById('q-progress-fill').style.width = `${(Math.min(n, total) / total) * 100}%`;
 }
 
 function pushAI(text) {
@@ -161,17 +162,13 @@ async function handleSend() {
   const result = await evaluateAnswer(
     STATE.questions[STATE.current].question,
     text
-);
+  );
 
-STATE.scores.technical = result.technical;
-STATE.scores.communication = result.communication;
-STATE.scores.confidence = result.confidence;
+  STATE.scores.technical = result.technical;
+  STATE.scores.communication = result.communication;
+  STATE.scores.confidence = result.confidence;
 
-updateScoreUI();
-
-    pushAI(
-    "Feedback: " + result.feedback
-);
+  updateScoreUI();
 
   STATE.current++;
   updateProgress();
@@ -180,27 +177,32 @@ updateScoreUI();
     pushTyping();
     setTimeout(() => {
       removeTyping();
-      pushAI('Thanks — that was the last question. Generating your performance report...');
-      setTimeout(finishInterview, 1400);
-    }, 1000);
+      // Short closing line
+      pushAI('That\'s all! Generating your report... 📊');
+      setTimeout(finishInterview, 1200);
+    }, 800);
   } else {
+    pushTyping();
     setTimeout(() => {
-      pushTyping();
-      setTimeout(() => {
-        removeTyping();
-        pushAI(randomFollowup());
-        setTimeout(askNext, 600);
-      }, 900);
-    }, 500);
+      removeTyping();
+      // Minimal one-liner feedback then next question
+      const shortFeedback = result.feedback
+        ? result.feedback.split('.')[0].trim() + '.'
+        : randomFollowup();
+      pushAI(shortFeedback);
+      setTimeout(() => askNext(), 600);
+    }, 700);
   }
 }
 
 function randomFollowup() {
   const ops = [
-    'Good — appreciate the detail.',
-    'Interesting approach. Let\'s move on.',
-    'Solid answer. Next one:',
-    'Got it. Here\'s the next question.',
+    'Good! Next one.',
+    'Nice. Moving on.',
+    'Got it. Next.',
+    'Interesting! Let\'s continue.',
+    'Noted. Here\'s the next one.',
+    'Good effort! Keep going.',
   ];
   return ops[Math.floor(Math.random() * ops.length)];
 }
