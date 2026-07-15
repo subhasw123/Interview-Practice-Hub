@@ -6,20 +6,24 @@ import os
 QUESTION_BANK_PATH = "question_bank"
 
 
+def _find_domain_file(domain):
+    requested = domain.lower()
+
+    for filename in os.listdir(QUESTION_BANK_PATH):
+        if filename.lower() == f"{requested}.json":
+            return os.path.join(QUESTION_BANK_PATH, filename)
+
+    raise FileNotFoundError(
+        f"Question file not found: {requested}.json"
+    )
+
+
 def load_questions(domain):
     """
     Load all questions for a given domain.
     """
 
-    file_path = os.path.join(
-        QUESTION_BANK_PATH,
-        f"{domain}.json"
-    )
-
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(
-            f"Question file not found: {file_path}"
-        )
+    file_path = _find_domain_file(domain)
 
     with open(file_path, "r", encoding="utf-8") as file:
         questions = json.load(file)

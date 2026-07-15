@@ -12,7 +12,6 @@ function renderResult() {
     const d = getDomain(slug);
     const total = data.questions.length;
     let correct = 0, attempted = 0;
-    const byTopic = {};
     const reviewItems = [];
     data.questions.forEach(q => {
         const ans = data.answers[q.id];
@@ -20,9 +19,6 @@ function renderResult() {
         if (has) attempted++;
         const isRight = q.type === 'mcq' && ans === q.correct;
         if (isRight) correct++;
-        byTopic[q.topic] = byTopic[q.topic] || { total: 0, right: 0 };
-        byTopic[q.topic].total++;
-        if (isRight) byTopic[q.topic].right++;
         reviewItems.push({ q, ans, isRight, has });
     });
     const accuracy = total ? Math.round((correct / total) * 100) : 0;
@@ -73,18 +69,6 @@ function renderResult() {
       <div class="card metric"><div class="metric-label">Attempted</div><div class="metric-value">${attempted}</div></div>
       <div class="card metric"><div class="metric-label">Skipped</div><div class="metric-value" style="color:var(--destructive)">${total - attempted}</div></div>
       <div class="card metric"><div class="metric-label">Performance</div><div class="metric-value">${perfLabel(accuracy)}</div></div>
-    </div>
-
-    <div class="card card-pad mt-24">
-      <h2 style="font-family:var(--font-display); margin:0 0 6px;">By topic</h2>
-      <p class="text-muted" style="margin:0;font-size:13px;">Where you scored best — and where to focus next.</p>
-      <div class="topic-list">
-        ${Object.entries(byTopic).map(([t, v]) => `
-          <div class="topic-row">
-            <span class="topic-name">${t}</span>
-            <span class="topic-score">${v.right} / ${v.total}</span>
-          </div>`).join('')}
-      </div>
     </div>
 
     <div class="mt-24">

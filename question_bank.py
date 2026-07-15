@@ -141,6 +141,28 @@ QUESTION_POOL = {
             {"type": "technical", "question": "What is CORS and how do you handle it in an Express server?"},
         ],
     },
+    "cyber": {
+        "intro": {"type": "hr", "question": "Tell me about yourself."},
+        "hr": [
+            {"type": "hr", "question": "Why are you interested in cybersecurity?"},
+            {"type": "hr", "question": "Describe a time you solved a security challenge."},
+            {"type": "hr", "question": "How do you stay current with emerging threats?"},
+            {"type": "hr", "question": "How do you communicate security risks to non-technical stakeholders?"},
+            {"type": "hr", "question": "Tell me about a project where you improved system security."},
+        ],
+        "technical": [
+            {"type": "technical", "question": "What is the CIA triad and why is it important?"},
+            {"type": "technical", "question": "What is the difference between IDS and IPS?"},
+            {"type": "technical", "question": "How do you secure a network against common attacks like phishing or DDoS?"},
+            {"type": "technical", "question": "Explain the difference between authentication and authorization."},
+            {"type": "technical", "question": "What are the OWASP Top 10 and why do they matter?"},
+            {"type": "technical", "question": "How does encryption protect data at rest and in transit?"},
+            {"type": "technical", "question": "What is zero trust security and how is it implemented?"},
+            {"type": "technical", "question": "How do you approach vulnerability management and patching?"},
+            {"type": "technical", "question": "Explain the role of network segmentation in cybersecurity."},
+            {"type": "technical", "question": "What is social engineering and how can organizations defend against it?"},
+        ],
+    },
     "genai": {
         "intro": {"type": "hr", "question": "Tell me about yourself."},
         "hr": [

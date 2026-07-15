@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Profile · Interview Practice Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main class="container profile-page">
+        <!-- Hero -->
+        <section class="profile-hero">
+            <div class="profile-hero-left">
+                <span class="hero-badge">👤 Your professional identity</span>
+                <h1>Career Profile</h1>
+                <p>Complete your professional profile to receive personalized interview questions, resume analysis, and
+                    career recommendations.</p>
+            </div>
+            <div class="profile-hero-right glass-card">
+                <div class="completion-ring">
+                    <svg viewBox="0 0 120 120" width="120" height="120">
+                        <circle cx="60" cy="60" r="52" stroke="var(--secondary)" stroke-width="10" fill="none" />
+                        <circle id="completion-circle" cx="60" cy="60" r="52" stroke="url(#grad)" stroke-width="10"
+                            fill="none" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"
+                            transform="rotate(-90 60 60)" />
+                        <defs>
+                            <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#4f46e5" />
+                                <stop offset="100%" stop-color="#7c6cff" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="completion-label">
+                        <div class="completion-pct" id="completion-pct">0%</div>
+                        <div class="completion-sub">Complete</div>
+                    </div>
+                </div>
+                <div class="completion-info">
+                    <div class="completion-title">Profile Completion</div>
+                    <p class="completion-desc">Fill in your details to unlock personalized recommendations.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="profile-grid">
+            <!-- LEFT COLUMN -->
+            <div class="profile-col">
+                <!-- Photo -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Profile Photo</h2>
+                        <span class="chip-soft">Public</span>
+                    </div>
+                    <div class="avatar-wrap">
+                        <div class="avatar" id="avatar-preview">
+                            <span id="avatar-fallback">IP</span>
+                        </div>
+                        <label class="btn btn-outline avatar-btn">
+                            <input type="file" id="photo-input" accept="image/*" hidden />
+                            📷 Upload Photo
+                        </label>
+                        <p class="hint">JPG or PNG · Max 5MB</p>
+                    </div>
+                </section>
+
+                <!-- Personal Info -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Personal Information</h2>
+                    </div>
+                    <div class="field-grid">
+                        <div class="float-field">
+                            <input type="text" id="fullname" data-track placeholder=" " />
+                            <label for="fullname">Full Name</label>
+                        </div>
+                        <div class="float-field">
+                            <input type="email" id="email" value="you@example.com" readonly placeholder=" " />
+                            <label for="email">Email (Read Only)</label>
+                        </div>
+                        <div class="float-field">
+                            <input type="tel" id="phone" data-track placeholder=" " />
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="float-field">
+                            <input type="text" id="city" data-track placeholder=" " />
+                            <label for="city">City</label>
+                        </div>
+                        <div class="float-field">
+                            <select id="country" data-track>
+                                <option value="">Select country</option>
+                                <option>India</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>Canada</option>
+                                <option>Germany</option>
+                                <option>Australia</option>
+                                <option>Other</option>
+                            </select>
+                            <label for="country">Country</label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Education</h2>
+                    </div>
+                    <div class="field-grid">
+                        <div class="float-field">
+                            <input type="text" id="college" data-track placeholder=" " />
+                            <label for="college">College Name</label>
+                        </div>
+                        <div class="float-field">
+                            <select id="degree" data-track>
+                                <option value="">Select degree</option>
+                                <option>B.Tech</option>
+                                <option>B.E.</option>
+                                <option>B.Sc</option>
+                                <option>M.Tech</option>
+                                <option>M.Sc</option>
+                                <option>MCA</option>
+                                <option>BCA</option>
+                                <option>MBA</option>
+                                <option>PhD</option>
+                            </select>
+                            <label for="degree">Degree</label>
+                        </div>
+                        <div class="float-field">
+                            <input type="text" id="branch" data-track placeholder=" " />
+                            <label for="branch">Branch / Specialization</label>
+                        </div>
+                        <div class="float-field">
+                            <select id="grad-year" data-track>
+                                <option value="">Select year</option>
+                            </select>
+                            <label for="grad-year">Graduation Year</label>
+                        </div>
+                        <div class="float-field">
+                            <input type="number" id="cgpa" step="0.01" min="0" max="10" data-track placeholder=" " />
+                            <label for="cgpa">CGPA</label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Career -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Career Information</h2>
+                    </div>
+                    <div class="field-grid">
+                        <div class="float-field">
+                            <select id="target-role" data-track>
+                                <option value="">Select target role</option>
+                                <option>Python Developer</option>
+                                <option>Java Developer</option>
+                                <option>Full Stack Developer</option>
+                                <option>Data Analyst</option>
+                                <option>Data Scientist</option>
+                                <option>AI/ML Engineer</option>
+                                <option>DevOps Engineer</option>
+                            </select>
+                            <label for="target-role">Target Job Role</label>
+                        </div>
+                        <div class="float-field">
+                            <select id="experience" data-track>
+                                <option value="">Select experience</option>
+                                <option>Student</option>
+                                <option>Fresher</option>
+                                <option>Intern</option>
+                                <option>1–2 Years</option>
+                                <option>3–5 Years</option>
+                            </select>
+                            <label for="experience">Experience Level</label>
+                        </div>
+                        <div class="float-field">
+                            <select id="worktype" data-track>
+                                <option value="">Preferred work type</option>
+                                <option>Remote</option>
+                                <option>Hybrid</option>
+                                <option>On-site</option>
+                            </select>
+                            <label for="worktype">Preferred Work Type</label>
+                        </div>
+                        <div class="float-field">
+                            <input type="text" id="pref-location" data-track placeholder=" " />
+                            <label for="pref-location">Preferred Location</label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="profile-col">
+                <!-- Skills -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Skills</h2>
+                        <span class="chip-soft" id="skills-count">0 skills</span>
+                    </div>
+                    <div class="skill-input-row">
+                        <input type="text" id="skill-input" placeholder="e.g. Python, Flask, SQL" />
+                        <button type="button" class="btn btn-primary" id="add-skill">+ Add Skill</button>
+                    </div>
+                    <div class="chips" id="skill-chips"></div>
+                    <p class="hint" id="skill-empty">No skills added yet. Add your top technologies.</p>
+                </section>
+
+                <!-- Resume -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>📄 Resume</h2>
+                    </div>
+                    <div class="resume-drop" id="resume-drop">
+                        <div class="resume-icon">📎</div>
+                        <div class="resume-text">
+                            <strong id="resume-name">No resume uploaded</strong>
+                            <span class="hint">PDF or DOCX · Max 5MB</span>
+                        </div>
+                        <label class="btn btn-outline">
+                            <input type="file" id="resume-input" accept=".pdf,.docx" hidden />
+                            <span id="resume-btn-label">Upload Resume</span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- About -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>About Me</h2>
+                    </div>
+                    <textarea id="about" maxlength="500" rows="5" data-track
+                        placeholder="Tell recruiters about yourself..."></textarea>
+                    <div class="char-counter"><span id="about-count">0</span> / 500</div>
+                </section>
+
+                <!-- Social -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Social Links</h2>
+                    </div>
+                    <div class="social-list">
+                        <div class="social-row"><span class="social-icon">in</span>
+                            <input type="url" id="linkedin" data-track placeholder="LinkedIn URL" />
+                        </div>
+                        <div class="social-row"><span class="social-icon gh">gh</span>
+                            <input type="url" id="github" data-track placeholder="GitHub URL" />
+                        </div>
+                        <div class="social-row"><span class="social-icon web">🌐</span>
+                            <input type="url" id="portfolio" data-track placeholder="Portfolio Website" />
+                        </div>
+                        <div class="social-row"><span class="social-icon lc">LC</span>
+                            <input type="url" id="leetcode" data-track placeholder="LeetCode URL" />
+                        </div>
+                        <div class="social-row"><span class="social-icon hr">HR</span>
+                            <input type="url" id="hackerrank" data-track placeholder="HackerRank URL" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Certifications</h2>
+                        <button type="button" class="btn btn-outline btn-sm" id="add-cert">+ Add Another</button>
+                    </div>
+                    <div id="cert-list" class="cert-list"></div>
+                </section>
+
+                <!-- Languages -->
+                <section class="glass-card">
+                    <div class="card-head">
+                        <h2>Languages</h2>
+                    </div>
+                    <div class="lang-grid" id="lang-grid">
+                        <label class="lang-chip"><input type="checkbox" value="English" /><span>English</span></label>
+                        <label class="lang-chip"><input type="checkbox" value="Hindi" /><span>Hindi</span></label>
+                        <label class="lang-chip"><input type="checkbox" value="Odia" /><span>Odia</span></label>
+                        <label class="lang-chip"><input type="checkbox" value="Spanish" /><span>Spanish</span></label>
+                        <label class="lang-chip"><input type="checkbox" value="French" /><span>French</span></label>
+                        <label class="lang-chip"><input type="checkbox" value="German" /><span>German</span></label>
+                        <label class="lang-chip other"><input type="checkbox"
+                                id="lang-other-check" /><span>Other</span></label>
+                    </div>
+                    <input type="text" id="lang-other" class="mt-input" placeholder="Other language(s), comma separated"
+                        style="display:none;" />
+                </section>
+            </div>
+        </div>
+
+        <!-- Save bar -->
+        <div class="save-bar glass-card">
+            <div class="save-info">
+                <strong>Ready to update your profile?</strong>
+                <span class="hint">Your data is saved to your account.</span>
+            </div>
+            <div class="save-actions">
+                <button type="button" class="btn btn-outline" id="cancel-btn">Cancel</button>
+                <button type="button" class="btn btn-primary" id="save-btn">💾 Save Profile</button>
+            </div>
+        </div>
+
+        <div id="toast" class="toast"></div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script>mountNavbar({ active: 'profile' });</script>
+    <script src="{{ url_for('static', filename='js/profile.js') }}?v=3"></script>
+</body>
+
+</html>

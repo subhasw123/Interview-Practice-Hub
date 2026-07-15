@@ -7,6 +7,7 @@ const DOMAINS = [
   { slug: 'dl', name: 'Deep Learning', icon: '🧬', desc: 'CNNs, RNNs, transformers, training.', questions: 50, duration: 60 },
   { slug: 'mern', name: 'MERN Stack', icon: '⚛️', desc: 'Mongo, Express, React, Node.', questions: 50, duration: 60 },
   { slug: 'dbms', name: 'DBMS', icon: '📚', desc: 'Normalization, ACID, indexing.', questions: 50, duration: 60 },
+  { slug: 'cyber', name: 'Cybersecurity', icon: '🛡️', desc: 'Threats, networks, defensive security, protocols.', questions: 50, duration: 60 },
   { slug: 'genai', name: 'Gen AI', icon: '✨', desc: 'LLMs, prompting, RAG, agents & more.', questions: 50, duration: 60 },
 ];
 
